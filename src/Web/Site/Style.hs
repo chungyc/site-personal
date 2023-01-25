@@ -1,18 +1,16 @@
-{-|
-Description: Stylesheet generation for the web site.
-Copyright: Copyright (C) 2023 Yoo Chung
-License: All rights reserved
-Maintainer: yoo.chul.chung@gmail.com
--}
+-- |
+-- Description: Stylesheet generation for the web site.
+-- Copyright: Copyright (C) 2023 Yoo Chung
+-- License: All rights reserved
+-- Maintainer: yoo.chul.chung@gmail.com
 module Web.Site.Style (stylesheet) where
 
-import           Clay
-import qualified Clay.Media as Media
-import           Prelude    hiding (rem, (**))
+import Clay
+import Clay.Media qualified as Media
+import Prelude hiding (rem, (**))
 
-{-|
-Context for Clay to render a stylesheet.
--}
+-- |
+-- Context for Clay to render a stylesheet.
 stylesheet :: Css
 stylesheet = do
   html ? fontSize (pct 62.5)
@@ -37,7 +35,7 @@ stylesheet = do
     padding (rem 1.2) nil (rem 1.2) nil
     borderTop (rem 0.2) solid (rgb 0 0 0)
     fontSize (rem 1.2)
-    color (rgb (5*16) (5*16) (5*16))
+    color (rgb (5 * 16) (5 * 16) (5 * 16))
 
   h1 ? fontSize (rem 2.4)
 
@@ -46,14 +44,14 @@ stylesheet = do
   article ** ".header" ? do
     fontSize (rem 1.4)
     fontStyle italic
-    color (rgb (5*16) (5*16) (5*16))
+    color (rgb (5 * 16) (5 * 16) (5 * 16))
 
   ".logo" ** a ? do
     fontWeight bold
     color (rgb 0 0 0)
     textDecoration none
 
-  query Media.screen [ Media.maxWidth (px 319) ] $ do
+  query Media.screen [Media.maxWidth (px 319)] $ do
     body ? do
       width (pct 90)
       margin nil nil nil nil
@@ -77,7 +75,7 @@ stylesheet = do
       display block
       lineHeight (unitless 1.6)
 
-  query Media.screen [ Media.minWidth (px 320) ] $ do
+  query Media.screen [Media.minWidth (px 320)] $ do
     body ? do
       width (pct 90)
       margin nil nil nil nil
@@ -101,7 +99,7 @@ stylesheet = do
       display inline
       margin nil (rem 0.6) nil (rem 0.6)
 
-  query Media.screen [ Media.minWidth (px 640) ] $ do
+  query Media.screen [Media.minWidth (px 640)] $ do
     body ? do
       width (rem 60)
       margin nil nil nil nil
