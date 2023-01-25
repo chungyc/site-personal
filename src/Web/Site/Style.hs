@@ -32,7 +32,7 @@ stylesheet = do
 
   footer ? do
     marginTop (rem 3)
-    padding (rem 1.2) nil (rem 1.2) nil
+    sym2 padding (rem 1.2) nil
     borderTop (rem 0.2) solid (rgb 0 0 0)
     fontSize (rem 1.2)
     color (rgb (5 * 16) (5 * 16) (5 * 16))
@@ -54,20 +54,20 @@ stylesheet = do
   query Media.screen [Media.maxWidth (px 319)] $ do
     body ? do
       width (pct 90)
-      margin nil nil nil nil
-      padding nil (pct 5) nil (pct 5)
+      sym margin nil
+      sym2 padding nil (pct 5)
 
-    header ? margin (rem 4.2) nil (rem 4.2) nil
+    header ? sym2 margin (rem 4.2) nil
 
     nav ? do
-      margin nil nil nil (rem 3)
+      sym3 margin nil auto (rem 3)
       textAlign center
 
     footer ? textAlign center
 
     ".logo" ? do
       textAlign center
-      margin (rem 1) nil nil (rem 3)
+      sym3 margin (rem 1) auto (rem 3)
 
     ".logo" ** a ? fontSize (rem 2.4)
 
@@ -78,37 +78,39 @@ stylesheet = do
   query Media.screen [Media.minWidth (px 320)] $ do
     body ? do
       width (pct 90)
-      margin nil nil nil nil
-      padding nil (pct 5) nil (pct 5)
+      sym margin nil
+      sym2 padding nil (pct 5)
 
-    header ? margin (rem 4.2) nil (rem 4.2) nil
+    header ? sym2 margin (rem 4.2) nil
 
     nav ? do
-      margin nil nil nil (rem 3)
+      sym3 margin nil auto (rem 3)
       textAlign center
 
     footer ? textAlign center
 
     ".logo" ? do
       textAlign center
-      margin (rem 1) nil nil (rem 3)
+      sym3 margin (rem 1) auto (rem 3)
 
     ".logo" ** a ? fontSize (rem 2.4)
 
     nav ** a ? do
       display inline
-      margin nil (rem 0.6) nil (rem 0.6)
+      sym2 margin nil (rem 0.6)
 
   query Media.screen [Media.minWidth (px 640)] $ do
     body ? do
       width (rem 60)
-      margin nil nil nil nil
-      padding nil (pct 5) nil (pct 5)
+      sym2 margin nil auto
+      sym padding nil
 
-    header ? margin nil nil nil (rem 3)
+    header ? do
+      sym3 margin nil nil (rem 3)
+      sym2 padding (rem 1.2) nil
 
     nav ? do
-      margin nil nil nil nil
+      sym margin nil
       textAlign (alignSide sideRight)
 
     nav ** a ? do
@@ -118,7 +120,7 @@ stylesheet = do
     footer ? textAlign (alignSide sideRight)
 
     ".logo" ? do
-      margin nil nil nil nil
+      sym margin nil
       textAlign (alignSide sideLeft)
 
     ".logo" ** a ? do

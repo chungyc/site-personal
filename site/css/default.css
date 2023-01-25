@@ -79,7 +79,7 @@ header
 
 nav
 {
-  margin     : 0 0 0 3rem;
+  margin     : 0 auto 0 3rem;
   text-align : center;
 }
 
@@ -91,7 +91,7 @@ footer
 .logo
 {
   text-align : center;
-  margin     : 1rem 0 0 3rem;
+  margin     : 1rem auto 1rem 3rem;
 }
 
 .logo a
@@ -123,7 +123,7 @@ header
 
 nav
 {
-  margin     : 0 0 0 3rem;
+  margin     : 0 auto 0 3rem;
   text-align : center;
 }
 
@@ -135,7 +135,7 @@ footer
 .logo
 {
   text-align : center;
-  margin     : 1rem 0 0 3rem;
+  margin     : 1rem auto 1rem 3rem;
 }
 
 .logo a
@@ -156,8 +156,8 @@ nav a
 body
 {
   width   : 60rem;
-  margin  : 0 0 0 0;
-  padding : 0 5% 0 5%;
+  margin  : 0 auto 0 auto;
+  padding : 0 0 0 0;
 }
 
 header

@@ -19,7 +19,7 @@ rules = do
     route idRoute
     compile compressCssCompiler
 
-  match (fromList ["about.rst", "contact.markdown"]) $ do
+  match (fromList ["about.markdown", "contact.markdown"]) $ do
     route $ setExtension "html"
     compile $
       pandocCompiler
