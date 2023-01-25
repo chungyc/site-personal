@@ -1,0 +1,7 @@
+# Resolver to choose a 'specific' stackage snapshot or a compiler version.
+resolver: lts-20.8
+
+extra-deps:
+- clay-0.14.0
+
+allow-newer: true
