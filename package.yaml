@@ -7,16 +7,10 @@ maintainer:          "yoo.chul.chung@gmail.com"
 license:             "AllRightsReserved"
 copyright:           "Copyright (C) 2023 Yoo Chung"
 
-extra-source-files:
-- README.md
-
 # Metadata used when publishing your package
 synopsis:            Personal web site for Yoo Chung
 category:            Personal
 
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
 description:         Source for personal web site which belongs to Yoo Chung.
 
 language: GHC2021

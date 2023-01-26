@@ -16,8 +16,6 @@ maintainer:     yoo.chul.chung@gmail.com
 copyright:      Copyright (C) 2023 Yoo Chung
 license:        AllRightsReserved
 build-type:     Simple
-extra-source-files:
-    README.md
 
 source-repository head
   type: git
