@@ -3,16 +3,16 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: yoo.chul.chung@gmail.com
-module Web.Site.Style (stylesheet) where
+module Web.Site.Style (defaultStyle) where
 
 import Clay
 import Clay.Media qualified as Media
 import Prelude hiding (rem, (**))
 
 -- |
--- Context for Clay to render a stylesheet.
-stylesheet :: Css
-stylesheet = do
+-- Default style for Clay to render into a stylesheet.
+defaultStyle :: Css
+defaultStyle = do
   html ? fontSize (pct 62.5)
 
   body ? do

@@ -162,7 +162,8 @@ body
 
 header
 {
-  margin : 0 0 0 3rem;
+  margin  : 0 0 0 3rem;
+  padding : 1.19999rem 0 1.19999rem 0;
 }
 
 nav

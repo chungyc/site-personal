@@ -55,6 +55,7 @@ executables:
     dependencies:
     - personal
     - clay
+    - text
 
 tests:
   test:

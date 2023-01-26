@@ -65,6 +65,7 @@ executable style
       base
     , clay
     , personal
+    , text
   default-language: GHC2021
 
 test-suite test
