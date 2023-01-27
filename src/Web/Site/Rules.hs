@@ -24,21 +24,21 @@ rules = do
     compile compressCssCompiler
 
   match (fromList ["about.markdown", "contact.markdown"]) $ do
-    route $ setExtension "html"
+    route $ stripExtension
     compile $
       pandocCompiler
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
   match "posts/*" $ do
-    route $ setExtension "html"
+    route $ stripExtension
     compile $
       pandocCompiler
         >>= loadAndApplyTemplate "templates/post.html" postCtx
         >>= loadAndApplyTemplate "templates/default.html" postCtx
         >>= relativizeUrls
 
-  create ["archive.html"] $ do
+  create ["archive"] $ do
     route idRoute
     compile $ do
       posts <- recentFirst =<< loadAll "posts/*"
@@ -70,3 +70,6 @@ postCtx :: Context String
 postCtx =
   dateField "date" "%B %e, %Y"
     <> defaultContext
+
+stripExtension :: Routes
+stripExtension = setExtension ""

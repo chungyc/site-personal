@@ -1,25 +1,80 @@
 
 html
 {
-  font-family : "Georgia","Garamond", serif,sans-serif,monospace;
+  font-family    : "Georgia","Garamond", serif,sans-serif,monospace;
+  text-rendering : optimizeLegibility;
 }
 
 body
 {
-  margin-left  : 10%;
-  margin-right : 10%;
+  margin-top    : 2rem;
+  margin-left   : 10%;
+  margin-right  : 10%;
+  margin-bottom : 2rem;
 }
 
 h1
 {
-  font-size  : 1.5rem;
-  text-align : center;
+  font-family : "Courier New", monospace,sans-serif;
+  font-size   : 1.5rem;
+  font-style  : italic;
 }
 
 h2
 {
-  font-size  : 1.3rem;
-  text-align : left;
+  font-family           : "Courier New", monospace,sans-serif;
+  font-size             : 1.3rem;
+  text-decoration-line  : underline;
+  text-decoration-color : #191970;
+}
+
+h3
+{
+  font-family           : "Courier New", monospace,sans-serif;
+  font-size             : 1.19999rem;
+  text-decoration-line  : underline;
+  text-decoration-color : #00008b;
+}
+
+h4
+{
+  font-family           : "Courier New", monospace,sans-serif;
+  font-size             : 1.1rem;
+  text-decoration-line  : underline;
+  text-decoration-color : #0000ff;
+}
+
+h5
+{
+  font-family           : "Courier New", monospace,sans-serif;
+  font-size             : 1.05rem;
+  text-decoration-line  : underline;
+  text-decoration-color : #00bfff;
+}
+
+h6
+{
+  font-family           : "Courier New", monospace,sans-serif;
+  text-decoration-line  : underline;
+  text-decoration-color : #add8e6;
+}
+
+footer
+{
+  font-family : "Courier New", monospace,sans-serif;
+  font-size   : 0.75rem;
+  border-top  : 1px solid #000000;
+  margin-top  : 1rem;
+}
+
+footer > nav
+{
+  padding-top : 1rem;
+}
+
+footer > nav a
+{
+  padding-right : 2rem;
 }
 
 
