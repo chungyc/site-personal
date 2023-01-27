@@ -24,14 +24,14 @@ rules = do
     compile compressCssCompiler
 
   match (fromList ["about.markdown", "contact.markdown"]) $ do
-    route $ stripExtension
+    route stripExtension
     compile $
       pandocCompiler
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
   match "posts/*" $ do
-    route $ stripExtension
+    route stripExtension
     compile $
       pandocCompiler
         >>= loadAndApplyTemplate "templates/post.html" postCtx
