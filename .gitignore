@@ -1,5 +1,6 @@
 _cache/
 _site/
 .stack-work/
+.vscode/
 stack.yaml.lock
 *~
