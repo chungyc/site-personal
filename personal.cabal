@@ -24,7 +24,9 @@ source-repository head
 library
   exposed-modules:
       Web.Site
+      Web.Site.Routes
       Web.Site.Rules
+      Web.Site.Rules.Update
       Web.Site.Style
   other-modules:
       Paths_personal
