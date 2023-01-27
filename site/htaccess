@@ -1,0 +1,5 @@
+AddDefaultCharset utf-8
+
+<FilesMatch "^[^.]+$">
+ForceType text/html
+</FilesMatch>

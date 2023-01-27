@@ -11,6 +11,10 @@ import Hakyll
 -- Rules for Hakyll to generate the web site.
 rules :: Rules ()
 rules = do
+  match "htaccess" $ do
+    route $ constRoute ".htaccess"
+    compile copyFileCompiler
+
   match "images/*" $ do
     route idRoute
     compile copyFileCompiler
