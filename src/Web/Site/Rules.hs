@@ -37,26 +37,26 @@ rules = do
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
-  match "posts/*" $ do
-    route stripExtension
-    compile $
-      pandocCompiler
-        >>= loadAndApplyTemplate "templates/post.html" postCtx
-        >>= loadAndApplyTemplate "templates/default.html" postCtx
-        >>= relativizeUrls
-
-  create ["archive"] $ do
+  create ["updates"] $ do
     route idRoute
     compile $ do
-      posts <- recentFirst =<< loadAll "posts/*"
-      let archiveCtx =
-            listField "posts" postCtx (return posts)
-              <> constField "title" "Archives"
+      updates <- recentFirst =<< loadAll "update/**"
+      let updatesContext =
+            listField "updates" defaultContext (return updates)
+              <> constField "title" "Updates"
               <> defaultContext
 
       makeItem ""
-        >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-        >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+        >>= loadAndApplyTemplate "templates/updates.html" updatesContext
+        >>= loadAndApplyTemplate "templates/default.html" updatesContext
+        >>= relativizeUrls
+
+  match "update/**" $ do
+    route stripExtension
+    compile $
+      pandocCompiler
+        >>= loadAndApplyTemplate "templates/update.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
   match "index.html" $ do

@@ -34,6 +34,10 @@ defaultStyle = do
     paddingTop $ rem 1
     a ? paddingRight (rem 2)
 
+  article |> section # ".byline" ? do
+    fontFamily ["Verdana"] [sansSerif, serif, monospace]
+    fontSize $ rem 0.7
+
 headings :: Css
 headings = do
   h1 ? do

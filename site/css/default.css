@@ -88,5 +88,11 @@ footer > nav a
   padding-right : 2rem;
 }
 
+article > section.byline
+{
+  font-family : "Verdana", sans-serif,serif,monospace;
+  font-size   : 0.69999rem;
+}
+
 
 /* Generated with Clay, http://fvisser.nl/clay */
