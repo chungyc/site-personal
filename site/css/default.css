@@ -1,200 +1,26 @@
 
 html
 {
-  font-size : 62.5%;
+  font-family : "Georgia","Garamond", serif,sans-serif,monospace;
 }
 
 body
 {
-  font-size : 1.6rem;
-  color     : #000000;
-}
-
-header
-{
-  border-bottom : 0.2rem solid #000000;
-}
-
-nav
-{
-  text-align : right;
-}
-
-nav a
-{
-  font-size       : 1.8rem;
-  font-weight     : bold;
-  color           : #000000;
-  text-decoration : none;
-  text-transform  : uppercase;
-}
-
-footer
-{
-  margin-top : 3rem;
-  padding    : 1.19999rem 0 1.19999rem 0;
-  border-top : 0.2rem solid #000000;
-  font-size  : 1.19999rem;
-  color      : #505050;
+  margin-left  : 10%;
+  margin-right : 10%;
 }
 
 h1
 {
-  font-size : 2.39999rem;
+  font-size  : 1.5rem;
+  text-align : center;
 }
 
 h2
 {
-  font-size : 2rem;
-}
-
-article .header
-{
-  font-size  : 1.39999rem;
-  font-style : italic;
-  color      : #505050;
-}
-
-.logo a
-{
-  font-weight     : bold;
-  color           : #000000;
-  text-decoration : none;
-}
-
-@media screen and (max-width: 319px)
-{
-
-body
-{
-  width   : 90%;
-  margin  : 0 0 0 0;
-  padding : 0 5% 0 5%;
-}
-
-header
-{
-  margin : 4.2rem 0 4.2rem 0;
-}
-
-nav
-{
-  margin     : 0 auto 0 3rem;
-  text-align : center;
-}
-
-footer
-{
-  text-align : center;
-}
-
-.logo
-{
-  text-align : center;
-  margin     : 1rem auto 1rem 3rem;
-}
-
-.logo a
-{
-  font-size : 2.39999rem;
-}
-
-nav a
-{
-  display     : block;
-  line-height : 1.6;
-}
-
-}
-@media screen and (min-width: 320px)
-{
-
-body
-{
-  width   : 90%;
-  margin  : 0 0 0 0;
-  padding : 0 5% 0 5%;
-}
-
-header
-{
-  margin : 4.2rem 0 4.2rem 0;
-}
-
-nav
-{
-  margin     : 0 auto 0 3rem;
-  text-align : center;
-}
-
-footer
-{
-  text-align : center;
-}
-
-.logo
-{
-  text-align : center;
-  margin     : 1rem auto 1rem 3rem;
-}
-
-.logo a
-{
-  font-size : 2.39999rem;
-}
-
-nav a
-{
-  display : inline;
-  margin  : 0 0.59999rem 0 0.59999rem;
-}
-
-}
-@media screen and (min-width: 640px)
-{
-
-body
-{
-  width   : 60rem;
-  margin  : 0 auto 0 auto;
-  padding : 0 0 0 0;
-}
-
-header
-{
-  margin  : 0 0 0 3rem;
-  padding : 1.19999rem 0 1.19999rem 0;
-}
-
-nav
-{
-  margin     : 0 0 0 0;
-  text-align : right;
-}
-
-nav a
-{
-  margin  : 0 0 0 1.19999rem;
-  display : inline;
-}
-
-footer
-{
-  text-align : right;
-}
-
-.logo
-{
-  margin     : 0 0 0 0;
+  font-size  : 1.3rem;
   text-align : left;
 }
 
-.logo a
-{
-  float     : left;
-  font-size : 1.8rem;
-}
-
-}
 
 /* Generated with Clay, http://fvisser.nl/clay */
