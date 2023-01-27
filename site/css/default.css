@@ -18,50 +18,56 @@ h1
   font-family : "Courier New", monospace,sans-serif;
   font-size   : 1.5rem;
   font-style  : italic;
+  color       : #14146e;
 }
 
 h2
 {
   font-family           : "Courier New", monospace,sans-serif;
+  color                 : #191970;
   text-decoration-line  : underline;
   text-decoration-style : dotted;
+  color                 : #282878;
   font-size             : 1.3rem;
-  text-decoration-color : #191970;
 }
 
 h3
 {
   font-family           : "Courier New", monospace,sans-serif;
+  color                 : #191970;
   text-decoration-line  : underline;
   text-decoration-style : dotted;
+  color                 : #3c3c82;
   font-size             : 1.19999rem;
-  text-decoration-color : #00008b;
 }
 
 h4
 {
   font-family           : "Courier New", monospace,sans-serif;
+  color                 : #191970;
   text-decoration-line  : underline;
   text-decoration-style : dotted;
+  color                 : #50508c;
   font-size             : 1.1rem;
-  text-decoration-color : #0000ff;
 }
 
 h5
 {
   font-family           : "Courier New", monospace,sans-serif;
+  color                 : #191970;
   text-decoration-line  : underline;
   text-decoration-style : dotted;
+  color                 : #646496;
   font-size             : 1.05rem;
-  text-decoration-color : #00bfff;
 }
 
 h6
 {
   font-family           : "Courier New", monospace,sans-serif;
+  color                 : #191970;
   text-decoration-line  : underline;
   text-decoration-style : dotted;
-  text-decoration-color : #add8e6;
+  color                 : #7878a0;
 }
 
 footer

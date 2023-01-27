@@ -40,32 +40,38 @@ headings = do
     fontFamily ["Courier New"] [monospace, sansSerif]
     fontSize $ rem 1.5
     fontStyle italic
+    fontColor $ headingColor 1
 
   h2 ? do
     common
+    level 2
     fontSize $ rem 1.3
-    textDecorationColor midnightblue
 
   h3 ? do
     common
+    level 3
     fontSize $ rem 1.2
-    textDecorationColor darkblue
 
   h4 ? do
     common
+    level 4
     fontSize $ rem 1.1
-    textDecorationColor blue
 
   h5 ? do
     common
+    level 5
     fontSize $ rem 1.05
-    textDecorationColor deepskyblue
 
   h6 ? do
     common
-    textDecorationColor lightblue
+    level 6
   where
     common = do
       fontFamily ["Courier New"] [monospace, sansSerif]
+      fontColor midnightblue
       textDecorationLine underline
       textDecorationStyle dotted
+
+    level n = fontColor $ headingColor n
+
+    headingColor n = rgb (n * 20) (n * 20) (100 + n * 10)
