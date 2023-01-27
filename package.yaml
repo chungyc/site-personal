@@ -53,6 +53,7 @@ executables:
     main:                app/Server.hs
     ghc-options: *exe-ghc-options
     dependencies:
+    - http-types
     - text
     - warp
     - wai

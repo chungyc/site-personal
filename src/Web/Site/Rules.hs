@@ -23,6 +23,13 @@ rules = do
     route idRoute
     compile compressCssCompiler
 
+  match "errors/missing.html" $ do
+    route idRoute
+    compile $
+      pandocCompiler
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= relativizeUrls
+
   match (fromList ["about.markdown", "contact.markdown"]) $ do
     route stripExtension
     compile $

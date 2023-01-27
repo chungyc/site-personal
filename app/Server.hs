@@ -8,6 +8,8 @@ module Main (main) where
 import Data.String
 import Data.Text (Text)
 import Data.Text qualified as Text
+import Network.HTTP.Types.Status (status404)
+import Network.Wai (Application, responseFile)
 import Network.Wai.Application.Static qualified as Static
 import Network.Wai.Handler.Warp qualified as Warp
 import WaiAppStatic.Types
@@ -18,7 +20,8 @@ main =
     Static.staticApp
       baseSettings
         { ssGetMimeType = getMimeType,
-          ssMaxAge = MaxAgeSeconds 1
+          ssMaxAge = MaxAgeSeconds 1,
+          ss404Handler = Just missing
         }
   where
     warpSettings =
@@ -36,5 +39,13 @@ main =
         then defaultGetMimeType file
         else return "text/html"
 
+-- | Whether a file name has an extension.
 hasExtension :: Text -> Bool
 hasExtension = Text.elem '.'
+
+-- | Response handler for when missing resources are requested.
+missing :: Application
+missing _ respond = respond $ responseFile status404 headers file Nothing
+  where
+    headers = [("Content-Type", "text/html")]
+    file = "_site/errors/missing.html"

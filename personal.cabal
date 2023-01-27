@@ -48,6 +48,7 @@ executable server
   ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base
+    , http-types
     , text
     , wai
     , wai-app-static
