@@ -30,35 +30,39 @@ library:
   - hakyll
   - clay
 
+_exe-ghc-options: &exe-ghc-options
+- -threaded
+- -rtsopts
+- -with-rtsopts=-N
+
 executables:
   site:
     main:                app/Site.hs
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+    ghc-options: *exe-ghc-options
     dependencies:
     - personal
     - hakyll
   style:
     main:                app/Style.hs
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+    ghc-options: *exe-ghc-options
     dependencies:
     - personal
     - clay
     - text
+  server:
+    main:                app/Server.hs
+    ghc-options: *exe-ghc-options
+    dependencies:
+    - text
+    - warp
+    - wai
+    - wai-app-static
 
 tests:
   test:
     main:                Spec.hs
     source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+    ghc-options:         *exe-ghc-options
     dependencies:
     - personal
     - hspec
