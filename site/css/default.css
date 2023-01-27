@@ -23,32 +23,36 @@ h1
 h2
 {
   font-family           : "Courier New", monospace,sans-serif;
-  font-size             : 1.3rem;
   text-decoration-line  : underline;
+  text-decoration-style : dotted;
+  font-size             : 1.3rem;
   text-decoration-color : #191970;
 }
 
 h3
 {
   font-family           : "Courier New", monospace,sans-serif;
-  font-size             : 1.19999rem;
   text-decoration-line  : underline;
+  text-decoration-style : dotted;
+  font-size             : 1.19999rem;
   text-decoration-color : #00008b;
 }
 
 h4
 {
   font-family           : "Courier New", monospace,sans-serif;
-  font-size             : 1.1rem;
   text-decoration-line  : underline;
+  text-decoration-style : dotted;
+  font-size             : 1.1rem;
   text-decoration-color : #0000ff;
 }
 
 h5
 {
   font-family           : "Courier New", monospace,sans-serif;
-  font-size             : 1.05rem;
   text-decoration-line  : underline;
+  text-decoration-style : dotted;
+  font-size             : 1.05rem;
   text-decoration-color : #00bfff;
 }
 
@@ -56,6 +60,7 @@ h6
 {
   font-family           : "Courier New", monospace,sans-serif;
   text-decoration-line  : underline;
+  text-decoration-style : dotted;
   text-decoration-color : #add8e6;
 }
 

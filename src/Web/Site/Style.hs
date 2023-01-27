@@ -26,14 +26,13 @@ defaultStyle = do
 
   footer ? do
     fontFamily ["Courier New"] [monospace, sansSerif]
-    fontSize (rem 0.75)
+    fontSize $ rem 0.75
     borderTop (px 1) solid black
-    marginTop (rem 1)
+    marginTop $ rem 1
 
   footer |> nav ? do
-    paddingTop (rem 1)
-    a ? do
-      paddingRight (rem 2)
+    paddingTop $ rem 1
+    a ? paddingRight (rem 2)
 
 headings :: Css
 headings = do
@@ -43,30 +42,30 @@ headings = do
     fontStyle italic
 
   h2 ? do
-    fontFamily ["Courier New"] [monospace, sansSerif]
+    common
     fontSize $ rem 1.3
-    textDecorationLine underline
     textDecorationColor midnightblue
 
   h3 ? do
-    fontFamily ["Courier New"] [monospace, sansSerif]
+    common
     fontSize $ rem 1.2
-    textDecorationLine underline
     textDecorationColor darkblue
 
   h4 ? do
-    fontFamily ["Courier New"] [monospace, sansSerif]
+    common
     fontSize $ rem 1.1
-    textDecorationLine underline
     textDecorationColor blue
 
   h5 ? do
-    fontFamily ["Courier New"] [monospace, sansSerif]
+    common
     fontSize $ rem 1.05
-    textDecorationLine underline
     textDecorationColor deepskyblue
 
   h6 ? do
-    fontFamily ["Courier New"] [monospace, sansSerif]
-    textDecorationLine underline
+    common
     textDecorationColor lightblue
+  where
+    common = do
+      fontFamily ["Courier New"] [monospace, sansSerif]
+      textDecorationLine underline
+      textDecorationStyle dotted

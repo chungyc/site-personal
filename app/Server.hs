@@ -15,7 +15,11 @@ import WaiAppStatic.Types
 main :: IO ()
 main =
   Warp.runSettings warpSettings $
-    Static.staticApp baseSettings {ssGetMimeType = getMimeType}
+    Static.staticApp
+      baseSettings
+        { ssGetMimeType = getMimeType,
+          ssMaxAge = MaxAgeSeconds 1
+        }
   where
     warpSettings =
       Warp.setHost (fromString "127.0.0.1") $
