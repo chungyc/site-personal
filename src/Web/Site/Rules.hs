@@ -7,25 +7,21 @@ module Web.Site.Rules (rules) where
 
 import Hakyll
 import Web.Site.Routes
+import Web.Site.Rules.File qualified as File
 import Web.Site.Rules.Update qualified as Update
 
 -- |
 -- Rules for Hakyll to generate the web site.
 rules :: Rules ()
 rules = do
+  File.rules
+  Update.rules
+
   match "templates/*" $ compile templateBodyCompiler
 
   match "htaccess" $ do
     route $ constRoute ".htaccess"
     compile copyFileCompiler
-
-  match "images/*" $ do
-    route idRoute
-    compile copyFileCompiler
-
-  match "css/*" $ do
-    route idRoute
-    compile compressCssCompiler
 
   match "errors/missing.html" $ do
     route idRoute
@@ -52,8 +48,6 @@ rules = do
         >>= applyAsTemplate indexCtx
         >>= loadAndApplyTemplate "templates/default.html" indexCtx
         >>= relativizeUrls
-
-  Update.rules
 
 postCtx :: Context String
 postCtx =

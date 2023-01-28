@@ -26,6 +26,7 @@ library
       Web.Site
       Web.Site.Routes
       Web.Site.Rules
+      Web.Site.Rules.File
       Web.Site.Rules.Update
       Web.Site.Style
   other-modules:
