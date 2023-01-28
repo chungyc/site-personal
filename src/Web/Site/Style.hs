@@ -6,6 +6,7 @@
 module Web.Site.Style (defaultStyle) where
 
 import Clay
+import Clay.Media qualified as Media
 import Prelude hiding (rem)
 
 -- |
@@ -37,6 +38,12 @@ defaultStyle = do
   article |> section # ".byline" ? do
     fontFamily ["Verdana"] [sansSerif, serif, monospace]
     fontSize $ rem 0.7
+
+  query Media.screen [Media.minWidth $ cm 21] $ do
+    body ? do
+      width $ cm 20
+      marginRight auto
+      marginLeft auto
 
 headings :: Css
 headings = do
