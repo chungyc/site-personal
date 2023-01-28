@@ -4,9 +4,9 @@ AddDefaultCharset utf-8
     ForceType text/html
 </FilesMatch>
 
-ErrorDocument 404 /errors/missing.html
+ErrorDocument 404 /server/errors/missing.html
 
-<Location "/errors/">
+<Location "/server/errors/">
     RewriteEngine On
     RewriteCond %{ENV:REDIRECT_STATUS} =""
     RewriteRule .* - [R=404,L]

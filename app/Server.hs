@@ -20,7 +20,7 @@ main =
     Static.staticApp
       baseSettings
         { ssGetMimeType = getMimeType,
-          ssMaxAge = MaxAgeSeconds 1,
+          ssMaxAge = MaxAgeSeconds 10,
           ss404Handler = Just missing
         }
   where
@@ -48,4 +48,4 @@ missing :: Application
 missing _ respond = respond $ responseFile status404 headers file Nothing
   where
     headers = [("Content-Type", "text/html")]
-    file = "_site/errors/missing.html"
+    file = "_site/server/errors/missing.html"
