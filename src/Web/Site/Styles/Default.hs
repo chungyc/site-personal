@@ -3,16 +3,16 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: yoo.chul.chung@gmail.com
-module Web.Site.Style (defaultStyle) where
+module Web.Site.Styles.Default (style) where
 
-import Clay
+import Clay hiding (style)
 import Clay.Media qualified as Media
 import Prelude hiding (rem)
 
 -- |
 -- Default style for Clay to render into a stylesheet.
-defaultStyle :: Css
-defaultStyle = do
+style :: Css
+style = do
   html ? do
     fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
     textRendering optimizeLegibility
@@ -38,9 +38,6 @@ defaultStyle = do
   article |> section # ".byline" ? do
     fontFamily ["Verdana"] [sansSerif, serif, monospace]
     fontSize $ rem 0.7
-
-  -- For single letters used like a big image all by itself.
-  ".letter-image" ? fontSize (cm 10)
 
   query Media.screen [Media.minWidth $ cm 21] $ do
     body ? do
