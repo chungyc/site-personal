@@ -3,6 +3,7 @@ html
 {
   font-family    : "Georgia","Garamond", serif,sans-serif,monospace;
   text-rendering : optimizeLegibility;
+  text-align     : justify;
 }
 
 body

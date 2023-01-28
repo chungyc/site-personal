@@ -16,6 +16,7 @@ style = do
   html ? do
     fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
     textRendering optimizeLegibility
+    textAlign justify
 
   body ? do
     marginTop $ rem 2
