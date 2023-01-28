@@ -31,5 +31,6 @@ rules = do
     compile $
       pandocCompiler
         >>= loadAndApplyTemplate "templates/update.html" defaultContext
+        >>= saveSnapshot "content"
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls

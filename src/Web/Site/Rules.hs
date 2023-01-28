@@ -30,7 +30,13 @@ rules = do
 
   match "index.html" $ do
     route idRoute
-    compile $
+    compile $ do
+      updates <- fmap (take 1) . recentFirst =<< loadAllSnapshots "update/**" "content"
+      let indexContext =
+            if null updates
+              then defaultContext
+              else listField "latest-update" defaultContext (return updates) <> defaultContext
       getResourceBody
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= applyAsTemplate indexContext
+        >>= loadAndApplyTemplate "templates/default.html" indexContext
         >>= relativizeUrls

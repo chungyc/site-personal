@@ -31,6 +31,7 @@ library
       Web.Site.Rules.Update
       Web.Site.Styles.Default
       Web.Site.Styles.Error
+      Web.Site.Styles.Front
   other-modules:
       Paths_personal
   hs-source-dirs:

@@ -17,6 +17,8 @@ style = do
     fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
     textRendering optimizeLegibility
     textAlign justify
+    color black
+    backgroundColor white
 
   body ? do
     marginTop $ rem 2
@@ -50,29 +52,29 @@ headings :: Css
 headings = do
   h1 ? do
     fontFamily ["Courier New"] [monospace, sansSerif]
-    fontSize $ rem 1.5
+    fontSize $ rem 2
     fontStyle italic
     fontColor $ headingColor 1
 
   h2 ? do
     common
     level 2
-    fontSize $ rem 1.3
+    fontSize $ rem 1.8
 
   h3 ? do
     common
     level 3
-    fontSize $ rem 1.2
+    fontSize $ rem 1.5
 
   h4 ? do
     common
     level 4
-    fontSize $ rem 1.1
+    fontSize $ rem 1.25
 
   h5 ? do
     common
     level 5
-    fontSize $ rem 1.05
+    fontSize $ rem 1.1
 
   h6 ? do
     common

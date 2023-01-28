@@ -1,9 +1,11 @@
 
 html
 {
-  font-family    : "Georgia","Garamond", serif,sans-serif,monospace;
-  text-rendering : optimizeLegibility;
-  text-align     : justify;
+  font-family      : "Georgia","Garamond", serif,sans-serif,monospace;
+  text-rendering   : optimizeLegibility;
+  text-align       : justify;
+  color            : #000000;
+  background-color : #ffffff;
 }
 
 body
@@ -17,7 +19,7 @@ body
 h1
 {
   font-family : "Courier New", monospace,sans-serif;
-  font-size   : 1.5rem;
+  font-size   : 2rem;
   font-style  : italic;
   color       : #14146e;
 }
@@ -29,7 +31,7 @@ h2
   text-decoration-line  : underline;
   text-decoration-style : dotted;
   color                 : #282878;
-  font-size             : 1.3rem;
+  font-size             : 1.8rem;
 }
 
 h3
@@ -39,7 +41,7 @@ h3
   text-decoration-line  : underline;
   text-decoration-style : dotted;
   color                 : #3c3c82;
-  font-size             : 1.19999rem;
+  font-size             : 1.5rem;
 }
 
 h4
@@ -49,7 +51,7 @@ h4
   text-decoration-line  : underline;
   text-decoration-style : dotted;
   color                 : #50508c;
-  font-size             : 1.1rem;
+  font-size             : 1.25rem;
 }
 
 h5
@@ -59,7 +61,7 @@ h5
   text-decoration-line  : underline;
   text-decoration-style : dotted;
   color                 : #646496;
-  font-size             : 1.05rem;
+  font-size             : 1.1rem;
 }
 
 h6

@@ -29,10 +29,9 @@ to use Haskell for something I use.  It also means it would be a lot
 easier to extend the site to support various things I would like it to include.
 
 I'm even using this as an opportunity to use a Haskell-based CSS preprocessor, [Clay].
-This also means that the style is rather minimal, since I don't have the
-experience or time to create beautiful styles for web sites.
-Surprisingly, I'm prety happy with the minimal look;
-I might keep it the way it is now,
+This also means that the style is exteremly minimal,
+since I don't have the experience or time to create beautiful styles for web sites.
+Surprisingly, I'm prety happy with the minimal look; I might keep it the way it is now,
 or I might change it little by little until it is a lot more polished.
 
 [Clay]: http://fvisser.nl/clay/
