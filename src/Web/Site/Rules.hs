@@ -26,7 +26,7 @@ rules = do
   match "errors/missing.html" $ do
     route idRoute
     compile $
-      pandocCompiler
+      getResourceBody
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
@@ -39,17 +39,7 @@ rules = do
 
   match "index.html" $ do
     route idRoute
-    compile $ do
-      posts <- recentFirst =<< loadAll "posts/*"
-      let indexCtx =
-            listField "posts" postCtx (return posts) <> defaultContext
-
+    compile $
       getResourceBody
-        >>= applyAsTemplate indexCtx
-        >>= loadAndApplyTemplate "templates/default.html" indexCtx
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
-
-postCtx :: Context String
-postCtx =
-  dateField "date" "%B %e, %Y"
-    <> defaultContext
