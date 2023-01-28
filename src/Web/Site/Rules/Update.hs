@@ -3,7 +3,7 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: yoo.chul.chung@gmail.com
-module Web.Site.Rules.Update (rules) where
+module Web.Site.Rules.Update (rules, withLatest) where
 
 import Hakyll
 import Web.Site.Routes
@@ -34,3 +34,12 @@ rules = do
         >>= saveSnapshot "content"
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
+
+withLatest :: (Context String -> Compiler (Item String)) -> Compiler (Item String)
+withLatest f = do
+  updates <- fmap (take 1) . recentFirst =<< loadAllSnapshots "update/**" "content"
+  let indexContext =
+        if null updates
+          then defaultContext
+          else listField "latest-update" defaultContext (return updates) <> defaultContext
+  f indexContext
