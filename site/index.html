@@ -2,6 +2,7 @@
 title: Yoo Chung
 standalone-title: true
 extra-stylesheet: /css/front.css
+include-latest-update: true
 ---
 
 My name is Yoo Chung, and this is my web site.
@@ -28,6 +29,7 @@ My name is Yoo Chung, and this is my web site.
 
 <p>This is a level 6 section.</p>
 
+$if(include-latest-update)$
 $if(latest-update)$
 <div class="latest-update">
     <h2>Latest update</h2>
@@ -36,4 +38,5 @@ $if(latest-update)$
     $body$
     $endfor$
 </div>
+$endif$
 $endif$
