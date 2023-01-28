@@ -39,6 +39,9 @@ defaultStyle = do
     fontFamily ["Verdana"] [sansSerif, serif, monospace]
     fontSize $ rem 0.7
 
+  -- For single letters used like a big image all by itself.
+  ".letter-image" ? fontSize (cm 10)
+
   query Media.screen [Media.minWidth $ cm 21] $ do
     body ? do
       width $ cm 20

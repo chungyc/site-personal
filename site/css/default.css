@@ -94,6 +94,11 @@ article > section.byline
   font-size   : 0.69999rem;
 }
 
+.letter-image
+{
+  font-size : 10cm;
+}
+
 @media screen and (min-width: 21cm)
 {
 
