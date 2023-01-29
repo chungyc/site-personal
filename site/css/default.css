@@ -1,11 +1,9 @@
 
 html
 {
-  font-family      : "Georgia","Garamond", serif,sans-serif,monospace;
-  text-rendering   : optimizeLegibility;
-  text-align       : justify;
-  color            : #000000;
-  background-color : #ffffff;
+  font-family    : "Georgia","Garamond", serif,sans-serif,monospace;
+  text-rendering : optimizeLegibility;
+  text-align     : justify;
 }
 
 body
@@ -21,56 +19,45 @@ h1
   font-family : "Courier New", monospace,sans-serif;
   font-size   : 2rem;
   font-style  : italic;
-  color       : #14146e;
 }
 
 h2
 {
   font-family           : "Courier New", monospace,sans-serif;
-  color                 : #191970;
   text-decoration-line  : underline;
   text-decoration-style : dotted;
-  color                 : #282878;
   font-size             : 1.8rem;
 }
 
 h3
 {
   font-family           : "Courier New", monospace,sans-serif;
-  color                 : #191970;
   text-decoration-line  : underline;
   text-decoration-style : dotted;
-  color                 : #3c3c82;
   font-size             : 1.5rem;
 }
 
 h4
 {
   font-family           : "Courier New", monospace,sans-serif;
-  color                 : #191970;
   text-decoration-line  : underline;
   text-decoration-style : dotted;
-  color                 : #50508c;
   font-size             : 1.25rem;
 }
 
 h5
 {
   font-family           : "Courier New", monospace,sans-serif;
-  color                 : #191970;
   text-decoration-line  : underline;
   text-decoration-style : dotted;
-  color                 : #646496;
   font-size             : 1.1rem;
 }
 
 h6
 {
   font-family           : "Courier New", monospace,sans-serif;
-  color                 : #191970;
   text-decoration-line  : underline;
   text-decoration-style : dotted;
-  color                 : #7878a0;
 }
 
 footer
@@ -114,6 +101,86 @@ body
   width        : 20cm;
   margin-right : auto;
   margin-left  : auto;
+}
+
+}
+@media all and (prefers-color-scheme: light)
+{
+
+html
+{
+  color            : #000000;
+  background-color : #ffffff;
+}
+
+h1
+{
+  color : #14146e;
+}
+
+h2
+{
+  color : #282878;
+}
+
+h3
+{
+  color : #3c3c82;
+}
+
+h4
+{
+  color : #50508c;
+}
+
+h5
+{
+  color : #646496;
+}
+
+h6
+{
+  color : #7878a0;
+}
+
+}
+@media all and (prefers-color-scheme: dark)
+{
+
+html
+{
+  color            : #ffffff;
+  background-color : #000000;
+}
+
+h1
+{
+  color : #ebeb91;
+}
+
+h2
+{
+  color : #d7d787;
+}
+
+h3
+{
+  color : #c3c37d;
+}
+
+h4
+{
+  color : #afaf73;
+}
+
+h5
+{
+  color : #9b9b69;
+}
+
+h6
+{
+  color : #87875f;
 }
 
 }

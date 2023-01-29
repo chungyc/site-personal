@@ -17,8 +17,6 @@ style = do
     fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
     textRendering optimizeLegibility
     textAlign justify
-    color black
-    backgroundColor white
 
   body ? do
     marginTop $ rem 2
@@ -51,44 +49,68 @@ style = do
       marginRight auto
       marginLeft auto
 
+  query Media.all [Media.prefersColorScheme Media.light] lightColorScheme
+
+  query Media.all [Media.prefersColorScheme Media.dark] darkColorScheme
+
 headings :: Css
 headings = do
   h1 ? do
     fontFamily ["Courier New"] [monospace, sansSerif]
     fontSize $ rem 2
     fontStyle italic
-    fontColor $ headingColor 1
 
   h2 ? do
     common
-    level 2
     fontSize $ rem 1.8
 
   h3 ? do
     common
-    level 3
     fontSize $ rem 1.5
 
   h4 ? do
     common
-    level 4
     fontSize $ rem 1.25
 
   h5 ? do
     common
-    level 5
     fontSize $ rem 1.1
 
-  h6 ? do
-    common
-    level 6
+  h6 ? common
   where
     common = do
       fontFamily ["Courier New"] [monospace, sansSerif]
-      fontColor midnightblue
       textDecorationLine underline
       textDecorationStyle dotted
 
-    level n = fontColor $ headingColor n
+-- | Color scheme to use in light mode.
+lightColorScheme :: Css
+lightColorScheme = do
+  html ? do
+    color black
+    backgroundColor white
 
+  h1 ? fontColor (headingColor 1)
+  h2 ? fontColor (headingColor 2)
+  h3 ? fontColor (headingColor 3)
+  h4 ? fontColor (headingColor 4)
+  h5 ? fontColor (headingColor 5)
+  h6 ? fontColor (headingColor 6)
+  where
     headingColor n = rgb (n * 20) (n * 20) (100 + n * 10)
+
+-- | Color scheme to use in dark mode.
+darkColorScheme :: Css
+darkColorScheme = do
+  html ? do
+    color white
+    backgroundColor black
+
+  h1 ? fontColor (headingColor 1)
+  h2 ? fontColor (headingColor 2)
+  h3 ? fontColor (headingColor 3)
+  h4 ? fontColor (headingColor 4)
+  h5 ? fontColor (headingColor 5)
+  h6 ? fontColor (headingColor 6)
+  where
+    headingColor n = rgb (255 - n * 20) (255 - n * 20) (155 - n * 10)
