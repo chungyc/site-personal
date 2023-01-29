@@ -42,10 +42,10 @@ style = do
     fontFamily ["Verdana"] [sansSerif, serif, monospace]
     fontSize $ rem 0.7
 
-  query Media.screen [Media.maxWidth $ cm 5] $ do
+  query Media.all [Media.maxWidth $ cm 5] $ do
     body ? sym margin nil
 
-  query Media.screen [Media.minWidth $ cm 21] $ do
+  query Media.all [Media.minWidth $ cm 21] $ do
     body ? do
       width $ cm 20
       marginRight auto

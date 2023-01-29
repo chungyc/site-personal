@@ -97,7 +97,7 @@ article > section.byline
   font-size   : 0.69999rem;
 }
 
-@media screen and (max-width: 5cm)
+@media all and (max-width: 5cm)
 {
 
 body
@@ -106,7 +106,7 @@ body
 }
 
 }
-@media screen and (min-width: 21cm)
+@media all and (min-width: 21cm)
 {
 
 body

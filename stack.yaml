@@ -2,6 +2,7 @@
 resolver: lts-20.8
 
 extra-deps:
-- clay-0.14.0
+- git: git@github.com:chungyc/clay.git
+  commit: b3e84fa3bfdb5e33b289856078875a791bbf39a7
 
 allow-newer: true
