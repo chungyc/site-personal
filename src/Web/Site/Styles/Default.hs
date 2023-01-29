@@ -7,7 +7,7 @@ module Web.Site.Styles.Default (style) where
 
 import Clay hiding (style)
 import Clay.Media qualified as Media
-import Prelude hiding (rem)
+import Prelude hiding (div, not, rem)
 
 -- |
 -- Default style for Clay to render into a stylesheet.
@@ -17,6 +17,7 @@ style = do
     fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
     textRendering optimizeLegibility
     textAlign justify
+    lineHeight $ unitless 1.25
 
   body ? do
     marginTop $ rem 2
@@ -39,6 +40,8 @@ style = do
   article |> section # ".byline" ? do
     fontFamily ["Verdana"] [sansSerif, serif, monospace]
     fontSize $ rem 0.7
+
+  li |+ li ? marginTop (rem 0.75)
 
   query Media.all [Media.maxWidth $ cm 5] $ do
     body ? sym margin nil

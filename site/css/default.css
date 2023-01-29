@@ -4,6 +4,7 @@ html
   font-family    : "Georgia","Garamond", serif,sans-serif,monospace;
   text-rendering : optimizeLegibility;
   text-align     : justify;
+  line-height    : 1.25;
 }
 
 body
@@ -82,6 +83,11 @@ article > section.byline
 {
   font-family : "Verdana", sans-serif,serif,monospace;
   font-size   : 0.69999rem;
+}
+
+li + li
+{
+  margin-top : 0.75rem;
 }
 
 @media all and (max-width: 5cm)
