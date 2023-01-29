@@ -56,6 +56,7 @@ style = do
 
   query Media.all [Media.prefersColorScheme Media.dark] darkColorScheme
 
+-- | Styles for headings.
 headings :: Css
 headings = do
   h1 ? do
