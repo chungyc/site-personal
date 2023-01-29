@@ -2,7 +2,7 @@
 resolver: lts-20.8
 
 extra-deps:
-- git: git@github.com:chungyc/clay.git
+- git: https://github.com/chungyc/clay.git
   commit: 452115da3546051c6f250b7c1897a2c0b0b93162
 
 allow-newer: true
