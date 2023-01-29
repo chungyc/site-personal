@@ -19,6 +19,9 @@
     $if(extra-stylesheet)$
     <link rel="stylesheet" href="$extra-stylesheet$" />
     $endif$
+    $if(rss-feed-link)$
+    <link rel="alternate" type="application/rss+xml" title="Updates from Yoo Chung" href="$rss-feed-link$" />
+    $endif$
 </head>
 
 <body>
