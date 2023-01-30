@@ -130,6 +130,17 @@ html
   background-color : #ffffff;
 }
 
+
+a :link
+{
+  color : #0000ff;
+}
+
+a :visited
+{
+  color : #800080;
+}
+
 h1
 {
   color : #14146e;
@@ -168,6 +179,17 @@ html
 {
   color            : #ffffff;
   background-color : #000000;
+}
+
+
+a :link
+{
+  color : #00ffff;
+}
+
+a :visited
+{
+  color : #ffc0cb;
 }
 
 h1

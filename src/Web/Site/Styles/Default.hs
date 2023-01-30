@@ -101,6 +101,10 @@ lightColorScheme = do
     color black
     backgroundColor white
 
+  a ? do
+    ":link" ? color blue
+    ":visited" ? color purple
+
   h1 ? fontColor (headingColor 1)
   h2 ? fontColor (headingColor 2)
   h3 ? fontColor (headingColor 3)
@@ -116,6 +120,10 @@ darkColorScheme = do
   html ? do
     color white
     backgroundColor black
+
+  a ? do
+    ":link" ? color cyan
+    ":visited" ? color pink
 
   h1 ? fontColor (headingColor 1)
   h2 ? fontColor (headingColor 2)
