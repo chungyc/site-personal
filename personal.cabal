@@ -87,19 +87,3 @@ executable style
     , personal
     , text
   default-language: GHC2021
-
-test-suite test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_personal
-  hs-source-dirs:
-      test
-  default-extensions:
-      OverloadedStrings
-  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base
-    , hspec
-    , personal
-  default-language: GHC2021
