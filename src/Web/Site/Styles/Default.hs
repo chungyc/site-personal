@@ -101,9 +101,8 @@ lightColorScheme = do
     color black
     backgroundColor white
 
-  a ? do
-    ":link" ? color blue
-    ":visited" ? color purple
+  a # link ? color blue
+  a # visited ? color purple
 
   h1 ? fontColor (headingColor 1)
   h2 ? fontColor (headingColor 2)
@@ -121,9 +120,8 @@ darkColorScheme = do
     color white
     backgroundColor black
 
-  a ? do
-    ":link" ? color cyan
-    ":visited" ? color pink
+  a # link ? color cyan
+  a # visited ? color pink
 
   h1 ? fontColor (headingColor 1)
   h2 ? fontColor (headingColor 2)

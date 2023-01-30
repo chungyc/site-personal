@@ -130,13 +130,12 @@ html
   background-color : #ffffff;
 }
 
-
-a :link
+a:link
 {
   color : #0000ff;
 }
 
-a :visited
+a:visited
 {
   color : #800080;
 }
@@ -181,13 +180,12 @@ html
   background-color : #000000;
 }
 
-
-a :link
+a:link
 {
   color : #00ffff;
 }
 
-a :visited
+a:visited
 {
   color : #ffc0cb;
 }
