@@ -1,13 +1,13 @@
 ---
 title: Rebuilding the web site
-published: 2023-01-27
+published: 2023-02-01
 ---
 
 I am completely rebuilding my web site from scratch.
 The previous one was becoming hopelessly out of date due to lack of updates.
 I also decided its structure didn't satisfy what I wanted from my personal web site.
 
-There are two problems with the previous web site that I want to deal with:
+There were two problems with the previous web site that I want to deal with:
 
 *   It was structured more like a blog instead of a more general web site.
     While this was fine in its early days when I regularly posted updates,
