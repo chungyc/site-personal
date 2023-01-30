@@ -1,6 +1,6 @@
 ---
 title: About
-description: About Yoo Chul Chung
+description: Information about Yoo Chul Chung.
 ---
 
 ## Name
@@ -23,3 +23,9 @@ I currently live in New York with my beautiful wife and daughter.
 
 [Google]: https://google.com/
 [KAIST]: https://kaist.ac.kr/
+
+## Contact
+
+I use multiple email addresses for different purposes.
+If you would like to contact me via email from this web site,
+you can send email to <code>web@chungyc.org</code>.

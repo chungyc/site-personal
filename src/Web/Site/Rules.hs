@@ -2,7 +2,7 @@
 -- Description: Rules for generating the web site.
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
--- Maintainer: yoo.chul.chung@gmail.com
+-- Maintainer: web@chungyc.org
 module Web.Site.Rules (rules) where
 
 import Hakyll
@@ -21,7 +21,7 @@ rules = do
 
   match "templates/*" $ compile templateBodyCompiler
 
-  match (fromList ["about.markdown", "contact.markdown"]) $ do
+  match (fromList ["about.markdown"]) $ do
     route stripExtension
     compile $
       pandocCompiler

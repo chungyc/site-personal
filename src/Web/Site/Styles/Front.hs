@@ -2,7 +2,7 @@
 -- Description: Extra stylesheet generation for front page.
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
--- Maintainer: yoo.chul.chung@gmail.com
+-- Maintainer: web@chungyc.org
 module Web.Site.Styles.Front (style) where
 
 import Clay hiding (style)

@@ -12,7 +12,7 @@ category:       Personal
 homepage:       https://chungyc.org/
 bug-reports:    https://github.com/chungyc/site-personal/issues
 author:         Yoo Chung
-maintainer:     yoo.chul.chung@gmail.com
+maintainer:     web@chungyc.org
 copyright:      Copyright (C) 2023 Yoo Chung
 license:        AllRightsReserved
 build-type:     Simple
