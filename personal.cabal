@@ -27,6 +27,7 @@ library
       Web.Site.Routes
       Web.Site.Rules
       Web.Site.Rules.File
+      Web.Site.Rules.Publication
       Web.Site.Rules.Server
       Web.Site.Rules.Update
       Web.Site.Styles.Default

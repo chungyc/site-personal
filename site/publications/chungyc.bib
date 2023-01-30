@@ -1,0 +1,16 @@
+@inproceedings{chungyc:gc-sweep2000,
+  author    = {Chung, Yoo C. and Moon, Soo-Mook and Ebcio\u{g}lu, Kemal and Sahlin, Dan},
+  title     = {Reducing Sweep Time for a Nearly Empty Heap},
+  year      = {2000},
+  isbn      = {1581131259},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/325694.325744},
+  doi       = {10.1145/325694.325744},
+  abstract  = {Mark and sweep garbage collectors are known for using time proportional to the heap size when sweeping memory, since all objects in the heap, regardless of whether they are live or not, must be visited in order to reclaim the memory occupied by dead objects. This paper introduces a sweeping method which traverses only the live objects, so that sweeping can be done in time dependent only on the number of live objects in the heap.This allows each collection to use time independent of the size of the heap, which can result in a large reduction of overall garbage collection time in empty heaps. Unfortunately, the algorithm used may slow down overall garbage collection if the heap is not so empty. So a way to select the sweeping algorithm depending on the heap occupancy is introduced, which can avoid any significant slowdown.},
+  booktitle = {Proceedings of the 27th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+  pages     = {378--389},
+  numpages  = {12},
+  location  = {Boston, MA, USA},
+  series    = {POPL '00}
+}

@@ -8,6 +8,7 @@ module Web.Site.Rules (rules) where
 import Hakyll
 import Web.Site.Routes
 import Web.Site.Rules.File qualified as File
+import Web.Site.Rules.Publication qualified as Publication
 import Web.Site.Rules.Server qualified as Server
 import Web.Site.Rules.Update qualified as Update
 
@@ -18,6 +19,7 @@ rules = do
   Server.rules
   File.rules
   Update.rules
+  Publication.rules
 
   match "templates/*" $ compile templateBodyCompiler
 
