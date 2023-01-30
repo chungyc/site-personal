@@ -7,6 +7,3 @@ AddDefaultCharset utf-8
 </FilesMatch>
 
 ErrorDocument 404 /server/errors/missing.html
-
-RewriteEngine On
-RewriteRule ^server(/|$) - [F]
