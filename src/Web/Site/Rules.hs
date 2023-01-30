@@ -26,7 +26,6 @@ rules = do
     compile $
       pandocCompiler
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
-        >>= relativizeUrls
 
   match "index.html" $ do
     route idRoute
@@ -34,4 +33,3 @@ rules = do
       getResourceBody
         >>= applyAsTemplate indexContext
         >>= loadAndApplyTemplate "templates/default.html" indexContext
-        >>= relativizeUrls

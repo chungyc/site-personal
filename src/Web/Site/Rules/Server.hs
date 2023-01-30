@@ -18,4 +18,3 @@ rules = do
     compile $
       getResourceBody
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
-        >>= relativizeUrls

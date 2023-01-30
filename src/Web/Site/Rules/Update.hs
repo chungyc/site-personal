@@ -26,7 +26,6 @@ rules = do
       makeItem ""
         >>= loadAndApplyTemplate "templates/updates.html" updatesContext
         >>= loadAndApplyTemplate "templates/default.html" updatesContext
-        >>= relativizeUrls
 
   -- Individual update page.
   match "update/**" $ do
@@ -36,7 +35,6 @@ rules = do
         >>= saveSnapshot "content"
         >>= loadAndApplyTemplate "templates/update.html" defaultContext
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
-        >>= relativizeUrls
 
   -- RSS feed for updates.
   create ["updates.xml"] $ do
