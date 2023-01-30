@@ -1,3 +1,5 @@
+Options -Indexes
+
 AddDefaultCharset utf-8
 
 <FilesMatch "^[^.]+$">
@@ -6,8 +8,5 @@ AddDefaultCharset utf-8
 
 ErrorDocument 404 /server/errors/missing.html
 
-<Location "/server/errors/">
-    RewriteEngine On
-    RewriteCond %{ENV:REDIRECT_STATUS} =""
-    RewriteRule .* - [R=404,L]
-</Location>
+RewriteEngine On
+RewriteRule ^server(/|$) - [F]
