@@ -20,7 +20,7 @@ $if(latest-update)$
     <h2>Latest update</h2>
     $for(latest-update)$
     <h3>$title$</h3>
-    $body$
+    $partial("templates/update.html")$
     $endfor$
 </div>
 $endif$

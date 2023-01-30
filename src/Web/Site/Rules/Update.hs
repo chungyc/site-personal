@@ -16,7 +16,7 @@ rules = do
   create ["updates"] $ do
     route idRoute
     compile $ do
-      updates <- recentFirst =<< loadAll "update/**"
+      updates <- recentFirst =<< loadAllSnapshots "update/**" "content"
       let updatesContext =
             listField "updates" defaultContext (return updates)
               <> constField "title" "Updates"
@@ -33,8 +33,8 @@ rules = do
     route stripExtension
     compile $
       pandocCompiler
-        >>= loadAndApplyTemplate "templates/update.html" defaultContext
         >>= saveSnapshot "content"
+        >>= loadAndApplyTemplate "templates/update.html" defaultContext
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
@@ -64,5 +64,5 @@ updateFeedConfiguration =
       feedDescription = "Occasional personal updates from Yoo Chung.",
       feedAuthorName = "Yoo Chung",
       feedAuthorEmail = "web@chungyc.org",
-      feedRoot = "https://chungyc.org/updates"
+      feedRoot = "https://chungyc.org"
     }
