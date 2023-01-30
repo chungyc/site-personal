@@ -12,9 +12,10 @@ import Clay.Media qualified as Media
 -- Style for front page which Clay will render into a stylesheet.
 style :: Css
 style = do
-  ".latest-update" ? do
-    sym margin $ em 2
-    sym padding $ em 2
+  query Media.all [Media.minWidth $ cm 10] $ do
+    ".latest-update" ? do
+      sym margin $ em 2
+      sym padding $ em 2
 
   query Media.all [Media.prefersColorScheme Media.light] $ do
     ".latest-update" ? do

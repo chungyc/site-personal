@@ -1,10 +1,14 @@
 
+@media all and (min-width: 10cm)
+{
+
 .latest-update
 {
   margin  : 2em 2em 2em 2em;
   padding : 2em 2em 2em 2em;
 }
 
+}
 @media all and (prefers-color-scheme: light)
 {
 
