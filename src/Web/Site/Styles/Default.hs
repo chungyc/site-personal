@@ -43,6 +43,13 @@ style = do
 
   li |+ li ? marginTop (rem 0.75)
 
+  dt ? do
+    fontWeight bold
+    marginBottom $ em 0.25
+
+  dd ? do
+    marginBottom $ em 1
+
   query Media.all [Media.maxWidth $ cm 5] $ do
     body ? sym margin nil
 

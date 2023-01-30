@@ -90,6 +90,17 @@ li + li
   margin-top : 0.75rem;
 }
 
+dt
+{
+  font-weight   : bold;
+  margin-bottom : 0.25em;
+}
+
+dd
+{
+  margin-bottom : 1em;
+}
+
 @media all and (max-width: 5cm)
 {
 

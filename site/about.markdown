@@ -1,17 +1,25 @@
 ---
 title: About
+description: About Yoo Chul Chung
 ---
-Nullam imperdiet sodales orci vitae molestie. Nunc quam orci, pharetra a
-rhoncus vitae, eleifend id felis. Suspendisse potenti. Etiam vitae urna orci.
-Quisque pellentesque dignissim felis, egestas tempus urna luctus vitae. In hac
-habitasse platea dictumst. Morbi fringilla mattis odio, et mattis tellus
-accumsan vitae.
 
-1. Amamus Unicode 碁
-2. Interdum nex magna.
+## Name
 
-Vivamus eget mauris sit amet nulla laoreet lobortis. Nulla in diam elementum
-risus convallis commodo. Cras vehicula varius dui vitae facilisis. Proin
-elementum libero eget leo aliquet quis euismod orci vestibulum. Duis rhoncus
-lorem consequat tellus vestibulum aliquam. Quisque orci orci, malesuada porta
-blandit et, interdum nec magna.
+Like most human beings, I do have a name.
+I also have two ways to write my name in two different writing systems.
+
+Yoo Chul Chung
+:   name in English
+
+정유철
+:   name in Korean
+
+## Life
+
+I work as a software engineer at [Google].
+I have a doctorate in computer science from [KAIST].
+My childhood was divided between California and Korea.
+I currently live in New York with my beautiful wife and daughter.
+
+[Google]: https://google.com/
+[KAIST]: https://kaist.ac.kr/
