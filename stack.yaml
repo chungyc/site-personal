@@ -1,5 +1,4 @@
-# Resolver to choose a 'specific' stackage snapshot or a compiler version.
-resolver: lts-20.8
+resolver: lts-20.9
 
 extra-deps:
 - git: https://github.com/chungyc/clay.git

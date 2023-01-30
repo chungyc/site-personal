@@ -39,7 +39,7 @@ rules = do
         >>= relativizeUrls
 
   -- RSS feed for updates.
-  create ["updates.rss"] $ do
+  create ["updates.xml"] $ do
     route idRoute
     compile $ do
       let feedContext = bodyField "description" <> defaultContext
