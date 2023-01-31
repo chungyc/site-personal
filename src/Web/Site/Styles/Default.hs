@@ -35,7 +35,7 @@ style = do
 
   footer |> nav ? do
     paddingTop $ rem 1
-    a ? paddingRight (rem 2)
+    a ? paddingRight (rem 1)
 
   article |> section # ".byline" ? do
     fontFamily ["Verdana"] [sansSerif, serif, monospace]
