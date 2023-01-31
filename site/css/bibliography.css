@@ -1,0 +1,28 @@
+
+div.csl-bib-body
+{
+  padding-top    : 1rem;
+  padding-bottom : 1rem;
+}
+
+div.csl-bib-body div.csl-entry
+{
+  margin-top    : 1rem;
+  margin-bottom : 1rem;
+}
+
+div.csl-bib-body div.csl-entry div.csl-left-margin
+{
+  float      : left;
+  width      : 3rem;
+  text-align : right;
+}
+
+div.csl-bib-body div.csl-entry div.csl-right-inline
+{
+  margin-left  : 3rem;
+  padding-left : 1rem;
+}
+
+
+/* Generated with Clay, http://fvisser.nl/clay */

@@ -7,6 +7,7 @@ module Main (main) where
 
 import Clay
 import Data.Text.Lazy.IO (writeFile)
+import Web.Site.Styles.Bibliography qualified as Bibliography
 import Web.Site.Styles.Default qualified as Default
 import Web.Site.Styles.Error qualified as Error
 import Web.Site.Styles.Front qualified as Front
@@ -17,6 +18,7 @@ main = do
   writeStylesheet "site/css/default.css" Default.style
   writeStylesheet "site/css/error.css" Error.style
   writeStylesheet "site/css/front.css" Front.style
+  writeStylesheet "site/css/bibliography.css" Bibliography.style
 
 -- |
 -- Write the stylesheet rendered from the given style to the given file path.

@@ -30,6 +30,7 @@ library
       Web.Site.Rules.Publication
       Web.Site.Rules.Server
       Web.Site.Rules.Update
+      Web.Site.Styles.Bibliography
       Web.Site.Styles.Default
       Web.Site.Styles.Error
       Web.Site.Styles.Front
