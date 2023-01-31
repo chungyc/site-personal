@@ -29,3 +29,11 @@ I currently live in New York with my beautiful wife and daughter.
 I use multiple email addresses for different purposes.
 If you would like to contact me via email from this web site,
 you can send email to <code>web@chungyc.org</code>.
+
+## Site
+
+This site is generated with [Hakyll] and [Clay], courtesy of [Haskell].
+
+[Clay]: http://fvisser.nl/clay/
+[Hakyll]: https://jaspervdj.be/hakyll/
+[Haskell]: https://www.haskell.org/
