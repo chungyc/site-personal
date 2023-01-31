@@ -1,0 +1,21 @@
+on: [push]
+name: Build
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: haskell/actions/setup@v2
+        with:
+          enable-stack: true
+
+      - id: cache-dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.stack
+          key: stack-${{ runner.os }}-${{ hashFiles('package.yaml', 'stack.yaml') }}
+
+      - run: stack test
