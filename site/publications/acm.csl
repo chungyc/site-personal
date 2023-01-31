@@ -113,8 +113,9 @@
   </citation>
   <bibliography second-field-align="flush" entry-spacing="0">
     <sort>
+      <!-- By chungyc: Custom sorting order for personal publications page. -->
+      <key variable="issued" sort="descending"/>
       <key macro="author"/>
-      <key variable="issued"/>
     </sort>
     <layout>
       <text variable="citation-number" prefix="[" suffix="]"/>
