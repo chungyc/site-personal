@@ -21,12 +21,15 @@ I have a doctorate in computer science from [KAIST].
 My childhood was divided between California and Korea.
 I currently live in New York with my beautiful wife and daughter.
 
+[Google]: https://google.com/
+[KAIST]: https://kaist.ac.kr/
+
 ## Links
 
 *   List of [publications](/publications)
-
-[Google]: https://google.com/
-[KAIST]: https://kaist.ac.kr/
+*   <a href="https://github.com/chungyc">GitHub</a>
+*   <a href="https://linkedin.com/in/chungyc">LinkedIn</a>
+*   <a href="https://www.goodreads.com/chungyc">GoodReads</a>
 
 ## Contact
 
