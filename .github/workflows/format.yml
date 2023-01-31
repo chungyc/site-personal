@@ -1,5 +1,5 @@
 on: [push]
-name: Format
+name: Ormolu
 jobs:
   ormolu:
     runs-on: ubuntu-latest
