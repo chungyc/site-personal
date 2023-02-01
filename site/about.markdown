@@ -40,6 +40,8 @@ you can send email to <code>web@chungyc.org</code>.
 ## Site
 
 This site is generated with [Hakyll] and [Clay], courtesy of [Haskell].
+If you are curious about how it is generated,
+the source is on [GitHub](https://github.com/chungyc/site-personal).
 
 [Clay]: http://fvisser.nl/clay/
 [Hakyll]: https://jaspervdj.be/hakyll/
