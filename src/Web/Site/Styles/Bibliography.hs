@@ -20,6 +20,9 @@ style = do
       marginTop $ rem 1
       marginBottom $ rem 1
 
+      -- When width is small, break long URLs.
+      overflowWrap breakWord
+
       div # ".csl-left-margin" ? do
         float floatLeft
         width $ rem 3
