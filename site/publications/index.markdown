@@ -1,5 +1,5 @@
 ---
-title: Publications from Yoo
+title: Publications
 extra-stylesheet: /css/bibliography.css
 ---
 
