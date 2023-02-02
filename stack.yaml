@@ -1,7 +1,7 @@
 resolver: lts-20.9
 
 extra-deps:
-- git: https://github.com/chungyc/clay.git
-  commit: 452115da3546051c6f250b7c1897a2c0b0b93162
+- git: https://github.com/sebastiaanvisser/clay.git
+  commit: f162121b4dcccdab01dbedf4b4144f2d8d13a2a6
 
 allow-newer: true
