@@ -11,4 +11,8 @@ import Web.Site.Rules (rules)
 -- |
 -- Configuration for Hakyll to generate the web site.
 config :: Configuration
-config = defaultConfiguration {providerDirectory = "site"}
+config =
+  defaultConfiguration
+    { providerDirectory = "site",
+      deployCommand = "rsync -avz --checksum _site/ chungyc.org:chungyc.org/"
+    }
