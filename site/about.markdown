@@ -26,6 +26,7 @@ I currently live in New York with my beautiful wife and daughter.
 
 ## Links
 
+*   Random [links](/links/) of personal interest
 *   List of [publications](/publications)
 *   <a href="https://github.com/chungyc">GitHub</a>
 *   <a href="https://linkedin.com/in/chungyc">LinkedIn</a>
@@ -35,7 +36,7 @@ I currently live in New York with my beautiful wife and daughter.
 
 I use multiple email addresses for different purposes.
 If you would like to contact me via email from this web site,
-you can send email to <code>web@chungyc.org</code>.
+you can send email to <web@chungyc.org>.
 
 ## Site
 

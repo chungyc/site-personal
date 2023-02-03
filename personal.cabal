@@ -27,6 +27,7 @@ library
       Web.Site.Routes
       Web.Site.Rules
       Web.Site.Rules.File
+      Web.Site.Rules.Link
       Web.Site.Rules.Publication
       Web.Site.Rules.Server
       Web.Site.Rules.Update
@@ -34,6 +35,7 @@ library
       Web.Site.Styles.Default
       Web.Site.Styles.Error
       Web.Site.Styles.Front
+      Web.Site.Styles.Links
   other-modules:
       Paths_personal
   hs-source-dirs:
@@ -44,6 +46,7 @@ library
   build-depends:
       base
     , clay
+    , filepath
     , hakyll
   default-language: GHC2021
 

@@ -1,0 +1,26 @@
+$if(description)$
+<p>$description$</p>
+$else$
+<p>Random links of interest to <a href="https://chungyc.org/">Yoo Chung</a>.</p>
+$endif$
+
+$if(subcategories)$
+<h2>Categories</h2>
+
+<dl>
+    $for(subcategories)$
+    <dt><a href="$url$">$title$</a></dt>
+
+    $if(description)$
+    <dd>$description$</dd>
+    $else$
+    <dd>$title$</dd>
+    $endif$
+
+    $endfor$
+</dl>
+$endif$
+
+<h2>Links</h2>
+
+$body$

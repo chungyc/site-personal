@@ -11,6 +11,7 @@ import Web.Site.Styles.Bibliography qualified as Bibliography
 import Web.Site.Styles.Default qualified as Default
 import Web.Site.Styles.Error qualified as Error
 import Web.Site.Styles.Front qualified as Front
+import Web.Site.Styles.Links qualified as Links
 import Prelude hiding (writeFile)
 
 main :: IO ()
@@ -18,6 +19,7 @@ main = do
   writeStylesheet "site/css/default.css" Default.style
   writeStylesheet "site/css/error.css" Error.style
   writeStylesheet "site/css/front.css" Front.style
+  writeStylesheet "site/css/links.css" Links.style
   writeStylesheet "site/css/bibliography.css" Bibliography.style
 
 -- |

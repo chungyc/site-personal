@@ -29,6 +29,7 @@ library:
   dependencies:
   - hakyll
   - clay
+  - filepath
 
 _exe-ghc-options: &exe-ghc-options
 - -threaded
