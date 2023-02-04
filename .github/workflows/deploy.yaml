@@ -26,7 +26,8 @@ jobs:
           key: stack-${{ hashFiles('package.yaml', 'stack.yaml') }}
           restore-keys: stack-
 
-      - uses: actions/cache@v3
+      - id: cache-build-objects
+        uses: actions/cache@v3
         with:
           path: .stack-work
           key: build-${{ hashFiles('app/**', 'src/**') }}
@@ -34,6 +35,10 @@ jobs:
 
       - run: stack build
 
+      - if: ${{ steps.cache-build-objects.outputs.cache-hit != 'true' }}
+        run: stack exec site rebuild
+
+      - if: ${{ steps.cache-build-objects.outputs.cache-hit == 'true' }}
       - run: stack exec site build
 
       - name: Run rsync
