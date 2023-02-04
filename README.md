@@ -11,6 +11,6 @@ The content is publicly visible for knowledge sharing, not for direct use by oth
 
 ## Status
 
-[![Build](https://github.com/chungyc/site-personal/actions/workflows/build.yml/badge.svg)](https://github.com/chungyc/site-personal/actions/workflows/build.yml)
-[![Ormolu](https://github.com/chungyc/site-personal/actions/workflows/ormolu.yml/badge.svg)](https://github.com/chungyc/site-personal/actions/workflows/ormolu.yml)
-[![HLint](https://github.com/chungyc/site-personal/actions/workflows/hlint.yml/badge.svg)](https://github.com/chungyc/site-personal/actions/workflows/hlint.yml)
+[![Build](https://github.com/chungyc/site-personal/actions/workflows/build.yaml/badge.svg)](https://github.com/chungyc/site-personal/actions/workflows/build.yaml)
+[![Ormolu](https://github.com/chungyc/site-personal/actions/workflows/ormolu.yaml/badge.svg)](https://github.com/chungyc/site-personal/actions/workflows/ormolu.yaml)
+[![HLint](https://github.com/chungyc/site-personal/actions/workflows/hlint.yaml/badge.svg)](https://github.com/chungyc/site-personal/actions/workflows/hlint.yaml)
