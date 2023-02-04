@@ -1,4 +1,11 @@
-on: workflow_dispatch
+on:
+  - workflow_dispatch
+  - push
+      branches:
+        - 'main'
+
+concurrency: deploy
+
 name: Deploy
 
 jobs:
@@ -6,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: haskell/actions/setup@v2
         with:
