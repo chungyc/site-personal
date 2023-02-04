@@ -36,4 +36,4 @@ jobs:
         env:
           CHUNGYC_SSH_PRIVATE_KEY: ${{ secrets.CHUNGYC_SSH_PRIVATE_KEY }}
           SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
-          RSYNC_RSH: ssh -o "echo ${SSH_KNOWN_HOSTS}"
+          RSYNC_RSH: ssh -o 'KnownHostsCommand "echo ${SSH_KNOWN_HOSTS}"'
