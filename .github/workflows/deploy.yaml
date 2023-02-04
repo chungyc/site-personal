@@ -36,7 +36,9 @@ jobs:
       - id: cache-site
         uses: actions/cache@v3
         with:
-          path: '["_site", "_cache"]'
+          path: |
+            _site
+            _cache
           key: site-${{ hashFiles('site/**') }}
           restore-keys: site-
 
