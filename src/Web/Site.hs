@@ -14,5 +14,5 @@ config :: Configuration
 config =
   defaultConfiguration
     { providerDirectory = "site",
-      deployCommand = "rsync -avz --checksum _site/ chungyc.org:chungyc.org/"
+      deployCommand = "rsync -avz --delete --checksum _site/ chungyc@chungyc.org:chungyc.org/"
     }
