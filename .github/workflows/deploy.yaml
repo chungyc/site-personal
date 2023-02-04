@@ -1,0 +1,35 @@
+on: workflow_dispatch
+name: Deploy
+
+jobs:
+  deploy:
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-haskell@v1.1
+        with:
+          enable-stack: true
+          stack-version: 'latest'
+      
+      - uses: actions/cache@v3
+        with:
+          path: ~/.stack
+          key: stack-${{ hashFiles('package.yaml', 'stack.yaml') }}
+
+      - uses: actions/cache@v3
+        with:
+          path: .stack-work
+          key: stack-work-${{ hashFiles('app/**', 'src/**') }}
+
+      - run: stack build
+
+      - run: stack exec site build
+
+      - run: |
+          eval $(ssh-agent -t 1800)
+          ssh-add - <<< ${CHUNGYC_SSH_PRIVATE_KEY}
+          stack exec site deploy
+        env:
+        - CHUNGYC_SSH_PRIVATE_KEY: ${{ secrets.CHUNGYC_SSH_PRIVATE_KEY }}
+        - SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        - RSYNC_RSH: ssh -o "echo ${SSH_KNOWN_HOSTS}"
