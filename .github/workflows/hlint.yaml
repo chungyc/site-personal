@@ -11,5 +11,5 @@ jobs:
 
     - uses: haskell/actions/hlint-run@v2
       with:
-        path: app/ src/
+        path: '["app/", "src/"]'
         fail-on: warning
