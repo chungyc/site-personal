@@ -6,6 +6,9 @@ description: References related to the Haskell programming language.
 [haskell.org](https://haskell.org/)
 :   All things Haskell.
 
+[Hackage](https://hackage.haskell.org/)
+:   Repository of open source Haskell software.
+
 [Hspec](https://hspec.github.io/)
 :   Easy to read testing framework which integrates HUnit and QuickCheck.
 
