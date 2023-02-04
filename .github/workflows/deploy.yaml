@@ -36,7 +36,8 @@ jobs:
 
       - run: stack exec site build
 
-      - run: |
+      - name: rsync
+        run: |
           eval $(ssh-agent -t 1800)
           ssh-add - <<< ${CHUNGYC_SSH_PRIVATE_KEY}
           mkdir ~/.ssh
