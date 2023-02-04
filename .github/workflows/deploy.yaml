@@ -32,7 +32,8 @@ jobs:
       - run: |
           eval $(ssh-agent -t 1800)
           ssh-add - <<< ${CHUNGYC_SSH_PRIVATE_KEY}
-          echo ${SSH_KNOWN_HOSTS} >> ~/.ssh/known_hosts
+          mkdir ~/.ssh
+          echo ${SSH_KNOWN_HOSTS} > ~/.ssh/known_hosts
           stack exec site deploy
         env:
           CHUNGYC_SSH_PRIVATE_KEY: ${{ secrets.CHUNGYC_SSH_PRIVATE_KEY }}
