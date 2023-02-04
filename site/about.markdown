@@ -26,7 +26,6 @@ I currently live in New York with my beautiful wife and daughter.
 
 ## Links
 
-*   Random [links](/links/) of personal interest
 *   List of [publications](/publications)
 *   <a href="https://github.com/chungyc">GitHub</a>
 *   <a href="https://linkedin.com/in/chungyc">LinkedIn</a>
