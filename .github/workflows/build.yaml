@@ -16,6 +16,16 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.stack
-          key: stack-${{ runner.os }}-${{ hashFiles('package.yaml', 'stack.yaml') }}
+          key: stack-${{ hashFiles('package.yaml', 'stack.yaml') }}
+          restore-keys:
+            - stack-
+
+      - id: cache-build-objects
+        uses: actions/cache@v3
+        with:
+          path: .stack-work
+          key: build-${{ hashFiles('app/**', 'src/**') }}
+          restore-keys:
+            - build-
 
       - run: stack test
