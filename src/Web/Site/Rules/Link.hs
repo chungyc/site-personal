@@ -11,7 +11,7 @@ import System.FilePath (dropExtension, takeDirectory)
 rules :: Rules ()
 rules = do
   match "links/**" $ do
-    route $ customRoute toIndexFilePath -- gsubRoute ".markdown" (const "/index.html")
+    route $ customRoute toIndexFilePath
     compile linksCompiler
 
   match "links.markdown" $ do
@@ -34,23 +34,25 @@ toIndexFilePath identifier = dropExtension path ++ "/index.html"
 
 -- |
 -- Compiles a page with links to also link to its sub-categories and parent.
--- (Note: linking to parent is still pending.)
 linksCompiler :: Compiler (Item String)
 linksCompiler = do
-  path <- toFilePath <$> getUnderlying
-  subcategories <-
-    loadAllSnapshots
-      (fromGlob $ dropExtension path ++ "/*")
-      $ "links:" ++ dropExtension path
+  path <- dropExtension . toFilePath <$> getUnderlying
+  subcategories <- loadAllSnapshots (fromGlob $ path ++ "/*") $ "links:" ++ path
 
-  let linksContext
-        | null subcategories = defaultContext
-        | otherwise =
-            listField "subcategories" defaultContext (return subcategories)
-              <> defaultContext
+  let parent = takeDirectory path
+
+  let applyParent
+        | path == "links" = id
+        | otherwise = (<>) $ constField "parent-url" $ "/" ++ parent ++ "/"
+
+  let applySubcategories
+        | null subcategories = id
+        | otherwise = (<>) $ listField "subcategories" defaultContext (return subcategories)
+
+  let linksContext = applyParent . applySubcategories $ defaultContext
 
   pandocCompiler
-    >>= saveSnapshot ("links:" ++ takeDirectory path)
+    >>= saveSnapshot ("links:" ++ parent)
     >>= loadAndApplyTemplate "templates/links.html" linksContext
     >>= loadAndApplyTemplate "templates/default.html" linksContext
     >>= cleanupIndexUrls
