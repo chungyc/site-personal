@@ -1,5 +1,7 @@
 on: [push]
+
 name: Build
+concurrency: build
 
 jobs:
   test:

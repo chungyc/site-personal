@@ -8,9 +8,8 @@ on:
       - 'site/**'
       - 'src/**'
 
-concurrency: deploy
-
 name: Deploy
+concurrency: build
 
 jobs:
   deploy:
