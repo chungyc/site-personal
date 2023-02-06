@@ -49,6 +49,7 @@ executables:
     dependencies:
     - personal
     - clay
+    - pandoc
     - text
   server:
     main:                app/Server.hs
