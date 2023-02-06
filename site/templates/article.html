@@ -1,6 +1,10 @@
 <article>
     <section class="byline">
-        By Yoo Chung. $published$
+        <p>By Yoo Chung.</p>
+        <p>Published on $published$.</p>
+        $if(updated)$
+        <p>Updated on $updated$.</p>
+        $endif
     </section>
     <section>
         $body$
