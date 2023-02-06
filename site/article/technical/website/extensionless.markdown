@@ -21,7 +21,7 @@ match "about.markdown" $ do
 
 ## Setup in Apache
 
-```
+```apache
 <FilesMatch "^[^.]+$">
     ForceType text/html
 </FilesMatch>
@@ -59,7 +59,7 @@ hasExtension :: Text -> Bool
 hasExtension = Text.elem '.'
 ```
 
-## Cons
+## Caveats
 
 ## See also
 
