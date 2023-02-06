@@ -6,7 +6,9 @@
 module Main (main) where
 
 import Clay
+import Data.Text.Lazy (pack)
 import Data.Text.Lazy.IO (writeFile)
+import Text.Pandoc.Highlighting (pygments, styleToCss)
 import Web.Site.Styles.Bibliography qualified as Bibliography
 import Web.Site.Styles.Default qualified as Default
 import Web.Site.Styles.Error qualified as Error
@@ -21,8 +23,14 @@ main = do
   writeStylesheet "site/css/front.css" Front.style
   writeStylesheet "site/css/links.css" Links.style
   writeStylesheet "site/css/bibliography.css" Bibliography.style
+  writePandocSyntaxStylesheet "site/css/syntax.css"
 
 -- |
 -- Write the stylesheet rendered from the given style to the given file path.
 writeStylesheet :: FilePath -> Css -> IO ()
 writeStylesheet path css = writeFile path $ render css
+
+-- |
+-- Write the stylesheet which supports the syntax highlighting done by Pandoc.
+writePandocSyntaxStylesheet :: FilePath -> IO ()
+writePandocSyntaxStylesheet path = writeFile path $ pack $ styleToCss pygments

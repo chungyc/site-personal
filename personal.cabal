@@ -89,6 +89,7 @@ executable style
   build-depends:
       base
     , clay
+    , pandoc
     , personal
     , text
   default-language: GHC2021

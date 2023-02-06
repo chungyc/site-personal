@@ -16,6 +16,9 @@
 
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="stylesheet" href="/css/default.css" />
+    $if(include-syntax-stylesheet)$
+    <link rel="stylesheet" href="/css/syntax.css" />
+    $endif$
     $if(extra-stylesheet)$
     <link rel="stylesheet" href="$extra-stylesheet$" />
     $endif$
