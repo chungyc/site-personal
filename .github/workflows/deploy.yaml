@@ -36,7 +36,8 @@ jobs:
           key: build-${{ hashFiles('app/**', 'src/**') }}
           restore-keys: build-
 
-      - id: cache-site
+      - if: ${{ steps.cache-build-objects.outputs.cache-hit == 'true' }}
+        id: cache-site
         uses: actions/cache@v3
         with:
           path: |
@@ -47,11 +48,7 @@ jobs:
 
       - run: stack build
 
-      - if: ${{ steps.cache-build-objects.outputs.cache-hit != 'true' }}
-        run: stack exec site rebuild
-
-      - if: ${{ steps.cache-build-objects.outputs.cache-hit == 'true' }}
-        run: stack exec site build
+      - run: stack exec site build
 
       - if: ${{ steps.cache-build-objects.outputs.cache-hit != 'true' || steps.cache-site.outputs.cache-hit != 'true' }}
         name: Run rsync
