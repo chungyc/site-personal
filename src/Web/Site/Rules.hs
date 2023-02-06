@@ -7,6 +7,7 @@ module Web.Site.Rules (rules) where
 
 import Hakyll
 import Web.Site.Routes
+import Web.Site.Rules.Article qualified as Article
 import Web.Site.Rules.File qualified as File
 import Web.Site.Rules.Link qualified as Link
 import Web.Site.Rules.Publication qualified as Publication
@@ -20,6 +21,7 @@ rules = do
   Server.rules
   File.rules
   Update.rules
+  Article.rules
   Publication.rules
   Link.rules
 

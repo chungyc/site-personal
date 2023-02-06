@@ -1,0 +1,25 @@
+---
+title: Articles
+description: Index of articles written by Yoo Chung and posted on their personal web site.
+rss-feed-link: /articles.xml
+---
+
+<p>
+    Articles written by <a href="/">Yoo Chung</a>.
+</p>
+
+<p>
+    There is an <a href="/articles.xml" type="application/rss+xml">RSS feed</a>
+    which can be used to subscribe to new articles.
+</p>
+
+<ul>
+    $for(articles)$
+    <li>
+        <a href="$url$">$title$</a> - $published$
+        $if(description)$
+        <p>$description$</p>
+        $endif$
+    </li>
+    $endfor$
+</ul>
