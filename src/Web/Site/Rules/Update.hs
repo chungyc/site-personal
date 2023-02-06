@@ -13,18 +13,18 @@ import Web.Site.Routes
 rules :: Rules ()
 rules = do
   -- The overview page.
-  create ["updates"] $ do
-    route idRoute
+  match "updates.html" $ do
+    route stripExtension
     compile $ do
-      updates <- recentFirst =<< loadAllSnapshots "update/**" "content"
+      updates <- recentFirst =<< loadAllSnapshots "update/**" "updates"
       let updatesContext =
             listField "updates" defaultContext (return updates)
               <> constField "title" "Updates"
               <> constField "rss-feed-link" "/updates.rss"
               <> defaultContext
 
-      makeItem ""
-        >>= loadAndApplyTemplate "templates/updates.html" updatesContext
+      getResourceBody
+        >>= applyAsTemplate updatesContext
         >>= loadAndApplyTemplate "templates/default.html" updatesContext
 
   -- Individual update page.
@@ -32,7 +32,7 @@ rules = do
     route stripExtension
     compile $
       pandocCompiler
-        >>= saveSnapshot "content"
+        >>= saveSnapshot "updates"
         >>= loadAndApplyTemplate "templates/update.html" defaultContext
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
 
@@ -41,13 +41,13 @@ rules = do
     route idRoute
     compile $ do
       let feedContext = bodyField "description" <> defaultContext
-      posts <- recentFirst =<< loadAllSnapshots "update/**" "content"
+      posts <- recentFirst =<< loadAllSnapshots "update/**" "updates"
       renderRss updateFeedConfiguration feedContext posts
 
 -- | Apply a context with the latest update in the list field @latest-update@ to the given rule.
 withLatest :: (Context String -> Compiler (Item String)) -> Compiler (Item String)
 withLatest f = do
-  updates <- fmap (take 1) . recentFirst =<< loadAllSnapshots "update/**" "content"
+  updates <- fmap (take 1) . recentFirst =<< loadAllSnapshots "update/**" "updates"
   let indexContext =
         if null updates
           then defaultContext
