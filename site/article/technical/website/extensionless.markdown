@@ -5,13 +5,35 @@ description: Another way to have URLs with no extensions for HTML pages with Hak
 include-syntax-stylesheet: true
 ---
 
+HTTP uses the [`Content-Type`] header to inform web browsers what they're getting back.
+If we can control it, then it would be nicer to use a [clean URL] instead of a URL
+that has an extension, where there is no `.html` file name extension in the URL.
+
+However, by default [Hakyll] will always include the `.html` extension
+with the HTML pages it generates.  It is actually not that hard to remove it, though,
+and here I describe how I did it for my [personal web site](https://chungyc.org/).
+
+[`Content-Type`]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type
+[clean URL]: https://en.wikipedia.org/wiki/Clean_URL
+
 ## Setup in Hakyll
+
+Some approaches rely on web servers typically serving the `index.html` file in a directory
+to serve an HTML page corresponding to a URL for the directory.  However, I wanted to use
+a more direct approach which avoided including `.html` in the file names in the first place.
+
+With a vanilla installation of a Hakyll site, you will see code such as the following,
+which switches the file name extension to `.html` for the file which will contain the
+HTML output translated from the original file.
 
 ```haskell
 match "about.markdown" $ do
   route $ setExtension "html"
   ...
 ```
+
+It is really easy to switch things so that it removes the extension, instead.
+Simply set the extension to the empty string instead of `.html`.
 
 ```haskell
 match "about.markdown" $ do
@@ -20,6 +42,9 @@ match "about.markdown" $ do
 ```
 
 ## Setup in Apache
+
+Using file names with no extension is all well and good, but it would be couterproductive
+if web browsers treated the content as plain text or a blob of binary bytes.
 
 ```apache
 <FilesMatch "^[^.]+$">
