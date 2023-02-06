@@ -1,5 +1,6 @@
 ---
 title: URLs with no extensions using Hakyll
+published: 2023-02-15
 description: Another way to remove the requirement that the extension be included in URLs for HTML pages with Hakyll.
 ---
 
