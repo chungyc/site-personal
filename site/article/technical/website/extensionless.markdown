@@ -1,5 +1,5 @@
 ---
-title: URLs with no extensions using Hakyll
+title: Clean URLs with with Hakyll
 published: 2023-02-15
 description: Another way to have URLs with no extensions for HTML pages with Hakyll.
 include-syntax-stylesheet: true
@@ -102,10 +102,16 @@ See https://github.com/chungyc/site-personal/blob/main/app/Server.hs.
 
 ## Caveats
 
+There are a few caveats with the way I implemented clean URLs with Hakyll.
+
+*   HTML files should not have a dot in their file names.
+
+*   The link checker in Hakyll ignores files without the `.html` extension.
+    This is not a problem for me because I use another tool to keep track of links.
+
 ## See also
 
-The approach described on this page is not the only way
-that URLs for HTML pages generated from Hakyll can avoid extensions.
+The approach described on this page is not the only way to use clean URLs with Hakyll.
 Others have described alternative approaches.
 
 *   [Clean URLs with Hakyll](https://www.rohanjain.in/hakyll-clean-urls/) by Rohan Jain
