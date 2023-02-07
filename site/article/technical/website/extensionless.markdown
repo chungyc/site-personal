@@ -42,6 +42,8 @@ match "about.markdown" $ do
   ...
 ```
 
+See https://github.com/chungyc/site-personal/blob/main/src/Web/Site/Rules.hs.
+
 ## Setup in Apache
 
 Using file names with no extension is all well and good, but it would be couterproductive
@@ -60,6 +62,10 @@ Since I cannot change the main configuration for the server, I put the following
 This will force the HTTP server to set the `Content-Type` to `text/html` if the file name has no extension.
 Obviously, this will not work as intended if I had dots in the names of files containing HTML,
 but this is fine for me because I have no such files, and my file naming convention avoids such files.
+
+See https://github.com/chungyc/site-personal/blob/main/site/server/htaccess.
+In fact, I have Hakyll generate my `.htaccess` file as well,
+so I don't have to worry about copying or editing it separately.
 
 [`.htaccess`]: https://httpd.apache.org/docs/2.4/howto/htaccess.html
 
@@ -94,6 +100,8 @@ main =
 hasExtension :: Text -> Bool
 hasExtension = Text.elem '.'
 ```
+
+See https://github.com/chungyc/site-personal/blob/main/app/Server.hs.
 
 ## Caveats
 
