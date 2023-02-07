@@ -1,6 +1,6 @@
 ---
 title: Clean URLs with with Hakyll
-published: 2023-02-15
+published: 2023-02-06
 description: Another way to have URLs with no extensions for HTML pages with Hakyll.
 include-syntax-stylesheet: true
 ---
@@ -43,7 +43,9 @@ match "about.markdown" $ do
   ...
 ```
 
-See https://github.com/chungyc/site-personal/blob/main/src/Web/Site/Rules.hs.
+See [`src/Web/Site/Rules.hs`].
+
+[`src/Web/Site/Rules.hs`]: https://github.com/chungyc/site-personal/blob/main/src/Web/Site/Rules.hs.
 
 ## Setup in Apache
 
@@ -67,9 +69,10 @@ but this is fine for me because I have no such files, and my file naming convent
 In fact, I have Hakyll generate my `.htaccess` file as well,
 so I don't have to worry about copying or editing it separately.
 
-See https://github.com/chungyc/site-personal/blob/main/site/server/htaccess.
+See [`src/Web/Site/htaccess`].
 
 [`.htaccess`]: https://httpd.apache.org/docs/2.4/howto/htaccess.html
+[`src/Web/Site/htaccess`]: https://github.com/chungyc/site-personal/blob/main/src/Web/Site/htaccess
 
 ## Custom server
 
@@ -98,7 +101,9 @@ main = Warp.runSettings warpSettings $
 Some day I might propose changes to Hakyll so that it could pass
 in such customizations to the HTTP server as an option.
 
-See https://github.com/chungyc/site-personal/blob/main/app/Server.hs.
+See [`app/Server.hs`].
+
+[`app/Server.hs`]: https://github.com/chungyc/site-personal/blob/main/app/Server.hs
 
 ## Caveats
 
