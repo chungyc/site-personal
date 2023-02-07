@@ -74,7 +74,6 @@ See https://github.com/chungyc/site-personal/blob/main/site/server/htaccess.
 ## Custom server
 
 ```haskell
-main :: IO ()
 main = Warp.runSettings warpSettings $
   Static.staticApp baseSettings{ ssGetMimeType = getMimeType }
   where warpSettings = Warp.setHost (fromString "127.0.0.1") $
