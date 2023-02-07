@@ -80,8 +80,8 @@ main = Warp.runSettings warpSettings $
                          Warp.setPort 8000 Warp.defaultSettings
         baseSettings = Static.defaultFileServerSettings "_site"
         defaultGetMimeType = ssGetMimeType baseSettings
-        getMimeType file{ fileName = name } =
-          if '.' `elem` fromPiece name
+        getMimeType file =
+          if '.' `elem` fromPiece (fileName file)
             then defaultGetMimeType file
             else return "text/html"
 ```
