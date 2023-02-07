@@ -45,7 +45,7 @@ match "about.markdown" $ do
 
 See [`src/Web/Site/Rules.hs`].
 
-[`src/Web/Site/Rules.hs`]: https://github.com/chungyc/site-personal/blob/main/src/Web/Site/Rules.hs.
+[`src/Web/Site/Rules.hs`]: https://github.com/chungyc/site-personal/blob/main/src/Web/Site/Rules.hs
 
 ## Setup in Apache
 
@@ -72,7 +72,7 @@ so I don't have to worry about copying or editing it separately.
 See [`src/Web/Site/htaccess`].
 
 [`.htaccess`]: https://httpd.apache.org/docs/2.4/howto/htaccess.html
-[`src/Web/Site/htaccess`]: https://github.com/chungyc/site-personal/blob/main/src/Web/Site/htaccess
+[`src/Web/Site/htaccess`]: https://github.com/chungyc/site-personal/blob/main/site/server/htaccess
 
 ## Custom server
 
@@ -103,6 +103,7 @@ in such customizations to the HTTP server as an option.
 
 See [`app/Server.hs`].
 
+[warp]: https://hackage.haskell.org/package/warp
 [`app/Server.hs`]: https://github.com/chungyc/site-personal/blob/main/app/Server.hs
 
 ## Caveats
