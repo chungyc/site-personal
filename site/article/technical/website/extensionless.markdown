@@ -75,32 +75,16 @@ See https://github.com/chungyc/site-personal/blob/main/site/server/htaccess.
 
 ```haskell
 main :: IO ()
-main =
-  Warp.runSettings warpSettings $
-    Static.staticApp
-      baseSettings
-        { ssGetMimeType = getMimeType,
-          ssMaxAge = MaxAgeSeconds 10,
-          ss404Handler = Just missing
-        }
-  where
-    warpSettings =
-      Warp.setHost (fromString "127.0.0.1") $
-        Warp.setPort 8000 Warp.defaultSettings
-
-    baseSettings = Static.defaultFileServerSettings "_site"
-
-    defaultGetMimeType = ssGetMimeType baseSettings
-
-    -- Overrides MIME type for files with no extension
-    -- so that HTML pages need no extension.
-    getMimeType file =
-      if hasExtension (fromPiece $ fileName file)
-        then defaultGetMimeType file
-        else return "text/html"
-
-hasExtension :: Text -> Bool
-hasExtension = Text.elem '.'
+main = Warp.runSettings warpSettings $
+  Static.staticApp baseSettings{ ssGetMimeType = getMimeType }
+  where warpSettings = Warp.setHost (fromString "127.0.0.1") $
+                         Warp.setPort 8000 Warp.defaultSettings
+        baseSettings = Static.defaultFileServerSettings "_site"
+        defaultGetMimeType = ssGetMimeType baseSettings
+        getMimeType file{ fileName = name } =
+          if '.' `elem` fromPiece name
+            then defaultGetMimeType file
+            else return "text/html"
 ```
 
 See https://github.com/chungyc/site-personal/blob/main/app/Server.hs.
