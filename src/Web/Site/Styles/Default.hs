@@ -50,6 +50,13 @@ style = do
   dd ? do
     marginBottom $ em 1
 
+  div # ".sourceCode" ? do
+    borderStyle solid
+    borderWidth $ px 1
+    marginRight $ em 1
+    marginLeft $ em 1
+    sym padding $ em 0.5
+
   query Media.all [Media.maxWidth $ cm 5] $ do
     body ? sym margin nil
 
@@ -110,6 +117,8 @@ lightColorScheme = do
   h4 ? fontColor (headingColor 4)
   h5 ? fontColor (headingColor 5)
   h6 ? fontColor (headingColor 6)
+
+  div # ".sourceCode" ? borderColor lightgrey
   where
     headingColor n = rgb (n * 20) (n * 20) (100 + n * 10)
 
@@ -129,5 +138,7 @@ darkColorScheme = do
   h4 ? fontColor (headingColor 4)
   h5 ? fontColor (headingColor 5)
   h6 ? fontColor (headingColor 6)
+
+  div # ".sourceCode" ? borderColor dimgrey
   where
     headingColor n = rgb (255 - n * 20) (255 - n * 20) (155 - n * 10)

@@ -101,6 +101,15 @@ dd
   margin-bottom : 1em;
 }
 
+div.sourceCode
+{
+  border-style : solid;
+  border-width : 1px;
+  margin-right : 1em;
+  margin-left  : 1em;
+  padding      : 0.5em 0.5em 0.5em 0.5em;
+}
+
 @media all and (max-width: 5cm)
 {
 
@@ -170,6 +179,11 @@ h6
   color : #7878a0;
 }
 
+div.sourceCode
+{
+  border-color : #d3d3d3;
+}
+
 }
 @media all and (prefers-color-scheme: dark)
 {
@@ -218,6 +232,11 @@ h5
 h6
 {
   color : #87875f;
+}
+
+div.sourceCode
+{
+  border-color : #696969;
 }
 
 }
