@@ -7,7 +7,8 @@ include-syntax-stylesheet: true
 
 HTTP uses the [`Content-Type`] header to inform web browsers what they're getting back.
 If we can control it, then it would be nicer to use a [clean URL] instead of a URL
-that has an extension, where there is no `.html` file name extension in the URL.
+that has an extension.  In other words, it would be nice if HTML pages did not
+have `.html` in the URL.
 
 However, by default [Hakyll] will always include the `.html` extension
 with the HTML pages it generates.  It is actually not that hard to remove it, though,
