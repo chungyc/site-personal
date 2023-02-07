@@ -73,6 +73,15 @@ See https://github.com/chungyc/site-personal/blob/main/site/server/htaccess.
 
 ## Custom server
 
+There is nothing more to do if all one wants is
+to serve HTML pages without including the extension in the URL.
+However, I would like to preview my site without standing up my own Apache HTTP server.
+
+Hakyll uses the [warp] HTTP server for previewing a site locally.
+It does not know to serve files without an extension as HTML,
+so I made my own customizations to warp so that it would set `Content-Type` to `text/html`
+for files without an extension.
+
 ```haskell
 main = Warp.runSettings warpSettings $
   Static.staticApp baseSettings{ ssGetMimeType = getMimeType }
@@ -85,6 +94,9 @@ main = Warp.runSettings warpSettings $
             then defaultGetMimeType file
             else return "text/html"
 ```
+
+Some day I might propose changes to Hakyll so that it could pass
+in such customizations to the HTTP server as an option.
 
 See https://github.com/chungyc/site-personal/blob/main/app/Server.hs.
 
