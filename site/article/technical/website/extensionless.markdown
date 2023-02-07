@@ -15,6 +15,7 @@ and here I describe how I did it for my [personal web site](https://chungyc.org/
 
 [`Content-Type`]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type
 [clean URL]: https://en.wikipedia.org/wiki/Clean_URL
+[Hakyll]: https://jaspervdj.be/hakyll/
 
 ## Setup in Hakyll
 
