@@ -45,12 +45,22 @@ match "about.markdown" $ do
 
 Using file names with no extension is all well and good, but it would be couterproductive
 if web browsers treated the content as plain text or a blob of binary bytes.
+In other words, we need the HTTP server to actually set the `Content-Type` to `text/html` for the HTML pages.
+
+My web site is served using the Apache HTTP server.
+Since I cannot change the main configuration for the server, I put the following in [`.htaccess`]:
 
 ```apache
 <FilesMatch "^[^.]+$">
     ForceType text/html
 </FilesMatch>
 ```
+
+This will force the HTTP server to set the `Content-Type` to `text/html` if the file name has no extension.
+Obviously, this will not work as intended if I had dots in the names of files containing HTML,
+but this is fine for me because I have no such files, and my file naming convention avoids such files.
+
+[`.htaccess`]: https://httpd.apache.org/docs/2.4/howto/htaccess.html
 
 ## Custom server
 
