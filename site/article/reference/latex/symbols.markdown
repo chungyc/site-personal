@@ -39,3 +39,7 @@ I often find myself looking these up.
   $\pi$                  `\pi`
   $\epsilon$             `\epsilon`
 --------------------   --------------------
+
+## See also
+
+*   [The Comprehensive LATEX Symbol List](https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf)
