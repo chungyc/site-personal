@@ -44,7 +44,7 @@ rules = do
   Sitemap.rules $
     "about.markdown"
       .||. "index.html"
-      .||. Article.pattern
-      .||. Link.pattern
-      .||. Publication.pattern
-      .||. Update.pattern
+      .||. Article.items
+      .||. Link.items
+      .||. Publication.items
+      .||. Update.items

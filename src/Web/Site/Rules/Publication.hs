@@ -3,7 +3,7 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Rules.Publication (rules, pattern) where
+module Web.Site.Rules.Publication (rules, items) where
 
 import Hakyll
 
@@ -20,8 +20,8 @@ rules = do
 
 -- |
 -- Pattern for files matched or created in this module.
-pattern :: Pattern
-pattern = "publications/index.markdown"
+items :: Pattern
+items = "publications/index.markdown"
 
 publicationsCompiler :: Compiler (Item String)
 publicationsCompiler = do
