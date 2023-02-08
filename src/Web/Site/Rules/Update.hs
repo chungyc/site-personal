@@ -3,7 +3,7 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Rules.Update (rules, withLatest) where
+module Web.Site.Rules.Update (rules, pattern, withLatest) where
 
 import Hakyll
 import Web.Site.Routes
@@ -43,6 +43,11 @@ rules = do
       let feedContext = bodyField "description" <> defaultContext
       posts <- recentFirst =<< loadAllSnapshots "update/**" "updates"
       renderRss updateFeedConfiguration feedContext posts
+
+-- |
+-- Pattern for files matched or created in this module.
+pattern :: Pattern
+pattern = "updates.html" .||. "update/**"
 
 -- | Apply a context with the latest update in the list field @latest-update@ to the given rule.
 withLatest :: (Context String -> Compiler (Item String)) -> Compiler (Item String)

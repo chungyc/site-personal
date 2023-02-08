@@ -1,0 +1,39 @@
+-- |
+-- Description: Rules for generating the site map.
+-- Copyright: Copyright (C) 2023 Yoo Chung
+-- License: All rights reserved
+-- Maintainer: web@chungyc.org
+module Web.Site.Rules.Sitemap (rules) where
+
+import Hakyll
+
+-- |
+-- Given a pattern which matches all the pages on the web site,
+-- returns the rules which generates the site map.
+rules :: Pattern -> Rules ()
+rules pattern = do
+  match "sitemap.xml" $ do
+    route idRoute
+    compile $ do
+      items <- loadAll pattern
+
+      let itemContext =
+            functionField "clean" clean
+              <> defaultContext
+
+      let sitemapContext =
+            listField "items" itemContext (return items)
+              <> defaultContext
+
+      getResourceBody
+        >>= applyAsTemplate sitemapContext
+
+-- |
+-- If the given URL is local and ends with @index.html@, strip the latter.
+clean :: [String] -> Item a -> Compiler String
+clean [url@('/' : _)] _
+  | Nothing <- prefix = return url
+  | Just s <- prefix = return s
+  where
+    prefix = needlePrefix "index.html" url
+clean _ _ = error "wrong number of arguments"

@@ -3,7 +3,7 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Rules.Link (rules) where
+module Web.Site.Rules.Link (rules, pattern) where
 
 import Hakyll
 import System.FilePath (dropExtension, takeDirectory)
@@ -17,6 +17,11 @@ rules = do
   match "links.markdown" $ do
     route $ constRoute "links/index.html"
     compile linksCompiler
+
+-- |
+-- Pattern for files matched or created in this module.
+pattern :: Pattern
+pattern = "link/**" .||. "links.markdown"
 
 -- |
 -- From the given identifier, return the path to the index HTML file

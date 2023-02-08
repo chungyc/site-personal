@@ -3,7 +3,7 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Rules.Publication (rules) where
+module Web.Site.Rules.Publication (rules, pattern) where
 
 import Hakyll
 
@@ -17,6 +17,11 @@ rules = do
 
   match (fromGlob cslFile) $ compile cslCompiler
   match (fromGlob bibFile) $ compile biblioCompiler
+
+-- |
+-- Pattern for files matched or created in this module.
+pattern :: Pattern
+pattern = "publications/index.markdown"
 
 publicationsCompiler :: Compiler (Item String)
 publicationsCompiler = do

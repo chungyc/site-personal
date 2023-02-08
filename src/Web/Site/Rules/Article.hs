@@ -3,7 +3,7 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Rules.Article (rules) where
+module Web.Site.Rules.Article (rules, pattern) where
 
 import Hakyll
 import Web.Site.Routes
@@ -43,6 +43,11 @@ rules = do
       let feedContext = bodyField "description" <> defaultContext
       articles <- recentFirst =<< loadAllSnapshots "article/**" "articles"
       renderRss updateFeedConfiguration feedContext articles
+
+-- |
+-- Pattern for files matched or created in this module.
+pattern :: Pattern
+pattern = "article/**" .||. "articles.html"
 
 -- |
 -- Feed configuration for updates.

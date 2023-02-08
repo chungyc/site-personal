@@ -12,6 +12,7 @@ import Web.Site.Rules.File qualified as File
 import Web.Site.Rules.Link qualified as Link
 import Web.Site.Rules.Publication qualified as Publication
 import Web.Site.Rules.Server qualified as Server
+import Web.Site.Rules.Sitemap qualified as Sitemap
 import Web.Site.Rules.Update qualified as Update
 
 -- |
@@ -39,3 +40,11 @@ rules = do
       getResourceBody
         >>= applyAsTemplate indexContext
         >>= loadAndApplyTemplate "templates/default.html" indexContext
+
+  Sitemap.rules $
+    "about.markdown"
+      .||. "index.html"
+      .||. Article.pattern
+      .||. Link.pattern
+      .||. Publication.pattern
+      .||. Update.pattern
