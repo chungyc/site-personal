@@ -15,14 +15,14 @@ rules items = do
   match "sitemap.xml" $ do
     route idRoute
     compile $ do
-      items <- loadAll items
+      itemList <- loadAll items
 
       let itemContext =
             functionField "clean" clean
               <> defaultContext
 
       let sitemapContext =
-            listField "items" itemContext (return items)
+            listField "items" itemContext (return itemList)
               <> defaultContext
 
       getResourceBody
