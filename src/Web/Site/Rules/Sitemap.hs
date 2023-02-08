@@ -11,11 +11,11 @@ import Hakyll
 -- Given a pattern which matches all the pages on the web site,
 -- returns the rules which generates the site map.
 rules :: Pattern -> Rules ()
-rules pattern = do
+rules items = do
   match "sitemap.xml" $ do
     route idRoute
     compile $ do
-      items <- loadAll pattern
+      items <- loadAll items
 
       let itemContext =
             functionField "clean" clean
