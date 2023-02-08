@@ -21,6 +21,13 @@ I often find myself looking these up.
   $\neg$                 `\neg`
   $\equiv$               `\equiv`
   $\approx$              `\approx`
+  $\neq$                 `\neq`
+  $\leq$                 `\leq`
+  $\geq$                 `\geq`
+  $\subset$              `\subset`
+  $\subseteq$            `\subseteq`
+  $\not\subset$          `\not\subset`
+  $\nsubseteq$           `\nsubseteq`
 --------------------   --------------------
 
 ## Greek letters
