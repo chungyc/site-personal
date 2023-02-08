@@ -1,6 +1,6 @@
 ---
 title: LaTeX symbols
-published: 2023-02-07
+published: 2023-02-08
 description: Reference of LaTeX symbols useful to me.
 ---
 
