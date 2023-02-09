@@ -194,6 +194,11 @@ html
   background-color : #000000;
 }
 
+footer
+{
+  border-top : 1px solid #ffffff;
+}
+
 a:link
 {
   color : #00ffff;

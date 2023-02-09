@@ -129,6 +129,8 @@ darkColorScheme = do
     color white
     backgroundColor black
 
+  footer ? borderTop (px 1) solid white
+
   a # link ? color cyan
   a # visited ? color pink
 
