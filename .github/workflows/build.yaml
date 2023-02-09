@@ -1,10 +1,17 @@
-on: [push]
-
 name: Build
 concurrency: build
 
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '**.yaml'
+      - 'app/**'
+      - 'site/**'
+      - 'src/**'
+
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -13,9 +20,8 @@ jobs:
       - uses: haskell/actions/setup@v2
         with:
           enable-stack: true
-
-      - id: cache-dependencies
-        uses: actions/cache@v3
+      
+      - uses: actions/cache@v3
         with:
           path: ~/.stack
           key: stack-${{ hashFiles('package.yaml', 'stack.yaml') }}
@@ -28,4 +34,31 @@ jobs:
           key: build-${{ hashFiles('app/**', 'src/**') }}
           restore-keys: build-
 
-      - run: stack test
+      - if: ${{ steps.cache-build-objects.outputs.cache-hit == 'true' }}
+        id: cache-site
+        uses: actions/cache@v3
+        with:
+          path: |
+            _site
+            _cache
+          key: site-${{ hashFiles('site/**') }}
+          restore-keys: site-
+
+      - run: stack build
+
+      - run: stack exec site build
+
+      - if: |
+          (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/workflow') &&
+          (steps.cache-build-objects.outputs.cache-hit != 'true' ||
+           steps.cache-site.outputs.cache-hit != 'true')
+        name: Run rsync
+        run: |
+          eval $(ssh-agent -t 1800)
+          ssh-add - <<< ${CHUNGYC_SSH_PRIVATE_KEY}
+          mkdir ~/.ssh
+          echo ${SSH_KNOWN_HOSTS} > ~/.ssh/known_hosts
+          stack exec site deploy
+        env:
+          CHUNGYC_SSH_PRIVATE_KEY: ${{ secrets.CHUNGYC_SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
