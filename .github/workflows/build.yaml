@@ -48,10 +48,7 @@ jobs:
 
       - run: stack exec site build
 
-      - if: |
-          (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/workflow') &&
-          (steps.cache-build-objects.outputs.cache-hit != 'true' ||
-           steps.cache-site.outputs.cache-hit != 'true')
+      - if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/workflow' }}
         name: Run rsync
         run: |
           eval $(ssh-agent -t 1800)
