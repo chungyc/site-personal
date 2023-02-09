@@ -1,5 +1,10 @@
-on: [push]
 name: Ormolu
+
+on:
+  push:
+    paths:
+      - '**.hs'
+
 jobs:
   ormolu:
     runs-on: ubuntu-latest
