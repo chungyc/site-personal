@@ -41,7 +41,7 @@ rules = do
     route idRoute
     compile $ do
       let feedContext = bodyField "description" <> defaultContext
-      articles <- recentFirst =<< loadAllSnapshots "article/**" "articles"
+      articles <- fmap (take 10) . recentFirst =<< loadAllSnapshots "article/**" "articles"
       renderRss updateFeedConfiguration feedContext articles
 
 -- |
