@@ -1,4 +1,4 @@
-resolver: lts-20.9
+resolver: lts-20.10
 
 extra-deps:
 - git: https://github.com/sebastiaanvisser/clay.git
