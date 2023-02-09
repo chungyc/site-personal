@@ -31,7 +31,7 @@ rules = do
   match "about.html" $ do
     route stripExtension
     compile $
-      pandocCompiler
+      getResourceBody
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
 
   match "index.html" $ do
