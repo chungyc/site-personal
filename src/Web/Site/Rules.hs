@@ -28,7 +28,7 @@ rules = do
 
   match "templates/*" $ compile templateBodyCompiler
 
-  match (fromList ["about.markdown"]) $ do
+  match "about.html" $ do
     route stripExtension
     compile $
       pandocCompiler
@@ -42,7 +42,7 @@ rules = do
         >>= loadAndApplyTemplate "templates/default.html" indexContext
 
   Sitemap.rules $
-    "about.markdown"
+    "about.html"
       .||. "index.html"
       .||. Article.items
       .||. Link.items
