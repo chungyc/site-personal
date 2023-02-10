@@ -1,5 +1,6 @@
 ---
 title: Probability
+description: Basic reference on probability.
 published: 2023-02-10
 ---
 
