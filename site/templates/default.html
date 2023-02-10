@@ -2,29 +2,29 @@
 <html lang="en">
 
 <head>
-    $if(standalone-title)$
+    $-if(standalone-title)$
     <title>$title$</title>
-    $else$
+    $-else$
     <title>$title$ - Yoo Chung</title>
-    $endif$
+    $-endif$
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    $if(description)$
+    $-if(description)$
     <meta name="description" content="$description$">
-    $endif$
+    $-endif$
 
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <link rel="stylesheet" href="/css/default.css" />
-    $if(include-syntax-stylesheet)$
+    $-if(include-syntax-stylesheet)$
     <link rel="stylesheet" href="/css/syntax.css" />
-    $endif$
-    $if(extra-stylesheet)$
+    $-endif$
+    $-if(extra-stylesheet)$
     <link rel="stylesheet" href="$extra-stylesheet$" />
-    $endif$
-    $if(rss-feed-link)$
+    $-endif$
+    $-if(rss-feed-link)$
     <link rel="alternate" type="application/rss+xml" href="$rss-feed-link$" />
-    $endif$
+    $-endif$
 </head>
 
 <body>
