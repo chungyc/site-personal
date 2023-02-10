@@ -44,7 +44,7 @@ library
       src
   default-extensions:
       OverloadedStrings
-  ghc-options: -Wall
+  ghc-options: -Wall -Werror
   build-depends:
       base
     , clay
@@ -58,7 +58,7 @@ executable server
       Paths_personal
   default-extensions:
       OverloadedStrings
-  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base
     , http-types
@@ -74,7 +74,7 @@ executable site
       Paths_personal
   default-extensions:
       OverloadedStrings
-  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base
     , hakyll
@@ -87,7 +87,7 @@ executable style
       Paths_personal
   default-extensions:
       OverloadedStrings
-  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base
     , clay
