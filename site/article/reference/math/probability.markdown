@@ -9,10 +9,14 @@ Probability of $X$:
 
 \[ P(X) \]
 
-Conditional probability of $X$ given $C$:
-
-\[ P(X \mid C) \]
-
 When $X$ and $Y$ are independent:
 
 \[ P(X \cap Y) = P(X) P(Y) \]
+
+Conditional probability of $X$ given $C$:
+
+\[ P(X \mid C) = \frac{P(X \cap C)}{P(C)} \]
+
+Bayes' theorem:
+
+\[ P(X \mid Y) = \frac{P(Y \mid X) P(X)}{P(Y)} \]
