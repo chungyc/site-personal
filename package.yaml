@@ -20,6 +20,7 @@ default-extensions:
 
 ghc-options:
 - -Wall
+- -Werror
 
 dependencies:
 - base
