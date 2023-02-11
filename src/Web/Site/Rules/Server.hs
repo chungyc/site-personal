@@ -13,6 +13,10 @@ rules = do
     route $ constRoute ".htaccess"
     compile copyFileCompiler
 
+  match "server/robots.txt" $ do
+    route $ constRoute "robots.txt"
+    compile copyFileCompiler
+
   match "server/errors/*.html" $ do
     route idRoute
     compile $
