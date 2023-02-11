@@ -2,6 +2,7 @@
 title: LaTeX symbols
 published: 2023-02-07
 description: Reference of LaTeX symbols useful to me.
+include-math: true
 ---
 
 Basic reference of LaTeX symbols that are useful to me.
