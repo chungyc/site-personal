@@ -6,6 +6,7 @@
 module Web.Site.Rules.Article (rules, items) where
 
 import Hakyll
+import Web.Site.Compilers
 import Web.Site.Routes
 
 -- |
@@ -18,7 +19,7 @@ rules = do
   match "article/**" $ do
     route stripExtension
     compile $
-      pandocCompiler
+      pandocCompilerWithMath
         >>= saveSnapshot "articles"
         >>= loadAndApplyTemplate "templates/article.html" defaultContext
         >>= loadAndApplyTemplate "templates/default.html" defaultContext

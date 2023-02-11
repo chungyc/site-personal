@@ -24,6 +24,7 @@ source-repository head
 library
   exposed-modules:
       Web.Site
+      Web.Site.Compilers
       Web.Site.Routes
       Web.Site.Rules
       Web.Site.Rules.Article
@@ -50,6 +51,7 @@ library
     , clay
     , filepath
     , hakyll
+    , pandoc
   default-language: GHC2021
 
 executable server
