@@ -17,6 +17,10 @@ rules = do
     route $ constRoute "robots.txt"
     compile copyFileCompiler
 
+  match "server/favicon.ico" $ do
+    route $ constRoute "favicon.ico"
+    compiler copyFileCompiler
+
   match "server/errors/*.html" $ do
     route idRoute
     compile $
