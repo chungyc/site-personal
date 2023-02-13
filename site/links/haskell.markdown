@@ -6,6 +6,9 @@ description: References related to the Haskell programming language.
 [haskell.org](https://haskell.org/)
 :   All things Haskell.
 
+[Haskell Discourse](https://discourse.haskell.org/)
+:   A place for discussing anything related to Haskell.
+
 [Hackage](https://hackage.haskell.org/)
 :   Repository of open source Haskell software.
 
