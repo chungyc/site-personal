@@ -19,7 +19,7 @@ rules = do
 
   match "server/favicon.ico" $ do
     route $ constRoute "favicon.ico"
-    compiler copyFileCompiler
+    compile copyFileCompiler
 
   match "server/errors/*.html" $ do
     route idRoute
