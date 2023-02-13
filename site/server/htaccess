@@ -2,6 +2,9 @@ Options -Indexes
 
 AddDefaultCharset utf-8
 
+# Available XML files are RSS feeds.
+AddType application/rss+xml .xml
+
 <FilesMatch "^[^.]+$">
     ForceType text/html
 </FilesMatch>
