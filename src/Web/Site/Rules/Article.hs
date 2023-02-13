@@ -41,9 +41,9 @@ rules = do
   create ["articles.xml"] $ do
     route idRoute
     compile $ do
-      let feedContext = bodyField "description" <> defaultContext
+      let itemContext = metadataField <> bodyField "description" <> defaultContext
       articles <- fmap (take 10) . recentFirst =<< loadAllSnapshots "article/**" "articles"
-      renderRss updateFeedConfiguration feedContext articles
+      renderRss updateFeedConfiguration itemContext articles
 
 -- |
 -- Pattern for files matched or created in this module.
