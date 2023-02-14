@@ -2,11 +2,12 @@ Options -Indexes
 
 AddDefaultCharset utf-8
 
-# Available XML files are RSS feeds.
-AddType application/rss+xml .xml
-
 <FilesMatch "^[^.]+$">
     ForceType text/html
+</FilesMatch>
+
+<FilesMatch "^(articles|updates)\.xml$">
+    ForceType application/rss+xml
 </FilesMatch>
 
 ErrorDocument 404 /server/errors/missing.html
