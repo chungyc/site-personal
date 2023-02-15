@@ -48,7 +48,7 @@ rules = do
 -- |
 -- Pattern for files matched or created in this module.
 items :: Pattern
-items = "article/**" .||. "articles.html"
+items = "article/**" .||. "articles.html" .||. "articles.xml"
 
 -- |
 -- Feed configuration for updates.

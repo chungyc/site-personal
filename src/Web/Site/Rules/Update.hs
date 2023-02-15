@@ -47,7 +47,7 @@ rules = do
 -- |
 -- Pattern for files matched or created in this module.
 items :: Pattern
-items = "updates.html" .||. "update/**"
+items = "updates.html" .||. "update/**" .||. "updates.xml"
 
 -- | Apply a context with the latest update in the list field @latest-update@ to the given rule.
 withLatest :: (Context String -> Compiler (Item String)) -> Compiler (Item String)
