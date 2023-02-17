@@ -1,6 +1,6 @@
 ---
 title: Distributions in Statistics
-published: 2023-02-15
+published: 2023-02-16
 description: Basic reference on distributions in statistics.
 include-math: true
 ---
