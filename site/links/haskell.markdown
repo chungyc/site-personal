@@ -12,6 +12,9 @@ description: References related to the Haskell programming language.
 [Hackage](https://hackage.haskell.org/)
 :   Repository of open source Haskell software.
 
+[Haskell Tool Stack](https://docs.haskellstack.org/)
+:   Package management and build tools for reproducible Haskell builds.
+
 [Hspec](https://hspec.github.io/)
 :   Easy to read testing framework which integrates HUnit and QuickCheck.
 
