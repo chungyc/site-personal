@@ -11,3 +11,6 @@ description: Podcasts I listen to and recommend.
 
 [Quanta Science Podcast](https://www.quantamagazine.org/podcasts/)
 :   In-depth coverage of recent developments in science.
+
+[Planetary Radio](https://www.planetary.org/planetary-radio)
+:   Explore the solar system and beyond.  From the Planetary Society.
