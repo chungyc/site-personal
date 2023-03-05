@@ -15,6 +15,9 @@ description: References related to the Haskell programming language.
 [Haskell Tool Stack](https://docs.haskellstack.org/)
 :   Package management and build tools for reproducible Haskell builds.
 
+[Haskell Playground](https://play.haskell.org/)
+:   Playground for trying out Haskell code.
+
 [Hspec](https://hspec.github.io/)
 :   Easy to read testing framework which integrates HUnit and QuickCheck.
 
