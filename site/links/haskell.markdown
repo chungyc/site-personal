@@ -21,6 +21,9 @@ description: References related to the Haskell programming language.
 [QuickCheck](https://hackage.haskell.org/package/QuickCheck)
 :   Property-based testing.
 
+[HLint](https://github.com/ndmitchell/hlint)
+:   Linter for Haskell.
+
 [Hakyll](https://jaspervdj.be/hakyll/)
 :   Static web site generator.
 
