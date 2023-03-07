@@ -19,8 +19,6 @@ rules = do
       updates <- recentFirst =<< loadAllSnapshots updatePattern "updates"
       let updatesContext =
             listField "updates" defaultContext (return updates)
-              <> constField "title" "Updates"
-              <> constField "rss-feed-link" "/updates.rss"
               <> defaultContext
 
       getResourceBody
