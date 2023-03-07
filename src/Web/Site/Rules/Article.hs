@@ -16,7 +16,7 @@ import Web.Site.Routes
 rules :: Rules ()
 rules = do
   -- Individual articles.
-  match "article/**" $ do
+  match articlePattern $ do
     route stripExtension
     compile $
       pandocCompilerWithMath
@@ -25,10 +25,10 @@ rules = do
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
 
   -- The overview page.
-  match "articles.html" $ do
-    route stripExtension
+  match "article/index.html" $ do
+    route $ constRoute "articles"
     compile $ do
-      articles <- recentFirst =<< loadAllSnapshots "article/**" "articles"
+      articles <- recentFirst =<< loadAllSnapshots articlePattern "articles"
       let context =
             listField "articles" defaultContext (return articles)
               <> defaultContext
@@ -42,13 +42,20 @@ rules = do
     route idRoute
     compile $ do
       let itemContext = metadataField <> bodyField "description" <> defaultContext
-      articles <- fmap (take 10) . recentFirst =<< loadAllSnapshots "article/**" "articles"
+      articles <- fmap (take 10) . recentFirst =<< loadAllSnapshots articlePattern "articles"
       renderRss updateFeedConfiguration itemContext articles
+
+-- |
+-- Pattern for files which are individual articles.
+--
+-- Does not include the overall index for the articles.
+articlePattern :: Pattern
+articlePattern = "article/**" .&&. complement "article/index.html"
 
 -- |
 -- Pattern for files matched or created in this module.
 items :: Pattern
-items = "article/**" .||. "articles.html" .||. "articles.xml"
+items = "article/**" .||. "articles.xml"
 
 -- |
 -- Feed configuration for updates.
