@@ -13,10 +13,10 @@ import Web.Site.Routes
 rules :: Rules ()
 rules = do
   -- The overview page.
-  match "updates.html" $ do
-    route stripExtension
+  match "update/index.html" $ do
+    route $ constRoute "updates"
     compile $ do
-      updates <- recentFirst =<< loadAllSnapshots "update/**" "updates"
+      updates <- recentFirst =<< loadAllSnapshots updatePattern "updates"
       let updatesContext =
             listField "updates" defaultContext (return updates)
               <> constField "title" "Updates"
@@ -28,7 +28,7 @@ rules = do
         >>= loadAndApplyTemplate "templates/default.html" updatesContext
 
   -- Individual update page.
-  match "update/**" $ do
+  match updatePattern $ do
     route stripExtension
     compile $
       pandocCompiler
@@ -41,18 +41,25 @@ rules = do
     route idRoute
     compile $ do
       let feedContext = bodyField "description" <> defaultContext
-      posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "update/**" "updates"
+      posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots updatePattern "updates"
       renderRss updateFeedConfiguration feedContext posts
+
+-- |
+-- Pattern for files which are individual updates.
+--
+-- Does not include the overall index for updates.
+updatePattern :: Pattern
+updatePattern = "update/**" .&&. complement "update/index.html"
 
 -- |
 -- Pattern for files matched or created in this module.
 items :: Pattern
-items = "updates.html" .||. "update/**" .||. "updates.xml"
+items = "update/**" .||. "updates.xml"
 
 -- | Apply a context with the latest update in the list field @latest-update@ to the given rule.
 withLatest :: (Context String -> Compiler (Item String)) -> Compiler (Item String)
 withLatest f = do
-  updates <- fmap (take 1) . recentFirst =<< loadAllSnapshots "update/**" "updates"
+  updates <- fmap (take 1) . recentFirst =<< loadAllSnapshots updatePattern "updates"
   let indexContext =
         if null updates
           then defaultContext
