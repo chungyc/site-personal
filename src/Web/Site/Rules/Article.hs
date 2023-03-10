@@ -17,7 +17,10 @@ rules :: Rules ()
 rules = do
   -- Individual articles.
   match articlePattern $ do
-    route stripExtension
+    route $ composeRoutes stripExtension $
+      -- Index pages have should URLs to the directory.
+      gsubRoute "/index$" (const "/index.html")
+
     compile $
       articleCompiler
         >>= saveSnapshot "articles"
@@ -36,6 +39,7 @@ rules = do
       getResourceBody
         >>= applyAsTemplate context
         >>= loadAndApplyTemplate "templates/default.html" context
+        >>= cleanupIndexUrls
 
   -- RSS feed for articles.
   create ["articles.xml"] $ do
@@ -44,6 +48,7 @@ rules = do
       let itemContext = metadataField <> bodyField "description" <> defaultContext
       articles <- fmap (take 10) . recentFirst =<< loadAllSnapshots articlePattern "articles"
       renderRss updateFeedConfiguration itemContext articles
+        >>= cleanupIndexUrls
 
   match "article/bibliography/references.bib" $ compile biblioCompiler
   match "article/bibliography/acm.csl" $ compile cslCompiler
@@ -85,3 +90,18 @@ articleCompiler = do
   pandoc <- readPandocWith mathReaderOptions body
   pandoc' <- processPandocBiblio cslFile bibFile pandoc
   return $ writePandocWith mathWriterOptions pandoc'
+
+-- |
+-- For local URLs which end with @index.html@, strip it.
+cleanupIndexUrls :: Item String -> Compiler (Item String)
+cleanupIndexUrls = return . fmap (withUrls cleanupIndexUrl)
+
+-- |
+-- If the given URL is local and ends with @index.html@, strip the latter.
+cleanupIndexUrl :: String -> String
+cleanupIndexUrl url@('/' : _)
+  | Nothing <- prefix = url
+  | Just s <- prefix = s
+  where
+    prefix = needlePrefix "index.html" url
+cleanupIndexUrl url = url
