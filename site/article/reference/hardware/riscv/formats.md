@@ -69,7 +69,7 @@ will generate an "instruction address misaligned" exception.
  [12:31]  `imm`[12:31]
 --------- -------------
 
-### J sub-variant
+#### J sub-variant
 
 --------- -------------
  [0:6]    `opcode` 
