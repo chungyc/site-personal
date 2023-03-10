@@ -3,7 +3,7 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Compilers (pandocCompilerWithMath) where
+module Web.Site.Compilers (mathReaderOptions, mathWriterOptions, pandocCompilerWithMath) where
 
 import Hakyll
 import Text.Pandoc.Options

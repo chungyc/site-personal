@@ -13,11 +13,9 @@ import Prelude hiding (div, not, rem)
 style :: Css
 style = do
   div # ".csl-bib-body" ? do
-    paddingTop $ rem 1
     paddingBottom $ rem 1
 
     div # ".csl-entry" ? do
-      marginTop $ rem 1
       marginBottom $ rem 1
 
       -- When width is small, break long URLs.

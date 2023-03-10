@@ -1,13 +1,11 @@
 
 div.csl-bib-body
 {
-  padding-top    : 1rem;
   padding-bottom : 1rem;
 }
 
 div.csl-bib-body div.csl-entry
 {
-  margin-top    : 1rem;
   margin-bottom : 1rem;
   overflow-wrap : break-word;
 }

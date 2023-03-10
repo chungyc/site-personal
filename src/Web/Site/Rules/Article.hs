@@ -19,7 +19,7 @@ rules = do
   match articlePattern $ do
     route stripExtension
     compile $
-      pandocCompilerWithMath
+      articleCompiler
         >>= saveSnapshot "articles"
         >>= loadAndApplyTemplate "templates/article.html" defaultContext
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
@@ -45,17 +45,23 @@ rules = do
       articles <- fmap (take 10) . recentFirst =<< loadAllSnapshots articlePattern "articles"
       renderRss updateFeedConfiguration itemContext articles
 
+  match "article/bibliography/references.bib" $ compile biblioCompiler
+  match "article/bibliography/acm.csl" $ compile cslCompiler
+
 -- |
 -- Pattern for files which are individual articles.
 --
 -- Does not include the overall index for the articles.
 articlePattern :: Pattern
-articlePattern = "article/**" .&&. complement "article/index.html"
+articlePattern =
+  "article/**"
+    .&&. complement "article/index.html"
+    .&&. complement "article/bibliography/**"
 
 -- |
 -- Pattern for files matched or created in this module.
 items :: Pattern
-items = "article/**" .||. "articles.xml"
+items = articlePattern .||. "article/index.html" .||. "articles.xml"
 
 -- |
 -- Feed configuration for updates.
@@ -68,3 +74,14 @@ updateFeedConfiguration =
       feedAuthorEmail = "web@chungyc.org",
       feedRoot = "https://chungyc.org"
     }
+
+-- |
+-- The Pandoc compiler, but with math support and bibliography.
+articleCompiler :: Compiler (Item String)
+articleCompiler = do
+  body <- getResourceBody
+  bibFile <- load "article/bibliography/references.bib"
+  cslFile <- load "article/bibliography/acm.csl"
+  pandoc <- readPandocWith mathReaderOptions body
+  pandoc' <- processPandocBiblio cslFile bibFile pandoc
+  return $ writePandocWith mathWriterOptions pandoc'
