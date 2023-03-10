@@ -6,8 +6,8 @@
 module Web.Site.Rules.Link (rules, items) where
 
 import Hakyll
-import Web.Site.Compilers
 import System.FilePath (dropExtension, takeDirectory)
+import Web.Site.Compilers
 
 rules :: Rules ()
 rules = do
