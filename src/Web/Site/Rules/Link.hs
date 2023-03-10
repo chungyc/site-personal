@@ -6,6 +6,7 @@
 module Web.Site.Rules.Link (rules, items) where
 
 import Hakyll
+import Web.Site.Compilers
 import System.FilePath (dropExtension, takeDirectory)
 
 rules :: Rules ()
@@ -61,18 +62,3 @@ linksCompiler = do
     >>= loadAndApplyTemplate "templates/links.html" linksContext
     >>= loadAndApplyTemplate "templates/default.html" linksContext
     >>= cleanupIndexUrls
-
--- |
--- For local URLs which end with @index.html@, strip it.
-cleanupIndexUrls :: Item String -> Compiler (Item String)
-cleanupIndexUrls = return . fmap (withUrls cleanupIndexUrl)
-
--- |
--- If the given URL is local and ends with @index.html@, strip the latter.
-cleanupIndexUrl :: String -> String
-cleanupIndexUrl url@('/' : _)
-  | Nothing <- prefix = url
-  | Just s <- prefix = s
-  where
-    prefix = needlePrefix "index.html" url
-cleanupIndexUrl url = url

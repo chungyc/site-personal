@@ -17,9 +17,10 @@ rules :: Rules ()
 rules = do
   -- Individual articles.
   match articlePattern $ do
-    route $ composeRoutes stripExtension $
-      -- Index pages have should URLs to the directory.
-      gsubRoute "/index$" (const "/index.html")
+    route $
+      composeRoutes stripExtension $
+        -- Index pages have should URLs to the directory.
+        gsubRoute "/index$" (const "/index.html")
 
     compile $
       articleCompiler
@@ -69,18 +70,6 @@ items :: Pattern
 items = articlePattern .||. "article/index.html" .||. "articles.xml"
 
 -- |
--- Feed configuration for updates.
-updateFeedConfiguration :: FeedConfiguration
-updateFeedConfiguration =
-  FeedConfiguration
-    { feedTitle = "Articles by Yoo Chung",
-      feedDescription = "Articles written by Yoo Chung and posted on their personal web site.",
-      feedAuthorName = "Yoo Chung",
-      feedAuthorEmail = "web@chungyc.org",
-      feedRoot = "https://chungyc.org"
-    }
-
--- |
 -- The Pandoc compiler, but with math support and bibliography.
 articleCompiler :: Compiler (Item String)
 articleCompiler = do
@@ -92,16 +81,13 @@ articleCompiler = do
   return $ writePandocWith mathWriterOptions pandoc'
 
 -- |
--- For local URLs which end with @index.html@, strip it.
-cleanupIndexUrls :: Item String -> Compiler (Item String)
-cleanupIndexUrls = return . fmap (withUrls cleanupIndexUrl)
-
--- |
--- If the given URL is local and ends with @index.html@, strip the latter.
-cleanupIndexUrl :: String -> String
-cleanupIndexUrl url@('/' : _)
-  | Nothing <- prefix = url
-  | Just s <- prefix = s
-  where
-    prefix = needlePrefix "index.html" url
-cleanupIndexUrl url = url
+-- Feed configuration for updates.
+updateFeedConfiguration :: FeedConfiguration
+updateFeedConfiguration =
+  FeedConfiguration
+    { feedTitle = "Articles by Yoo Chung",
+      feedDescription = "Articles written by Yoo Chung and posted on their personal web site.",
+      feedAuthorName = "Yoo Chung",
+      feedAuthorEmail = "web@chungyc.org",
+      feedRoot = "https://chungyc.org"
+    }

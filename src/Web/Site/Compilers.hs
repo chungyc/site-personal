@@ -3,15 +3,25 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Compilers (mathReaderOptions, mathWriterOptions, pandocCompilerWithMath) where
+module Web.Site.Compilers (cleanupIndexUrls, mathReaderOptions, mathWriterOptions) where
 
 import Hakyll
 import Text.Pandoc.Options
 
 -- |
--- The Pandoc compiler, but with math support enabled.
-pandocCompilerWithMath :: Compiler (Item String)
-pandocCompilerWithMath = pandocCompilerWith mathReaderOptions mathWriterOptions
+-- For local URLs in the input which end with @index.html@, strip it.
+cleanupIndexUrls :: Item String -> Compiler (Item String)
+cleanupIndexUrls = return . fmap (withUrls cleanupIndexUrl)
+
+-- |
+-- If the given URL is local and ends with @index.html@, strip the latter.
+cleanupIndexUrl :: String -> String
+cleanupIndexUrl url@('/' : _)
+  | Nothing <- prefix = url
+  | Just s <- prefix = s
+  where
+    prefix = needlePrefix "index.html" url
+cleanupIndexUrl url = url
 
 -- |
 -- Reader options for properly treating math in input.
