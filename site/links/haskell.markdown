@@ -32,3 +32,6 @@ description: References related to the Haskell programming language.
 
 [Clay](http://fvisser.nl/clay/)
 :   CSS preprocessor.
+
+[Pandoc](https://pandoc.org/)
+:   A library for converting one markup format to another.
