@@ -21,7 +21,7 @@ rules = do
 -- |
 -- Pattern for files matched or created in this module.
 items :: Pattern
-items = "link/**" .||. "links.markdown"
+items = "links/**" .||. "links.markdown"
 
 -- |
 -- From the given identifier, return the path to the index HTML file
