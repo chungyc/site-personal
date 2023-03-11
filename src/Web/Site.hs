@@ -5,7 +5,6 @@
 -- Maintainer: web@chungyc.org
 module Web.Site (config, rules) where
 
-import Data.List (intercalate)
 import Hakyll
 import Web.Site.Rules (rules)
 
@@ -16,8 +15,7 @@ config =
   defaultConfiguration
     { providerDirectory = "site",
       deployCommand =
-        intercalate
-          " "
+        unwords
           [ "rsync",
             "-avz",
             "--checksum",
