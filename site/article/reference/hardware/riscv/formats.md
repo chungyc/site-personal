@@ -49,7 +49,9 @@ will generate an "instruction address misaligned" exception.
  [25:31]  `imm`[5:11]
 --------- -------------
 
-#### B sub-variant
+#### B
+
+A variant of the S format.
 
 --------- -------------
  [0:6]    `opcode` 
@@ -70,7 +72,9 @@ will generate an "instruction address misaligned" exception.
  [12:31]  `imm`[12:31]
 --------- -------------
 
-#### J sub-variant
+#### J
+
+A variant of the U format.
 
 --------- -------------
  [0:6]    `opcode` 
