@@ -49,7 +49,7 @@ will generate an "instruction address misaligned" exception.
  [25:31]  `imm`[5:11]
 --------- -------------
 
-#### B
+### B
 
 A variant of the S format.
 
@@ -72,7 +72,7 @@ A variant of the S format.
  [12:31]  `imm`[12:31]
 --------- -------------
 
-#### J
+### J
 
 A variant of the U format.
 
