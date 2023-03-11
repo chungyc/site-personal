@@ -3,9 +3,16 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Compilers (cleanupIndexUrls, mathReaderOptions, mathWriterOptions) where
+module Web.Site.Compilers
+  ( cleanupIndexUrls,
+    mathReaderOptions,
+    mathWriterOptions,
+    getTocOptionsWith,
+  )
+where
 
 import Hakyll
+import Text.Pandoc (compileTemplate, runPure, runWithDefaultPartials)
 import Text.Pandoc.Options
 
 -- |
@@ -46,3 +53,26 @@ mathReaderOptions =
 -- how Pandoc writes out math in KaTeX.
 mathWriterOptions :: WriterOptions
 mathWriterOptions = defaultHakyllWriterOptions {writerHTMLMathMethod = MathJax ""}
+
+-- |
+-- Rewrite the writer options to include a table of contents
+-- if the source has a @toc@ field in its metadata.
+-- If there is no such field, the given writer options are returned as is.
+getTocOptionsWith :: WriterOptions -> Compiler WriterOptions
+getTocOptionsWith options = do
+  identifier <- getUnderlying
+  tocField <- getMetadataField identifier "toc"
+  return $ getOptions tocField
+  where
+    getOptions Nothing = options
+    getOptions (Just _) =
+      options
+        { writerTableOfContents = True,
+          writerTOCDepth = 4,
+          writerTemplate = tocTemplate
+        }
+    tocTemplate
+      | Right (Right t) <- build templateSource = Just t
+      | otherwise = Nothing
+    build = runPure . runWithDefaultPartials . compileTemplate ""
+    templateSource = "<nav class='toc'><h2>Contents</h2>\n$toc$\n</nav>\n$body$"

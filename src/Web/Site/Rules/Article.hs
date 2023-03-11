@@ -6,7 +6,6 @@
 module Web.Site.Rules.Article (rules, items) where
 
 import Hakyll
-import Text.Pandoc
 import Web.Site.Compilers
 import Web.Site.Routes
 
@@ -74,29 +73,13 @@ items = articlePattern .||. "article/index.html" .||. "articles.xml"
 -- The Pandoc compiler, but with math support and bibliography.
 articleCompiler :: Compiler (Item String)
 articleCompiler = do
-  identifier <- getUnderlying
-  toc <- getMetadataField identifier "toc"
+  writerOptions <- getTocOptionsWith mathWriterOptions
   body <- getResourceBody
   bibFile <- load "article/bibliography/references.bib"
   cslFile <- load "article/bibliography/acm.csl"
   pandoc <- readPandocWith mathReaderOptions body
   pandoc' <- processPandocBiblio cslFile bibFile pandoc
-  return $ writePandocWith (options toc) pandoc'
-  where
-    options toc
-      | Nothing <- toc = mathWriterOptions
-      | otherwise =
-          mathWriterOptions
-            { writerTableOfContents = True,
-              writerTOCDepth = 4,
-              writerTemplate = Just $ tocTemplate
-            }
-    tocTemplate =
-      either error id $
-        either (error . show) id $
-          runPure $
-            runWithDefaultPartials $
-              compileTemplate "" "<nav class='toc'><h2>Contents</h2>\n$toc$\n</nav>\n$body$"
+  return $ writePandocWith writerOptions pandoc'
 
 -- |
 -- Feed configuration for updates.
