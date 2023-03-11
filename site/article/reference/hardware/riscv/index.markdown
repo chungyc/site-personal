@@ -9,6 +9,8 @@ extra-stylesheet: /css/bibliography.css
 nocite: "@riscv:user-level"
 ---
 
+These are my notes on the RISC-V instruction set architecture.
+
 *   [Registers](registers)
 *   [Instruction length encoding](encoding)
 *   [Instruction formats](formats)

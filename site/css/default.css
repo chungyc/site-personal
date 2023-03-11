@@ -85,6 +85,42 @@ article > section.byline
   font-size   : 0.69999rem;
 }
 
+article > section.byline p
+{
+  margin-top    : 0.2em;
+  margin-bottom : 0.2em;
+}
+
+nav.toc
+{
+  margin-top    : 1em;
+  margin-bottom : 1em;
+  padding       : 1em 1em 1em 1em;
+  border-style  : none;
+}
+
+nav.toc h2
+{
+  font-family           : "Georgia","Garamond", serif,sans-serif,monospace;
+  font-size             : 1.19999rem;
+  font-style            : normal;
+  font-weight           : bold;
+  text-decoration-line  : none;
+  text-decoration-style : none;
+  margin-top            : 0.1em;
+  margin-bottom         : 0.25em;
+}
+
+nav.toc ul,
+nav.toc ul ul,
+nav.toc ul li
+{
+  padding-left    : 0.75em;
+  margin-top      : 0.1em;
+  margin-bottom   : 0.1em;
+  list-style-type : none;
+}
+
 li + li
 {
   margin-top : 0.75rem;
@@ -179,6 +215,11 @@ h6
   color : #7878a0;
 }
 
+nav.toc
+{
+  background-color : #fafafa;
+}
+
 div.sourceCode
 {
   border-color : #d3d3d3;
@@ -237,6 +278,11 @@ h5
 h6
 {
   color : #87875f;
+}
+
+nav.toc
+{
+  background-color : #050505;
 }
 
 div.sourceCode

@@ -7,7 +7,7 @@ module Web.Site.Styles.Default (style) where
 
 import Clay hiding (style)
 import Clay.Media qualified as Media
-import Prelude hiding (div, not, rem)
+import Prelude hiding (div, not, rem, (**))
 
 -- |
 -- Default style for Clay to render into a stylesheet.
@@ -40,6 +40,31 @@ style = do
   article |> section # ".byline" ? do
     fontFamily ["Verdana"] [sansSerif, serif, monospace]
     fontSize $ rem 0.7
+    p ? do
+      marginTop $ em 0.2
+      marginBottom $ em 0.2
+
+  nav # ".toc" ? do
+    marginTop $ em 1
+    marginBottom $ em 1
+    sym padding $ em 1
+    borderStyle none
+
+    h2 ? do
+      fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
+      fontSize $ rem 1.2
+      fontStyle normal
+      fontWeight bold
+      textDecorationLine none
+      textDecorationStyle none
+      marginTop $ em 0.1
+      marginBottom $ em 0.25
+
+    ul <> (ul ** (ul <> li)) ? do
+      paddingLeft $ em 0.75
+      marginTop $ em 0.1
+      marginBottom $ em 0.1
+      listStyleType none
 
   li |+ li ? marginTop (rem 0.75)
 
@@ -118,6 +143,8 @@ lightColorScheme = do
   h5 ? fontColor (headingColor 5)
   h6 ? fontColor (headingColor 6)
 
+  nav # ".toc" ? backgroundColor (rgb 250 250 250)
+
   div # ".sourceCode" ? borderColor lightgrey
   where
     headingColor n = rgb (n * 20) (n * 20) (100 + n * 10)
@@ -140,6 +167,8 @@ darkColorScheme = do
   h4 ? fontColor (headingColor 4)
   h5 ? fontColor (headingColor 5)
   h6 ? fontColor (headingColor 6)
+
+  nav # ".toc" ? backgroundColor (rgb 5 5 5)
 
   div # ".sourceCode" ? borderColor dimgrey
   where
