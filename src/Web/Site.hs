@@ -5,6 +5,7 @@
 -- Maintainer: web@chungyc.org
 module Web.Site (config, rules) where
 
+import Data.List (intercalate)
 import Hakyll
 import Web.Site.Rules (rules)
 
@@ -14,5 +15,15 @@ config :: Configuration
 config =
   defaultConfiguration
     { providerDirectory = "site",
-      deployCommand = "rsync -az --checksum --delete --exclude .well-known _site/ chungyc@chungyc.org:chungyc.org/"
+      deployCommand =
+        intercalate
+          " "
+          [ "rsync",
+            "-avz",
+            "--checksum",
+            "--delete",
+            "--exclude .well-known",
+            "_site/",
+            "chungyc@chungyc.org:chungyc.org/"
+          ]
     }
