@@ -48,7 +48,8 @@ style = do
     marginTop $ em 1
     marginBottom $ em 1
     sym padding $ em 1
-    borderStyle none
+    borderStyle solid
+    borderWidth $ px 1
 
     h2 ? do
       fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
@@ -143,7 +144,9 @@ lightColorScheme = do
   h5 ? fontColor (headingColor 5)
   h6 ? fontColor (headingColor 6)
 
-  nav # ".toc" ? backgroundColor (rgb 250 250 250)
+  nav # ".toc" ? do
+    borderColor lightgrey
+    backgroundColor $ rgb 240 240 240
 
   div # ".sourceCode" ? borderColor lightgrey
   where
@@ -168,7 +171,9 @@ darkColorScheme = do
   h5 ? fontColor (headingColor 5)
   h6 ? fontColor (headingColor 6)
 
-  nav # ".toc" ? backgroundColor (rgb 5 5 5)
+  nav # ".toc" ? do
+    borderColor dimgrey
+    backgroundColor $ rgb 20 20 20
 
   div # ".sourceCode" ? borderColor dimgrey
   where
