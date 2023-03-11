@@ -1,0 +1,30 @@
+# This workflow warns and then closes issues and PRs that have had no activity for a specified amount of time.
+#
+# You can adjust the behavior by modifying this file.
+# For more information, see:
+# https://github.com/actions/stale
+name: Staleness
+
+on:
+  schedule:
+  - cron: '38 23 * * 5'
+
+jobs:
+  stale:
+
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+    - uses: actions/stale@v5
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        stale-issue-message: 'No activity on this issue for a prolonged time.'
+        stale-pr-message: 'No activity on this pull request for a prolonged time.'
+        stale-issue-label: 'stale'
+        stale-pr-label: 'stale'
+        close-issue-label: 'wontfix'
+        days-before-stale: 60
+        days-before-close: 30
