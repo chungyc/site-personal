@@ -1,6 +1,6 @@
 ---
 title: Miscellaneous
-description: Random links that I don't want at the top-level, but an appropriate category yet.
+description: Random links that I don't want at the top-level, but don't have an appropriate category yet.
 updated: 2023-03-13
 ---
 
