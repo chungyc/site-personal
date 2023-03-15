@@ -46,6 +46,8 @@ executables:
     # but included here to ensure these are available
     # for site Haskell code which generate files.
     - clay
+    - diagrams-svg
+    - svg-builder
   server:
     main:                app/Server.hs
     ghc-options:

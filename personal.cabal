@@ -76,6 +76,8 @@ executable site
   build-depends:
       base
     , clay
+    , diagrams-svg
     , hakyll
     , personal
+    , svg-builder
   default-language: GHC2021
