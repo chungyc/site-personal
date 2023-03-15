@@ -34,16 +34,6 @@ jobs:
           key: build-${{ hashFiles('app/**', 'src/**') }}
           restore-keys: build-
 
-      - if: ${{ steps.cache-build-objects.outputs.cache-hit == 'true' }}
-        id: cache-site
-        uses: actions/cache@v3
-        with:
-          path: |
-            _site
-            _cache
-          key: site-${{ hashFiles('site/**') }}
-          restore-keys: site-
-
       - run: stack build
 
       - run: stack exec site build
