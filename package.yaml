@@ -45,14 +45,6 @@ executables:
     dependencies:
     - personal
     - hakyll
-  style:
-    main:                app/Style.hs
-    ghc-options: *exe-ghc-options
-    dependencies:
-    - personal
-    - clay
-    - pandoc
-    - text
   server:
     main:                app/Server.hs
     ghc-options: *exe-ghc-options

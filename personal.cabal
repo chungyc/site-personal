@@ -33,12 +33,8 @@ library
       Web.Site.Rules.Publication
       Web.Site.Rules.Server
       Web.Site.Rules.Sitemap
+      Web.Site.Rules.Stylesheet
       Web.Site.Rules.Update
-      Web.Site.Styles.Bibliography
-      Web.Site.Styles.Default
-      Web.Site.Styles.Error
-      Web.Site.Styles.Front
-      Web.Site.Styles.Links
   other-modules:
       Paths_personal
   hs-source-dirs:
@@ -81,19 +77,4 @@ executable site
       base
     , hakyll
     , personal
-  default-language: GHC2021
-
-executable style
-  main-is: app/Style.hs
-  other-modules:
-      Paths_personal
-  default-extensions:
-      OverloadedStrings
-  ghc-options: -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base
-    , clay
-    , pandoc
-    , personal
-    , text
   default-language: GHC2021

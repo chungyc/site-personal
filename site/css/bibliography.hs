@@ -3,15 +3,18 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Styles.Bibliography (style) where
+module Main (main) where
 
-import Clay hiding (style)
+import Clay
 import Prelude hiding (div, not, rem)
+
+main :: IO ()
+main = putCss biblioStyle
 
 -- |
 -- Bibliography style for Clay to render into a stylesheet.
-style :: Css
-style = do
+biblioStyle :: Css
+biblioStyle = do
   div # ".csl-bib-body" ? do
     paddingBottom $ rem 1
 

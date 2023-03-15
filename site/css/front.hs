@@ -3,15 +3,18 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Styles.Front (style) where
+module Main (main) where
 
-import Clay hiding (style)
+import Clay
 import Clay.Media qualified as Media
+
+main :: IO ()
+main = putCss frontStyle
 
 -- |
 -- Style for front page which Clay will render into a stylesheet.
-style :: Css
-style = do
+frontStyle :: Css
+frontStyle = do
   ".latest-update" ? do
     sym padding $ em 1
 

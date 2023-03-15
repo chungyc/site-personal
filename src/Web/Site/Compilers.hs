@@ -4,7 +4,8 @@
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
 module Web.Site.Compilers
-  ( cleanupIndexUrls,
+  ( haskellCompiler,
+    cleanupIndexUrls,
     mathReaderOptions,
     mathWriterOptions,
     getTocOptionsWith,
@@ -14,6 +15,21 @@ where
 import Hakyll
 import Text.Pandoc (compileTemplate, runPure, runWithDefaultPartials)
 import Text.Pandoc.Options
+
+-- |
+-- Run the content of the resource as Haskell code and use its output.
+haskellCompiler :: Compiler (Item String)
+haskellCompiler =
+  getResourceString
+    >>= withItemBody
+      ( unixFilter
+          "stack"
+          [ "runhaskell",
+            "--",
+            "-XGHC2021",
+            "-XOverloadedStrings"
+          ]
+      )
 
 -- |
 -- For local URLs in the input which end with @index.html@, strip it.

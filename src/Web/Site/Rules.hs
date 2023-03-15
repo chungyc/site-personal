@@ -13,6 +13,7 @@ import Web.Site.Rules.Link qualified as Link
 import Web.Site.Rules.Publication qualified as Publication
 import Web.Site.Rules.Server qualified as Server
 import Web.Site.Rules.Sitemap qualified as Sitemap
+import Web.Site.Rules.Stylesheet qualified as Stylesheet
 import Web.Site.Rules.Update qualified as Update
 
 -- |
@@ -20,6 +21,7 @@ import Web.Site.Rules.Update qualified as Update
 rules :: Rules ()
 rules = do
   Server.rules
+  Stylesheet.rules
   File.rules
   Update.rules
   Article.rules

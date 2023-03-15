@@ -1,18 +1,21 @@
 -- |
--- Description: Stylesheet generation for the web site.
+-- Description: Generation of the default stylesheet for the web site.
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Styles.Default (style) where
+module Main (main) where
 
-import Clay hiding (style)
+import Clay
 import Clay.Media qualified as Media
 import Prelude hiding (div, not, rem, (**))
 
+main :: IO ()
+main = putCss defaultStyle
+
 -- |
 -- Default style for Clay to render into a stylesheet.
-style :: Css
-style = do
+defaultStyle :: Css
+defaultStyle = do
   html ? do
     fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
     textRendering optimizeLegibility

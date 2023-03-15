@@ -3,15 +3,18 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Styles.Error (style) where
+module Main (main) where
 
-import Clay hiding (style)
+import Clay
 import Prelude hiding (div)
+
+main :: IO ()
+main = putCss errorStyle
 
 -- |
 -- Style for error pages which Clay will render into a stylesheet.
-style :: Css
-style = do
+errorStyle :: Css
+errorStyle = do
   -- For single letters used like a big image all by itself.
   -- E.g., a big question mark for a 404 page.
   div # ".letter-image" ? fontSize (cm 10)

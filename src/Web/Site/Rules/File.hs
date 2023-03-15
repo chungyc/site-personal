@@ -14,10 +14,6 @@ rules = do
     route idRoute
     compile copyFileCompiler
 
-  match "css/**" $ do
-    route idRoute
-    compile compressCssCompiler
-
   match "files/**" $ do
     route idRoute
     compile copyFileCompiler
