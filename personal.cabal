@@ -28,6 +28,7 @@ library
       Web.Site.Routes
       Web.Site.Rules
       Web.Site.Rules.Article
+      Web.Site.Rules.Diagram
       Web.Site.Rules.File
       Web.Site.Rules.Link
       Web.Site.Rules.Publication

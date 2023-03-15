@@ -8,6 +8,7 @@ module Web.Site.Rules (rules) where
 import Hakyll
 import Web.Site.Routes
 import Web.Site.Rules.Article qualified as Article
+import Web.Site.Rules.Diagram qualified as Diagram
 import Web.Site.Rules.File qualified as File
 import Web.Site.Rules.Link qualified as Link
 import Web.Site.Rules.Publication qualified as Publication
@@ -22,6 +23,7 @@ rules :: Rules ()
 rules = do
   Server.rules
   Stylesheet.rules
+  Diagram.rules
   File.rules
   Update.rules
   Article.rules
@@ -38,10 +40,11 @@ rules = do
 
   match "index.html" $ do
     route idRoute
-    compile $ Update.withLatest $ \indexContext ->
-      getResourceBody
-        >>= applyAsTemplate indexContext
-        >>= loadAndApplyTemplate "templates/default.html" indexContext
+    compile $
+      Update.withLatest $ \indexContext ->
+        getResourceBody
+          >>= applyAsTemplate indexContext
+          >>= loadAndApplyTemplate "templates/default.html" indexContext
 
   Sitemap.rules $
     "about.html"
