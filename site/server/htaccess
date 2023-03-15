@@ -2,6 +2,14 @@ Options -Indexes
 
 AddDefaultCharset utf-8
 
+# If there was any secret data being transmitted, then enabling compression
+# with TLS opens up a security vulnerability (https://www.breachattack.com/).
+# However, this is a static site with no secrets, so we enable it.
+#
+# If there are any secret directories protected by passwords or certificates,
+# compression should be disabled for these directories.
+SSLCompression on
+
 <FilesMatch "^[^.]+$">
     ForceType text/html
 </FilesMatch>
@@ -12,6 +20,7 @@ AddDefaultCharset utf-8
 
 ErrorDocument 404 /server/errors/missing.html
 
+# Files in /server are not meant to be accessed directly.
 RewriteEngine On
 RewriteCond %{ENV:REDIRECT_STATUS} ^$
 RewriteRule ^server/ - [R=404]
