@@ -44,7 +44,6 @@ library
   ghc-options: -Wall -Werror
   build-depends:
       base
-    , clay
     , filepath
     , hakyll
     , pandoc
@@ -75,6 +74,7 @@ executable site
   ghc-options: -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base
+    , clay
     , hakyll
     , personal
   default-language: GHC2021
