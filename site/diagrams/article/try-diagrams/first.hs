@@ -1,6 +1,4 @@
 myCircle :: Diagram B
-myCircle = circle 0.8
+myCircle = circle 0.8 # fc blue
 
-main = putStr $ prettyText $ renderDia SVG options myCircle
-  where
-    options = SVGOptions (mkWidth 250) Nothing "" [] True
+main = putStr $ prettyText $ renderDia SVG defaultOptions $ pad 1.1 $ myCircle

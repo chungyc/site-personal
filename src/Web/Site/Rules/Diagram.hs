@@ -17,19 +17,9 @@ rules = do
     route $ setExtension "svg"
     compile haskellCompiler'
   where
-    preamble =
-      intercalate
-        "\n"
-        [ "{-# LANGUAGE NoMonomorphismRestriction #-}",
-          "{-# LANGUAGE TypeFamilies              #-}",
-          "import           Data.Text.Lazy.IO    (putStr)",
-          "import           Diagrams.Backend.SVG",
-          "import           Diagrams.Prelude",
-          "import           Graphics.Svg",
-          "import           Prelude              hiding (putStr)"
-        ]
-    haskellCompiler' =
+    haskellCompiler' = do
       getResourceString
+        >>= return . fmap (\s -> concat [preamble, s, postamble])
         >>= withItemBody
           ( unixFilter
               "stack"
@@ -38,5 +28,21 @@ rules = do
                 "-XGHC2021",
                 "-XOverloadedStrings"
               ]
-              . (preamble ++)
           )
+
+preamble :: String
+preamble =
+  intercalate
+    "\n"
+    [ "{-# LANGUAGE NoMonomorphismRestriction #-}",
+      "{-# LANGUAGE TypeFamilies              #-}",
+      "import           Data.Text.Lazy.IO    (putStr)",
+      "import           Diagrams.Backend.SVG",
+      "import           Diagrams.Prelude",
+      "import           Graphics.Svg",
+      "import           Prelude              hiding (putStr)",
+      ""
+    ]
+
+postamble :: String
+postamble = "\ndefaultOptions = SVGOptions (mkWidth 400) Nothing \"\" [] True"

@@ -11,6 +11,6 @@ import Web.Site.Compilers
 -- | Rules related to stylesheets generated from Haskell code.
 rules :: Rules ()
 rules = do
-  match "css/*.hs" $ do
+  match "css/**.hs" $ do
     route $ setExtension "css"
     compile haskellCompiler
