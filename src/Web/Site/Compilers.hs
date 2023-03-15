@@ -12,9 +12,10 @@ module Web.Site.Compilers
   )
 where
 
-import Hakyll
-import Text.Pandoc (compileTemplate, runPure, runWithDefaultPartials)
-import Text.Pandoc.Options
+import           Hakyll
+import           Text.Pandoc         (compileTemplate, runPure,
+                                      runWithDefaultPartials)
+import           Text.Pandoc.Options
 
 -- |
 -- Run the content of the resource as Haskell code and use its output.

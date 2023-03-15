@@ -5,9 +5,9 @@
 -- Maintainer: web@chungyc.org
 module Main (main) where
 
-import Clay
+import           Clay
 import qualified Clay.Media as Media
-import Prelude hiding (div, not, rem, (**))
+import           Prelude    hiding (div, not, rem, (**))
 
 main :: IO ()
 main = putCss defaultStyle
@@ -78,6 +78,25 @@ defaultStyle = do
 
   dd ? do
     marginBottom $ em 1
+
+  figure ? do
+    paddingTop $ em 0.5
+    paddingBottom $ em 0.5
+    marginTop $ em 0.5
+    marginBottom $ em 0.5
+    marginLeft auto
+    marginRight auto
+    textAlign center
+    img ? do
+      display block
+      marginLeft auto
+      marginRight auto
+      sym padding $ px 10
+      maxWidth $ pct 95
+    figcaption ? do
+      paddingTop $ em 1
+      marginLeft auto
+      marginRight auto
 
   div # ".sourceCode" ? do
     borderStyle solid

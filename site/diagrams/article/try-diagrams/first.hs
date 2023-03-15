@@ -1,14 +1,5 @@
-{-# LANGUAGE TypeFamilies #-}
-{-# LANGUAGE NoMonomorphismRestriction #-}
-
-import Data.Text.Lazy.IO (putStr)
-import Diagrams.Backend.SVG
-import Diagrams.Prelude
-import Graphics.Svg
-import Prelude hiding (putStr)
-
 myCircle :: Diagram B
-myCircle = circle 1
+myCircle = circle 0.8
 
 main = putStr $ prettyText $ renderDia SVG options myCircle
   where
