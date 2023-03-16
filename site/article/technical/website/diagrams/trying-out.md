@@ -1,7 +1,7 @@
 ---
 title: Trying out Diagrams
 description: Trying out Diagrams to embed images in the web site.
-published: 2023-03-15
+published: 2023-03-20
 ---
 
 I'm trying out using [Diagrams] for including diagrams.
