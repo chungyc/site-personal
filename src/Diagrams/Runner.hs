@@ -20,8 +20,8 @@ import Diagrams.Prelude
 import Graphics.Svg
 import Prelude hiding (putStr)
 
-putDiagram :: SVGFloat n => Options SVG V2 n -> QDiagram SVG V2 n Any -> IO ()
+putDiagram :: (SVGFloat n) => Options SVG V2 n -> QDiagram SVG V2 n Any -> IO ()
 putDiagram options diagram = putStr $ prettyText $ renderDia SVG options $ pad 1.1 $ diagram
 
-defaultOptions :: SVGFloat n => Options SVG V2 n
+defaultOptions :: (SVGFloat n) => Options SVG V2 n
 defaultOptions = SVGOptions (mkWidth 400) Nothing "" [] True
