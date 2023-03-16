@@ -19,7 +19,7 @@ rules = do
   where
     haskellCompiler' = do
       getResourceString
-        >>= return . fmap (\s -> concat [preamble, s, postamble])
+        >>= return . fmap (preamble ++)
         >>= withItemBody
           ( unixFilter
               "stack"
@@ -36,13 +36,6 @@ preamble =
     "\n"
     [ "{-# LANGUAGE NoMonomorphismRestriction #-}",
       "{-# LANGUAGE TypeFamilies              #-}",
-      "import           Data.Text.Lazy.IO    (putStr)",
-      "import           Diagrams.Backend.SVG",
-      "import           Diagrams.Prelude",
-      "import           Graphics.Svg",
-      "import           Prelude              hiding (putStr)",
+      "import           Diagrams.Runner",
       ""
     ]
-
-postamble :: String
-postamble = "\ndefaultOptions = SVGOptions (mkWidth 400) Nothing \"\" [] True"

@@ -1,4 +1,4 @@
 myCircle :: Diagram B
-myCircle = circle 0.8 # fc red
+myCircle = circle 1
 
-main = putStr $ prettyText $ renderDia SVG defaultOptions $ pad 1.1 $ myCircle
+main = putDiagram defaultOptions myCircle

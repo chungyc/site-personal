@@ -23,6 +23,7 @@ source-repository head
 
 library
   exposed-modules:
+      Diagrams.Runner
       Web.Site
       Web.Site.Compilers
       Web.Site.Routes
@@ -45,9 +46,13 @@ library
   ghc-options: -Wall -Werror
   build-depends:
       base
+    , diagrams-lib
+    , diagrams-svg
     , filepath
     , hakyll
     , pandoc
+    , svg-builder
+    , text
   default-language: GHC2021
 
 executable server
@@ -76,8 +81,8 @@ executable site
   build-depends:
       base
     , clay
+    , diagrams-lib
     , diagrams-svg
     , hakyll
     , personal
-    , svg-builder
   default-language: GHC2021
