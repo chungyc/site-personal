@@ -36,6 +36,6 @@ preamble =
     "\n"
     [ "{-# LANGUAGE NoMonomorphismRestriction #-}",
       "{-# LANGUAGE TypeFamilies              #-}",
-      "import           Diagrams.Runner",
+      "import Diagrams.Runner",
       ""
     ]
