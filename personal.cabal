@@ -81,6 +81,7 @@ executable site
   build-depends:
       base
     , clay
+    , diagrams-contrib
     , diagrams-lib
     , diagrams-svg
     , hakyll

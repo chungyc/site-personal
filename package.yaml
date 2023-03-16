@@ -50,6 +50,7 @@ executables:
     # but included here to ensure these are available
     # for site Haskell code which generate files.
     - clay
+    - diagrams-contrib
     - diagrams-lib
     - diagrams-svg
   server:
