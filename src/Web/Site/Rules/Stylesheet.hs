@@ -13,4 +13,4 @@ rules :: Rules ()
 rules = do
   match "css/**.hs" $ do
     route $ setExtension "css"
-    compile haskellCompiler
+    compile $ getResourceBody >>= haskellCompiler

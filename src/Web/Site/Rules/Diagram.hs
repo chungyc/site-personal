@@ -3,7 +3,7 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Web.Site.Rules.Diagram (rules) where
+module Web.Site.Rules.Diagram (rules, preamble) where
 
 import Data.List (intercalate)
 import Hakyll
@@ -31,11 +31,7 @@ rules :: Rules ()
 rules = do
   match "diagrams/**.hs" $ do
     route $ setExtension "svg"
-    compile $
-      getResourceBody
-        >>= pure . fmap (preamble ++)
-        >>= makeItem
-        >> haskellCompiler
+    compile $ getResourceBody >>= pure . fmap (preamble ++) >>= haskellCompiler
 
 -- |
 -- Common preamble to Diagrams-based code.
