@@ -10,4 +10,6 @@ Let's see if this works.  The following is the first diagram I tried.
 
 ![First diagram](/diagrams/article/try-diagrams/first.svg)
 
+This is a circle filled with the color red.
+
 [Diagrams]: https://diagrams.github.io/

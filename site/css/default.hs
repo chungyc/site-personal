@@ -80,10 +80,11 @@ defaultStyle = do
     marginBottom $ em 1
 
   figure ? do
+    display block
     paddingTop $ em 0.5
     paddingBottom $ em 0.5
-    marginTop $ em 0.5
-    marginBottom $ em 0.5
+    marginTop $ em 1
+    marginBottom $ em 1
     marginLeft auto
     marginRight auto
     textAlign center
@@ -91,10 +92,12 @@ defaultStyle = do
       display block
       marginLeft auto
       marginRight auto
-      sym padding $ px 10
       maxWidth $ pct 95
     figcaption ? do
-      paddingTop $ em 1
+      display block
+      fontFamily ["Verdana"] [sansSerif, serif, monospace]
+      fontSize $ rem 0.9
+      marginTop $ em 0.5
       marginLeft auto
       marginRight auto
 
