@@ -6,7 +6,8 @@ toc: true
 include-syntax-stylesheet: true
 ---
 
-I'm trying out using [Diagrams] for including diagrams.  Let's see if this works.
+I'm trying out using [Diagrams] for including images in the web site.
+Let's see if this works.
 
 ## First diagram
 
@@ -40,7 +41,7 @@ example = circle 2 # lc purple `atop` circle 1 # lc green
 
 ![Circle atop another](/diagrams/article/diagrams/combine1.svg)
 
-A circle and square side by side:
+A circle and a square side by side:
 
 ```haskell
 example :: Diagram B
