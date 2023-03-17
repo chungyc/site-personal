@@ -30,7 +30,11 @@ library:
   dependencies:
   - hakyll
   - pandoc
+  - diagrams-lib
+  - diagrams-svg
   - filepath
+  - svg-builder
+  - text
 
 executables:
   site:
@@ -46,6 +50,9 @@ executables:
     # but included here to ensure these are available
     # for site Haskell code which generate files.
     - clay
+    - diagrams-contrib
+    - diagrams-lib
+    - diagrams-svg
   server:
     main:                app/Server.hs
     ghc-options:

@@ -29,6 +29,8 @@ defaultStyle = do
     marginBottom $ rem 2
 
   headings
+  tableOfContents
+  figures
 
   footer ? do
     fontFamily ["Courier New"] [monospace, sansSerif]
@@ -46,29 +48,6 @@ defaultStyle = do
     p ? do
       marginTop $ em 0.2
       marginBottom $ em 0.2
-
-  nav # ".toc" ? do
-    marginTop $ em 1
-    marginBottom $ em 1
-    sym padding $ em 1
-    borderStyle solid
-    borderWidth $ px 1
-
-    h2 ? do
-      fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
-      fontSize $ rem 1.2
-      fontStyle normal
-      fontWeight bold
-      textDecorationLine none
-      textDecorationStyle none
-      marginTop $ em 0.1
-      marginBottom $ em 0.25
-
-    ul <> (ul ** (ul <> li)) ? do
-      paddingLeft $ em 0.75
-      marginTop $ em 0.1
-      marginBottom $ em 0.1
-      listStyleType none
 
   li |+ li ? marginTop (rem 0.75)
 
@@ -129,6 +108,59 @@ headings = do
       fontFamily ["Courier New"] [monospace, sansSerif]
       textDecorationLine underline
       textDecorationStyle dotted
+
+-- |
+-- Style for table of contents.
+tableOfContents :: Css
+tableOfContents = do
+  nav # ".toc" ? do
+    marginTop $ em 1
+    marginBottom $ em 1
+    sym padding $ em 1
+    borderStyle solid
+    borderWidth $ px 1
+
+    h2 ? do
+      fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
+      fontSize $ rem 1.2
+      fontStyle normal
+      fontWeight bold
+      textDecorationLine none
+      textDecorationStyle none
+      marginTop $ em 0.1
+      marginBottom $ em 0.25
+
+    ul <> (ul ** (ul <> li)) ? do
+      paddingLeft $ em 0.75
+      marginTop $ em 0.1
+      marginBottom $ em 0.1
+      listStyleType none
+
+-- |
+-- Style for figures generated from Diagrams-based Haskell code.
+figures :: Css
+figures = do
+  figure ? do
+    display block
+    paddingTop $ em 0.5
+    paddingBottom $ em 0.5
+    marginTop $ em 1
+    marginBottom $ em 1
+    marginLeft auto
+    marginRight auto
+    textAlign center
+    img ? do
+      display block
+      marginLeft auto
+      marginRight auto
+      maxWidth $ pct 95
+    figcaption ? do
+      display block
+      fontFamily ["Verdana"] [sansSerif, serif, monospace]
+      fontSize $ rem 0.9
+      marginTop $ em 0.5
+      marginLeft auto
+      marginRight auto
 
 -- | Color scheme to use in light mode.
 lightColorScheme :: Css

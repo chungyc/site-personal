@@ -5,7 +5,6 @@
 -- Maintainer: web@chungyc.org
 module Main (main) where
 
-import Data.String
 import Data.Text (Text)
 import Data.Text qualified as Text
 import Network.HTTP.Types.Status (status404)
@@ -25,7 +24,7 @@ main =
         }
   where
     warpSettings =
-      Warp.setHost (fromString "127.0.0.1") $
+      Warp.setHost "*" $
         Warp.setPort 8000 Warp.defaultSettings
 
     baseSettings = Static.defaultFileServerSettings "_site"
