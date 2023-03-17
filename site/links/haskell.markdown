@@ -35,3 +35,6 @@ description: References related to the Haskell programming language.
 
 [Pandoc](https://pandoc.org/)
 :   A library for converting one markup format to another.
+
+[Diagrams](https://diagrams.github.io/)
+:   Domain-specific language for declaratively defining images.
