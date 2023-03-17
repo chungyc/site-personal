@@ -12,6 +12,7 @@ module Web.Site.Compilers
   )
 where
 
+import Data.ByteString.Lazy
 import Hakyll
 import Text.Pandoc
   ( compileTemplate,
@@ -22,10 +23,10 @@ import Text.Pandoc.Options
 
 -- |
 -- Run the content of the string item as Haskell code and use its output.
-haskellCompiler :: Item String -> Compiler (Item String)
+haskellCompiler :: Item ByteString -> Compiler (Item ByteString)
 haskellCompiler =
   withItemBody
-    ( unixFilter
+    ( unixFilterLBS
         "stack"
         [ "runhaskell",
           "--",
