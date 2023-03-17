@@ -1,7 +1,7 @@
 ---
 title: Trying out Diagrams
 description: Trying out Diagrams to embed images in the web site.
-published: 2023-03-20
+published: 2023-03-16
 toc: true
 include-syntax-stylesheet: true
 ---
@@ -22,6 +22,12 @@ main = putDiagram defaultOptions myCircle
 It is a circle filled with the color red.
 
 ![First diagram](/diagrams/article/diagrams/first.svg)
+
+In subsequent code snippets, I will omit the definition of the `main` function.
+It will almost always be the same, but it is not part of the implicitly
+included boilerplate that this site uses for the code.
+This is to allow customizations of the `main` function,
+in particular the options, in the rare cases where it might be needed.
 
 ## Combining diagrams
 
@@ -52,7 +58,7 @@ example = circle 1 === square 2
 
 ![Circle above square](/diagrams/article/diagrams/combine3.svg)
 
-Three series of growing circles:
+Three rows of growing circles:
 
 ```haskell
 circles :: Diagram B
@@ -69,6 +75,7 @@ example = vcat $ replicate 3 circles
 Circles of different sizes aligned on the top:
 
 ```haskell
+example :: Diagram B
 example = hrule (2 * sum sizes) === circles # centerX
   where
     circles = hcat $ map (alignT . (`scale` circle 1)) sizes
@@ -86,6 +93,7 @@ A Koch snowflake:
 ```haskell
 import Diagrams.TwoD.Path.IteratedSubset
 
+example :: Diagram B
 example = strokeTrail $ snowflake 5
 ```
 
@@ -96,6 +104,7 @@ A Sierpinski triangle:
 ```haskell
 import Diagrams.TwoD.Path.LSystem
 
+example :: Diagram B
 example = getTurtleDiagram $ sierpinski 8
 ```
 
@@ -106,6 +115,7 @@ Tree figure generated with an L-system:
 ```haskell
 import Diagrams.TwoD.Path.LSystem
 
+example :: Diagram B
 example = rotateBy 0.25 $ getTurtleDiagram $ tree4 7
 ```
 
