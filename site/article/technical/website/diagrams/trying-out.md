@@ -66,6 +66,19 @@ example = vcat $ replicate 3 circles
 
 ![Rows of growing circles](/diagrams/article/diagrams/combine4.svg)
 
+## Aligning shapes
+
+Circles of different sizes aligned on the top:
+
+```haskell
+example = hrule (2 * sum sizes) === circles # centerX
+  where
+    circles = hcat . map alignT . zipWith scale sizes $ repeat $ circle 1
+    sizes = [2, 5, 4, 7, 1, 3]
+```
+
+![Shapes aligned on top](/diagrams/article/diagrams/combine4.svg)
+
 ## See also
 
 *   [Diagrams Quick Start Tutorial](https://diagrams.github.io/doc/quickstart.html)
