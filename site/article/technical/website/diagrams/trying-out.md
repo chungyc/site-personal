@@ -77,7 +77,7 @@ example = hrule (2 * sum sizes) === circles # centerX
     sizes = [2, 5, 4, 7, 1, 3]
 ```
 
-![Shapes aligned on top](/diagrams/article/diagrams/combine4.svg)
+![Shapes aligned on top](/diagrams/article/diagrams/align.svg)
 
 ## See also
 
