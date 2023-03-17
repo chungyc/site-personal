@@ -15,7 +15,7 @@ rules :: Rules ()
 rules = do
   match "css/**.hs" $ do
     route $ setExtension "css"
-    compile $ getResourceBody >>= haskellCompiler
+    compile $ getResourceLBS >>= haskellCompiler
 
   -- Stylesheet for supporting syntax highlighting.
   -- This will import the actual stylesheet according to the preferred color scheme.

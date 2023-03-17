@@ -29,10 +29,11 @@ library:
   source-dirs: src
   dependencies:
   - hakyll
-  - pandoc
+  - bytestring
   - diagrams-lib
   - diagrams-svg
   - filepath
+  - pandoc
   - svg-builder
   - text
 

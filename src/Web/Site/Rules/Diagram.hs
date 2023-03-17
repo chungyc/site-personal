@@ -5,7 +5,7 @@
 -- Maintainer: web@chungyc.org
 module Web.Site.Rules.Diagram (rules, preamble) where
 
-import Data.List (intercalate)
+import Data.ByteString.Lazy
 import Hakyll
 import Web.Site.Compilers
 
@@ -31,7 +31,7 @@ rules :: Rules ()
 rules = do
   match "diagrams/**.hs" $ do
     route $ setExtension "svg"
-    compile $ getResourceBody >>= haskellCompiler . fmap (preamble ++)
+    compile $ getResourceLBS >>= haskellCompiler . fmap (append preamble)
 
 -- |
 -- Common preamble to Diagrams-based code.
@@ -55,7 +55,7 @@ rules = do
 --    roundThing :: Diagram B
 --    roundThing = circle 1 # lc red
 -- @
-preamble :: String
+preamble :: ByteString
 preamble =
   intercalate
     "\n"
