@@ -31,7 +31,7 @@ rules :: Rules ()
 rules = do
   match "diagrams/**.hs" $ do
     route $ setExtension "svg"
-    compile $ getResourceBody >>= pure . fmap (preamble ++) >>= haskellCompiler
+    compile $ getResourceBody >>= haskellCompiler . fmap (preamble ++)
 
 -- |
 -- Common preamble to Diagrams-based code.
