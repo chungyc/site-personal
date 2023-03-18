@@ -21,13 +21,14 @@ jobs:
         with:
           enable-stack: true
 
-      - uses: actions/cache@v3
+      - name: Cache dependencies
+        uses: actions/cache@v3
         with:
           path: ~/.stack
           key: stack-${{ hashFiles('package.yaml', 'stack.yaml') }}
           restore-keys: stack-
 
-      - id: cache-build-objects
+      - name: Cache build artifacts
         uses: actions/cache@v3
         with:
           path: .stack-work

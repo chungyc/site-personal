@@ -15,6 +15,7 @@ jobs:
           enable-stack: true
 
       - name: Cache dependencies
+        uses: actions/cache@v3
         with:
           path: ~/.stack
           key: stack-${{ hashFiles('package.yaml', 'stack.yaml') }}
