@@ -12,4 +12,8 @@ nocite: "@riscv:user-level"
 [RV32I](rv32i)
 :   32-bit base integer instruction set
 
+## See also
+
+*   [RISC-V Notes](../)
+
 ## References

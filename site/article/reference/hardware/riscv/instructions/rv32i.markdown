@@ -218,5 +218,6 @@ Specific encodings are reserved for standard and custom hints for use in the fut
 
 *   [Registers](../registers)
 *   [Instruction formats](../formats)
+*   [RISC-V Notes](../)
 
 ## References
