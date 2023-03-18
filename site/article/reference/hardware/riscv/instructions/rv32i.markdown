@@ -111,7 +111,79 @@ SRA
 
 ## Control instructions
 
+JAL
+:   Jump and link.  J type.
+
+    Adds offset to address of instruction to obtain jump target address.
+	Stores address of instruction after jump instruction in `rd`.
+
+	J assmbler pseudo-instruction is implemented in terms of JAL.
+	I.e., `j n` is actually `jal x0, n`.
+
+JALR
+:   Indirect jump, or jump and link register.  I type.
+
+    Adds offset to `rs1` to obtain jump target address,
+	sets least significant bit to zero.
+	Stores address of instruction after jump instruction in `rd`.
+
+BEQ
+:   Branch on equality.  B type.
+
+BNE
+:   Branch on inequality.  B type.
+
+BLT
+:   Branch on `rs1 < rs2`.  B type.
+
+    BGT synthesized by reversing operands.
+
+BLTU
+:   Branch on `rs1 < rs2`; unsigned.  B type.
+
+    BGTU synthesized by reversing operands.
+
+BGE
+:   Branch on `rs1 > rs2`.  B type.
+
+    BLE synthesized by reversing operands.
+
+BGEU
+:   Branch on `rs1 > rs2`; unsigned.  B type.
+
+    BLEU synthesized by reversing operands.
+
 ## Load and store instructions
+
+The execution environment interface defines whether memory is little-endian or big-endian.
+Endianness is byte-address invariant; if a byte is stored to some address in some endianness,
+a byte-sized load from that address in any endianness restores that value.
+
+LW
+:   Loads 32-bit value from memory.  I type.
+
+LH
+:   Loads 16-bit value from memory; value is sign-extended to 32 bits.  I type.
+
+LHU
+:   Loads 16-bit value from memory; value is zero-extended to 32 bits.  I type.
+
+LB
+:   Same as LH, but loads 8-bit value.  I type.
+
+LBU
+:   Same as LHU, but loads 8-bit value.  I type.
+
+SW
+:   Stores 32-bit value to memory.  S type.
+
+SH
+:   Stores 16-bit value to memory.  S type.
+
+SB
+:   Stores 8-bit value to memory.  S type.
+
+Naturally aligned loads and stores are guaranteed to be atomic.
 
 ## Memory ordering instructions
 
