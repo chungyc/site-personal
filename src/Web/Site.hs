@@ -17,11 +17,10 @@ config =
       deployCommand =
         unwords
           [ "rsync",
-            "-az",
+            "-avz",
             "--checksum",
             "--delete",
             "--exclude .well-known",
-            "--info=BACKUP,COPY,DEL,REMOVE,STATS,SYMSAFE",
             "_site/",
             "chungyc@chungyc.org:chungyc.org/"
           ]
