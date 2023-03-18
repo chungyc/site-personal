@@ -20,7 +20,8 @@ myCircle = circle 1 # fc red
 main = putDiagram defaultOptions myCircle
 ```
 
-It is a circle filled with the color red.
+It is a circle filled with the color red in light mode.
+In dark mode, colors will be inverted.
 
 ![First diagram](/diagrams/article/diagrams/first.svg)
 
