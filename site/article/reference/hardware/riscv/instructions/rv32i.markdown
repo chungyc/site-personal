@@ -197,10 +197,26 @@ FENCE
 
 ## Environment call and breakpoints
 
+Technically there is a single SYSTEM instruction.
+The immediate value encodes the type of the instruction.
+
+ECALL
+:   System call.  I type.  Unprivileged.
+
+EBREAK
+:   Break to debugger.  I type.  Unpriviledged.
+
 ## Hint instructions
+
+HINT instructions do not affect visible architectural state.
+They are encoded as integer instructions with `x0` as the destination register.
+
+No HINT instructions are currently defined.
+Specific encodings are reserved for standard and custom hints for use in the future.
 
 ## See also
 
-*   [Instruction formats](../formats.md)
+*   [Registers](../registers)
+*   [Instruction formats](../formats)
 
 ## References
