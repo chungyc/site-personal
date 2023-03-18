@@ -1,6 +1,7 @@
 ---
 title: Haskell
 description: References related to the Haskell programming language.
+updated: 2023-03-17
 ---
 
 [haskell.org](https://haskell.org/)
