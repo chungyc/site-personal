@@ -187,6 +187,14 @@ Naturally aligned loads and stores are guaranteed to be atomic.
 
 ## Memory ordering instructions
 
+FENCE
+:   Orders device I/O and memory access as viewed
+    by other harts, external devices, or coprocessors.
+	I type.
+
+	Immediate value encodes various aspects of the ordering.
+	Register fields are currently unused and reserved for future use.
+
 ## Environment call and breakpoints
 
 ## Hint instructions
