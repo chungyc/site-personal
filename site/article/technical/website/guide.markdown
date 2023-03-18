@@ -20,6 +20,28 @@ That somewhere is here.
 
 ## Metadata
 
+### Standard
+
+`title`
+
+`description`
+
+`published`
+
+`updated`
+
+### Custom
+
+`robots`
+
+`include-syntax-stylesheet`
+
+`extra-stylesheet`
+
+`rss-feed-link`
+
+`include-math`
+
 ## Compiling
 
 ### Generation from Haskell
