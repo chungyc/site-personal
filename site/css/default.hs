@@ -210,7 +210,7 @@ darkColorScheme = do
     borderColor dimgrey
     backgroundColor $ rgb 20 20 20
 
-  figure # not ".keep-colors" ? filter (invert $ pct 100)
+  figure # not ".keep-colors" |> img ? filter (invert $ pct 100)
 
   div # ".sourceCode" ? borderColor dimgrey
   where
