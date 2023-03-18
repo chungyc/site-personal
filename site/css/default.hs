@@ -7,7 +7,7 @@ module Main (main) where
 
 import Clay
 import qualified Clay.Media as Media
-import Prelude hiding (div, not, rem, (**))
+import Prelude hiding (div, filter, not, rem, (**))
 
 main :: IO ()
 main = putCss defaultStyle
@@ -209,6 +209,8 @@ darkColorScheme = do
   nav # ".toc" ? do
     borderColor dimgrey
     backgroundColor $ rgb 20 20 20
+
+  figure # not ".keep" ? filter (invert $ pct 100)
 
   div # ".sourceCode" ? borderColor dimgrey
   where
