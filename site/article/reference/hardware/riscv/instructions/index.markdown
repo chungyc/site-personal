@@ -1,5 +1,5 @@
 ---
-title: RISC-V instruction sets
+title: RISC-V Instruction Sets
 description: Instruction sets for RISC-V.
 published: 2023-03-17
 extra-stylesheet: /css/bibliography.css
