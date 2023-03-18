@@ -20,7 +20,7 @@ jobs:
       - uses: haskell/actions/setup@v2
         with:
           enable-stack: true
-      
+
       - uses: actions/cache@v3
         with:
           path: ~/.stack
@@ -37,15 +37,3 @@ jobs:
       - run: stack build
 
       - run: stack exec site build
-
-      - if: ${{ github.ref == 'refs/heads/main' }}
-        name: Run rsync
-        run: |
-          eval $(ssh-agent -t 1800)
-          ssh-add - <<< ${CHUNGYC_SSH_PRIVATE_KEY}
-          mkdir ~/.ssh
-          echo ${SSH_KNOWN_HOSTS} > ~/.ssh/known_hosts
-          stack exec site deploy
-        env:
-          CHUNGYC_SSH_PRIVATE_KEY: ${{ secrets.CHUNGYC_SSH_PRIVATE_KEY }}
-          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}

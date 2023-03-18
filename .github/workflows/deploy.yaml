@@ -1,0 +1,52 @@
+name: Deploy Website
+concurrency: build
+
+on: [workflow_dispatch]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: haskell/actions/setup@v2
+        with:
+          enable-stack: true
+
+      - name: Cache dependencies
+        with:
+          path: ~/.stack
+          key: stack-${{ hashFiles('package.yaml', 'stack.yaml') }}
+          restore-keys: stack-
+
+      - name: Cache build artifacts
+        uses: actions/cache@v3
+        with:
+          path: .stack-work
+          key: build-${{ hashFiles('app/**', 'src/**') }}
+          restore-keys: build-
+
+      - run: stack build
+
+      - run: stack exec site build
+
+      # The build steps above are identical to the build workflow.
+      # This is both because they do need to be the same,
+      # but also means that deploying can be faster by
+      # reusing build artifacts.
+      #
+      # It would be better to have to define the workflow only once,
+      # so some day I should figure out how to get the deploy workflow to
+      # call the build workflow and get the files to deploy.
+
+      - name: rsync
+        run: |
+          eval $(ssh-agent -t 1800)
+          ssh-add - <<< ${CHUNGYC_SSH_PRIVATE_KEY}
+          mkdir ~/.ssh
+          echo ${SSH_KNOWN_HOSTS} > ~/.ssh/known_hosts
+          stack exec site deploy
+        env:
+          CHUNGYC_SSH_PRIVATE_KEY: ${{ secrets.CHUNGYC_SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
