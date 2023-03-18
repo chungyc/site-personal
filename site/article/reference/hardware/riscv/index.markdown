@@ -14,5 +14,7 @@ These are my notes on the RISC-V instruction set architecture.
 *   [Registers](registers)
 *   [Instruction length encoding](encoding)
 *   [Instruction formats](formats)
+*   [Instruction sets](instructions/)
+    *   [RV32I](instructions/rv32i)
 
 ## References
