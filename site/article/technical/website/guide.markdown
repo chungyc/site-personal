@@ -32,6 +32,8 @@ That somewhere is here.
 
 ### Custom
 
+`standalone-title`
+
 `robots`
 
 `include-syntax-stylesheet`
@@ -42,38 +44,64 @@ That somewhere is here.
 
 `include-math`
 
+### Front page
+
+`include-latest-update`
+
+## Directories
+
+### Pages
+
+`article`
+
+`links`
+
+`publications`
+
+`update`
+
+### Support
+
+`css`
+
+`diagrams`
+
+`files`
+
+`images`
+
+`server`
+
+`templates`
+
 ## Compiling
 
 ### Generation from Haskell
 
+`haskellCompiler`
+
 ### Cleaning up URLs
+
+`cleanupIndexUrls`
 
 ### Math support
 
+`mathReaderOptions`
+
+`mathWriterOptions`
+
 ### Table of contents
+
+`getTocOptionsWith`
 
 ## Routes
 
+`stripExtension`
+
 ## Rules
 
-### Server
-
-### Stylesheet
-
-### Diagrams
-
-### Files
-
-### Updates
-
-### Articles
-
-### Publications
-
-### Links
-
-### Sitemap
+Convention of exporting `rules` and `items`.
 
 ## See also
 
-*   https://github.com/chungyc/site-personal
+*   Source on [GitHub](https://github.com/chungyc/site-personal)
