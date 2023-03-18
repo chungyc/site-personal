@@ -15,7 +15,7 @@ nocite: "@riscv:user-level"
 
 ### General purpose
 
-Register  ABI name  Description                                         Saver
+Register  ABI name  Convention                                          Saver
 --------- --------- --------------------------------------------------- --------
 `x0`      `zero`    Hard-wired zero
 `x1`      `ra`      Return address                                      caller
@@ -49,6 +49,25 @@ Register  ABI name  Description                                         Saver
 `x29`     `t4`      Temporary                                           caller
 `x30`     `t5`      Temporary                                           caller
 `x31`     `t6`      Temporary                                           caller
+
+#### Standard calling convention
+
+Hardware may treat these specially for better performance.
+
+`x1`
+:   Holds return address for the call
+
+`x2`
+:   Stack pointer
+
+`x5`
+:   Alternate link register
+
+The optional compressed instruction format depends on these conventions for `x1` and `x2`.
+
+#### Notes
+
+Writes to `x0` are always discarded, and reads from `x0` always returns 0.
 
 ### Special purpose
 
