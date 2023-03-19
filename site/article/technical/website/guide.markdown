@@ -58,11 +58,13 @@ Custom metadata fields which can be defined for any page.
     the entirety of the title for the page.  This is intended for the front page.
 	Other pages are expected to have the site title included in the page title.
 
-TODO: A `include-bibliography-stylesheet` field should be added.
-
 [KaTeX]: https://katex.org/
 [robots `meta` tag]: https://www.robotstxt.org/meta.html
 [RSS feed]: https://validator.w3.org/feed/docs/rss2.html
+
+#### TODO
+
+An `include-bibliography-stylesheet` field should be added.
 
 ### Front page
 
@@ -176,8 +178,19 @@ that it is stripping and not setting an extension.
 
 ## Rules
 
-Convention of exporting `rules` and `items`.
+The modules under `Web.Site.Rules` define the rules for each portion of the web site.
+I have a convention of exporting `rules` and `items` functions from such modules.
+
+The `rules` function should be obvious.
+It allows the central `Web.Site.Rules` module to call the rules in its sub-modules.
+
+The `items` function returns the pattern which maps to resources
+which should be included in the sitemap.
+The `Web.Site.Rules.Sitemap` module uses them to collect the URLs
+to include in the [sitemap] for the web site.
+
+[sitemap]: https://www.sitemaps.org/
 
 ## See also
 
-*   Source on [GitHub](https://github.com/chungyc/site-personal)
+*   Source for the web site on [GitHub](https://github.com/chungyc/site-personal)

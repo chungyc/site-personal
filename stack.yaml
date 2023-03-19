@@ -2,6 +2,6 @@ resolver: lts-20.12
 
 extra-deps:
 - git: https://github.com/sebastiaanvisser/clay.git
-  commit: f162121b4dcccdab01dbedf4b4144f2d8d13a2a6
+  commit: e68574333a4f0178e7e5808cbd37a8dd350330ea
 
 allow-newer: true

@@ -88,7 +88,7 @@ getTocOptionsWith options = do
     getOptions (Just _) =
       options
         { writerTableOfContents = True,
-          writerTOCDepth = 4,
+          writerTOCDepth = 3,
           writerTemplate = tocTemplate
         }
     tocTemplate
