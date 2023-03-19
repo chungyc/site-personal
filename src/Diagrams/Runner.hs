@@ -23,7 +23,12 @@ import Prelude hiding (putStr)
 -- |
 -- Write out SVG for the given diagram to standard output.
 putDiagram :: (SVGFloat n) => Options SVG V2 n -> QDiagram SVG V2 n Any -> IO ()
-putDiagram options diagram = putStr $ prettyText $ renderDia SVG options $ pad 1.1 diagram
+putDiagram options diagram =
+  putStr $
+    prettyText $
+      renderDia SVG options $
+        -- Include padding to prevent non-zero width lines from being cut off.
+        frame 1.1 diagram
 
 -- |
 -- Default options for rendering a diagram into SVG.
