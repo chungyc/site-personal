@@ -14,8 +14,7 @@ import System.FilePath (takeExtension)
 import WaiAppStatic.Types
 import Web.Site.Rules (rules)
 
--- |
--- Configuration for Hakyll to generate the web site.
+-- | Configuration for Hakyll to generate the web site.
 config :: Configuration
 config =
   defaultConfiguration
@@ -43,20 +42,27 @@ hasExtension path
   where
     extension = takeExtension path
 
+-- | Server customizations which fit better with this web site.
 serverSettings :: FilePath -> Static.StaticSettings
-serverSettings path = baseSettings { ssGetMimeType = getMimeType,
-                                     ssMaxAge = MaxAgeSeconds 10,
-                                     ss404Handler = Just missing
-                                   }
+serverSettings path =
+  baseSettings
+    { -- Allow HTML files to lack an extension.
+      ssGetMimeType = getMimeType,
+      -- Prevent browsers from caching files which may have changed for too long.
+      ssMaxAge = MaxAgeSeconds 10,
+      -- A 404 page consistent with the rest of the site is much better.
+      ss404Handler = Just missing
+    }
   where
     baseSettings = Static.defaultFileServerSettings path
     defaultGetMimeType = ssGetMimeType baseSettings
 
     -- Overrides MIME type for files with no extension
     -- so that HTML pages need no extension.
-    getMimeType file = if Text.elem '.' (fromPiece $ fileName file)
-      then defaultGetMimeType file
-      else return "text/html"
+    getMimeType file =
+      if Text.elem '.' (fromPiece $ fileName file)
+        then defaultGetMimeType file
+        else return "text/html"
 
 -- | Response handler for when missing resources are requested.
 missing :: Application
