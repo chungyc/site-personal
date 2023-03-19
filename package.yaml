@@ -33,9 +33,12 @@ library:
   - diagrams-lib
   - diagrams-svg
   - filepath
+  - http-types
   - pandoc
   - svg-builder
   - text
+  - wai
+  - wai-app-static
 
 executables:
   site:
@@ -54,15 +57,3 @@ executables:
     - diagrams-contrib
     - diagrams-lib
     - diagrams-svg
-  server:
-    main:                app/Server.hs
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - http-types
-    - text
-    - warp
-    - wai
-    - wai-app-static

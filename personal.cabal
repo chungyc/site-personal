@@ -51,25 +51,12 @@ library
     , diagrams-svg
     , filepath
     , hakyll
+    , http-types
     , pandoc
     , svg-builder
     , text
-  default-language: GHC2021
-
-executable server
-  main-is: app/Server.hs
-  other-modules:
-      Paths_personal
-  default-extensions:
-      OverloadedStrings
-  ghc-options: -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base
-    , http-types
-    , text
     , wai
     , wai-app-static
-    , warp
   default-language: GHC2021
 
 executable site

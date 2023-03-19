@@ -5,7 +5,13 @@
 -- Maintainer: web@chungyc.org
 module Web.Site (config, rules) where
 
+import Data.Text qualified as Text
 import Hakyll
+import Network.HTTP.Types.Status (status404)
+import Network.Wai (Application, responseFile)
+import Network.Wai.Application.Static qualified as Static
+import System.FilePath (takeExtension)
+import WaiAppStatic.Types
 import Web.Site.Rules (rules)
 
 -- |
@@ -14,6 +20,7 @@ config :: Configuration
 config =
   defaultConfiguration
     { providerDirectory = "site",
+      checkHtmlFile = hasExtension,
       deployCommand =
         unwords
           [ "rsync",
@@ -23,5 +30,37 @@ config =
             "--exclude .well-known",
             "_site/",
             "chungyc@chungyc.org:chungyc.org/"
-          ]
+          ],
+      previewSettings = serverSettings
     }
+
+-- | Whether a file name has an extension.
+hasExtension :: FilePath -> Bool
+hasExtension path
+  | "" <- extension = True
+  | "html" <- extension = True
+  | otherwise = False
+  where
+    extension = takeExtension path
+
+serverSettings :: FilePath -> Static.StaticSettings
+serverSettings path = baseSettings { ssGetMimeType = getMimeType,
+                                     ssMaxAge = MaxAgeSeconds 10,
+                                     ss404Handler = Just missing
+                                   }
+  where
+    baseSettings = Static.defaultFileServerSettings path
+    defaultGetMimeType = ssGetMimeType baseSettings
+
+    -- Overrides MIME type for files with no extension
+    -- so that HTML pages need no extension.
+    getMimeType file = if Text.elem '.' (fromPiece $ fileName file)
+      then defaultGetMimeType file
+      else return "text/html"
+
+-- | Response handler for when missing resources are requested.
+missing :: Application
+missing _ respond = respond $ responseFile status404 headers file Nothing
+  where
+    headers = [("Content-Type", "text/html")]
+    file = "_site/server/errors/missing.html"

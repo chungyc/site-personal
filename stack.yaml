@@ -1,7 +1,12 @@
 resolver: lts-20.12
 
 extra-deps:
+# Uses media query functions not released yet.
 - git: https://github.com/sebastiaanvisser/clay.git
   commit: e68574333a4f0178e7e5808cbd37a8dd350330ea
+# Uses server customization and link check file customization
+# changes not released yet.  The latter is not even merged yet.
+- git: https://github.com/chungyc/hakyll.git
+  commit: f90c35423911c392cedecae3417a472bc861a58a
 
 allow-newer: true
