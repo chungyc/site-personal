@@ -25,7 +25,7 @@ import Prelude hiding (putStr)
 putDiagram :: (SVGFloat n) => Options SVG V2 n -> QDiagram SVG V2 n Any -> IO ()
 putDiagram options diagram =
   putStr $
-    prettyText $
+    renderText $
       renderDia SVG options $
         -- Include padding to prevent non-zero width lines from being cut off.
         frame 1.1 diagram
@@ -33,4 +33,4 @@ putDiagram options diagram =
 -- |
 -- Default options for rendering a diagram into SVG.
 defaultOptions :: (SVGFloat n) => Options SVG V2 n
-defaultOptions = SVGOptions (mkWidth 400) Nothing "" [] True
+defaultOptions = SVGOptions (mkWidth 4096) Nothing "" [] True
