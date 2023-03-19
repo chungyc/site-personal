@@ -23,6 +23,9 @@ import Text.Pandoc.Options
 
 -- |
 -- Run the content of the string item as Haskell code and use its output.
+--
+-- It does not read the content of the resource directly,
+-- which makes it easier to apply transformations before running it through Haskell.
 haskellCompiler :: Item ByteString -> Compiler (Item ByteString)
 haskellCompiler =
   withItemBody
@@ -91,6 +94,10 @@ getTocOptionsWith options = do
           writerTOCDepth = 3,
           writerTemplate = tocTemplate
         }
+
+    -- Pandoc metadata is not Hakyll metadata,
+    -- so Pandoc has to take care of writing out the table of contents,
+    -- instead of Hakyll being able to write it out with its own templates.
     tocTemplate
       | Right (Right t) <- build templateSource = Just t
       | otherwise = Nothing
