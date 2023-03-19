@@ -75,26 +75,37 @@ If defined, it will include the latest [update] in the front page.
 ### Pages
 
 `article/`
+:   Generic pages which are not related to updates about me or the site.
 
 `links/`
+:   Links of interest.  These are basically public bookmarks.
 
 `publications/`
+:   List of publications by yours truly.
 
 `update/`
+:   Updates about me or the site.
 
 ### Support
 
-`css`
+`css/`
+:   Haskell code for generating the stylesheets.
 
-`diagrams`
+`diagrams/`
+:   Haskell code for generating diagrams.
 
-`files`
+`files/`
+:   Generic files to be included as is on the site.
 
-`images`
+`images/`
+:   Images to be included as is on the site.
 
-`server`
+`server/`
+:   Files related to the server infrastructure.
+    E.g., Apache configuration.
 
-`templates`
+`templates/`
+:   Hakyll templates used by the site.
 
 ## Compiling
 
