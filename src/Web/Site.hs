@@ -23,10 +23,14 @@ config =
       deployCommand =
         unwords
           [ "rsync",
-            "-avz",
             "--checksum",
+            "--compress",
             "--delete",
             "--exclude .well-known",
+            "--links",
+            "--perms",
+            "--recursive",
+            "--verbose",
             "_site/",
             "chungyc@chungyc.org:chungyc.org/"
           ],
