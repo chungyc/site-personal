@@ -20,45 +20,67 @@ That somewhere is here.
 
 ## Metadata
 
+Hakyll metadata included for individual resources.
+
 ### Standard
 
-`title`
+The fields `title`, `description`, `published`, and `updated`
+are standard Hakyll metadata fields with their usual meaning.
+They should be included in page metadata when possible.
 
-`description`
-
-`published`
-
-`updated`
+I use the sane and sensibly lexicographically sorted date format.
+I.e., dates such as 2023-03-28.
 
 ### Custom
 
-`standalone-title`
-
-`robots`
-
-`include-syntax-stylesheet`
+Custom metadata fields which can be defined for any page.
 
 `extra-stylesheet`
-
-`rss-feed-link`
+:   A URL for an extra stylesheet to load for the page.
+    For loading stylesheets only loaded by a few pages;
+	other stylesheets will usually have dedicated metadata fields.
 
 `include-math`
+:   If defined, load [KaTeX] resources necessary for rendering math.
+
+`include-syntax-stylesheet`
+:   If defined, load stylesheet responsible for syntax highlighting.
+
+`robots`
+:   Content for a [robots `meta` tag].
+
+`rss-feed-link`
+:   A URL for an [RSS feed].
+
+`standalone-title`
+:   If defined, the value for the `title` metadata field will be
+    the entirety of the title for the page.  This is intended for the front page.
+	Other pages are expected to have the site title included in the page title.
+
+TODO: A `include-bibliography-stylesheet` field should be added.
+
+[KaTeX]: https://katex.org/
+[robots `meta` tag]: https://www.robotstxt.org/meta.html
+[RSS feed]: https://validator.w3.org/feed/docs/rss2.html
 
 ### Front page
 
-`include-latest-update`
+The front page can define a `include-latest-update` metadata field.
+If defined, it will include the latest [update] in the front page.
+
+[update]:  /updates
 
 ## Directories
 
 ### Pages
 
-`article`
+`article/`
 
-`links`
+`links/`
 
-`publications`
+`publications/`
 
-`update`
+`update/`
 
 ### Support
 
