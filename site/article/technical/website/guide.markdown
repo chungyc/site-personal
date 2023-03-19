@@ -170,7 +170,9 @@ so that it can be combined with other writer options.
 
 ## Routes
 
-`stripExtension`
+The `stripExtension` function strips the extension from a route.
+It is really just `setExtension ""`, but makes it more obvious
+that it is stripping and not setting an extension.
 
 ## Rules
 
