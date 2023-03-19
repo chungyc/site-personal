@@ -44,6 +44,9 @@ Custom metadata fields which can be defined for any page.
 `include-math`
 :   If defined, load [KaTeX] resources necessary for rendering math.
 
+`include-bibliography-stylesheet`
+:   If defined, load stylesheet responsible for bibliographic references.
+
 `include-syntax-stylesheet`
 :   If defined, load stylesheet responsible for syntax highlighting.
 
@@ -61,10 +64,6 @@ Custom metadata fields which can be defined for any page.
 [KaTeX]: https://katex.org/
 [robots `meta` tag]: https://www.robotstxt.org/meta.html
 [RSS feed]: https://validator.w3.org/feed/docs/rss2.html
-
-#### TODO
-
-An `include-bibliography-stylesheet` field should be added.
 
 ### Front page
 

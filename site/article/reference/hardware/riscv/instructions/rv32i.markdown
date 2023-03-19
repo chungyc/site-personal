@@ -3,7 +3,7 @@ title: RISC-V RV32I Instructions
 description: RV32I base instructions for the RISC-V instruction set architecture.
 published: 2023-03-17
 toc: true
-extra-stylesheet: /css/bibliography.css
+include-bibliography-stylesheet: true
 ---
 
 ---

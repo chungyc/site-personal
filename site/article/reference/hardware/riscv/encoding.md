@@ -3,7 +3,7 @@ title: RISC-V Instruction Length
 description: Encoding specified in RISC-V for deriving the number of bits in an instruction.
 published: 2023-03-09
 include-math: true
-extra-stylesheet: /css/bibliography.css
+include-bibliography-stylesheet: true
 ---
 
 Excluding the compact instruction set, the standard instructions in RISC-V are all 32 bits.

@@ -4,7 +4,7 @@ description: Registers in the RISC-V instruction set architecture.
 published: 2023-03-10
 updated: 2023-03-17
 toc: true
-extra-stylesheet: /css/bibliography.css
+include-bibliography-stylesheet: true
 ---
 
 ---

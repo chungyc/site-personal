@@ -1,6 +1,6 @@
 ---
 title: Publications
-extra-stylesheet: /css/bibliography.css
+include-bibliography-stylesheet: true
 ---
 
 ---

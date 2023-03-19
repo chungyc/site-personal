@@ -3,7 +3,7 @@ title: RISC-V Instruction Formats
 description: Instruction formats for the RISC-V instruction set architecture.
 published: 2023-03-10
 toc: true
-extra-stylesheet: /css/bibliography.css
+include-bibliography-stylesheet: true
 ---
 
 ---
