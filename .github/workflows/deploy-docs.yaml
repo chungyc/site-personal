@@ -20,4 +20,4 @@ jobs:
           name: docs
           path: _site
 
-      - uses: actions/upload-pages-artifact
+      - uses: actions/upload-pages-artifact@v1
