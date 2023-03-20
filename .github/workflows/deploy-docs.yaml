@@ -1,9 +1,7 @@
 name: Deploy Documentation
-concurrency: deploy-docs
 permissions: read-all
 
 on:
-  workflow_call:
   workflow_dispatch:
 
 jobs:
@@ -12,13 +10,21 @@ jobs:
 
   deploy:
     needs: build
+    concurrency: deploy-docs
     runs-on: ubuntu-latest
 
-    steps:
+    # Permissions needed to deploy to GitHub Pages.
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
+    steps:
       - uses: actions/download-artifact@v3
         with:
           name: docs
           path: _site
 
       - uses: actions/upload-pages-artifact@v1
+
+      - uses: actions/deploy-pages@v1

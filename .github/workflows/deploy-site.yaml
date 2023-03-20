@@ -1,9 +1,7 @@
 name: Deploy Site
-concurrency: deploy-site
 permissions: read-all
 
 on:
-  workflow_call:
   workflow_dispatch:
 
 jobs:
@@ -12,6 +10,7 @@ jobs:
 
   deploy:
     needs: build
+    concurrency: deploy-site
     runs-on: ubuntu-latest
 
     steps:
