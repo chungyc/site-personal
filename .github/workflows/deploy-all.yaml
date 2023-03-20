@@ -1,0 +1,12 @@
+name: Deploy Everything
+permissions: read-all
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  docs:
+    uses: ./.github/workflows/deploy-docs.yaml
+  site:
+    uses: ./.github/workflows/deploy-site.yaml
