@@ -1,4 +1,4 @@
-name: Deploy Everything
+name: Deploy All
 permissions: read-all
 
 on:
@@ -6,7 +6,10 @@ on:
   workflow_dispatch:
 
 jobs:
+
   docs:
     uses: ./.github/workflows/deploy-docs.yaml
+
   site:
     uses: ./.github/workflows/deploy-site.yaml
+    secrets: inherit
