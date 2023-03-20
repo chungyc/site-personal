@@ -57,9 +57,9 @@ jobs:
 
       - name: Upload documentation
         uses: actions/upload-artifact@v3
-	with:
-	  name: docs
-	  path: ${{ steps.paths.outputs.docs }}
+        with:
+          name: docs
+          path: ${{ steps.paths.outputs.docs }}
 
       - name: Upload site
         uses: actions/upload-artifact@v3
