@@ -1,5 +1,6 @@
 name: Build
 concurrency: build
+permissions: read-all
 
 on:
   workflow_call:
@@ -12,8 +13,6 @@ on:
       - 'site/**'
       - 'src/**'
       - 'test/**'
-
-permissions: read-all
 
 jobs:
   build:

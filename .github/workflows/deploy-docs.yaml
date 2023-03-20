@@ -1,10 +1,9 @@
 name: Deploy documentation
 concurrency: deploy-docs
+permissions: read-all
 
 on:
   workflow_dispatch:
-
-permissions: read-all
 
 jobs:
   build:

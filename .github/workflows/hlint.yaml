@@ -1,11 +1,10 @@
 name: HLint
+permissions: read-all
 
 on:
   push:
     paths:
       - '**.hs'
-
-permissions: read-all
 
 jobs:
   hlint:

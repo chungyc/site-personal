@@ -4,6 +4,7 @@
 # For more information, see:
 # https://github.com/actions/stale
 name: Track stale issues
+permissions: read-all
 
 on:
   schedule:

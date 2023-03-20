@@ -1,10 +1,9 @@
 name: Deploy web site
 concurrency: deploy-site
+permissions: read-all
 
 on:
   workflow_dispatch:
-
-permissions: read-all
 
 jobs:
   build:
