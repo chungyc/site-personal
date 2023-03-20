@@ -32,6 +32,7 @@ jobs:
           ssh-add - <<< ${CHUNGYC_SSH_PRIVATE_KEY}
           mkdir ~/.ssh
           echo ${SSH_KNOWN_HOSTS} > ~/.ssh/known_hosts
+          chmod u+x site
           ./site deploy
         env:
           CHUNGYC_SSH_PRIVATE_KEY: ${{ secrets.CHUNGYC_SSH_PRIVATE_KEY }}
