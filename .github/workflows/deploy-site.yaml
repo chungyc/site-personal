@@ -3,6 +3,7 @@ concurrency: deploy-site
 permissions: read-all
 
 on:
+  workflow_call:
   workflow_dispatch:
 
 jobs:
