@@ -1,4 +1,4 @@
-name: Deploy web site
+name: Deploy Site
 concurrency: deploy-site
 permissions: read-all
 
