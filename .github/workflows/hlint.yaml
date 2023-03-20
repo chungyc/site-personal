@@ -5,6 +5,8 @@ on:
     paths:
       - '**.hs'
 
+permissions: read-all
+
 jobs:
   hlint:
     runs-on: ubuntu-latest
@@ -13,5 +15,5 @@ jobs:
       - uses: haskell/actions/hlint-setup@v2
       - uses: haskell/actions/hlint-run@v2
         with:
-          path: '["app/", "src/"]'
+          path: '["app/", "src/", "test/"]'
           fail-on: warning
