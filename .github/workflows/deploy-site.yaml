@@ -10,6 +10,7 @@ jobs:
     uses: ./.github/workflows/build.yaml
 
   deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
