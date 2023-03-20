@@ -42,7 +42,7 @@ library:
 
 executables:
   site:
-    main:                app/Site.hs
+    main: app/Site.hs
     ghc-options:
     - -threaded
     - -rtsopts
@@ -57,3 +57,14 @@ executables:
     - diagrams-contrib
     - diagrams-lib
     - diagrams-svg
+
+tests:
+  examples:
+    main: test/Examples.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - personal
+    - doctest-parallel

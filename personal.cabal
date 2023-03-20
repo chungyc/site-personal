@@ -75,3 +75,17 @@ executable site
     , hakyll
     , personal
   default-language: GHC2021
+
+test-suite examples
+  type: exitcode-stdio-1.0
+  main-is: test/Examples.hs
+  other-modules:
+      Paths_personal
+  default-extensions:
+      OverloadedStrings
+  ghc-options: -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base
+    , doctest-parallel
+    , personal
+  default-language: GHC2021
