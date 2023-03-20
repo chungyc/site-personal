@@ -11,7 +11,7 @@ copyright:           "Copyright (C) 2023 Yoo Chung"
 synopsis:            Personal web site for Yoo Chung
 category:            Personal
 
-description:         Source for personal web site which belongs to Yoo Chung.
+description:         Source for personal web site which belongs to Yoo Chung at <https://chungyc.org/>.
 
 language: GHC2021
 
