@@ -1,0 +1,23 @@
+name: Deploy documentation
+concurrency: deploy-docs
+
+on:
+  workflow_dispatch:
+
+permissions: read-all
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yaml
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: docs
+          path: _site
+
+      - uses: actions/upload-pages-artifact

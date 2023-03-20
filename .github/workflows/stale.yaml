@@ -3,7 +3,7 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/actions/stale
-name: Track Stale Issues
+name: Track stale issues
 
 on:
   schedule:

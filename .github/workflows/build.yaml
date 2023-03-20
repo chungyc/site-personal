@@ -6,7 +6,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '**.yaml'
+      - 'package.yaml'
+      - 'stack.yaml'
       - 'app/**'
       - 'site/**'
       - 'src/**'
