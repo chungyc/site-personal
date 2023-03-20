@@ -2,6 +2,7 @@ name: Build
 concurrency: build
 
 on:
+  workflow_call:
   workflow_dispatch:
   push:
     paths:
@@ -9,6 +10,7 @@ on:
       - 'app/**'
       - 'site/**'
       - 'src/**'
+      - 'test/**'
 
 jobs:
   build:
@@ -32,9 +34,35 @@ jobs:
         uses: actions/cache@v3
         with:
           path: .stack-work
-          key: build-${{ hashFiles('app/**', 'src/**') }}
+          key: build-${{ hashFiles('app/**', 'src/**', 'test/**') }}
           restore-keys: build-
 
-      - run: stack build
+      - name: Build and test
+        run: stack build --test --haddock --no-haddock-deps --haddock-arguments=--no-warnings
 
-      - run: stack exec site build
+      - name: Build site
+        run: stack exec site build
+
+      - id: paths
+        name: Get paths
+        run: |
+          echo "executable=$(stack path --local-install-root)/bin/site" >> $GITHUB_OUTPUT
+          echo "docs=$(stack path --local-doc-root --no-haddock-deps)/personal-$(stack query locals personal version)" >> $GITHUB_OUTPUT
+
+      - name: Upload executable
+        uses: actions/upload-artifact@v3
+        with:
+          name: executable
+          path: ${{ steps.paths.outputs.executable }}
+
+      - name: Upload documentation
+        uses: actions/upload-artifact@v3
+	with:
+	  name: docs
+	  path: ${{ steps.paths.outputs.docs }}
+
+      - name: Upload site
+        uses: actions/upload-artifact@v3
+        with:
+          name: site
+          path: _site
