@@ -18,3 +18,4 @@ The content is publicly visible for knowledge sharing, not for direct use by oth
 ## See also
 
 *   [Library documentation](https://chungyc.github.io/site-personal/)
+*   Guide to [writing for the site](https://chungyc.org/article/technical/website/guide)
