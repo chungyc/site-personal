@@ -3,13 +3,15 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
+--
+-- Exports rules generating updates about me or the web site.
 module Web.Site.Rules.Update (rules, items, withLatest) where
 
 import Hakyll
 import Web.Site.Routes
 
 -- |
--- Rules related to generated recent updates from me.
+-- Rules related to recent updates about me or the web site.
 rules :: Rules ()
 rules = do
   -- The overview page.
@@ -51,10 +53,15 @@ updatePattern = "update/**" .&&. complement "update/index.html"
 
 -- |
 -- Pattern for files matched or created in this module.
+--
+-- These will be used to generate the sitemap.
 items :: Pattern
 items = "update/**"
 
--- | Apply a context with the latest update in the list field @latest-update@ to the given rule.
+-- |
+-- Apply a context with the latest update in the list field @latest-update@ to the given rule.
+--
+-- In particular, this is used by the front page to include the latest update.
 withLatest :: (Context String -> Compiler (Item String)) -> Compiler (Item String)
 withLatest f = do
   updates <- fmap (take 1) . recentFirst =<< loadAllSnapshots updatePattern "updates"
