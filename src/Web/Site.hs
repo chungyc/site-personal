@@ -3,6 +3,10 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
+--
+-- Everything I need to generate my site with Hakyll.
+-- These are used in @app/Site.hs@ to build a custom @site@ executable,
+-- using the 'hakyllWith' function.
 module Web.Site (config, rules) where
 
 import Data.Text qualified as Text
