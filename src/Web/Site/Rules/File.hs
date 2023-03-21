@@ -3,6 +3,8 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
+--
+-- Exports the rules for files that are to be included as is on the site.
 module Web.Site.Rules.File (rules) where
 
 import Hakyll
