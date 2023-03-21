@@ -3,6 +3,8 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
+--
+-- Exports the rules for all of the web site.
 module Web.Site.Rules (rules) where
 
 import Hakyll
@@ -19,6 +21,8 @@ import Web.Site.Rules.Update qualified as Update
 
 -- |
 -- Rules for Hakyll to generate the web site.
+--
+-- This encompasses all of the rules exported by all of the modules defining rules.
 rules :: Rules ()
 rules = do
   Server.rules
