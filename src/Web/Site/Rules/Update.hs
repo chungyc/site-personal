@@ -52,7 +52,7 @@ updatePattern = "update/**" .&&. complement "update/index.html"
 -- |
 -- Pattern for files matched or created in this module.
 items :: Pattern
-items = "update/**" .||. "updates.xml"
+items = "update/**"
 
 -- | Apply a context with the latest update in the list field @latest-update@ to the given rule.
 withLatest :: (Context String -> Compiler (Item String)) -> Compiler (Item String)
