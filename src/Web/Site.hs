@@ -5,8 +5,8 @@
 -- Maintainer: web@chungyc.org
 --
 -- Everything I need to generate my site with Hakyll.
--- These are used in @app/Site.hs@ to build a custom @site@ executable,
--- using the 'hakyllWith' function.
+-- These are used in [@app/Site.hs@](https://github.com/chungyc/site-personal/blob/main/app/Site.hs)
+-- to build a custom @site@ executable, using the 'hakyllWith' function.
 module Web.Site (config, rules) where
 
 import Data.Text qualified as Text
