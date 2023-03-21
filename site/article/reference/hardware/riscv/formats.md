@@ -86,7 +86,7 @@ A variant of the [U format](#u).
  [31]     `imm`[20]
 --------- -------------
 
-### Notes
+## Notes
 
 *   All instructions have `opcode` in bits [0:6]
 
