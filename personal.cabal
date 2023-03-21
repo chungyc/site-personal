@@ -7,7 +7,13 @@ cabal-version: 1.12
 name:           personal
 version:        0.0.0
 synopsis:       Personal web site for Yoo Chung
-description:    Source for personal web site which belongs to Yoo Chung at <https://chungyc.org/>.
+description:    Library for generating the personal web site belonging to [Yoo Chung](https://chungyc.org/).
+                .
+                * The URL for the site is <https://chungyc.org/>.
+                .
+                * Some guidance on [how to use the library](https://chungyc.org/article/technical/website/guide) is also available.
+                .
+                * The source is available on [GitHub](https://github.com/chungyc/site-personal).
 category:       Personal
 homepage:       https://chungyc.org/
 bug-reports:    https://github.com/chungyc/site-personal/issues
