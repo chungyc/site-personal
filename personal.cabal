@@ -5,7 +5,7 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           personal
-version:        0.0.0
+version:        1.0.0
 synopsis:       Personal web site for Yoo Chung
 description:    Library for generating the personal web site belonging to [Yoo Chung](https://chungyc.org/).
                 .
