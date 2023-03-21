@@ -3,6 +3,8 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
+--
+-- Exports the rules for generic articles on the site.
 module Web.Site.Rules.Article (rules, items) where
 
 import Hakyll
@@ -12,7 +14,17 @@ import Web.Site.Routes
 -- |
 -- Rules related to generic articles.
 --
--- I.e., articles that are not specifically updates about things related to me.
+-- I.e., articles that are not specifically updates about things related to me or this site.
+-- In particular, they will usually not have content that is time-sensitive.
+--
+-- Articles have support for:
+--
+-- * Rendering math.
+-- * Bibliographic references.
+-- * Table of contents.
+--
+-- See the [guide on writing for the site](https://chungyc.org/article/technical/website/guide)
+-- for how to enable these for individual pages.
 rules :: Rules ()
 rules = do
   -- Individual articles.
@@ -66,11 +78,17 @@ articlePattern =
 
 -- |
 -- Pattern for files matched or created in this module.
+--
+-- These will be used to generate the sitemap.
 items :: Pattern
 items = articlePattern .||. "article/index.html" .||. "articles.xml"
 
 -- |
--- The Pandoc compiler, but with math support and bibliography.
+-- The Pandoc compiler, but with support for:
+--
+-- * rendering math
+-- * bibliographic references
+-- * table of contents
 articleCompiler :: Compiler (Item String)
 articleCompiler = do
   writerOptions <- getTocOptionsWith mathWriterOptions
