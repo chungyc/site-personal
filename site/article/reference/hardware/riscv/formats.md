@@ -51,7 +51,7 @@ will generate an "instruction address misaligned" exception.
 
 ### B
 
-A variant of the S format.
+A variant of the [S format](#s).
 
 --------- -------------
  [0:6]    `opcode` 
@@ -74,7 +74,7 @@ A variant of the S format.
 
 ### J
 
-A variant of the U format.
+A variant of the [U format](#u).
 
 --------- -------------
  [0:6]    `opcode` 
@@ -88,11 +88,31 @@ A variant of the U format.
 ### Notes
 
 *   All instructions have `opcode` in bits [0:6]
+
 *   `rd` will always be in bits [7:11]
+
 *   `rs1` will always be in bits [15:19]
+
 *   `rs2` will always be in bits [20:24]
+
 *   Immediates will always be sign-extended
+
     *   Sign bits will always be in bit [31]
+
+*   Multiple operations can have the same opcode.
+
+    *   Most can be distinguished using "funct" fields in the instruction.
+
+    *   A few encode different operations in immediate values.
+
+*   The RISC-V Instruction Set Manual [@riscv:user-level] uses mnemonics,
+    instead of showing opcode or "funct" field values directly,
+	in each chapter explaining individual instruction sets and extensions.
+	For example, it uses "OP-IMM" or "OP" for integer instruction opcodes
+	in chapter 2.
+
+    The values of these mnemonics can be found in chapter 24,
+	"RV32/64G Instruction Set Listings".
 
 ## See also
 
