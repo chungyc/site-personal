@@ -3,12 +3,18 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
+--
+-- Exports the rules for collections of links.
 module Web.Site.Rules.Link (rules, items) where
 
 import Hakyll
 import System.FilePath (dropExtension, takeDirectory)
 import Web.Site.Compilers
 
+-- |
+-- Rules related to collections of links.
+--
+-- These are basically public bookmarks for myself.
 rules :: Rules ()
 rules = do
   match "links/**" $ do
@@ -21,6 +27,8 @@ rules = do
 
 -- |
 -- Pattern for files matched or created in this module.
+--
+-- These will be used to generate the sitemap.
 items :: Pattern
 items = "links/**" .||. "links.markdown"
 
