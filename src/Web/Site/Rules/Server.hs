@@ -3,10 +3,16 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
+--
+-- Exports rules related to server setup.
 module Web.Site.Rules.Server (rules) where
 
 import Hakyll
 
+-- |
+-- Rules related to server setup.
+--
+-- For example, this includes Apache configuration, @robots.txt@, error pages, etc.
 rules :: Rules ()
 rules = do
   match "server/htaccess" $ do
