@@ -3,6 +3,8 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
+--
+-- Exports rules for generating the stylesheets for the web site.
 module Web.Site.Rules.Stylesheet (rules) where
 
 import Data.List (intercalate)
@@ -10,7 +12,13 @@ import Hakyll
 import Text.Pandoc.Highlighting (pygments, styleToCss, zenburn)
 import Web.Site.Compilers
 
--- | Rules related to stylesheets generated from Haskell code.
+-- |
+-- Rules related to stylesheets generated from Haskell code.
+--
+-- Except for a few stylesheets which are not expected to change,
+-- the stylesheets are generated from Haskell code via standard output.
+-- While theoretically this can use any framework for generating
+-- stylesheets, this web site uses [Clay](http://fvisser.nl/clay/).
 rules :: Rules ()
 rules = do
   match "css/**.hs" $ do
