@@ -32,7 +32,6 @@ config =
             "--delete",
             "--exclude .well-known",
             "--links",
-            "--perms",
             "--recursive",
             "--verbose",
             "_site/",
