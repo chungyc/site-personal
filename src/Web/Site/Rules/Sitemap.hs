@@ -3,13 +3,15 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
+--
+-- Exports rules related to generating the sitemap for the web site.
 module Web.Site.Rules.Sitemap (rules) where
 
 import Hakyll
 
 -- |
 -- Given a pattern which matches all the pages on the web site,
--- returns the rules which generates the site map.
+-- returns the rules which generates the sitemap.
 rules :: Pattern -> Rules ()
 rules items = do
   match "sitemap.xml" $ do
@@ -25,8 +27,7 @@ rules items = do
             listField "items" itemContext (return itemList)
               <> defaultContext
 
-      getResourceBody
-        >>= applyAsTemplate sitemapContext
+      getResourceBody >>= applyAsTemplate sitemapContext
 
 -- |
 -- If the given URL is local and ends with @index.html@, strip the latter.
