@@ -47,8 +47,10 @@ import Text.Pandoc.Options
 -- >>> let preamble = "import Hakyll\n" :: ByteString
 -- >>> let _ = getResourceLBS >>= haskellCompiler . fmap (append preamble)
 haskellCompiler :: Item ByteString -> Compiler (Item ByteString)
-haskellCompiler =
-  withItemBody $ unixFilterLBS "runhaskell" ["-XGHC2021", "-XOverloadedStrings"]
+haskellCompiler = withItemBody $ unixFilterLBS command args
+  where
+    command = "runhaskell"
+    args = ["-XGHC2021", "-XOverloadedStrings"]
 
 -- |
 -- For local URLs in the input which end with @index.html@, strip it.
