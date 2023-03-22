@@ -7,8 +7,8 @@
 -- Hakyll route functions useful for this web site.
 module Web.Site.Routes (dropExtensions) where
 
-import System.FilePath qualified as FilePath
 import Hakyll
+import System.FilePath qualified as FilePath
 
 -- |
 -- Strip all extensions from a route.
