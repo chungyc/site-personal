@@ -41,6 +41,7 @@ import Text.Pandoc.Options
 --
 -- The Haskell code will be executed using @runhaskell@.
 -- It will run with @-XGHC2021@ and @-XOverloadedStrings@.
+--
 -- Extra flags can also be passed to @runhaskell@.
 -- For example,
 --
