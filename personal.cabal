@@ -67,8 +67,6 @@ library
 
 executable site
   main-is: app/Site.hs
-  other-modules:
-      Paths_personal
   default-extensions:
       OverloadedStrings
   ghc-options: -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
@@ -85,8 +83,6 @@ executable site
 test-suite examples
   type: exitcode-stdio-1.0
   main-is: test/Examples.hs
-  other-modules:
-      Paths_personal
   default-extensions:
       OverloadedStrings
   ghc-options: -Wall -Werror -threaded -rtsopts -with-rtsopts=-N

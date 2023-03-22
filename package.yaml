@@ -64,6 +64,10 @@ executables:
     - diagrams-contrib
     - diagrams-lib
     - diagrams-svg
+    # Work around https://github.com/sol/hpack/issues/303.
+    when:
+    - condition: false
+      other-modules: Paths_personal
 
 tests:
   examples:
@@ -75,3 +79,7 @@ tests:
     dependencies:
     - personal
     - doctest-parallel
+    # Work around https://github.com/sol/hpack/issues/303.
+    when:
+    - condition: false
+      other-modules: Paths_personal
