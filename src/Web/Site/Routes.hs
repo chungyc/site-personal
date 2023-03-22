@@ -5,13 +5,12 @@
 -- Maintainer: web@chungyc.org
 --
 -- Hakyll route functions useful for this web site.
-module Web.Site.Routes (stripExtension) where
+module Web.Site.Routes (dropExtensions) where
 
+import System.FilePath qualified as FilePath
 import Hakyll
 
 -- |
--- Strip extension from the file name.
---
--- It is the same as @setExtension ""@, but just with a more obvious name.
-stripExtension :: Routes
-stripExtension = setExtension ""
+-- Strip all extensions from a route.
+dropExtensions :: Routes
+dropExtensions = customRoute $ FilePath.dropExtensions . toFilePath

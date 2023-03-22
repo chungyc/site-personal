@@ -30,7 +30,7 @@ rules = do
   -- Individual articles.
   match articlePattern $ do
     route $
-      composeRoutes stripExtension $
+      composeRoutes dropExtensions $
         -- Index pages have should URLs to the directory.
         gsubRoute "/index$" (const "/index.html")
 

@@ -175,11 +175,10 @@ so that it can be combined with other writer options.
 
 ## Routes
 
-The [`stripExtension`] function strips the extension from a route.
-It is really just `setExtension ""`, but makes it more obvious
-that it is stripping and not setting an extension.
+The [`dropExtensions`] function strips all extensions from a route.
+It is used for making URLs clean.
 
-[`stripExtension`]: https://chungyc.github.io/site-personal/Web-Site-Routes.html#v:stripExtension
+[`dropExtensions`]: https://chungyc.github.io/site-personal/Web-Site-Routes.html#v:dropExtensions
 
 ## Rules
 

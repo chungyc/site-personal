@@ -1,0 +1,6 @@
+title: Literate Haskell experiment
+description: Page for experimenting with use of literate Haskell to generate a page on the site.
+published: 2023-03-22
+toc: true
+include-math: true
+include-syntax-stylesheet: true

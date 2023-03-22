@@ -37,7 +37,7 @@ rules = do
   match "templates/*" $ compile templateBodyCompiler
 
   match "about.html" $ do
-    route stripExtension
+    route dropExtensions
     compile $
       getResourceBody
         >>= loadAndApplyTemplate "templates/default.html" defaultContext

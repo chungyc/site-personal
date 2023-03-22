@@ -29,7 +29,7 @@ rules = do
 
   -- Individual update page.
   match updatePattern $ do
-    route stripExtension
+    route dropExtensions
     compile $
       pandocCompiler
         >>= saveSnapshot "updates"
