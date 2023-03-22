@@ -70,11 +70,13 @@ main = do
 
 If we run the code above, it will print out the Fibonacci numbers as expected.
 
+\begin{quote}
 \begin{verbatim}
 $ runhaskell literate-haskell.lhs
 [1,1,2,3,5,8,13,21,34,55]
 [1,1,2,3,5,8,13,21,34,55,89]
 \end{verbatim}
+\end{quote}
 
 Despite these being infinite lists, defined in a somewhat more typically mathematical style,
 the code is not stuck trying to futilely compute all the numbers before printing
