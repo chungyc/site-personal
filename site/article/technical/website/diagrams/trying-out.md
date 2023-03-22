@@ -2,6 +2,7 @@
 title: Trying out Diagrams
 description: Trying out Diagrams to embed images in the web site.
 published: 2023-03-16
+updated: 2023-03-22
 toc: true
 include-syntax-stylesheet: true
 ---
