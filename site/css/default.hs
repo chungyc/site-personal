@@ -6,7 +6,7 @@
 module Main (main) where
 
 import Clay
-import Clay.Media qualified as Media
+import qualified Clay.Media as Media
 import Prelude hiding (div, filter, not, rem, (**))
 
 main :: IO ()
