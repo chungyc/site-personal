@@ -29,8 +29,6 @@ defaultStyle = do
     marginBottom $ rem 2
 
   headings
-  tableOfContents
-  figures
 
   footer ? do
     fontFamily ["Courier New"] [monospace, sansSerif]
@@ -41,13 +39,6 @@ defaultStyle = do
   footer |> nav ? do
     paddingTop $ rem 1
     a ? paddingRight (rem 1)
-
-  article |> section # ".byline" ? do
-    fontFamily ["Verdana"] [sansSerif, serif, monospace]
-    fontSize $ rem 0.7
-    p ? do
-      marginTop $ em 0.2
-      marginBottom $ em 0.2
 
   li |+ li ? marginTop (rem 0.75)
 
@@ -64,6 +55,16 @@ defaultStyle = do
     marginRight $ em 1
     marginLeft $ em 1
     sym padding $ em 0.5
+
+  article |> section # ".byline" ? do
+    fontFamily ["Verdana"] [sansSerif, serif, monospace]
+    fontSize $ rem 0.7
+    p ? do
+      marginTop $ em 0.2
+      marginBottom $ em 0.2
+
+  tableOfContents
+  figures
 
   query Media.all [Media.maxWidth $ cm 5] $ do
     body ? sym margin nil
