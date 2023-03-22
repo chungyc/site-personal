@@ -78,9 +78,8 @@ $ runhaskell literate-haskell.lhs
 \end{verbatim}
 \end{quote}
 
-Despite these being infinite lists, defined in a somewhat more typically mathematical style,
-the code is not stuck trying to futilely compute all the numbers before printing
-any of them out thanks to lazy evaluation in Haskell.
+Despite these being infinite lists, the code is not stuck trying to futilely compute
+all the numbers before printing any of them out thanks to lazy evaluation in Haskell.
 
 \subsection{Source}
 
