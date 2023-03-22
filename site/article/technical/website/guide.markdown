@@ -69,7 +69,7 @@ Custom metadata fields which can be defined for any page.
 ### Front page
 
 The front page can define a `include-latest-update` metadata field.
-If defined, it will include the latest [update] in the front page.
+If defined, it will include the latest [update] on the front page.
 
 [update]:  /updates
 
@@ -116,7 +116,7 @@ If defined, it will include the latest [update] in the front page.
 
 ### Generation from Haskell
 
-`haskellCompiler` compiles items by running its input argument as Haskell code.
+[`haskellCompiler`] compiles items by running its input argument as Haskell code.
 The output will be taken from the standard output of the executed Haskell code.
 
 For example:
@@ -127,6 +127,8 @@ compile $ haskellCompiler []
 
 The code can be either Haskell or literate Haskell.
 
+[`haskellCompiler`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:haskellCompiler
+
 ### Cleaning up URLs
 
 This site uses [clean URLs].  For most pages, nothing further needs to be done
@@ -135,7 +137,7 @@ because they are routed to file names which serve as part of clean URLs in the f
 However, some pages are routed to `index.html` files so that the directory can be the URL.
 This is not an issue for manually inserted URLs, but URLs automatically collected,
 such as the index of updates or the index of articles, will include the `index.html` string.
-`cleanupIndexUrls` is used to clean up such URLs in the generated files.
+[`cleanupIndexUrls`] is used to clean up such URLs in the generated files.
 
 For example,
 
@@ -147,10 +149,11 @@ compile $
 ```
 
 [clean URLs]: /article/technical/website/extensionless
+[`cleanupIndexUrls`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:cleanupIndexUrls
 
 ### Math support
 
-Use `mathReaderOptions` and `mathWriterOptions` to make Pandoc render math.
+Use [`mathReaderOptions`] and [`mathWriterOptions`] to make Pandoc render math.
 
 For example,
 
@@ -158,18 +161,25 @@ For example,
 compile $ pandocCompilerWith mathReaderOptions mathWriterOptions
 ```
 
+[`mathReaderOptions`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:mathReaderOptions
+[`mathWriterOptions`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:mathWriterOptions
+
 ### Table of contents
 
-Use `getTocOptionsWith` to make Pandoc render a table of contents
+Use [`getTocOptionsWith`] to make Pandoc render a table of contents
 if the `toc` metadata field is defined.
 It is passed another Pandoc writer option as an input argument
 so that it can be combined with other writer options.
 
+[`getTocOptionsWith`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:getTocOptionsWith
+
 ## Routes
 
-The `stripExtension` function strips the extension from a route.
+The [`stripExtension`] function strips the extension from a route.
 It is really just `setExtension ""`, but makes it more obvious
 that it is stripping and not setting an extension.
+
+[`stripExtension`]: https://chungyc.github.io/site-personal/Web-Site-Routes.html#v:stripExtension
 
 ## Rules
 

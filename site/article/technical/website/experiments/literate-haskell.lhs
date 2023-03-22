@@ -8,10 +8,12 @@ include-syntax-stylesheet: true
 ---
 
 It's nice to be able to mix serious writing and coding together.
-While literate Haskell may be far from the pinnacle of literate programming,
+While [literate Haskell] may be far from the pinnacle of literate programming,
 it is still a nice tool to have available.
 
 This is a page for experimenting with its use.
+
+[literate Haskell]: https://wiki.haskell.org/Literate_programming
 
 Fibonacci numbers
 -----------------
