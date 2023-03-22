@@ -6,7 +6,7 @@
 module Main (main) where
 
 import Clay
-import qualified Clay.Media as Media
+import Clay.Media qualified as Media
 import Prelude hiding (div, filter, not, rem, (**))
 
 main :: IO ()
@@ -150,11 +150,13 @@ figures = do
     marginLeft auto
     marginRight auto
     textAlign center
+
     img ? do
       display block
       marginLeft auto
       marginRight auto
       maxWidth $ pct 95
+
     figcaption ? do
       display block
       fontFamily ["Verdana"] [sansSerif, serif, monospace]
@@ -211,7 +213,8 @@ darkColorScheme = do
     borderColor dimgrey
     backgroundColor $ rgb 20 20 20
 
-  figure # not ".keep-colors" |> img ? filter (invert $ pct 100)
+  figure # not ".keep-colors" |> img <> figure |> img # ("src" $= ".svg") ? do
+    filter (invert $ pct 100)
 
   div # ".sourceCode" ? borderColor dimgrey
   where
