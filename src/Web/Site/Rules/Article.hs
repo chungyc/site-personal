@@ -75,6 +75,7 @@ articlePattern =
   "article/**"
     .&&. complement "article/index.html"
     .&&. complement "article/bibliography/**"
+    .&&. complement "article/**.metadata"
 
 -- |
 -- Pattern for files matched or created in this module.
