@@ -21,9 +21,17 @@ import Web.Site.Compilers
 -- stylesheets, this web site uses [Clay](http://fvisser.nl/clay/).
 rules :: Rules ()
 rules = do
+  match "css/**.css" $ do
+    route idRoute
+    compile compressCssCompiler
+
   match "css/**.hs" $ do
     route $ setExtension "css"
-    compile $ getResourceLBS >>= haskellCompiler
+    compile $ haskellCompiler []
+
+  match "css/**.lhs" $ do
+    route $ setExtension "css"
+    compile $ haskellCompiler []
 
   -- Stylesheet for supporting syntax highlighting.
   -- This will import the actual stylesheet according to the preferred color scheme.

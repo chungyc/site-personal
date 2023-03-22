@@ -1,3 +1,6 @@
+import Diagrams.Runner
+
+main :: IO ()
 main = putDiagram defaultOptions example
 
 circles :: Diagram B

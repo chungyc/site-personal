@@ -22,7 +22,7 @@ module Web.Site.Compilers
   )
 where
 
-import Data.ByteString.Lazy
+import Data.ByteString.Lazy (ByteString)
 import Hakyll
 import Text.Pandoc (compileTemplate, runPure, runWithDefaultPartials)
 import Text.Pandoc.Options
@@ -33,24 +33,37 @@ import Text.Pandoc.Options
 -- >>> import Hakyll
 
 -- |
--- Run the content of the string item as Haskell code and use its output.
+-- Run the Haskell code in the underlying file and use its output.
 --
--- It does not read the content of the resource directly,
--- which makes it easier to apply transformations before running it through Haskell.
+-- For example,
 --
--- To use the resource body as Haskell code directly:
+-- >>> let _ = compile $ haskellCompiler []
 --
--- >>> let _ = getResourceLBS >>= haskellCompiler
+-- The Haskell code will be executed using @runhaskell@.
+-- It will run with @-XGHC2021@ and @-XOverloadedStrings@.
+-- Extra flags can also be passed to @runhaskell@.
+-- For example,
 --
--- To add a preamble to the resource body before using it as Haskell code:
+-- >>> let _ = compile $ haskellCompiler ["-XTypeFamilies"]
 --
--- >>> let preamble = "import Hakyll\n" :: ByteString
--- >>> let _ = getResourceLBS >>= haskellCompiler . fmap (append preamble)
-haskellCompiler :: Item ByteString -> Compiler (Item ByteString)
-haskellCompiler = withItemBody $ unixFilterLBS command args
+-- This can compile both Haskell code and literate Haskell code.
+haskellCompiler ::
+  -- | Extra flags to pass to @runhaskell@.
+  [String] ->
+  Compiler (Item ByteString)
+haskellCompiler args = do
+  file <- getResourceFilePath
+  emptyItem >>= withItemBody (run file)
   where
-    command = "runhaskell"
-    args = ["-XGHC2021", "-XOverloadedStrings"]
+    -- Run the Haskell code in the given file and return its standard output.
+    run f = unixFilterLBS "runhaskell" $ concat [defaultArgs, args, [f]]
+
+    -- Default flags to always use with @runhaskell@.
+    defaultArgs = ["-XGHC2021", "-XOverloadedStrings"]
+
+    -- We will run the code from the file directly,
+    -- so we don't care about any content in an item.
+    emptyItem = makeItem ""
 
 -- |
 -- For local URLs in the input which end with @index.html@, strip it.

@@ -14,10 +14,13 @@ Let's see if this works.
 The following is the first diagram I tried:
 
 ```haskell
+import Diagrams.Runner
+
+main :: IO ()
+main = putDiagram defaultOptions myCircle
+
 myCircle :: Diagram B
 myCircle = circle 1 # fc red
-
-main = putDiagram defaultOptions myCircle
 ```
 
 It is a circle filled with the color red in light mode.
@@ -25,11 +28,12 @@ In dark mode, colors will be inverted.
 
 ![First diagram](/diagrams/article/diagrams/first.svg)
 
-In subsequent code snippets, I will omit the definition of the `main` function.
-It will almost always be the same, but it is not part of the implicitly
-included boilerplate that this site uses for the code.
-This is to allow customizations of the `main` function,
-in particular the options, in the rare cases where it might be needed.
+The code snippet above imports the [Diagrams.Runner] module,
+which is a custom module for this web site to generate SVG output from [Diagrams].
+It exports the `putDiagram` function which does this work.
+
+In subsequent code snippets,
+I will omit the import statement and the definition of the `main` function.
 
 ## Combining diagrams
 
@@ -137,4 +141,5 @@ whenever I need one is going to be a great help.
 *   [Diagrams Quick Start Tutorial](https://diagrams.github.io/doc/quickstart.html)
 
 [Diagrams]: https://diagrams.github.io/
+[Diagrams.Runner]: https://chungyc.github.io/site-personal/Diagrams-Runner.html
 [diagrams-contrib]: https://hackage.haskell.org/package/diagrams-contrib

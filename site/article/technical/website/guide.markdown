@@ -91,7 +91,9 @@ If defined, it will include the latest [update] in the front page.
 ### Support
 
 `css/`
-:   Haskell code for generating the stylesheets.
+:   Contains files related to generating stylesheets.
+    They may be Haskell code for generating the stylesheets,
+    or be CSS stylesheets themselves that are copied verbatim.
 
 `diagrams/`
 :   Haskell code for generating diagrams.
@@ -116,20 +118,13 @@ If defined, it will include the latest [update] in the front page.
 `haskellCompiler` compiles items by running its input argument as Haskell code.
 The output will be taken from the standard output of the executed Haskell code.
 
-A fully formed Haskell file can be compiled the following way:
+For example:
 
 ```haskell
-compile $ getResourceLBS >>= haskellCompiler
+compile $ haskellCompiler []
 ```
 
-`haskellCompiler` takes an input argument instead of reading the resource body directly
-so that it can be easy to transform the resource body into another form if needed.
-
-For example,
-
-```haskell
-compile $ getResourceLBS >>= haskellCompiler . fmap (append preamble)
-```
+The code can be either Haskell or literate Haskell.
 
 ### Cleaning up URLs
 
