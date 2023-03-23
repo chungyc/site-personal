@@ -10,7 +10,14 @@ module Web.Site.Routes (dropExtensions) where
 import Hakyll
 import System.FilePath qualified as FilePath
 
+-- $setup
+-- >>> import Hakyll
+
 -- |
--- Strip all extensions from a route.
+-- Drop all file extensions from a route.
+--
+-- For example,
+--
+-- >>> let _ = route dropExtensions
 dropExtensions :: Routes
 dropExtensions = customRoute $ FilePath.dropExtensions . toFilePath
