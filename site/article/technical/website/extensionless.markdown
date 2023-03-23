@@ -1,5 +1,5 @@
 ---
-title: Clean URLs with with Hakyll
+title: Clean URLs with Hakyll
 published: 2023-02-06
 updated: 2023-03-11
 description: Another way to have URLs with no extensions for HTML pages with Hakyll.

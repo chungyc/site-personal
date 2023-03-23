@@ -40,9 +40,16 @@ rules = do
         >>= loadAndApplyTemplate "templates/article.html" defaultContext
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
 
-  -- The overview page.
-  match "article/index.html" $ do
+  -- A curated index to the articles.
+  match "article/index.markdown" $ do
     route $ constRoute "articles"
+    compile $
+      pandocCompiler
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+
+  -- The archive page with links to all articles.
+  match "article/archive.html" $ do
+    route $ constRoute "article/archive"
     compile $ do
       articles <- recentFirst =<< loadAllSnapshots articlePattern "articles"
       let context =
@@ -73,7 +80,8 @@ rules = do
 articlePattern :: Pattern
 articlePattern =
   "article/**"
-    .&&. complement "article/index.html"
+    .&&. complement "article/archive.html"
+    .&&. complement "article/index.markdown"
     .&&. complement "article/bibliography/**"
     .&&. complement "article/**.metadata"
 
@@ -82,7 +90,7 @@ articlePattern =
 --
 -- These will be used to generate the sitemap.
 items :: Pattern
-items = articlePattern .||. "article/index.html"
+items = articlePattern .||. "article/index.markdown" .||. "article/archive.html"
 
 -- |
 -- The Pandoc compiler, but with support for:
