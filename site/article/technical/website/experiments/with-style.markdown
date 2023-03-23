@@ -6,6 +6,9 @@ toc: true
 include-bibliography-stylesheet: true
 ---
 
+This is a page for experimenting with various changes to the stylesheets
+used by this web site.  It has no meaningful content.
+
 I would like to start on this page.
 
 This is me saying something.
