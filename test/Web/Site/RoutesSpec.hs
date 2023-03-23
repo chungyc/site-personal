@@ -52,7 +52,15 @@ spec = do
                 filename = directory ++ basename
              in testRoute dropExtensions filename `shouldReturn` (Just filename, False)
 
-testRoute :: Routes -> FilePath -> IO (Maybe FilePath, UsedMetadata)
+-- | Tests routes against a specific identifier based on a given file path.
+--
+-- It will run with an empty provider, i.e., a provider based on an empty directory.
+testRoute ::
+  -- | Routes to test.
+  Routes ->
+  -- | Underlies identifier against which routes will be run.
+  FilePath ->
+  IO (Maybe FilePath, UsedMetadata)
 testRoute routes filepath = withSystemTempDirectory "test" $ \tmpdir -> do
   store <- Store.new True tmpdir
   provider <- newProvider store (const $ pure False) tmpdir
