@@ -70,7 +70,7 @@ jobs:
           path: _site
 
   deploy-site:
-    if: ${{ github.ref_name == "main" }}
+    if: github.ref_name == 'main'
     needs: build
     concurrency: deploy-site
     runs-on: ubuntu-latest
@@ -101,7 +101,7 @@ jobs:
           SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
 
   deploy-docs:
-    if: ${{ github.ref_name == "main" }}
+    if: github.ref_name == 'main'
     needs: build
     concurrency: deploy-docs
     runs-on: ubuntu-latest
