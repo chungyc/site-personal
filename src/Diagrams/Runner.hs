@@ -40,7 +40,7 @@ putDiagram options diagram =
     renderText $
       renderDia SVG options $
         -- Include padding to prevent non-zero width lines from being cut off.
-        frame 1.1 diagram
+        pad 1.1 diagram
 
 -- |
 -- Default options for rendering a diagram into SVG.
