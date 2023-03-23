@@ -42,6 +42,8 @@ defaultStyle = do
 
   li |+ li ? marginTop (rem 0.75)
 
+  li |> (ul <> ol) ? marginTop (rem 0.75)
+
   dt ? do
     fontWeight bold
     marginBottom $ em 0.25
