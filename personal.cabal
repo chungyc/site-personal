@@ -95,6 +95,8 @@ test-suite examples
 test-suite spec
   type: exitcode-stdio-1.0
   main-is: Spec.hs
+  other-modules:
+      Web.Site.RoutesSpec
   hs-source-dirs:
       test
   default-extensions:
@@ -103,6 +105,8 @@ test-suite spec
   build-depends:
       QuickCheck
     , base
+    , hakyll
     , hspec
     , personal
+    , temporary
   default-language: GHC2021

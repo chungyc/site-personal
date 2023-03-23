@@ -84,8 +84,10 @@ tests:
 
     dependencies:
     - personal
+    - hakyll
     - hspec
     - QuickCheck
+    - temporary
 
     when:
       condition: false
