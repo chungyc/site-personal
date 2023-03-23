@@ -99,3 +99,25 @@ jobs:
         env:
           CHUNGYC_SSH_PRIVATE_KEY: ${{ secrets.CHUNGYC_SSH_PRIVATE_KEY }}
           SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+
+  deploy-docs:
+    if: ${{ github.ref_name == "main" }}
+    needs: build
+    concurrency: deploy-docs
+    runs-on: ubuntu-latest
+
+    # Permissions needed to deploy to GitHub Pages.
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: docs
+          path: _site
+
+      - uses: actions/upload-pages-artifact@v1
+
+      - uses: actions/deploy-pages@v1
