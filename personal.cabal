@@ -91,3 +91,18 @@ test-suite examples
     , doctest-parallel
     , personal
   default-language: GHC2021
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  default-extensions:
+      OverloadedStrings
+  ghc-options: -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base
+    , hspec
+    , personal
+  default-language: GHC2021

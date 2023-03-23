@@ -50,10 +50,12 @@ library:
 executables:
   site:
     main: app/Site.hs
+
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+
     dependencies:
     - personal
     - hakyll
@@ -64,21 +66,45 @@ executables:
     - diagrams-contrib
     - diagrams-lib
     - diagrams-svg
+
     # Work around https://github.com/sol/hpack/issues/303.
     when:
     - condition: false
       other-modules: Paths_personal
 
 tests:
-  examples:
-    main: test/Examples.hs
+  spec:
+    main:                Spec.hs
+    source-dirs:         test
+
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+
+    dependencies:
+    - personal
+    - hspec
+    - QuickCheck
+
+    when:
+      condition: false
+      other-modules:
+      - Examples        # Don't include the doctest runner.
+      - Paths_personal  # Work around https://github.com/sol/hpack/issues/303.
+
+  examples:
+    main: test/Examples.hs
+
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+
     dependencies:
     - personal
     - doctest-parallel
+
     # Work around https://github.com/sol/hpack/issues/303.
     when:
     - condition: false
