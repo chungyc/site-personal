@@ -17,7 +17,7 @@ For a list of all articles, see the [archive of articles](/article/archive).
 
         *   [LaTeX symbols](/article/reference/latex/symbols)
 
-    *   Math
+    *   Mathematics
 
         *   [Probability](/article/reference/math/probability)
 
