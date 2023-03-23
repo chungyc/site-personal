@@ -2,7 +2,7 @@
 title: Guide to writing for this web site
 description: Various knobs that are useful to writing pages for this web site.
 published: 2023-03-18
-updated: 2023-03-22
+updated: 2023-03-23
 toc: true
 include-syntax-stylesheet: true
 ---
@@ -72,6 +72,15 @@ The front page can define a `include-latest-update` metadata field.
 If defined, it will include the latest [update] on the front page.
 
 [update]:  /updates
+
+## Style
+
+These are particular CSS elements I may need to use manually.
+
+keep-colors
+:   CSS class used with SVG images, for those whose colors should never invert on dark mode.
+    The class should be associated with the `img` element inside a `figure` element;
+    this is what the conversion to HTML from Markdown does.
 
 ## Directories
 
