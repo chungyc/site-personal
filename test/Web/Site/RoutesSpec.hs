@@ -8,7 +8,7 @@ module Web.Site.RoutesSpec (spec) where
 import Data.List (intercalate)
 import Hakyll
 import Hakyll.Core.Provider
-import qualified Hakyll.Core.Store as Store
+import Hakyll.Core.Store qualified as Store
 import System.IO.Temp
 import Test.Hspec
 import Test.Hspec.QuickCheck
