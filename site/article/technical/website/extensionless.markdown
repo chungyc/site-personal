@@ -1,7 +1,7 @@
 ---
 title: Clean URLs with Hakyll
 published: 2023-02-06
-updated: 2023-03-11
+updated: 2023-03-23
 description: Another way to have URLs with no extensions for HTML pages with Hakyll.
 toc: true
 include-syntax-stylesheet: true
@@ -45,17 +45,13 @@ match "about.markdown" $ do
   ...
 ```
 
-See [`src/Web/Site/Rules.hs`].
-
-[`src/Web/Site/Rules.hs`]: https://github.com/chungyc/site-personal/blob/main/src/Web/Site/Rules.hs
-
 ## Setup in Apache
 
 Using file names with no extension is all well and good, but it would be couterproductive
 if web browsers treated the content as plain text or a blob of binary bytes.
 In other words, we need the HTTP server to actually set the `Content-Type` to `text/html` for the HTML pages.
 
-My web site is served using the Apache HTTP server.
+My web site is served using the Apache HTTP server on a shared host.
 Since I cannot change the main configuration for the server, I put the following in [`.htaccess`]:
 
 ```apache
@@ -71,16 +67,18 @@ but this is fine for me because I have no such files, and my file naming convent
 In fact, I have Hakyll generate my `.htaccess` file as well,
 so I don't have to worry about copying or editing it separately.
 
-See [`src/Web/Site/htaccess`].
+See [`site/server/htaccess`].
 
 [`.htaccess`]: https://httpd.apache.org/docs/2.4/howto/htaccess.html
-[`src/Web/Site/htaccess`]: https://github.com/chungyc/site-personal/blob/main/site/server/htaccess
+[`site/server/htaccess`]: https://github.com/chungyc/site-personal/blob/main/site/server/htaccess
 
 ## Custom server
 
 There is nothing more to do if all one wants is
 to serve HTML pages without including the extension in the URL.
 However, I would like to preview my site without standing up my own Apache HTTP server.
+I am now using an unreleased version of Hakyll with a custom change to do this,
+but this section explains what I had done with the current release of Hakyll.
 
 Hakyll uses the [warp] HTTP server for previewing a site locally.
 It does not know to serve files without an extension as HTML,
@@ -100,27 +98,29 @@ main = Warp.runSettings warpSettings $
             else return "text/html"
 ```
 
-Some day I might propose changes to Hakyll so that it could pass
-in such customizations to the HTTP server as an option.
-
-See [`app/Server.hs`].
+Hakyll now has a change to [customize its server settings] merged into its code base.
+It is not part of an official release yet, so I am using an unreleased version
+of Hakyll to do the same thing with Hakyll's own preview server.
+I am also using a custom change to customize how Hakyll's link checker
+[determines the type of files].
 
 [warp]: https://hackage.haskell.org/package/warp
-[`app/Server.hs`]: https://github.com/chungyc/site-personal/blob/main/app/Server.hs
+[customize its server settings]: https://github.com/jaspervdj/hakyll/commit/a7e7e52302fd38130ac5ceb677d81bff82af45d6
+[determines the type of files]: https://github.com/jaspervdj/hakyll/pull/973
 
 ## Caveats
 
-There are a few caveats with the way I implemented clean URLs with Hakyll.
-
-*   HTML files should not have a dot in their file names.
-
-*   The link checker in Hakyll ignores files without the `.html` extension.
-    This is not a problem for me because I use another tool to keep track of links.
+A caveat with the way clean URLs are implemented here is that
+HTML files should not have a dot in their file names.
+This is not a problem for me because my file naming conventions avoids this.
 
 ## See also
 
-The approach described on this page is not the only way to use clean URLs with Hakyll.
-Others have described alternative approaches.
+*   The [source code](https://github.com/chungyc/site-personal) for this site.
 
-*   [Clean URLs with Hakyll](https://www.rohanjain.in/hakyll-clean-urls/) by Rohan Jain
-*   [Jekyll Style URLs with Hakyll](http://aherrmann.github.io/programming/2016/01/31/jekyll-style-urls-with-hakyll/index.html) by Andreas Herrmann
+*   The approach described on this page is not the only way to use clean URLs with Hakyll.
+    Others have described alternative approaches.
+
+    *   [Clean URLs with Hakyll](https://www.rohanjain.in/hakyll-clean-urls/) by Rohan Jain
+
+    *   [Jekyll Style URLs with Hakyll](http://aherrmann.github.io/programming/2016/01/31/jekyll-style-urls-with-hakyll/index.html) by Andreas Herrmann
