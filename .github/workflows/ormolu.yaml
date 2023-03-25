@@ -5,7 +5,7 @@ on:
   push:
     paths:
       - '**.hs'
-  workflow_dispath:
+  workflow_dispatch:
 
 jobs:
   ormolu:
