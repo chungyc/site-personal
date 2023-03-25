@@ -7,7 +7,7 @@ module Main (main) where
 
 import Clay
 import Clay.Media qualified as Media
-import Prelude hiding (div, filter, not, rem, (**))
+import Prelude hiding (div, filter, not, (**))
 
 main :: IO ()
 main = putCss defaultStyle
@@ -24,26 +24,26 @@ defaultStyle = do
     "hyphens" -: "auto"
 
   body ? do
-    marginTop $ rem 2
+    marginTop $ em 2
     marginLeft $ pct 10
     marginRight $ pct 10
-    marginBottom $ rem 2
+    marginBottom $ em 2
 
   headings
 
   footer ? do
     fontFamily ["Courier New"] [monospace, sansSerif]
-    fontSize $ rem 0.75
+    fontSize $ em 0.75
     borderTop (px 1) solid black
-    marginTop $ rem 1
+    marginTop $ em 1
 
   footer |> nav ? do
-    paddingTop $ rem 1
-    a ? paddingRight (rem 1)
+    paddingTop $ em 1.5
+    a ? paddingRight (em 1)
 
-  li |+ li ? marginTop (rem 0.75)
+  li |+ li ? marginTop (em 0.75)
 
-  li |> (ul <> ol) ? marginTop (rem 0.75)
+  li |> (ul <> ol) ? marginTop (em 0.75)
 
   dt ? do
     fontWeight bold
@@ -61,7 +61,7 @@ defaultStyle = do
 
   article |> section # ".byline" ? do
     fontFamily ["Verdana"] [sansSerif, serif, monospace]
-    fontSize $ rem 0.7
+    fontSize $ em 0.7
     p ? do
       marginTop $ em 0.2
       marginBottom $ em 0.2
@@ -69,16 +69,16 @@ defaultStyle = do
   tableOfContents
   figures
 
-  query Media.all [Media.maxWidth $ cm 5] $ do
-    body ? sym margin nil
+  query Media.all [Media.maxWidth $ em 30] $ do
+    body ? sym margin (em 0.5)
 
     ul ? do
-      marginLeft $ rem 0.5
-      paddingLeft $ rem 0.5
+      marginLeft $ em 0.5
+      paddingLeft $ em 0.5
 
-  query Media.all [Media.minWidth $ cm 21] $ do
+  query Media.all [Media.minWidth $ em 60] $ do
     body ? do
-      width $ cm 20
+      width $ em 60
       marginRight auto
       marginLeft auto
 
@@ -91,24 +91,24 @@ headings :: Css
 headings = do
   h1 ? do
     fontFamily ["Courier New"] [monospace, sansSerif]
-    fontSize $ rem 2
+    fontSize $ em 2
     fontStyle italic
 
   h2 ? do
     common
-    fontSize $ rem 1.8
+    fontSize $ em 1.8
 
   h3 ? do
     common
-    fontSize $ rem 1.5
+    fontSize $ em 1.5
 
   h4 ? do
     common
-    fontSize $ rem 1.25
+    fontSize $ em 1.25
 
   h5 ? do
     common
-    fontSize $ rem 1.1
+    fontSize $ em 1.1
 
   h6 ? common
   where
@@ -130,7 +130,7 @@ tableOfContents = do
 
     h2 ? do
       fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
-      fontSize $ rem 1.2
+      fontSize $ em 1.2
       fontStyle normal
       fontWeight bold
       textDecorationLine none
@@ -167,7 +167,7 @@ figures = do
     figcaption ? do
       display block
       fontFamily ["Verdana"] [sansSerif, serif, monospace]
-      fontSize $ rem 0.9
+      fontSize $ em 0.9
       marginTop $ em 0.5
       marginLeft auto
       marginRight auto
