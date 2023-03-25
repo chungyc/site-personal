@@ -71,6 +71,10 @@ defaultStyle = do
   query Media.all [Media.maxWidth $ cm 5] $ do
     body ? sym margin nil
 
+    ul ? do
+      marginLeft $ rem 0.5
+      paddingLeft $ rem 0.5
+
   query Media.all [Media.minWidth $ cm 21] $ do
     body ? do
       width $ cm 20
