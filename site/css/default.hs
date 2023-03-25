@@ -6,7 +6,7 @@
 module Main (main) where
 
 import Clay
-import qualified Clay.Media as Media
+import Clay.Media qualified as Media
 import Prelude hiding (div, filter, not, rem, (**))
 
 main :: IO ()
@@ -21,6 +21,7 @@ defaultStyle = do
     textRendering optimizeLegibility
     textAlign justify
     lineHeight $ unitless 1.25
+    "hyphens" -: "auto"
 
   body ? do
     marginTop $ rem 2
