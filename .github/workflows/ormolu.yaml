@@ -14,5 +14,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: mrkkrp/ormolu-action@v10
         with:
+          # Set language and extensions explicitly
+          # to accommodate Haskell code generating the site.
           respect-cabal-files: false
-          extra-args: '-o "-XGHC2021 -XOverloadedStrings"'
+          extra-args: '-o -XGHC2021 -o -XOverloadedStrings'
