@@ -6,7 +6,7 @@
 module Main (main) where
 
 import Clay
-import qualified Clay.Media as Media
+import Clay.Media qualified as Media
 
 main :: IO ()
 main = putCss frontStyle
