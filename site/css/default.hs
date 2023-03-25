@@ -70,7 +70,7 @@ defaultStyle = do
   figures
 
   query Media.all [Media.maxWidth $ em 30] $ do
-    body ? sym margin (em 0.5)
+    body ? sym margin (em 1)
 
     ul ? do
       marginLeft $ em 0.5
