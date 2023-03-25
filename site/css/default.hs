@@ -182,12 +182,7 @@ lightColorScheme = do
   a # link ? color blue
   a # visited ? color purple
 
-  h1 ? fontColor (headingColor 1)
-  h2 ? fontColor (headingColor 2)
-  h3 ? fontColor (headingColor 3)
-  h4 ? fontColor (headingColor 4)
-  h5 ? fontColor (headingColor 5)
-  h6 ? fontColor (headingColor 6)
+  headingColors headingColor
 
   nav # ".toc" ? do
     borderColor lightgrey
@@ -209,12 +204,7 @@ darkColorScheme = do
   a # link ? color cyan
   a # visited ? color pink
 
-  h1 ? fontColor (headingColor 1)
-  h2 ? fontColor (headingColor 2)
-  h3 ? fontColor (headingColor 3)
-  h4 ? fontColor (headingColor 4)
-  h5 ? fontColor (headingColor 5)
-  h6 ? fontColor (headingColor 6)
+  headingColors headingColor
 
   nav # ".toc" ? do
     borderColor dimgrey
@@ -226,3 +216,17 @@ darkColorScheme = do
   div # ".sourceCode" ? borderColor dimgrey
   where
     headingColor n = rgb (255 - n * 20) (255 - n * 20) (155 - n * 10)
+
+-- | Set up colors for headings depending on heading level.
+headingColors ::
+  -- | Maps heading level to its color.
+  (Integer -> Color) ->
+  -- | Style defining heading colors.
+  Css
+headingColors color = do
+  h1 ? fontColor (color 1)
+  h2 ? fontColor (color 2)
+  h3 ? fontColor (color 3)
+  h4 ? fontColor (color 4)
+  h5 ? fontColor (color 5)
+  h6 ? fontColor (color 6)
