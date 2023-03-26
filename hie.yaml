@@ -24,3 +24,7 @@ cradle:
             component: "personal:exe:site"
           - path: "./test"
             component: "personal:test:spec"
+
+dependencies:
+  - package.yaml
+  - stack.yaml
