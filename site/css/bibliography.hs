@@ -6,7 +6,7 @@
 module Main (main) where
 
 import Clay
-import Prelude hiding (div, not, rem)
+import Prelude hiding (div, not)
 
 main :: IO ()
 main = putCss biblioStyle
@@ -16,19 +16,19 @@ main = putCss biblioStyle
 biblioStyle :: Css
 biblioStyle = do
   div # ".csl-bib-body" ? do
-    paddingBottom $ rem 1
+    paddingBottom $ em 1
 
     div # ".csl-entry" ? do
-      marginBottom $ rem 1
+      marginBottom $ em 1
 
       -- When width is small, break long URLs.
       overflowWrap breakWord
 
       div # ".csl-left-margin" ? do
         float floatLeft
-        width $ rem 3
+        width $ em 3
         textAlign $ alignSide sideRight
 
       div # ".csl-right-inline" ? do
-        marginLeft $ rem 3
-        paddingLeft $ rem 1
+        marginLeft $ em 3
+        paddingLeft $ em 1

@@ -6,7 +6,7 @@
 module Main (main) where
 
 import Clay
-import Prelude hiding (div, rem)
+import Prelude hiding (div)
 
 main :: IO ()
 main = putCss linksStyle
@@ -17,8 +17,8 @@ main = putCss linksStyle
 -- Mainly for reducing the heading sizes.
 linksStyle :: Css
 linksStyle = do
-  h2 ? fontSize (rem 1.4)
-  h3 ? fontSize (rem 1.3)
-  h4 ? fontSize (rem 1.2)
-  h5 ? fontSize (rem 1.1)
-  h6 ? fontSize (rem 1)
+  h2 ? fontSize (em 1.4)
+  h3 ? fontSize (em 1.3)
+  h4 ? fontSize (em 1.2)
+  h5 ? fontSize (em 1.1)
+  h6 ? fontSize (em 1)
