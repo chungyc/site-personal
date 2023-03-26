@@ -2,7 +2,7 @@
 title: Guide to writing for this web site
 description: Various knobs that are useful to writing pages for this web site.
 published: 2023-03-18
-updated: 2023-03-23
+updated: 2023-03-26
 toc: true
 include-syntax-stylesheet: true
 ---
@@ -40,7 +40,7 @@ Custom metadata fields which can be defined for any page.
 `extra-stylesheet`
 :   A URL for an extra stylesheet to load for the page.
     For loading stylesheets only loaded by a few pages;
-	other stylesheets will usually have dedicated metadata fields.
+    other stylesheets will usually have dedicated metadata fields.
 
 `include-math`
 :   If defined, load [KaTeX] resources necessary for rendering math.
@@ -60,7 +60,11 @@ Custom metadata fields which can be defined for any page.
 `standalone-title`
 :   If defined, the value for the `title` metadata field will be
     the entirety of the title for the page.  This is intended for the front page.
-	Other pages are expected to have the site title included in the page title.
+    Other pages are expected to have the site title included in the page title.
+
+    Note that this only applies to the text that goes inside the `title` HTML element.
+    The top-level heading will only include the value for the `title` metadata field
+    regardless of whether this is defined or not.
 
 [KaTeX]: https://katex.org/
 [robots `meta` tag]: https://www.robotstxt.org/meta.html
