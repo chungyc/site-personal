@@ -29,28 +29,7 @@ defaultStyle = do
     marginRight $ pct 10
     marginBottom $ em 2
 
-  headings
-
-  footer ? do
-    fontFamily ["Courier New"] [monospace, sansSerif]
-    fontSize $ em 0.75
-    borderTop (px 1) solid black
-    marginTop $ em 1
-
-  footer |> nav ? do
-    paddingTop $ em 1.5
-    a ? paddingRight (em 1)
-
-  li |+ li ? marginTop (em 0.75)
-
-  li |> (ul <> ol) ? marginTop (em 0.75)
-
-  dt ? do
-    fontWeight bold
-    marginBottom $ em 0.25
-
-  dd ? do
-    marginBottom $ em 1
+  genericStyle
 
   div # ".sourceCode" ? do
     borderStyle solid
@@ -85,6 +64,32 @@ defaultStyle = do
   query Media.all [Media.prefersColorScheme Media.light] lightColorScheme
 
   query Media.all [Media.prefersColorScheme Media.dark] darkColorScheme
+
+-- | Styles which apply generally.
+genericStyle :: Css
+genericStyle = do
+  headings
+
+  footer ? do
+    fontFamily ["Courier New"] [monospace, sansSerif]
+    fontSize $ em 0.75
+    borderTop (px 1) solid black
+    marginTop $ em 1
+
+  footer |> nav ? do
+    paddingTop $ em 1.5
+    a ? paddingRight (em 1)
+
+  li |+ li ? marginTop (em 0.75)
+
+  li |> (ul <> ol) ? marginTop (em 0.75)
+
+  dt ? do
+    fontWeight bold
+    marginBottom $ em 0.25
+
+  dd ? do
+    marginBottom $ em 1
 
 -- | Styles for headings.
 headings :: Css
