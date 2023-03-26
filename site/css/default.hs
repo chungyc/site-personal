@@ -223,10 +223,10 @@ headingColors ::
   (Integer -> Color) ->
   -- | Style defining heading colors.
   Css
-headingColors color = do
-  h1 ? fontColor (color 1)
-  h2 ? fontColor (color 2)
-  h3 ? fontColor (color 3)
-  h4 ? fontColor (color 4)
-  h5 ? fontColor (color 5)
-  h6 ? fontColor (color 6)
+headingColors mapColor = do
+  h1 ? fontColor (mapColor 1)
+  h2 ? fontColor (mapColor 2)
+  h3 ? fontColor (mapColor 3)
+  h4 ? fontColor (mapColor 4)
+  h5 ? fontColor (mapColor 5)
+  h6 ? fontColor (mapColor 6)

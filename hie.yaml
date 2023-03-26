@@ -1,0 +1,26 @@
+cradle:
+  multi:
+    - path: "./site"
+      config:
+        cradle:
+          stack:
+          - path: "./site"
+            component: "personal:exe:site"
+
+    - path: "./test/Examples.hs"
+      config:
+        cradle:
+          stack:
+          - path: "./test/Examples.hs"
+            component: "personal:test:examples"
+
+    - path: "./"
+      config:
+        cradle:
+          stack:
+          - path: "./src"
+            component: "personal:lib"
+          - path: "./app"
+            component: "personal:exe:site"
+          - path: "./test"
+            component: "personal:test:spec"
