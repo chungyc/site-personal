@@ -72,7 +72,7 @@ defaultStyle = do
   query Media.all [Media.maxWidth $ em 30] $ do
     body ? sym margin (em 1)
 
-    ul ? do
+    ul <> ol ? do
       marginLeft $ em 0.5
       paddingLeft $ em 0.5
 
