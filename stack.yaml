@@ -11,7 +11,5 @@ extra-deps:
   - git: https://github.com/chungyc/hakyll.git
     commit: f90c35423911c392cedecae3417a472bc861a58a
 
-allow-newer: true
-
 ghc-options:
   "$everything": -O2
