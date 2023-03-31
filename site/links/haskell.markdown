@@ -19,6 +19,9 @@ updated: 2023-03-17
 [Haskell Playground](https://play.haskell.org/)
 :   Playground for trying out Haskell code.
 
+[Stackage](https://www.stackage.org/)
+:   Provides a consistent set of Haskell packages that are known to build together.
+
 [Hspec](https://hspec.github.io/)
 :   Easy to read testing framework which integrates HUnit and QuickCheck.
 
