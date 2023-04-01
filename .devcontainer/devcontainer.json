@@ -27,7 +27,7 @@
   },
   "onCreateCommand": {
     "clean": "cp ~/.cabal/bin/* ~/.local/bin/ && rm -r ~/.cabal/",
-    "stack": "~/ghcup/bin/stack build --test --no-run-tests --haddock --no-haddock-deps --haddock-arguments=--no-warnings"
+    "stack": "~/.ghcup/bin/stack build --test --no-run-tests --haddock --no-haddock-deps --haddock-arguments=--no-warnings"
   },
   "hostRequirements": {
     "memory": "8gb",
