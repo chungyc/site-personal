@@ -6,10 +6,9 @@ extra-deps:
   - git: https://github.com/sebastiaanvisser/clay.git
     commit: e68574333a4f0178e7e5808cbd37a8dd350330ea
 
-  # Uses server customization and link check file customization
-  # changes not released yet.  The latter is not even merged yet.
+  # Uses link check file customization change not merged yet.
   - git: https://github.com/chungyc/hakyll.git
-    commit: f90c35423911c392cedecae3417a472bc861a58a
+    commit: 8cb5fa5dc36122d53a89530239d9036bc6594ffa
 
 ghc-options:
   "$everything": -O2
