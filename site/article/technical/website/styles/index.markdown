@@ -12,7 +12,7 @@ The following lists individual stylesheets which are used by this web site.
 [Front page](front)
 :   Styling specific to the front page.
 
-Bibliography
+[Bibliography](bibliography)
 :   Styling for bibliographic references.
 
 Links

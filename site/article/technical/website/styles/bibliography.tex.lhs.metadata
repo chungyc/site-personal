@@ -1,0 +1,4 @@
+title: Stylesheet for bibliographic references
+description: Setting up extra styles for bibliographies on this site.
+published: 2023-04-01
+include-syntax-stylesheet: true
