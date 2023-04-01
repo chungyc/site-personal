@@ -49,4 +49,5 @@ frontStyle = do
 \begin{itemize}
 \item \href{https://github.com/chungyc/site-personal/blob/main/site/css/front.lhs}{Source code}
 \item \href{/css/front.css}{Generated stylesheet}
+\item \href{./}{Other stylesheets}
 \end{itemize}

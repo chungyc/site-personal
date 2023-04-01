@@ -52,4 +52,5 @@ biblioStyle = do
 \begin{itemize}
 \item \href{https://github.com/chungyc/site-personal/blob/main/site/css/bibliography.lhs}{Source code}
 \item \href{/css/bibliography.css}{Generated stylesheet}
+\item \href{./}{Other stylesheets}
 \end{itemize}

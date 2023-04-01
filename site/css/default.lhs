@@ -378,4 +378,5 @@ darkColorScheme = do
 \begin{itemize}
 \item \href{https://github.com/chungyc/site-personal/blob/main/site/css/default.lhs}{Source code}
 \item \href{/css/default.css}{Generated stylesheet}
+\item \href{./}{Other stylesheets}
 \end{itemize}
