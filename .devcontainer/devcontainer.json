@@ -1,11 +1,14 @@
 {
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "ghcr.io/devcontainers-contrib/features/haskell:2": {
-      "globalPackages": "hlint ormolu"
-    },
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
       "packages": "pkg-config"
+    },
+    "ghcr.io/devcontainers-contrib/features/haskell:2": {
+      "installHLS": true,
+      "installStack": true,
+      "installStackGHCupHook": true,
+      "globalPackages": "hlint ormolu"
     }
   },
   "customizations": {
