@@ -15,8 +15,8 @@ The following lists individual stylesheets which are used by this web site.
 [Bibliography](bibliography)
 :   Styling for bibliographic references.
 
-Links
+[Links](links)
 :   Styling for link pages.
 
-Errors
+[Errors](error)
 :   Styling for error pages.
