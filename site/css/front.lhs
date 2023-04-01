@@ -23,8 +23,6 @@ This is so that the update will not be confused with the rest of the front page.
 It is this extra bit of styling that is done for the front page.
 
 \begin{code}
--- |
--- Style for front page which Clay will render into a stylesheet.
 frontStyle :: Css
 frontStyle = do
   ".latest-update" ? do
