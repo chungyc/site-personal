@@ -16,6 +16,20 @@ main = putCss defaultStyle
 -- Default style for Clay to render into a stylesheet.
 defaultStyle :: Css
 defaultStyle = do
+  -- Comes first, since later styles should be able to override properties.
+  genericStyle
+
+  codeStyle
+  articleStyle
+  tableOfContents
+  figures
+
+  -- Comes last, since they may have to override previous properties.
+  mediaStyles
+
+-- | Styles which apply generally.
+genericStyle :: Css
+genericStyle = do
   html ? do
     fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
     textRendering optimizeLegibility
@@ -29,45 +43,6 @@ defaultStyle = do
     marginRight $ pct 10
     marginBottom $ em 2
 
-  genericStyle
-
-  div # ".sourceCode" ? do
-    borderStyle solid
-    borderWidth $ px 1
-    marginRight $ em 1
-    marginLeft $ em 1
-    sym padding $ em 0.5
-
-  article |> section # ".byline" ? do
-    fontFamily ["Verdana"] [sansSerif, serif, monospace]
-    fontSize $ em 0.7
-    p ? do
-      marginTop $ em 0.2
-      marginBottom $ em 0.2
-
-  tableOfContents
-  figures
-
-  query Media.all [Media.maxWidth $ em 30] $ do
-    body ? sym margin (em 1)
-
-    ul <> ol ? do
-      marginLeft $ em 0.5
-      paddingLeft $ em 0.5
-
-  query Media.all [Media.minWidth $ em 60] $ do
-    body ? do
-      width $ em 60
-      marginRight auto
-      marginLeft auto
-
-  query Media.all [Media.prefersColorScheme Media.light] lightColorScheme
-
-  query Media.all [Media.prefersColorScheme Media.dark] darkColorScheme
-
--- | Styles which apply generally.
-genericStyle :: Css
-genericStyle = do
   headings
 
   footer ? do
@@ -121,6 +96,26 @@ headings = do
       fontFamily ["Courier New"] [monospace, sansSerif]
       textDecorationLine underline
       textDecorationStyle dotted
+
+-- | Style for code snippets.
+codeStyle :: Css
+codeStyle = do
+  div # ".sourceCode" ? do
+    borderStyle solid
+    borderWidth $ px 1
+    marginRight $ em 1
+    marginLeft $ em 1
+    sym padding $ em 0.5
+
+-- | Style for @article@ elements.
+articleStyle :: Css
+articleStyle = do
+  article |> section # ".byline" ? do
+    fontFamily ["Verdana"] [sansSerif, serif, monospace]
+    fontSize $ em 0.7
+    p ? do
+      marginTop $ em 0.2
+      marginBottom $ em 0.2
 
 -- |
 -- Style for table of contents.
@@ -176,6 +171,26 @@ figures = do
       marginTop $ em 0.5
       marginLeft auto
       marginRight auto
+
+-- | Customize style depending on media.
+mediaStyles :: Css
+mediaStyles = do
+  query Media.all [Media.maxWidth $ em 30] $ do
+    body ? sym margin (em 1)
+
+    ul <> ol ? do
+      marginLeft $ em 0.5
+      paddingLeft $ em 0.5
+
+  query Media.all [Media.minWidth $ em 60] $ do
+    body ? do
+      width $ em 60
+      marginRight auto
+      marginLeft auto
+
+  query Media.all [Media.prefersColorScheme Media.light] lightColorScheme
+
+  query Media.all [Media.prefersColorScheme Media.dark] darkColorScheme
 
 -- | Color scheme to use in light mode.
 lightColorScheme :: Css
