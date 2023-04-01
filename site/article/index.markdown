@@ -2,6 +2,7 @@
 title: Articles
 description: Index of articles written by Yoo Chung and posted on their personal web site.
 published: 2023-03-23
+updated: 2023-04-01
 rss-feed-link: /articles.xml
 ---
 
@@ -32,6 +33,8 @@ For a list of all articles, see the [archive of articles](/article/archive).
         *   [Guide to writing for the site](/article/technical/website/guide)
 
         *   [Supporting clean URLs](/article/technical/website/extensionless)
+
+        *   [Stylesheets](/article/technical/website/styles/)
 
         *   [Trying out diagrams](/article/technical/website/diagrams/trying-out)
 

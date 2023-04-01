@@ -1,0 +1,5 @@
+title: Default stylesheet
+description: How the default stylesheet used by this site is set up.
+published: 2023-04-01
+toc: true
+include-syntax-stylesheet: true
