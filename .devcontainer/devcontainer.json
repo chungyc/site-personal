@@ -5,9 +5,6 @@
       "packages": "pkg-config"
     },
     "ghcr.io/devcontainers-contrib/features/haskell:2": {
-      "installHLS": true,
-      "installStack": true,
-      "installStackGHCupHook": true,
       "globalPackages": "hlint ormolu"
     }
   },
@@ -30,7 +27,7 @@
   },
   "onCreateCommand": {
     "clean": "cp ~/.cabal/bin/* ~/.local/bin/ && rm -r ~/.cabal/",
-    "stack": "stack build --test --no-run-tests --haddock --no-haddock-deps --haddock-arguments=--no-warnings"
+    "stack": "~/ghcup/bin/stack build --test --no-run-tests --haddock --no-haddock-deps --haddock-arguments=--no-warnings"
   },
   "hostRequirements": {
     "memory": "8gb",
