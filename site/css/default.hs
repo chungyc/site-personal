@@ -74,28 +74,15 @@ headings = do
     fontSize $ em 2
     fontStyle italic
 
-  h2 ? do
-    common
-    fontSize $ em 1.8
+  h2 <> h3 <> h4 <> h5 <> h6 ? do
+    fontFamily ["Courier New"] [monospace, sansSerif]
+    textDecorationLine underline
+    textDecorationStyle dotted
 
-  h3 ? do
-    common
-    fontSize $ em 1.5
-
-  h4 ? do
-    common
-    fontSize $ em 1.25
-
-  h5 ? do
-    common
-    fontSize $ em 1.1
-
-  h6 ? common
-  where
-    common = do
-      fontFamily ["Courier New"] [monospace, sansSerif]
-      textDecorationLine underline
-      textDecorationStyle dotted
+  h2 ? fontSize (em 1.8)
+  h3 ? fontSize (em 1.5)
+  h4 ? fontSize (em 1.25)
+  h5 ? fontSize (em 1.1)
 
 -- | Style for code snippets.
 codeStyle :: Css
