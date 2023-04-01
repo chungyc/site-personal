@@ -9,7 +9,7 @@ The following lists individual stylesheets which are used by this web site.
 [Default stylesheet](default)
 :   The default stylesheet included by all pages on this site.
 
-Front page
+[Front page](front)
 :   Styling specific to the front page.
 
 Bibliography

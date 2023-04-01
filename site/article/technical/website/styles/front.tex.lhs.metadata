@@ -1,0 +1,4 @@
+title: Extra stylesheet for front page
+description: Setting up extra styles for the front page of this site.
+published: 2023-04-01
+include-syntax-stylesheet: true
