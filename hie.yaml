@@ -1,3 +1,6 @@
+# Needs a custom configuration because Stack and Cabal would not know
+# what to do with Haskell code in the site/ directory.
+
 cradle:
   multi:
     - path: "./site"
