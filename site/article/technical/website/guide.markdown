@@ -2,7 +2,7 @@
 title: Guide to writing for this web site
 description: Various knobs that are useful to writing pages for this web site.
 published: 2023-03-18
-updated: 2023-03-26
+updated: 2023-04-02
 toc: true
 include-syntax-stylesheet: true
 ---
@@ -210,4 +210,5 @@ to include in the [sitemap] for the web site.
 
 ## See also
 
+*   [Library documentation](https://chungyc.github.io/site-personal)
 *   Source for the web site on [GitHub](https://github.com/chungyc/site-personal)
