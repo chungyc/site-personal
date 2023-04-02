@@ -66,6 +66,7 @@ executables:
     - diagrams-contrib
     - diagrams-lib
     - diagrams-svg
+    - linear
 
     # Work around https://github.com/sol/hpack/issues/303.
     when:

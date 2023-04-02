@@ -35,6 +35,6 @@ import Web.Site.Compilers
 -- this will generate the file @\/diagrams\/round.svg@ for the site.
 rules :: Rules ()
 rules = do
-  match "diagrams/**.hs" $ do
+  match ("diagrams/**.hs" .||. "diagrams/**.lhs") $ do
     route $ setExtension "svg"
     compile $ haskellCompiler ["-XNoMonomorphismRestriction", "-XTypeFamilies"]
