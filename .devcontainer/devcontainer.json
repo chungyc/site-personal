@@ -11,14 +11,16 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "haskell.haskell"
+        "haskell.haskell",
+        "james-yu.latex-workshop"
       ],
       "settings": {
         "editor.formatOnSave": true,
         "git.fetchOnPull": true,
-        "git.autofetch": true,
+        "git.autofetch": "all",
         "git.pruneOnFetch": true,
         "git.autofetchPeriod": 3600,
+        "update.showReleaseNotes": false,
         "githubPullRequests.ignoredPullRequestBranches": [
           "main"
         ]
@@ -26,8 +28,13 @@
     }
   },
   "onCreateCommand": {
-    "clean": "cp ~/.cabal/bin/* ~/.local/bin/ && rm -r ~/.cabal/",
+    "clean": "cp ~/.cabal/bin/* ~/.local/bin/ && rm -r ~/.cabal/"
+  },
+  "updateContentCommand": {
     "stack": "stack build --test --no-run-tests --haddock --no-haddock-deps --haddock-arguments=--no-warnings"
+  },
+  "postStartCommand": {
+    "pull": "git pull --all"
   },
   "hostRequirements": {
     "memory": "8gb",
