@@ -30,6 +30,7 @@ source-repository head
 library
   exposed-modules:
       Diagrams.Runner
+      Physics.Spacetime.Flat
       Web.Site
       Web.Site.Compilers
       Web.Site.Routes

@@ -7,7 +7,7 @@ include-math: true
 
 A basic reference on relativity meant for my own use.
 
-## Lorentz transformation
+## Lorentz transformation {#lorentz}
 
 \begin{aligned}
 \gamma & = \sqrt{1 - \left( \frac{v}{c} \right)^2} \\
