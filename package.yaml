@@ -87,6 +87,7 @@ tests:
     - hakyll
     - hspec
     - QuickCheck
+    - diagrams-lib
     - temporary
 
     when:

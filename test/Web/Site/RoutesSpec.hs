@@ -1,5 +1,5 @@
 -- |
--- Description: Tests for "Web.Site.Route."
+-- Description: Tests for "Web.Site.Route".
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org

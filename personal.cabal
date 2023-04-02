@@ -97,6 +97,7 @@ test-suite spec
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      Physics.Spacetime.FlatSpec
       Web.Site.RoutesSpec
   hs-source-dirs:
       test
@@ -106,6 +107,7 @@ test-suite spec
   build-depends:
       QuickCheck
     , base
+    , diagrams-lib
     , hakyll
     , hspec
     , personal

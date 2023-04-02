@@ -31,12 +31,13 @@ module Physics.Spacetime.Flat
 where
 
 import Diagrams.TwoD.Types
+import GHC.Generics (Generic)
 
 -- | The coordinates \((t, x, y, z)\) in flat spacetime.
 --
 -- The coordinates use Planck units.  In other words, \(c = 1\).
 newtype Coordinate = Coordinate (Double, Double, Double, Double)
-  deriving (Eq, Show)
+  deriving (Eq, Show, Generic)
 
 -- | Treat two coordinates like vectors and add them together.
 --
@@ -96,8 +97,8 @@ interval (Coordinate (t, x, y, z)) = t ** 2 - x ** 2 - y ** 2 - z ** 2
 -- in a new inertial frame.  It is assumed that the origin coincides
 -- between the two frames, and that the velocity only has an \(x\) component.
 --
--- >>> let expected = Coordinate (0.20710678118, 0.20710678118, 0.0, 0.0)
--- >>> let actual = transform (sqrt 0.5) $ Coordinate (1, 1, 0, 0)
+-- >>> let expected = Coordinate (0.414213562,0.414213562,2.0,3.0)
+-- >>> let actual = transform (sqrt 0.5) $ Coordinate (1, 1, 2, 3)
 -- >>> actual `approximates` expected
 -- True
 --
@@ -112,7 +113,7 @@ transform ::
   Coordinate
 transform v (Coordinate (t, x, y, z)) = Coordinate (t', x', y', z')
   where
-    gamma = sqrt $ 1 - v ** 2
+    gamma = 1 / sqrt (1 - v ** 2)
     t' = gamma * (t - v * x)
     x' = gamma * (x - v * t)
     y' = y
