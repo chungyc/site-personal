@@ -10,7 +10,7 @@ A basic reference on relativity meant for my own use.
 ## Lorentz transformation {#lorentz}
 
 \begin{aligned}
-\gamma & = \sqrt{1 - \left( \frac{v}{c} \right)^2} \\
+\gamma & = \frac{1}{\sqrt{1 - \left( \frac{v}{c} \right)^2}} \\
 t' & = \gamma \left( t - \frac{vx}{c^2} \right) \\
 x' & = \gamma (x - vt) \\
 y' & = y \\
