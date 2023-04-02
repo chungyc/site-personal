@@ -103,7 +103,7 @@ interval (Coordinate (t, x, y, z)) = t ** 2 - x ** 2 - y ** 2 - z ** 2
 -- True
 --
 -- For reference, look up the
--- [Lorentz transformation](https://chungyc.org/article/physics/relativity/#lorentz).
+-- [Lorentz transformation](https://chungyc.org/article/reference/physics/relativity/#lorentz).
 transform ::
   -- | Velocity of the new frame in the original frame.
   Double ->
