@@ -14,7 +14,7 @@ import Test.Hspec.QuickCheck
 import Test.QuickCheck hiding (scale)
 
 spec :: Spec
-spec = do
+spec = parallel $ do
   prop "combines coordinates" $
     \c@(Coordinate (t, x, y, z)) c'@(Coordinate (t', x', y', z')) func ->
       let f = applyFun2 func
