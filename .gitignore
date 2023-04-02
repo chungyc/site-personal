@@ -2,5 +2,6 @@ _cache/
 _site/
 .stack-work/
 .vscode/
+personal.cabal
 stack.yaml.lock
 *~
