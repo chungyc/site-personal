@@ -24,12 +24,15 @@ module Physics.Spacetime.Flat
 
     -- * Lorentz transformation
     transform,
+    transformation,
 
     -- * Working with Diagrams
     vectorize2D,
   )
 where
 
+import Diagrams.Transform (Transformation)
+import Diagrams.Transform.Matrix (fromMat22)
 import Diagrams.TwoD.Types
 import GHC.Generics (Generic)
 
@@ -118,6 +121,32 @@ transform v (Coordinate (t, x, y, z)) = Coordinate (t', x', y', z')
     x' = gamma * (x - v * t)
     y' = y
     z' = z
+
+-- | Returns a Lorentz transformation.
+--
+-- It will transform diagrams in an original inertial frame to those
+-- in a new inertial frame.  It is assumed that the origin coincides
+-- between the two frames, and that the velocity only has an \(x\) component.
+--
+-- >>> import Diagrams.Prelude qualified as D
+-- >>> let c = Coordinate (2, 1, 0, 0)
+-- >>> let v = 0.5
+-- >>> let expected = vectorize2D $ transform v c
+-- >>> let actual = D.transform (transformation v) $ vectorize2D c
+-- >>> abs (actual - expected) < 1e-5
+-- True
+--
+-- For reference, look up the
+-- [Lorentz transformation](https://chungyc.org/article/reference/physics/relativity/#lorentz).
+transformation ::
+  -- | Velocity of the new fram in the original frame.
+  Double ->
+  -- | Transformation for a two-dimensional "Diagrams" object.
+  Transformation V2 Double
+transformation v = fromMat22 matrix (V2 0 0)
+  where
+    gamma = 1 / sqrt (1 - v ** 2)
+    matrix = V2 (V2 gamma (-gamma * v)) (V2 (-gamma * v) gamma)
 
 -- | Convert given coordinates into a two-dimensional "Diagrams" vector.
 --

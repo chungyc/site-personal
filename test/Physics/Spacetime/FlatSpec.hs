@@ -7,7 +7,8 @@
 -- Maintainer: web@chungyc.org
 module Physics.Spacetime.FlatSpec (spec) where
 
-import Diagrams.Prelude (V2 (..))
+import Diagrams.Prelude (V2 (..), (^-^))
+import Diagrams.Prelude qualified as D
 import Physics.Spacetime.Flat
 import Test.Hspec
 import Test.Hspec.QuickCheck
@@ -54,6 +55,12 @@ spec = parallel $ do
     forAll (choose (0, 1) `suchThat` (< 1)) $ \v ->
       transform v c `shouldSatisfy` closeTo (interval c) . interval
 
+  prop "transformation embodies Lorentz transform" $ \c ->
+    forAll (choose (0, 1) `suchThat` (< 1)) $ \v ->
+      let transformed = D.transform (transformation v) $ vectorize2D c
+          transformed' = vectorize2D $ transform v c
+       in (transformed, transformed') `shouldSatisfy` closeVectors
+
   prop "turns into two-dimensional vector" $ \c@(Coordinate (t, x, _, _)) ->
     vectorize2D c `shouldBe` V2 x t
 
@@ -66,3 +73,9 @@ instance Arbitrary Coordinate where
 -- The treshold for approximate equivalence is somewhat arbitrary.
 closeTo :: Double -> Double -> Bool
 closeTo x y = abs (x - y) < 1e-5
+
+-- | Checks whether two vectors are approximately equal.
+--
+-- The treshold for approximate equivalence is somewhat arbitrary.
+closeVectors :: (V2 Double, V2 Double) -> Bool
+closeVectors (v, v') = closeTo 0 $ D.norm $ v ^-^ v'

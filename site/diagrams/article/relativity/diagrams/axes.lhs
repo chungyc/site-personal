@@ -2,13 +2,15 @@
 >
 > import Diagrams.Runner
 > import Diagrams.Transform.Matrix
-> import Linear.Matrix (M22)
+> import Physics.Spacetime.Flat qualified as Spacetime
 >
 > main :: IO ()
-> main = putDiagram defaultOptions $ hcat [axes, deformedAxes # lc red]
+> main = putDiagram defaultOptions $
+>   hcat [ axes
+>        , deformedAxes <> axes # opacity 0.25 # lc red]
 
 > deformedAxes :: Diagram B
-> deformedAxes = axes # transform (fromMat22 (matrix 0.5) (V2 0 0 :: V2 Double))
+> deformedAxes = axes # transform (Spacetime.transformation 0.5)
 
 > axes :: Diagram B
 > axes = xAxis <> tAxis <> lightCone
@@ -31,8 +33,3 @@
 >    backwardEdge = reflectX forwardEdge
 >    lowerLeftCorner = (-axisLength) ^& (-axisLength)
 >    upperRightCorner = axisLength ^& axisLength
-
-> matrix :: Double -> M22 Double
-> matrix v = V2 (V2 gamma (-gamma * v)) (V2 (-gamma*v) gamma)
->   where
->     gamma = 1 / sqrt (1 - v*v)
