@@ -50,4 +50,4 @@ jobs:
           rm -rf hlint
 
         # Use branch because it's not ready for a release yet.
-      - uses: chungyc/hlint-scan@hardening
+      - uses: chungyc/hlint-scan@main
