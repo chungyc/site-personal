@@ -5,9 +5,11 @@ on:
   push:
     paths:
       - '**.hs'
+      - '**.lhs'
 
 jobs:
   hlint:
+    name: Status check with HLint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,3 +18,34 @@ jobs:
         with:
           path: '["app/", "src/", "test/"]'
           fail-on: warning
+
+  scan:
+    name: Scan code with HLint
+    runs-on: ubuntu-latest
+    permissions:
+      # Needed to upload the results to code-scanning dashboard.
+      security-events: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+        # A version of HLint with SARIF support has not been released yet,
+        # so build the most recent version of HLint ourselves.
+      - uses: haskell/actions/setup@v2
+      - uses: actions/checkout@v3
+        with:
+          repository: ndmitchell/hlint
+          path: ${{ env.RUNNER_TEMP }}/hlint/
+      - uses: actions/cache@v3
+        with:
+          path: ~/.cabal
+          key: custom-hlint-cabal
+      - run: |
+          $RUNNER_TEMP/hlint/
+          cabal --overwrite-policy=always install
+          cd $GITHUB_WORKSPACE
+
+        # Use main branch because it's not ready for a release yet.
+      - uses: chungyc/hlint-scan@main
+        with:
+          path: '["app/", "src/", "test/"]'
