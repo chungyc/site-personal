@@ -2,6 +2,7 @@ name: HLint
 permissions: read-all
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - '**.hs'
