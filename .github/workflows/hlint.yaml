@@ -36,15 +36,17 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: ndmitchell/hlint
-          path: ${{ env.RUNNER_TEMP }}/hlint/
+          path: hlint
       - uses: actions/cache@v3
         with:
           path: ~/.cabal
           key: custom-hlint-cabal
-      - run: |
-          $RUNNER_TEMP/hlint/
+      - name: Install hlint
+        run: |
+          cd hlint
           cabal --overwrite-policy=always install
-          cd $GITHUB_WORKSPACE
+          cd ..
+          rm -rf hlint
 
         # Use main branch because it's not ready for a release yet.
       - uses: chungyc/hlint-scan@main
