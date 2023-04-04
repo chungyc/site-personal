@@ -21,6 +21,7 @@ jobs:
           fail-on: warning
 
   scan:
+    if: ${{ github.ref_name == 'main' }}
     name: Scan code with HLint
     runs-on: ubuntu-latest
     permissions:
