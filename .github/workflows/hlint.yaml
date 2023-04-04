@@ -51,4 +51,7 @@ jobs:
         # Use main branch because it's not ready for a release yet.
       - uses: chungyc/hlint-scan@main
         with:
-          path: '["app/", "src/", "test/"]'
+          path: |
+            "app/"
+            "src/"
+            "test/"
