@@ -50,4 +50,4 @@ jobs:
           rm -rf hlint
 
         # Use branch because it's not ready for a release yet.
-      - uses: chungyc/hlint-scan@v0.1.0.0
+      - uses: haskell-actions/hlint-scan@v0.1.0.0
