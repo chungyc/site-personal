@@ -30,24 +30,4 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-        # A version of HLint with SARIF support has not been released yet,
-        # so build the most recent version of HLint ourselves.
-      - uses: haskell/actions/setup@v2
-      - uses: actions/checkout@v3
-        with:
-          repository: ndmitchell/hlint
-          path: hlint
-      - uses: actions/cache@v3
-        with:
-          path: ~/.cabal
-          key: custom-hlint-cabal
-      - name: Install hlint
-        run: |
-          cd hlint
-          cabal --overwrite-policy=always install
-          cd ..
-          rm -rf hlint
-
-        # Use branch because it's not ready for a release yet.
-      - uses: haskell-actions/hlint-scan@v0.1.0.0
+      - uses: haskell-actions/hlint-scan@v0
