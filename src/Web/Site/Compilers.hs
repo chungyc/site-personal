@@ -154,7 +154,7 @@ getTocOptionsWith :: WriterOptions -> Compiler WriterOptions
 getTocOptionsWith options = do
   identifier <- getUnderlying
   tocField <- getMetadataField identifier "toc"
-  return $ getOptions tocField
+  return $ (getOptions tocField)
   where
     getOptions Nothing = options
     getOptions (Just _) =
