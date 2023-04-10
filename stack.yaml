@@ -2,13 +2,13 @@ resolver: lts-20.16
 
 extra-deps:
 
-  # Uses media query functions not released yet.
+  # Uses properties and media query functions not released yet.
   - git: https://github.com/sebastiaanvisser/clay.git
-    commit: e68574333a4f0178e7e5808cbd37a8dd350330ea
+    commit: a68f105f3408b524a3d194d0cfc8ccdc78ba3da2
 
-  # Uses link check file customization change not merged yet.
-  - git: https://github.com/chungyc/hakyll.git
-    commit: 8cb5fa5dc36122d53a89530239d9036bc6594ffa
+  # Uses link check file customization change not released yet.
+  - git: https://github.com/jaspervdj/hakyll.git
+    commit: 532eb3bed46e5e5cb2de9628b816346e402ad991
 
 ghc-options:
   "$everything": -O2
