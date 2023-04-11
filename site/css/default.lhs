@@ -91,14 +91,8 @@ In narrow screens, it often feels like there is a great waste of empty space
 without words being hyphenated as appropriate, so automatic hyphenation is enabled.
 I think hyphenation is fine in general, so I don't restrict its use to only narrow screens.
 
-Clay does not support the \texttt{hyphens} property yet,
-so I use Clay's ability to use custom CSS properties here.
-I have a \href{https://github.com/sebastiaanvisser/clay/pull/248}{change}
-proposed for Clay to support CSS properties related to hyphenation,
-so I may be able to change these into native Clay functions eventually.
-
 \begin{code}
-    "hyphens" -: "auto"
+    hyphens auto
 \end{code}
 
 The rest of the generic styles were basically tweaked by me
