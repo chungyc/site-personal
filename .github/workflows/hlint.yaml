@@ -1,33 +1,15 @@
 name: HLint
 permissions: read-all
 
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - '**.hs'
-      - '**.lhs'
+on: [push]
 
 jobs:
   hlint:
-    name: Status check with HLint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: haskell/actions/hlint-setup@v2
-      - uses: haskell/actions/hlint-run@v2
-        with:
-          path: '["app/", "src/", "test/"]'
-          fail-on: warning
-
-  scan:
-    if: ${{ github.ref_name == 'main' }}
     name: Scan code with HLint
     runs-on: ubuntu-latest
     permissions:
       # Needed to upload the results to code-scanning dashboard.
       security-events: write
-
     steps:
       - uses: actions/checkout@v3
       - uses: haskell-actions/hlint-scan@v0
