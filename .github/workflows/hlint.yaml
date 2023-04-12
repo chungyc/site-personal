@@ -1,7 +1,9 @@
 name: HLint
 permissions: read-all
 
-on: [push]
+on:
+  push:
+  schedule: '9 4 5 * 8 *'
 
 jobs:
   hlint:
