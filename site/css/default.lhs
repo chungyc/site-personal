@@ -96,7 +96,7 @@ I think hyphenation is fine in general, so I don't restrict its use to only narr
 \end{code}
 
 The rest of the generic styles were basically tweaked by me
-until they achieved minimal level of acceptability.
+until they achieved a minimal level of acceptability.
 Unexpectedly, I ended up liking the minimal look,
 so I will probably stick with it.
 
@@ -127,7 +127,7 @@ so I will probably stick with it.
     marginBottom $ em 1
 \end{code}
 
-One thing to note is that for I want some spacing between list items.
+One thing to note is that I want some spacing between list items.
 So there is a margin between each list item.
 There is only an extra margin for a list if it is a direct child of a list item,
 since there would be extra margins from other block elements
