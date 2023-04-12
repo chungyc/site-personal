@@ -1,7 +1,7 @@
 ---
 title: Clean URLs with Hakyll
 published: 2023-02-06
-updated: 2023-03-23
+updated: 2023-04-11
 description: Another way to have URLs with no extensions for HTML pages with Hakyll.
 toc: true
 include-syntax-stylesheet: true
@@ -77,7 +77,7 @@ See [`site/server/htaccess`].
 There is nothing more to do if all one wants is
 to serve HTML pages without including the extension in the URL.
 However, I would like to preview my site without standing up my own Apache HTTP server.
-I am now using an unreleased version of Hakyll with a custom change to do this,
+I am now using an unreleased version of Hakyll to do this,
 but this section explains what I had done with the current release of Hakyll.
 
 Hakyll uses the [warp] HTTP server for previewing a site locally.
@@ -101,12 +101,12 @@ main = Warp.runSettings warpSettings $
 Hakyll now has a change to [customize its server settings] merged into its code base.
 It is not part of an official release yet, so I am using an unreleased version
 of Hakyll to do the same thing with Hakyll's own preview server.
-I am also using a custom change to customize how Hakyll's link checker
-[determines the type of files].
+I have also customized what files it [considers for link checking],
+which is another option that is not part of an official release yet.
 
 [warp]: https://hackage.haskell.org/package/warp
 [customize its server settings]: https://github.com/jaspervdj/hakyll/commit/a7e7e52302fd38130ac5ceb677d81bff82af45d6
-[determines the type of files]: https://github.com/jaspervdj/hakyll/pull/973
+[considers for link checking]: https://github.com/jaspervdj/hakyll/commit/532eb3bed46e5e5cb2de9628b816346e402ad991
 
 ## Caveats
 
