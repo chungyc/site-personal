@@ -3,6 +3,7 @@ permissions: read-all
 
 on:
   push:
+  pull_request:
   schedule:
   - cron: '4 5 13 * *'
 
@@ -15,4 +16,4 @@ jobs:
       security-events: write
     steps:
       - uses: actions/checkout@v3
-      - uses: haskell-actions/hlint-scan@v0
+      - uses: haskell-actions/hlint-scan@v1
