@@ -28,12 +28,18 @@ module Physics.Spacetime.Flat
 
     -- * Working with Diagrams
     vectorize2D,
+    axes,
+    axesWith,
+    axesOptions,
+    axesLength,
+    axesLightcone,
+    AxesOptions,
   )
 where
 
-import Diagrams.Transform (Transformation)
+import Diagrams.Backend.SVG
+import Diagrams.Prelude hiding (interval, scale, transform)
 import Diagrams.Transform.Matrix (fromMat22)
-import Diagrams.TwoD.Types
 import GHC.Generics (Generic)
 
 -- | The coordinates \((t, x, y, z)\) in flat spacetime.
@@ -158,3 +164,58 @@ transformation v = fromMat22 matrix (V2 0 0)
 -- V2 1.0 1.0
 vectorize2D :: Coordinate -> V2 Double
 vectorize2D (Coordinate (t, x, _, _)) = r2 (x, t)
+
+-- | Stores various options for drawing axes.
+data AxesOptions = AxesOptions
+  { -- | Length of each axis.
+    --
+    -- >>> axesOptions { axesLength = 4 }
+    -- AxesOptions {axesLength = 4.0, axesLightcone = True}
+    axesLength :: Double,
+    -- | Whether to draw the lightcone.
+    --
+    -- >>> axesOptions { axesLightcone = False }
+    -- AxesOptions {axesLength = 2.0, axesLightcone = False}
+    axesLightcone :: Bool
+  }
+  deriving (Show)
+
+-- | Default options for drawing axes.
+axesOptions :: AxesOptions
+axesOptions = AxesOptions {axesLength = 2.0, axesLightcone = True}
+
+-- | Draw axes for a spacetime diagram with default options.
+--
+-- Both axes will extend up to length 2 from the origin,
+-- and the lightcone will also be drawn.
+-- Units will be in Planck units, i.e., \(c = 1\).
+--
+-- >>> let _ = axes
+axes :: Diagram B
+axes = axesWith axesOptions
+
+-- | Draw axes for a spacetime diagram with given options.
+--
+-- The horizontal axis will be for the \(x\) space coordinate,
+-- while the vertical axis will be for the \(t\) space coordinate.
+-- Units will be in Planck units, i.e., \(c = 1\).
+--
+-- >>> let _ = axesWith axesOptions { axesLength = 8 }
+axesWith :: AxesOptions -> Diagram B
+axesWith AxesOptions {axesLength, axesLightcone} =
+  xAxis <> tAxis <> lightCone
+  where
+    xAxis = (-axesLength ^& 0) ~~ (axesLength ^& 0)
+    tAxis = (0 ^& (-axesLength)) `arrowBetween` (0 ^& axesLength)
+    lightCone
+      | axesLightcone =
+          (forwardEdge <> backwardEdge)
+            # opacity 0.75
+            # dashingN [0.01, 0.02] 0
+            # lw ultraThin
+      | otherwise = mempty
+      where
+        forwardEdge = lowerLeftCorner ~~ upperRightCorner
+        backwardEdge = reflectX forwardEdge
+        lowerLeftCorner = (-axesLength) ^& (-axesLength)
+        upperRightCorner = axesLength ^& axesLength
