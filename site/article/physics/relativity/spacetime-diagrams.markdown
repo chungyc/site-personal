@@ -9,8 +9,8 @@ include-math: true
 
 ## A spacetime diagram
 
-![Axes for a spacetime diagram](/diagrams/article/relativity/diagrams/axes.svg)
+![A spacetime diagram](/diagrams/article/relativity/diagrams/worldline.svg)
 
 ## From another inertial frame
 
-![Same axes from another inertial frame](/diagrams/article/relativity/diagrams/observed-axes.svg)
+![Same diagram from observer moving at \(0.5c\)](/diagrams/article/relativity/diagrams/worldline-50.svg)
