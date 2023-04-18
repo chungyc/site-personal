@@ -1,7 +1,7 @@
 ---
 title: Spacetime diagrams
 description: Spacetime diagrams for plotting out wordlines relativistically.
-published: 2023-04-02
+published: 2023-04-18
 include-math: true
 ---
 
@@ -11,4 +11,6 @@ include-math: true
 
 ![Axes for a spacetime diagram](/diagrams/article/relativity/diagrams/axes.svg)
 
-## From another perspective
+## From another inertial frame
+
+![Same axes from another inertial frame](/diagrams/article/relativity/diagrams/observed-axes.svg)
