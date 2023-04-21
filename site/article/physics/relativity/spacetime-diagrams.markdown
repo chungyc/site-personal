@@ -17,6 +17,12 @@ include-math: true
 
 ## Time dilation
 
+![Time dilation at \(0.9c\)](/diagrams/article/relativity/diagrams/time-dilation.svg)
+
 ## Length contraction
+
+![Length contraction at \(0.9c\)](/diagrams/article/relativity/diagrams/length-contraction.svg)
+
+## Simultaneity
 
 ## Conclusion
