@@ -2,6 +2,7 @@
 title: Spacetime diagrams
 description: Spacetime diagrams for plotting out wordlines relativistically.
 published: 2023-04-18
+toc: true
 include-math: true
 ---
 

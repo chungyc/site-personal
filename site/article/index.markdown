@@ -30,6 +30,12 @@ For a list of all articles, see the [archive of articles](/article/archive).
     
         *   [Relativity](/article/reference/physics/relativity/)
 
+*   Physics
+
+    *   Relativity
+
+        *   [Spacetime diagrams](article/physics/relativity/spacetime-diagrams)
+
 *   Technical
 
     *   This web site
