@@ -8,7 +8,7 @@ main :: IO ()
 main = putDiagram defaultOptions observedAxes
 
 observedAxes :: Diagram B
-observedAxes = otherFrame <> originalFrame
+observedAxes = otherFrame <> originalFrame <> phantomBox
   where
     otherFrame =
       axesWith axesOptions {axesLength = 2}
@@ -30,3 +30,8 @@ worldLine =
   strokeLine (fromOffsets [V2 1 2])
     # lineWidth thick
     # lineColor blue
+
+-- | An invisible box so that the diagram sizes are comparable
+-- to other diagrams on the page.
+phantomBox :: Diagram B
+phantomBox = phantom $ fromCorners ((-4) ^& (-2)) (4 ^& 2)

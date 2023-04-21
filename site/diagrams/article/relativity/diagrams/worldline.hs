@@ -1,5 +1,6 @@
 module Main (main) where
 
+import Diagrams.Backend.SVG
 import Diagrams.Runner
 import Physics.Spacetime.Flat (axesLength, axesOptions, axesWith)
 
@@ -7,7 +8,7 @@ main :: IO ()
 main = putDiagram defaultOptions diagram
 
 diagram :: Diagram B
-diagram = axes <> worldLine
+diagram = axes <> worldLine <> phantomBox
 
 axes :: Diagram B
 axes = axesWith axesOptions {axesLength = 2}
@@ -18,3 +19,8 @@ worldLine =
   strokeLine (fromOffsets [V2 1 2])
     # lineWidth thick
     # lineColor blue
+
+-- | An invisible box so that the diagram sizes are comparable
+-- to other diagrams on the page.
+phantomBox :: Diagram B
+phantomBox = phantom $ fromCorners ((-4) ^& (-2)) (4 ^& 2)

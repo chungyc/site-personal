@@ -14,3 +14,9 @@ include-math: true
 ## From another inertial frame
 
 ![Same diagram from observer moving at \(0.5c\)](/diagrams/article/relativity/diagrams/worldline-50.svg)
+
+## Time dilation
+
+## Length contraction
+
+## Conclusion
