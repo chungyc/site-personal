@@ -51,7 +51,24 @@ but should be considered intertwined as spacetime.
 
 ## A spacetime diagram {#diagram}
 
-![A spacetime diagram](/diagrams/article/relativity/diagrams/worldline.svg)
+If you have a record of how a particular object moves across space as time passes by,
+you have a record of \((x,t)\) spacetime coordinatates for the object.
+You can plot these on a graph with an \(x\) axis and a \(t\) axis.
+This is called a _spacetime diagram_, and the plot of the \((x,t)\) coordinates
+is called a _world line_.  These are useful for visualizing things in spacetime.
+
+Below is a spacetime diagram with a world line of an object departing from the origin at
+half the speed of light, or \(v=0.5c\).  The horizontal axis is the \(x\) axis,
+and the vertical axis is the \(t\) axis with the future pointing up.
+The two dashed line criss-crossing at the origin
+are the tracks of light passing through the origin, and these are often called
+the _light cone_ in a spacetime diagram.
+
+![A spacetime diagram with a \(0.5c\) world line](/diagrams/article/relativity/diagrams/worldline.svg)
+
+There is no reason why one cannot use spacetime diagrams with non-relativistic mechanics,
+but the different way coordinates transform between different inertial frames
+makes spacetime diagrams even more useful for visualizing things in relativity.
 
 ## From another inertial frame {#transform}
 
