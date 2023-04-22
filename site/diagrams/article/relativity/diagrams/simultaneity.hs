@@ -31,7 +31,7 @@ worldLine = (upperLines <> lowerLines) # lineWidth veryThick
   where
     endA = strokeLine (fromOffsets [V2 0 2]) # translate (V2 (-1) 0)
     endB = strokeLine (fromOffsets [V2 0 2]) # translate (V2 1 0)
-    upperLines = (endA <> endB) # lineColor blue
+    upperLines = (endA <> endB) # lineColor blue # dashingL [0.1, 0.3] 0
     endC = strokeLine (fromOffsets [V2 0 (-2)]) # translate (V2 (-1) 0)
     endD = strokeLine (fromOffsets [V2 0 (-2)]) # translate (V2 1 0)
-    lowerLines = (endC <> endD) # lineColor green
+    lowerLines = (endC <> endD) # lineColor red # dashingL [0.3, 0.1] 0
