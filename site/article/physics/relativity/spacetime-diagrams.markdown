@@ -26,4 +26,6 @@ include-math: true
 
 ## Simultaneity
 
+![Simultaneity is relative](/diagrams/article/relativity/diagrams/simultaneity.svg)
+
 ## Conclusion
