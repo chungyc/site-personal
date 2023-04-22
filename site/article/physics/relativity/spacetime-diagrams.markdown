@@ -1,10 +1,13 @@
 ---
 title: Spacetime diagrams
-description: Spacetime diagrams for plotting out wordlines relativistically.
+description: Spacetime diagrams for plotting out world lines relativistically.
 published: 2023-04-22
 toc: true
 include-math: true
 ---
+
+Plotting world lines on spacetime diagrams can aid in the understanding of
+special relativity through visualization.
 
 ## Spacetime
 
