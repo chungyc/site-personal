@@ -5,7 +5,7 @@ import Physics.Spacetime.Flat (axesLength, axesLightcone, axesOptions, axesWith)
 import Physics.Spacetime.Flat qualified as Spacetime
 
 main :: IO ()
-main = putDiagram defaultOptions $ vcat [diagram, observedAxes]
+main = putDiagram defaultOptions $ hcat [diagram, observedAxes]
 
 observedAxes :: Diagram B
 observedAxes = otherFrame <> originalFrame
