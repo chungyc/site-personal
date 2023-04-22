@@ -9,7 +9,7 @@ include-math: true
 Plotting world lines on spacetime diagrams can aid in the understanding of
 special relativity through visualization.
 
-## Spacetime
+## Spacetime {#spacetime}
 
 Special relativity starts out with the following two postulates:
 
@@ -47,30 +47,30 @@ Instead, they transform together as a set of spacetime coordinates from one iner
 Space and time should not be considered completely independent things,
 but should be considered intertwined as spacetime.
 
-## A spacetime diagram
+## A spacetime diagram {#diagram}
 
 ![A spacetime diagram](/diagrams/article/relativity/diagrams/worldline.svg)
 
-## From another inertial frame
+## From another inertial frame {#transform}
 
 ![Same diagram from observer moving at \(0.5c\)](/diagrams/article/relativity/diagrams/worldline-50.svg)
 
-## Time dilation
+## Time dilation {#time-dilation}
 
 \[ t' = \gamma t \]
 
 ![Time dilation at \(0.9c\)](/diagrams/article/relativity/diagrams/time-dilation.svg)
 
-## Length contraction
+## Length contraction {#length-contraction}
 
 \[ l' = \frac{1}{\gamma} l \]
 
 ![Length contraction at \(0.9c\)](/diagrams/article/relativity/diagrams/length-contraction.svg)
 
-## Simultaneity
+## Simultaneity {#simultaneity}
 
 ![Simultaneity is relative](/diagrams/article/relativity/diagrams/simultaneity.svg)
 
-## Conclusion
+## Conclusion {#conclusion}
 
 [Maxwell's equations for electromagnetism]: https://www.maxwells-equations.com/
