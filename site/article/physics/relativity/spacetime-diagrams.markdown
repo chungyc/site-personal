@@ -4,6 +4,7 @@ description: Spacetime diagrams for plotting out world lines relativistically.
 published: 2023-04-22
 toc: true
 include-math: true
+include-bibliography-stylesheet: true
 ---
 
 Plotting world lines on spacetime diagrams can aid in the understanding of
@@ -11,7 +12,8 @@ special relativity through visualization.
 
 ## Spacetime {#spacetime}
 
-Special relativity starts out with the following two postulates:
+Special relativity [@carroll2022; @susskind2017] starts out with
+the following two postulates:
 
 1.   The laws of physics are the same in all inertial frames.
 2.   The speed of light is the same in all inertial frames.[^maxwell]
@@ -72,5 +74,11 @@ but should be considered intertwined as spacetime.
 ![Simultaneity is relative](/diagrams/article/relativity/diagrams/simultaneity.svg)
 
 ## Conclusion {#conclusion}
+
+## References
+
+
+
+<!-- List of reference links -->
 
 [Maxwell's equations for electromagnetism]: https://www.maxwells-equations.com/
