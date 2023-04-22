@@ -72,6 +72,12 @@ makes spacetime diagrams even more useful for visualizing things in relativity.
 
 ## From another inertial frame {#transform}
 
+In non-relativistic mechanics, transforming coordinates from one inertial frame
+to another does not change the \(t\) coordinate or spatial lengths.
+If one were to transform the spacetime diagram in the previous section to the inertial
+frame for the moving object, it would merely slant the diagram, and horizontal
+distances and vertical distances would not change.
+
 ![Same diagram from observer moving at \(0.5c\)](/diagrams/article/relativity/diagrams/worldline-50.svg)
 
 ## Time dilation {#time-dilation}
