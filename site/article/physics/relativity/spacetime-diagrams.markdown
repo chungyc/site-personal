@@ -22,8 +22,9 @@ This is because the equations predict a specific speed for light,
 and the equations would not be laws of physics
 if the speed of light was different for different inertial frames.
 
-With these postulates, one can derive how the coordinates \((x,t)\) of a particular event
-in one inertial frame are transformed to coordinates \((x',t')\) in another inertial frame as follows,
+With these postulates, one can derive how the coordinates \((x,t)\)
+of a particular event in one inertial frame are transformed
+to coordinates \((x',t')\) in another inertial frame as follows,[^ignored-yz]
 
 \begin{aligned}
 t' & = \gamma \left( t - \frac{vx}{c^2} \right) \\
@@ -34,6 +35,12 @@ where \(v\) is the speed the other inertial frame is moving relative to the orig
 and the Lorentz factor \(\gamma\) is
 
 \[ \gamma = \frac{1}{\sqrt{1 - \left( \frac{v}{c} \right)^2}} \]
+
+[^ignored-yz]: Space in our world is three-dimensional, so there should also
+be \(y\) and \(z\) coordinates, but we ignore them here, both because they
+remain unchanged when the movement is in the \(x\) direction,
+and because it makes drawing spacetime diagrams on a two-dimensional
+surface much simpler.
 
 In other words, the coordinates for space and time do not transform independently.
 Instead, they transform together as a set of spacetime coordinates from one inertial frame to another.
