@@ -11,7 +11,7 @@ observedAxes :: Diagram B
 observedAxes = otherFrame <> originalFrame
   where
     otherFrame =
-      axesWith axesOptions {axesLength = 2}
+      axesWith axesOptions {axesLength = 2, axesLightcone = False}
         # opacity 0.25
         # lineColor red
     -- As observed from the other frame moving at 0.9c.

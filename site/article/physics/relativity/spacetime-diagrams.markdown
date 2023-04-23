@@ -75,10 +75,36 @@ makes spacetime diagrams even more useful for visualizing things in relativity.
 In non-relativistic mechanics, transforming coordinates from one inertial frame
 to another does not change the \(t\) coordinate or spatial lengths.
 If one were to transform the spacetime diagram in the previous section to the inertial
-frame for the moving object, it would merely slant the diagram, and horizontal
-distances and vertical distances would not change.
+frame for the moving object, it would merely slant the diagram.
+Horizontal and vertical distances would not change.
+In particular, the world line corresponding to the \(x\) axis
+in the original diagram would remain the same in the other inertial frame.
+In addition, light emitted from a stationary source in the original frame
+would have a different speed.
 
-![Same diagram from observer moving at \(0.5c\)](/diagrams/article/relativity/diagrams/worldline-50.svg)
+![Same diagram from observer moving at \(0.5c\) in a non-relativistic world](/diagrams/article/relativity/diagrams/worldline-nonrelativistic.svg)
+
+However, this is not how coordinates actually transform in the real world given its relativistic nature.
+Unlike in non-relativistic mechanics, where space does not affect how time is transformed
+and there is no distortion in the spatial dimensions with relative velocities,
+space does affect how time is transformed and there is distortion according to the Lorentz factor
+for both temporal and spatial dimensions.
+
+When the spacetime diagram from the [previous section](#diagram) is tranformed into
+the inertial frame for the object moving at half the speed of light, it will transform
+as in the following diagram.
+
+![Same diagram from observer moving at \(0.5c\) in the real world](/diagrams/article/relativity/diagrams/worldline-50.svg)
+
+As in the diagram transformed non-relativistically, the world line of the observer is stationary
+in its own inertial frame, i.e., \(x=0\) for the world line.  But much else is different.
+Both the \(x\) and \(t\) axes are different from those in the original inertial frame,
+and events that had the same \(t\) coordinate in the original inertial frame now have
+different \(t\) coordinates.  And the speed of light remains the same in both inertial frames.
+
+You may or may not have also noticed that the world line now terminates at a \(t\) coordinate
+slightly smaller than the \(t\) coordinate it terminated at in the original diagram.
+If you did, you noticed time dilation, which will be discussed in the [next section](#time-dilation).
 
 ## Time dilation {#time-dilation}
 
