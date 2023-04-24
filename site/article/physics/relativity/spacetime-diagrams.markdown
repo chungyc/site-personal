@@ -1,7 +1,7 @@
 ---
 title: Spacetime diagrams
 description: Spacetime diagrams for plotting out world lines relativistically.
-published: 2023-04-22
+published: 2023-04-24
 toc: true
 include-math: true
 include-bibliography-stylesheet: true
@@ -108,9 +108,25 @@ If you did, you noticed time dilation, which will be discussed in the [next sect
 
 ## Time dilation {#time-dilation}
 
-\[ t' = \gamma t \]
+The passage of time \(t\) in one inertial frame is \( t' = \gamma t \) in another inertial frame.
+This time dilation can be visualized using spacetime diagrams.
+
+In the left diagram below is a world line stationary at \(x=0\),
+starting at \(t=0\) up to some time interval.
+On its right is the same diagram in another inertial frame moving at \(0.9c\)
+towards the left, relative to the original inertial frame.
+You can see that the world line on the right terminates at a \(t\) coordinate
+significantly higher than where it terminates on the left.
 
 ![Time dilation at \(0.9c\)](/diagrams/article/relativity/diagrams/time-dilation.svg)
+
+What does this mean?  It means that time which elapses for the world line
+in the inertial frame on the right is significantly longer than how much it
+elapses in the inertial frame on the left.  In other words, the time for
+a stationary observer is dilated for an observer moving at \(0.9c\).
+The stationary observer does not notice anything funny with the flow
+of time, but the moving observer will notice that time is flowing much
+more slowly for the stationary observer.
 
 ## Length contraction {#length-contraction}
 
