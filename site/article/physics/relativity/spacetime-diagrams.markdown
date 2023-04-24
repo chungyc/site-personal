@@ -60,7 +60,7 @@ is called a _world line_.  These are useful for visualizing things in spacetime.
 Below is a spacetime diagram with a world line of an object departing from the origin at
 half the speed of light, or \(v=0.5c\).  The horizontal axis is the \(x\) axis,
 and the vertical axis is the \(t\) axis with the future pointing up.
-The two dashed line criss-crossing at the origin
+The two dashed lines criss-crossing at the origin
 are the tracks of light passing through the origin, and these are often called
 the _light cone_ in a spacetime diagram.
 
@@ -91,7 +91,7 @@ space does affect how time is transformed and there is distortion according to t
 for both temporal and spatial dimensions.
 
 When the spacetime diagram from the [previous section](#diagram) is tranformed into
-the inertial frame for the object moving at half the speed of light, it will transform
+the inertial frame of the object moving at half the speed of light, it will transform
 as in the following diagram.
 
 ![Same diagram from observer moving at \(0.5c\) in the real world](/diagrams/article/relativity/diagrams/worldline-50.svg)
@@ -99,12 +99,12 @@ as in the following diagram.
 As in the diagram transformed non-relativistically, the world line of the observer is stationary
 in its own inertial frame, i.e., \(x=0\) for the world line.  But much else is different.
 Both the \(x\) and \(t\) axes are different from those in the original inertial frame,
-and events that had the same \(t\) coordinate in the original inertial frame now have
+and events that had the same \(t\) coordinates in the original inertial frame now have
 different \(t\) coordinates.  And the speed of light remains the same in both inertial frames.
 
 You may or may not have also noticed that the world line now terminates at a \(t\) coordinate
 slightly smaller than the \(t\) coordinate it terminated at in the original diagram.
-If you did, you noticed time dilation, which will be discussed in the [next section](#time-dilation).
+If you did, you noticed time dilation, which will be discussed in the next section.
 
 ## Time dilation {#time-dilation}
 
@@ -168,7 +168,7 @@ happening at the same time in one inertial frame do _not_ happen at the same tim
 in another inertial frame.
 
 In the spacetime diagram on the left below, there are two world lines which change
-their color and how they are dotted at the same time.  The spacetime diagram on
+their color and how they are dashed at the same time.  The spacetime diagram on
 the right shows the same world lines as observed from an inertial frame moving
 at \(0.9c\) to the left, relative to the original inertial frame.
 
