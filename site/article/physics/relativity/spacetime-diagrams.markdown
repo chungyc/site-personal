@@ -123,16 +123,43 @@ significantly higher than where it terminates on the left.
 What does this mean?  It means that time which elapses for the world line
 in the inertial frame on the right is significantly longer than how much it
 elapses in the inertial frame on the left.  In other words, the time for
-a stationary observer is dilated for an observer moving at \(0.9c\).
+a stationary observer is _dilated_ for an observer moving at \(0.9c\).
 The stationary observer does not notice anything funny with the flow
 of time, but the moving observer will notice that time is flowing much
 more slowly for the stationary observer.
 
 ## Length contraction {#length-contraction}
 
-\[ l' = \frac{1}{\gamma} l \]
+A length \(l\) in one inertial frame is \(l' = \frac{1}{\gamma} l\) in another inertial frame.
+Similarly to time dilation, length contraction can be visualized using spacetime diagrams,
+although it is a little more tricky.
+We can't just compare how far along the \(x\) axis a world line moves in two inertial frames,
+since that is measuring how far a point object travels, not its length.
+We have to think about what we are measuring and how we are measuring it.
+
+Let's say that we are going to measure the length of a stick which lies on the \(x\) axis.
+Then what we want to measure is the distance between the two ends of the stick.
+If the two ends of the stick emit light towards each other at the _same_ time,
+then we can measure the length of the stick by adding up the time for each beam of light
+to meet each other.  Since the speed of light is always the same in any inertial frame,
+and the \(t\) coordinate is the same for events happening at the same time,
+the length will be the distance parallel to the \(x\) axis.
+
+So what we will do with spacetime diagrams is to plot the world lines of both ends
+of the stick.  For a stationary stick, the world lines will look like the diagram
+on the top below.  The world lines are truncated so that they fit better in a
+spacetime diagram for another inertial frame, but you can imagine them extending
+forever into the past and future.  Below this diagram is another spacetime diagram,
+this time for an inertial frame moving at \(0.9c\) to the left,
+relative to the original inertial frame.  The other diagram has transformed
+what is in the first diagram into its own inertial frame.
 
 ![Length contraction at \(0.9c\)](/diagrams/article/relativity/diagrams/length-contraction.svg)
+
+What you will notice from the diagrams above is that the length of the stationary stick
+as measured in the moving inertial frame is shorter than the length as measured in the
+stationary frame.  In other words, the length of a stationary object _contracts_
+for a moving observer.
 
 ## Simultaneity {#simultaneity}
 
