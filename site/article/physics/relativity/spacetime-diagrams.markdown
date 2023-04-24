@@ -163,7 +163,23 @@ for a moving observer.
 
 ## Simultaneity {#simultaneity}
 
+Another thing you could visualize using spacetime diagrams is how two events
+happening at the same time in one inertial frame do _not_ happen at the same time
+in another inertial frame.
+
+In the spacetime diagram on the left below, there are two world lines which change
+their color and how they are dotted at the same time.  The spacetime diagram on
+the right shows the same world lines as observed from an inertial frame moving
+at \(0.9c\) to the left, relative to the original inertial frame.
+
 ![Simultaneity is relative](/diagrams/article/relativity/diagrams/simultaneity.svg)
+
+You should notice right away that what happened at the same time in the
+spacetime diagram on the left do _not_ happen at the same time in the spacetime
+diagram on the right.  In other words, simultaneity depends on the observer.
+Understanding this is crucial to understanding why seemingly paradoxical
+thought experiments such as the barn-pole paradox do not really give rise
+to a paradox.
 
 ## Conclusion {#conclusion}
 
