@@ -183,6 +183,18 @@ to a paradox.
 
 ## Conclusion {#conclusion}
 
+Spacetime diagrams do not replace the need for the equations specifying
+relativistic transformation of coordinates from one inertial frame to another.
+In particular, the equations are needed to transform spacetime diagrams
+from one inertial frame to another.
+
+However, they are useful for visualizing how things may look differently
+from one inertial frame to another.  This can aid the understanding of
+time dilation, length contraction, and the relativity of simultaneity.
+They can also aid in the understanding of various thought experiments
+with special relativity.  In fact, I plan to use them to write up how
+one might understand apparent paradoxes such as the twin paradox.
+
 ## References
 
 
