@@ -11,7 +11,7 @@ include-bibliography-stylesheet: true
 
 Discusses how time passes for a non-inertial observer in special relativity [@carroll2022; @susskind2017].
 
-## World lines
+## World lines {#world-lines}
 
 For any object moving through space, one can plot its spatial position
 against its temporal position with a [spacetime diagram].
@@ -35,7 +35,7 @@ for these objects?
 [spacetime diagram]: /article/physics/relativity/spacetime-diagrams
 [time dilation]: /article/physics/relativity/spacetime-diagrams#time-dilation
 
-## Spacetime intervals
+## Spacetime intervals {#spacetime-intervals}
 
 Before thinking about how time passes for moving objects in general,
 let's think about how it passes for an object moving at a constant velocity.
@@ -76,7 +76,7 @@ is the same as its spacetime interval.
 
 \[ d\tau = ds \]
 
-## Proper time in general
+## Proper time in general {#proper-time}
 
 Now that we know how to figure out the time which passes for an object
 moving at constant velocity, how would we figure it out for an object
@@ -111,7 +111,7 @@ this gives us a way to figure out the proper time for any world line
 without having to transform infinitely tiny bits of spacetime diagrams
 an infinite number of times.
 
-### With parameterized coordinates
+### With parameterized coordinates {#parameterization}
 
 If you are computing the proper time numerically by chopping up a world line into
 little pieces and adding up the spacetime intervals, this is enough.
@@ -151,7 +151,7 @@ to have a computer calculate the sum numerically to get the proper time.
   since if they were equal, we would already know \(\tau\)
   and wouldn't be trying to do complicated calculations to obtain the proper time.
 
-### Staying still for the longest time
+### Staying still for the longest time {#longest}
 
 Spacetime diagrams are useful for visualizing a lot of things in relativity,
 but spacetime intervals are not quite intuitive with spacetime diagrams.

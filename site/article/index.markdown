@@ -35,8 +35,10 @@ For a list of all articles, see the [archive of articles](/article/archive).
     *   Relativity
 
         *   [Spacetime diagrams](/article/physics/relativity/spacetime-diagrams)
-        
+
         *   [Proper time](/article/physics/relativity/proper-time/)
+
+        *   [Twin paradox](/article/physics/relativity/paradox/twin/)
 
 *   Technical
 

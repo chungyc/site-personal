@@ -200,7 +200,10 @@ one might understand apparent paradoxes such as the twin paradox.
 
 ## See also
 
-*   [Proper time](/article/physics/relativity/proper-time/),
-    i.e., how time passes for a moving object
+*   [Proper time](/article/physics/relativity/proper-time/);
+    how time passes for a moving object
+
+*   [Twin paradox](/article/physics/relativity/paradox/twin/);
+    how two twins could both observe time being slow for each other
 
 ## References
