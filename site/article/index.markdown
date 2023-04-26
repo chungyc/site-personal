@@ -2,7 +2,7 @@
 title: Articles
 description: Index of articles written by Yoo Chung and posted on their personal web site.
 published: 2023-03-23
-updated: 2023-04-01
+updated: 2023-04-24
 rss-feed-link: /articles.xml
 ---
 
@@ -34,7 +34,9 @@ For a list of all articles, see the [archive of articles](/article/archive).
 
     *   Relativity
 
-        *   [Spacetime diagrams](article/physics/relativity/spacetime-diagrams)
+        *   [Spacetime diagrams](/article/physics/relativity/spacetime-diagrams)
+        
+        *   [Proper time](/article/physics/relativity/proper-time/)
 
 *   Technical
 
