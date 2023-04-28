@@ -13,7 +13,11 @@ Special relativity [@carroll2022; @susskind2017]
 
 ## World lines
 
+![A wandering world line](/diagrams/article/relativity/proper-time/random-line.svg)
+
 ## Spacetime intervals
+
+![Measuring time for a moving object](/diagrams/article/relativity/proper-time/measuring-time.svg)
 
 \[ ds^2 = dt^2 - dx^2 - dy^2 - dz^z \]
 
@@ -25,9 +29,15 @@ Special relativity [@carroll2022; @susskind2017]
 
 \[ d\tau = ds \]
 
+![Switching between inertial frames](/diagrams/article/relativity/proper-time/discrete-lines.svg)
+
 \[ \tau = \sum \Delta\tau = \sum \Delta s \]
 
+![Smoothly transitioning between inertial frames](/diagrams/article/relativity/proper-time/continuous-line.svg)
+
 \[ \tau = \int d\tau = \int ds \]
+
+\[ ds = \sqrt{dt^2 - dx^2 - dy^2 - dz^2} \]
 
 ## See also
 
