@@ -1,5 +1,5 @@
 name: HLint
-permissions: read-all
+permissions: {}
 
 on:
   push:
@@ -11,6 +11,8 @@ jobs:
     name: Scan code with HLint
     runs-on: ubuntu-latest
     permissions:
+      contents: read
+      actions: read
       # Needed to upload the results to code-scanning dashboard.
       security-events: write
     steps:
