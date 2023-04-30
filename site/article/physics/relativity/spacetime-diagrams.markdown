@@ -175,7 +175,7 @@ at \(0.9c\) to the left, relative to the original inertial frame.
 ![Simultaneity is relative](/diagrams/article/relativity/diagrams/simultaneity.svg)
 
 You should notice right away that what happened at the same time in the
-spacetime diagram on the left do _not_ happen at the same time in the spacetime
+spacetime diagram on the left did _not_ happen at the same time in the spacetime
 diagram on the right.  In other words, simultaneity depends on the observer.
 Understanding this is crucial to understanding why seemingly paradoxical
 thought experiments such as the barn-pole paradox do not really give rise
