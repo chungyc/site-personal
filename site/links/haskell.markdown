@@ -21,24 +21,3 @@ updated: 2023-03-31
 
 [Stackage](https://www.stackage.org/)
 :   Provides a consistent set of Haskell packages that are known to build together.
-
-[Hspec](https://hspec.github.io/)
-:   Easy to read testing framework which integrates HUnit and QuickCheck.
-
-[QuickCheck](https://hackage.haskell.org/package/QuickCheck)
-:   Property-based testing.
-
-[HLint](https://github.com/ndmitchell/hlint)
-:   Linter for Haskell.
-
-[Hakyll](https://jaspervdj.be/hakyll/)
-:   Static web site generator.
-
-[Clay](http://fvisser.nl/clay/)
-:   CSS preprocessor.
-
-[Pandoc](https://pandoc.org/)
-:   A library for converting one markup format to another.
-
-[Diagrams](https://diagrams.github.io/)
-:   Domain-specific language for declaratively defining images.
