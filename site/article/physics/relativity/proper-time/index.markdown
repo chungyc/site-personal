@@ -26,13 +26,14 @@ for the object as in the diagram below.
 ![A wandering world line](/diagrams/article/relativity/proper-time/random-line.svg)
 
 For objects which stay in a single inertial frame, we can use the equations
-for time dilation to figure out how time passes for these objects
+for [time dilation] to figure out how time passes for these objects
 relative to another inertial frame.  But what about objects which do not
 stay in a single inertial frame?  What do they experience relative to
 a particular inertial frame, and how would we figure out how time passes
 for these objects?
 
 [spacetime diagram]: /article/physics/relativity/spacetime-diagrams
+[time dilation]: /article/physics/relativity/spacetime-diagrams#time-dilation
 
 ## Spacetime intervals
 
@@ -57,6 +58,8 @@ for these objects?
 \[ \tau = \int d\tau = \int ds \]
 
 \[ ds = \sqrt{dt^2 - dx^2 - dy^2 - dz^2} \]
+
+## Staying still for the longest time
 
 ## See also
 

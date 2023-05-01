@@ -49,6 +49,8 @@ Instead, they transform together as a set of spacetime coordinates from one iner
 Space and time should not be considered completely independent things,
 but should be considered intertwined as spacetime.
 
+[Maxwell's equations for electromagnetism]: https://www.maxwells-equations.com/
+
 ## A spacetime diagram {#diagram}
 
 If you have a record of how a particular object moves across space as time passes by,
@@ -195,10 +197,9 @@ They can also aid in the understanding of various thought experiments
 with special relativity.  In fact, I plan to use them to write up how
 one might understand apparent paradoxes such as the twin paradox.
 
+## See also
+
+*   [Proper time](/article/physics/relativity/proper-time/);
+    how time passes for a moving object
+
 ## References
-
-
-
-<!-- List of reference links -->
-
-[Maxwell's equations for electromagnetism]: https://www.maxwells-equations.com/
