@@ -39,7 +39,14 @@ for these objects?
 
 ![Measuring time for a moving object](/diagrams/article/relativity/proper-time/measuring-time.svg)
 
+One can define the _spacetime interval_ as follows.
+
 \[ ds^2 = dt^2 - dx^2 - dy^2 - dz^z \]
+
+It can be shown that this remains the same no matter the inertial frame.
+In other words, the amount of time or length between two events will be
+different depending on the inertial frame, but the spacetime interval
+between two events will stay the same.
 
 \[ dx = dy = dz = 0 \]
 
