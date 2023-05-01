@@ -9,11 +9,30 @@ include-math: true
 include-bibliography-stylesheet: true
 ---
 
-Special relativity [@carroll2022; @susskind2017]
+Discusses how time passes for a non-inertial observer in special relativity [@carroll2022; @susskind2017].
 
 ## World lines
 
+For any object moving through space, one can plot its spatial position
+against its temporal position with a [spacetime diagram].
+For an object which stays in a single inertial frame,
+the world line of this object will be a straight line.
+
+World lines do not have to be straight lines.
+We could also have objects which accelerate randomly and do not stay in
+a single inertial frame, and we would have no problem plotting a world line
+for the object as in the diagram below.
+
 ![A wandering world line](/diagrams/article/relativity/proper-time/random-line.svg)
+
+For objects which stay in a single inertial frame, we can use the equations
+for time dilation to figure out how time passes for these objects
+relative to another inertial frame.  But what about objects which do not
+stay in a single inertial frame?  What do they experience relative to
+a particular inertial frame, and how would we figure out how time passes
+for these objects?
+
+[spacetime diagram]: /article/physics/relativity/spacetime-diagrams
 
 ## Spacetime intervals
 
@@ -33,7 +52,7 @@ Special relativity [@carroll2022; @susskind2017]
 
 \[ \tau = \sum \Delta\tau = \sum \Delta s \]
 
-![Smoothly transitioning between inertial frames](/diagrams/article/relativity/proper-time/continuous-line.svg)
+![Continuously transitioning between inertial frames](/diagrams/article/relativity/proper-time/continuous-line.svg)
 
 \[ \tau = \int d\tau = \int ds \]
 
