@@ -1,5 +1,5 @@
 -- |
--- Description: Rules for files included verbatim.
+-- Description: Rules for collections of links.
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
