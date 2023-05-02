@@ -37,9 +37,19 @@ for these objects?
 
 ## Spacetime intervals
 
+Before thinking about how time passes for moving objects in general,
+let's think about how it passes for an object moving at a constant velocity.
+In other words, an object that stays in a single inertial frame.
+The spacetime diagram on the left below shows the world line of such an object.
+To get the amount of time that passes for this object,
+we measure it in the inertial frame where the moving object is stationary,
+which is the spacetime diagram on the right below.
+
 ![Measuring time for a moving object](/diagrams/article/relativity/proper-time/measuring-time.svg)
 
-One can define the _spacetime interval_ as follows.
+We can also find the time which passes for the moving object without transforming
+a world line into the intertial frame where it is stationary.
+First, we can define the _spacetime interval_ as follows.
 
 \[ ds^2 = dt^2 - dx^2 - dy^2 - dz^z \]
 
@@ -48,13 +58,24 @@ In other words, the amount of time or length between two events will be
 different depending on the inertial frame, but the spacetime interval
 between two events will stay the same.
 
+In the inertial frame where a world line is not moving, we have
+
 \[ dx = dy = dz = 0 \]
+
+so it must be the case that
 
 \[ ds^2 = dt^2 \]
 
-## Proper time
+In other words, the time which passes for an object moving at constant velocity
+is the same as its spacetime interval.  To distinguish the time which passes for
+the object from the time as observed from other inertial frames,
+we often call the former the _proper time_ for the object,
+and \(\tau\) is the symbol which usually denotes the proper time.
+So we can say that the proper time for a world line is the same as its spacetime interval.
 
 \[ d\tau = ds \]
+
+## Proper time
 
 ![Switching between inertial frames](/diagrams/article/relativity/proper-time/discrete-lines.svg)
 
