@@ -23,4 +23,4 @@ worldLine =
 -- | An invisible box so that the diagram sizes are comparable
 -- to other diagrams on the page.
 phantomBox :: Diagram B
-phantomBox = phantom $ fromCorners ((-4) ^& (-2)) (4 ^& 2)
+phantomBox = phantom $ fromCorners ((-5) ^& (-2)) (5 ^& 2)

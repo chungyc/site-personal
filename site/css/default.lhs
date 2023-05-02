@@ -237,6 +237,12 @@ tableOfContents = do
 \subsubsection{Images}
 
 Style for images.
+One thing to note is that we want images to fit well with everything else.
+The maximum width is limited to the surrounding content width.
+The maximum height is limited to 60\% of the display area
+so that some content before and after an image can also be visible,
+which in some cases would make it easier to keep track of what the image
+is supposed to explain.
 
 \begin{code}
 figures :: Css
@@ -256,6 +262,7 @@ figures = do
       marginLeft auto
       marginRight auto
       maxWidth $ pct 95
+      maxHeight $ vh 60
 
     figcaption ? do
       display block
