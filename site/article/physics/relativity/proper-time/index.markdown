@@ -71,21 +71,85 @@ is the same as its spacetime interval.  To distinguish the time which passes for
 the object from the time as observed from other inertial frames,
 we often call the former the _proper time_ for the object,
 and \(\tau\) is the symbol which usually denotes the proper time.
-So we can say that the proper time for a world line is the same as its spacetime interval.
+So we can say that the proper time for an inertial world line
+is the same as its spacetime interval.
 
 \[ d\tau = ds \]
 
-## Proper time
+## Proper time in general
+
+Now that we know how to figure out the time which passes for an object
+moving at constant velocity, how would we figure it out for an object
+which does not stay in a single intertial frame?
+
+If a moving object switches between a finite number of inertial frames as
+in the spacetime diagram below, then it is a simple matter of adding up
+the time which passes for the object in each of these inertial frames.
 
 ![Switching between inertial frames](/diagrams/article/relativity/proper-time/discrete-lines.svg)
 
+We know that the time which passes for the object in each segment is equal
+to the spacetime interval of the segment, so the total proper time
+is the sum of these spacetime intervals.
+
 \[ \tau = \sum \Delta\tau = \sum \Delta s \]
+
+What about an object which changes its velocity smoothly as in the spacetime diagram below?
 
 ![Continuously transitioning between inertial frames](/diagrams/article/relativity/proper-time/continuous-line.svg)
 
+We can think of this world line as an infinite number of infinitely small segments
+of straight world lines, each of them continuously switching over to different inertial frames.
+The total proper time would be the sum of these,
+and anyone who has even a passing familiarity with calculus would recognize
+that this is the same as the integral over the spacetime interval.
+
 \[ \tau = \int d\tau = \int ds \]
 
-\[ ds = \sqrt{dt^2 - dx^2 - dy^2 - dz^2} \]
+Given that \( ds = \sqrt{dt^2 - dx^2 - dy^2 - dz^2} \),
+this gives us a way to figure out the proper time for any world line
+without having to transform infinitely tiny bits of spacetime diagrams
+an infinite number of times.
+
+### With parameterized coordinates
+
+If you are computing the proper time numerically by chopping up a world line into
+little pieces and adding up the spacetime intervals, this is enough.
+It's a lot harder if you want to derive an analytical solution in the form of an equation.
+I don't even know where to start with integrals of the form
+\( \int \sqrt{dt^2 -dx^2 - dy^2 - dz^2} \).
+
+It is easier if it is changed into an integral of a single variable.
+This can be done by _parameterizing_ the coordinates \(t\), \(x\), \(y\), \(z\) with
+a single variable, let's say, \(\theta\).  In other words, they would be functions
+of the form \(t(\theta)\), \(x(\theta)\), \(y(\theta)\), \(z(\theta)\),
+taking advantage of the fact that a world line is a line and not something like a surface.[^surface]
+The integral for proper time would then be of a more tractable sort.
+
+\[
+\tau = \int \sqrt{\left(\frac{dt}{d\theta}\right)^2 -
+                  \left(\frac{dx}{d\theta}\right)^2 -
+                  \left(\frac{dx}{d\theta}\right)^2 -
+                  \left(\frac{dx}{d\theta}\right)^2} \, d\theta
+\]
+
+While it can be the case that \(\theta = \tau\), it doesn't have to be.[^proper-time-parameter]
+The variable \(\theta\) may not have any special physical meaning,
+since the most important factor in deciding how to parameterize the coordinates
+would be to make the calculations simpler, not that \(\theta\) have any
+physical significance.
+
+With all that said, I expect most such integrals would be beyond my ability to solve analytically.
+I'm satisfied with understanding the concept that proper time
+is equal to the sum of the spacetime intervals and being able
+to have a computer calculate the sum numerically to get the proper time.
+
+[^surface]: A world "surface" can be parameterized, but it would need two variables.
+
+[^proper-time-parameter]: In fact, if we are trying to compute the proper time,
+  it will almost certainly be the case that \(\theta \neq \tau\),
+  since if they were equal, we would already know \(\tau\)
+  and wouldn't be trying to do complicated calculations to obtain the proper time.
 
 ## Staying still for the longest time
 
