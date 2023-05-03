@@ -175,7 +175,7 @@ data AxesOptions = AxesOptions
     -- | Whether to draw the lightcone.  It is drawn by default.
     --
     -- >>> axesOptions { axesLightcone = False }
-    -- AxesOptions {axesLength = 2.0, axesLightcone = False}
+    -- AxesOptions {axesLength = 1.0, axesLightcone = False}
     axesLightcone :: Bool
   }
   deriving (Show)
