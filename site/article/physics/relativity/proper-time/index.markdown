@@ -153,6 +153,37 @@ to have a computer calculate the sum numerically to get the proper time.
 
 ## Staying still for the longest time
 
+Spacetime diagrams are useful for visualizing a lot of things in relativity,
+but spacetime intervals are not quite intuitive with spacetime diagrams.
+It would be nice if the length of a world line is proportional to the
+spacetime interval, but it isn't.  The length is \(\sqrt{t^2+x^2}\),
+while the spacetime interval is \(\sqrt{t^2-x^2}\).
+
+There are still some aspects of spacetime intervals and proper time
+that can be gleaned from a spacetime diagram at a glance.
+Namely, if you want to experience the most time between two events,
+then you need to stay in a single inertial frame.
+In the diagram below, the world line which stays still at \(x=0\)
+will experience more time than the world line which meanders about.
+
+![Longest time is the shortest path](/diagrams/article/relativity/proper-time/longest-time.svg)
+
+We can see this by parameterizing the world lines by \(t\).[^t]
+For the straight world line, \( ds = dt \).
+However, for the meandering world line, it will be the case that \( ds = \sqrt{dt^2 - dx^2} \),
+so \(ds\) will be smaller than that for the straight world line at any point where \(dx \neq 0\).
+This means the total spacetime interval for the straight world line is larger than
+that of the meandering world line.  In other words, the stationary world line
+experiences a longer amount of time.
+
+Since spacetime intervals remain the same in any inertial frame,
+we can conclude that the shortest world line in a spacetime diagram 
+between two fixed events will have the largest proper time,
+and any deviation from a straight world line will experience
+a shorter amount of time between the two events.
+
+[^t]: For the straight world line, \(t = \tau\), but this is _not_ the case for the meandering world line.
+
 ## See also
 
 *   [Spacetime diagrams](/article/physics/relativity/spacetime-diagrams)
