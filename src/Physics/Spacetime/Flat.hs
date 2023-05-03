@@ -167,12 +167,12 @@ vectorize2D (Coordinate (t, x, _, _)) = r2 (x, t)
 
 -- | Stores various options for drawing axes.
 data AxesOptions = AxesOptions
-  { -- | Length of each axis.
+  { -- | Length of each axis.  The default is 1.
     --
     -- >>> axesOptions { axesLength = 4 }
     -- AxesOptions {axesLength = 4.0, axesLightcone = True}
     axesLength :: Double,
-    -- | Whether to draw the lightcone.
+    -- | Whether to draw the lightcone.  It is drawn by default.
     --
     -- >>> axesOptions { axesLightcone = False }
     -- AxesOptions {axesLength = 2.0, axesLightcone = False}
@@ -182,11 +182,11 @@ data AxesOptions = AxesOptions
 
 -- | Default options for drawing axes.
 axesOptions :: AxesOptions
-axesOptions = AxesOptions {axesLength = 2.0, axesLightcone = True}
+axesOptions = AxesOptions {axesLength = 1.0, axesLightcone = True}
 
 -- | Draw axes for a spacetime diagram with default options.
 --
--- Both axes will extend up to length 2 from the origin,
+-- Both axes will extend up to length 1 from the origin,
 -- and the lightcone will also be drawn.
 -- Units will be in Planck units, i.e., \(c = 1\).
 --
