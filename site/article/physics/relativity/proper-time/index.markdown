@@ -3,7 +3,7 @@ title: Passage of time in special relativity
 description: |
   How to think about the passage of time for an object following a world line.
   Explains the concept of proper time.
-published: 2023-05-05
+published: 2023-05-03
 toc: true
 include-math: true
 include-bibliography-stylesheet: true
@@ -151,7 +151,7 @@ to have a computer calculate the sum numerically to get the proper time.
   since if they were equal, we would already know \(\tau\)
   and wouldn't be trying to do complicated calculations to obtain the proper time.
 
-## Staying still for the longest time
+### Staying still for the longest time
 
 Spacetime diagrams are useful for visualizing a lot of things in relativity,
 but spacetime intervals are not quite intuitive with spacetime diagrams.

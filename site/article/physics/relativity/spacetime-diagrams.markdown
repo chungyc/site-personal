@@ -2,7 +2,7 @@
 title: Spacetime diagrams
 description: Spacetime diagrams for plotting out world lines relativistically.
 published: 2023-04-24
-updated: 2023-05-02
+updated: 2023-05-03
 toc: true
 include-math: true
 include-bibliography-stylesheet: true
@@ -200,7 +200,7 @@ one might understand apparent paradoxes such as the twin paradox.
 
 ## See also
 
-*   [Proper time](/article/physics/relativity/proper-time/);
-    how time passes for a moving object
+*   [Proper time](/article/physics/relativity/proper-time/),
+    i.e., how time passes for a moving object
 
 ## References
