@@ -13,6 +13,19 @@ which is often glossed over in many popular treatments of the topic.
 
 ## The "paradox" {#intro}
 
+Let's say there are twins.  One of them stays on Earth.
+The other twin travels to a star near the speed of light and comes back.
+Due to [time dilation], time for the twin traveling to the star
+passes more slowly from the inertial frame of the twin staying on Earth.
+But for the traveling twin, it is the twin staying on Earth which is moving
+and whose time is passing more slowly.
+
+Both twins supposedly observe time flowing more slowly for the other twin.
+But when they meet up back on Earth and compare their clocks,
+they can't both be right, can they?
+
+[time dilation]: ../../spacetime-diagrams#time-dilation
+
 ## Standard popular treatment {#popular-treatment}
 
 ## The other twin's inertial frame {#other-frame}
