@@ -19,3 +19,7 @@ The content is publicly visible for knowledge sharing, not for direct use by oth
 
 *   [Library documentation](https://chungyc.github.io/site-personal/)
 *   Guide to [writing for the site](https://chungyc.org/article/technical/website/guide)
+
+---
+
+Copyright &copy; 2023 Yoo Chung
