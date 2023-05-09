@@ -39,10 +39,14 @@ consistently passes slowly from the perspective of the traveling twin.
 Some may even point out that for any world line which starts and ends
 at the same two events, the straight one will [experience the most time],
 which in this case would be the world line for the twin who stays on Earth.
+Below is a [spacetime diagram] for these world lines from
+the inertial frame of Earth.
 
 ![World lines for the twins](/diagrams/article/relativity/paradox/twin/worldlines.svg)
 
 [experience the most time]: ../../proper-time/#longest
+
+[spacetime diagram]: ../../spacetime-diagrams
 
 These explanations are absolutely correct.
 However, I have always found them highly unsatisfactory.
