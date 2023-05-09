@@ -1,7 +1,7 @@
 \subsection{Preamble}
 
 > import Diagrams.Runner
-> import Physics.Spacetime.Flat (axes)
+> import Physics.Spacetime.Flat (axes, transformation)
 
 \subsection{World lines}
 
@@ -37,5 +37,23 @@ The traveling twin is traveling at the following speed:
 
 \subsection{Spacetime diagram}
 
+In the inertial frame stationary with respect to the traveling twin
+on their outbound trip to the star, the following Lorentz transformation applies:
+The origin is set to be the point at which the traveling twin arrives at the star.
+
+> observe :: Diagram B -> Diagram B
+> observe = translate (r2 (-x', -t')) . transform (transformation v)
+>   where
+>     gamma = 1 / sqrt (1 - v * v)
+>     x' = gamma * v * t
+>     t' = gamma * (- v * x)
+>     x = v * t
+
+In this inertial frame, the world lines look like this:
+
 > main :: IO ()
-> main = putDiagram defaultOptions $ earthTwin <> travelingTwin <> axes
+> main = putDiagram defaultOptions $ mconcat
+>   [ earthTwin # observe
+>   , travelingTwin # observe
+>   , axes
+>   ]

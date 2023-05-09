@@ -72,6 +72,10 @@ Do we need to reach for general relativity to figure any of this out?
 
 ## The other twin's inertial frames {#other-frames}
 
+![World lines in the inertial frame for the outbound trip](/diagrams/article/relativity/paradox/twin/outbound-frame.svg)
+
+![World lines in the inertial frame for the inbound trip](/diagrams/article/relativity/paradox/twin/inbound-frame.svg)
+
 ## What the other twin sees {#other-observations}
 
 ## When both twins travel {#both-twins}
