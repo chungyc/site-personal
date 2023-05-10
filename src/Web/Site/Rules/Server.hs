@@ -19,6 +19,10 @@ rules = do
     route $ constRoute ".htaccess"
     compile copyFileCompiler
 
+  match "server/humans.txt" $ do
+    route $ constRoute "humans.txt"
+    compile copyFileCompiler
+
   match "server/robots.txt" $ do
     route $ constRoute "robots.txt"
     compile copyFileCompiler
