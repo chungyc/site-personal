@@ -86,6 +86,10 @@ Do we need to reach for general relativity to figure any of this out?
 
 ## When both twins travel {#both-twins}
 
+![World lines when both twins travel](/diagrams/article/relativity/paradox/twin/both-travel.svg)
+
+![World lines with axes from both twins](/diagrams/article/relativity/paradox/twin/both-travel-axes.svg)
+
 ## Conclusion {#conclusion}
 
 ## See also
