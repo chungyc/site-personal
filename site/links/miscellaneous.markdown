@@ -17,3 +17,6 @@ updated: 2023-03-13
 
 [Coursea](https://www.coursera.org/)
 :   Online learning resource with full courses from universities and companies.
+
+[The Great Courses](https://www.thegreatcourses.com/)
+:   In-depth lectures on various subjects for the interested layperson.
