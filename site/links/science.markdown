@@ -8,7 +8,7 @@ published: 2023-05-11
 :   Explains recent science news beyond the usual superficial levels,
     but still comprehensible to the interested layperson.
 
-[Scientific American](https://www.quantamagazine.org/)
+[Scientific American](https://www.scientificamerican.com/)
 :   Monthly magazine about recent developments in science.
 
 [Science United](https://scienceunited.org/)
