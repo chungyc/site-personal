@@ -80,7 +80,7 @@ Do we need to reach for general relativity to figure any of this out?
 
 ![World lines in the inertial frame for the inbound trip](/diagrams/article/relativity/paradox/twin/inbound-frame.svg)
 
-![World lines from Earth with axes from the traveling twin](/diagrams/article/relativity/paradox/twin/worldlines-axes.svg)
+![World lines from Earth with the \(x\) axes from the traveling twin](/diagrams/article/relativity/paradox/twin/worldlines-axes.svg)
 
 ## What the other twin sees {#other-observations}
 
@@ -88,9 +88,7 @@ Do we need to reach for general relativity to figure any of this out?
 
 ## When both twins travel {#both-twins}
 
-![World lines when both twins travel](/diagrams/article/relativity/paradox/twin/both-travel.svg)
-
-![World lines with axes from both twins](/diagrams/article/relativity/paradox/twin/both-travel-axes.svg)
+![World lines when both twins travel with their \(x\) axes](/diagrams/article/relativity/paradox/twin/both-travel-axes.svg)
 
 ## Conclusion {#conclusion}
 
