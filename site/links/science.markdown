@@ -10,3 +10,7 @@ published: 2023-05-11
 
 [Scientific American](https://www.quantamagazine.org/)
 :   Monthly magazine about recent developments in science.
+
+[Science United](https://scienceunited.org/)
+:   Contributing a little bit of computing power to scientific research
+    while I do other stuff on my computer.
