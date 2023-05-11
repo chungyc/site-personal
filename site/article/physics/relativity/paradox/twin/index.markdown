@@ -84,6 +84,8 @@ Do we need to reach for general relativity to figure any of this out?
 
 ## What the other twin sees {#other-observations}
 
+![Light from twin on Earth](/diagrams/article/relativity/paradox/twin/worldlines-light.svg)
+
 ## When both twins travel {#both-twins}
 
 ![World lines when both twins travel](/diagrams/article/relativity/paradox/twin/both-travel.svg)
