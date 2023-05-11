@@ -14,3 +14,6 @@ updated: 2023-03-13
 [Association for Computing Machinery](https://www.acm.org/)
 :   The world's largest educational and scientific computing society.
     I am a professional member.
+
+[Coursea](https://www.coursera.org/)
+:   Online learning resource with full courses from universities and companies.
