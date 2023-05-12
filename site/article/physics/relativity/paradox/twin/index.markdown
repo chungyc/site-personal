@@ -76,11 +76,57 @@ Do we need to reach for general relativity to figure any of this out?
 
 ## The other twin's inertial frames {#other-frames}
 
+No, we do not need general relativity for this particular problem.
+We would need general relativity if spacetime is curved
+or if mass or energy affects spacetime significantly,
+neither of which is the case here.
+Special relativity suffices to explain what happens from
+the other twin's perspective.
+
+First, let us take a look at the spacetime diagram of the world lines of the twins
+in the inertial frame where the traveling twin is stationary during their outbound trip.
+This diagram is below, with the origin set at the event where
+the traveling twin arrives at the star.
+
 ![World lines in the inertial frame for the outbound trip](/diagrams/article/relativity/paradox/twin/outbound-frame.svg)
+
+Interestingly, much less than half of the total time has passed for the twin
+who remains on Earth in the inertial frame above by the time
+the traveling twin arrives at the star.
+What about the other way around, when the traveling twin departs from the star
+and heads back to Earth?  This diagram is below, likewise with the origin
+set at the event where the traveling twin departs from the star.
 
 ![World lines in the inertial frame for the inbound trip](/diagrams/article/relativity/paradox/twin/inbound-frame.svg)
 
+Similarly to the perspective from the outbound trip, much less than half the time
+passes for the twin from the inertial frame where the traveling twin is stationary
+during their inbound trip.  Also note that the time on Earth is significantly _after_
+the halfway point when the traveling twin departs from the star.
+
+What does this mean?  Time _does_ pass more slowly for the twin on the Earth in the
+inertial frames for the other twin while they are traveling to and from the star.
+However, there is a whole chunk of time in the middle for the twin on the Earth
+which is skipped while the traveling twin is in these inertial frames.
+Said another way, while the traveling twin is on their way to the star,
+the twin on Earth ages slowly in the traveling twin's inertial frame,
+but the twin on Earth ages suddenly when the other twin turns around at the star,
+and the twin on Earth ages slowly again while the traveling twin heads back to Earth.
+
+We can see this as well with the spacetime diagram in Earth's inertial frame.
+If we map the \(x\) axes from the previous two diagrams into Earth's inertial frame,
+we will get the spacetime diagram below.
+We can see between these axes the same chunk of time for the twin on the Earth
+which does not pass in the inertial frames for the traveling twin while they are
+traveling to the star and coming back from the star.
+
 ![World lines from Earth with the \(x\) axes from the traveling twin](/diagrams/article/relativity/paradox/twin/worldlines-axes.svg)
+
+This explains why it seemed the twin paradox was paradoxical.
+We correctly reasoned that time will pass slowly for both twins,
+but it's too easy for us to assume that a "now" is in every inertial frame,
+and not realize that there's a big gap in the time on Earth
+between the inertial frames for the traveling twin when they turn around.
 
 ## What the other twin sees {#other-observations}
 
