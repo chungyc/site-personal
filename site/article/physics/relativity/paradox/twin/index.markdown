@@ -130,6 +130,14 @@ between the inertial frames for the traveling twin when they turn around.
 
 ## What the other twin sees {#other-observations}
 
+In the previous section, we saw that from the inertial frames for the traveling twin,
+time travels more slowly on Earth, then there's a big skip during the short period
+where the traveling twin turns around at the star, and then time travels more slowly
+on the Earth again while the traveling twin returns to Earth.  But light is still
+being emitted from Earth during the time skip.
+Does this mean that the traveling twin will be incinerated at the star
+as they turn around as all the during this time skip arrives at the star all at once?
+
 ![Light from twin on Earth](/diagrams/article/relativity/paradox/twin/worldlines-light.svg)
 
 ## When both twins travel {#both-twins}
