@@ -138,7 +138,28 @@ being emitted from Earth during the time skip.
 Does this mean that the traveling twin will be incinerated at the star
 as they turn around as all the during this time skip arrives at the star all at once?
 
+No, the traveling twin will not be vaporized by an almost infinite spike of light.
+You may or may not have noticed that I said things like "time passes slowly for
+the other twin" in the previous sections.  I was careful not to say something like
+"one twin _sees_ time passing slowly for the other twin", because they are actually
+not the same thing.  Light needs to travel from one twin to another for them to
+see each other, so the _observed_ passage of time ends up being different from
+the passage of time.
+
+So what does the traveling twin observe?
+We can see what it would be like by plotting the light rays leaving
+the twin on Earth in a spacetime diagram, and look at how they
+meet the traveling twin.
+
 ![Light from twin on Earth](/diagrams/article/relativity/paradox/twin/worldlines-light.svg)
+
+Looking at how the light rays reach the traveling twin,
+we can see that the traveling twin on their outbound leg will observe time on Earth
+passing even more slowly than would be predicted by time dilation.
+In contrast, on the inbound leg, they will observe time on Earth passing by very quickly,
+and the twin on Earth would have aged a lot more once they meet up again.
+The light rays from Earth do not all arrive at the traveling twin in a single instant,
+so they will not be incinerated.
 
 ## When both twins travel {#both-twins}
 
