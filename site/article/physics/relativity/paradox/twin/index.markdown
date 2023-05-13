@@ -180,6 +180,24 @@ when they meet up again.
 
 ## Conclusion {#conclusion}
 
+While the twin paradox is often explained as one of the twins not staying
+in a single inertial frame, it can also be considered an example of
+a counter-intuitive situation that arises because of the
+[relativity of simultaneity](/article/physics/relativity/spacetime-diagrams#simultaneity).
+We are so used to time flowing smoothly that we can easily forget that "now"
+is not the same in all inertial frames.  So if someone wonders how it could be
+if both twins observe time flows slowly for each other and yet only one twin
+ends up being older when they meet up with each other, they don't realize
+that there is a big time skip for one of the twins because the traveling twin
+changes inertial frames.
+
+We can now also explain what the traveling twin sees as they travel out and back,
+something which is often lacking in many popular treatments of the twin paradox.
+On the outbound leg, it will look as if time is passing slowly for the twin on Earth,
+but on the inbound leg, it will look as if time is passing quickly,
+so that by the time the twins meet up with each other,
+the twin on Earth would be older.
+
 ## See also
 
 *   [Spacetime diagrams](/article/physics/relativity/spacetime-diagrams);
