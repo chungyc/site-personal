@@ -1,7 +1,7 @@
 ---
 title: Twin paradox
 description: Explaining the twin paradox from the perspective of the other twin.
-published: 2023-05-10
+published: 2023-05-12
 toc: true
 include-math: true
 include-bibliography-stylesheet: true
