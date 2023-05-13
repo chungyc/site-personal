@@ -124,8 +124,9 @@ traveling to the star and coming back from the star.
 
 This explains why it seemed the twin paradox was paradoxical.
 We correctly reasoned that time will pass slowly for both twins,
-but it's too easy for us to assume that a "now" is in every inertial frame,
-and not realize that there's a big gap in the time on Earth
+but it's too easy for us to assume that a "now" is the same in every inertial frame
+when [it is not](/article/physics/relativity/spacetime-diagrams#simultaneity),
+and not realize that there's a big skip in the time on Earth
 between the inertial frames for the traveling twin when they turn around.
 
 ## What the other twin sees {#other-observations}
@@ -163,7 +164,19 @@ so they will not be incinerated.
 
 ## When both twins travel {#both-twins}
 
+Now that we know how to figure out what a non-inertial observer sees
+using spacetime diagrams, we can say something about what the twins
+how time passes for each other and what they will see when they _both_ travel.
+The spacetime diagram below shows their world lines and the \(x\) axes for
+when they are on their outbound trip and their inbound trip.
+
 ![World lines when both twins travel with their \(x\) axes](/diagrams/article/relativity/paradox/twin/both-travel-axes.svg)
+
+Like in the ordinary twin paradox, we can see that while a twin is moving inertially,
+time for the other twin is passing slowly.  There will also be a big time skip when turning around.
+What they will see is that time for the other twin is passing slowly on the outbound leg,
+but it will speed up on the inbound leg, and their ages will end up matching
+when they meet up again.
 
 ## Conclusion {#conclusion}
 
