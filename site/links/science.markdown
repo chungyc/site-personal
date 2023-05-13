@@ -14,3 +14,7 @@ published: 2023-05-11
 [Science United](https://scienceunited.org/)
 :   Contributing a little bit of computing power to scientific research
     while I do other stuff on my computer.
+
+[Zooniverse](https://www.zooniverse.org/)
+:   Platform for citizen science.
+    Contribute to scientific research without having to get a PhD.
