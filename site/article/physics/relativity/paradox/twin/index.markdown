@@ -137,7 +137,8 @@ where the traveling twin turns around at the star, and then time travels more sl
 on the Earth again while the traveling twin returns to Earth.  But light is still
 being emitted from Earth during the time skip.
 Does this mean that the traveling twin will be incinerated at the star
-as they turn around as all the during this time skip arrives at the star all at once?
+as they turn around as all this light emitted during this time skip arrives
+at the star all at once?
 
 No, the traveling twin will not be vaporized by an almost infinite spike of light.
 You may or may not have noticed that I said things like "time passes slowly for
