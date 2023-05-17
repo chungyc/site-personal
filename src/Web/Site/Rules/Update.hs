@@ -21,8 +21,8 @@ rules = do
     compile $ do
       updates <- recentFirst =<< loadAllSnapshots updatePattern "updates"
       let updatesContext =
-            listField "updates" defaultContext (return updates)
-              <> defaultContext
+            listField "updates" siteContext (return updates)
+              <> siteContext
 
       getResourceBody
         >>= applyAsTemplate updatesContext
@@ -34,8 +34,8 @@ rules = do
     compile $
       pandocCompiler
         >>= saveSnapshot "updates"
-        >>= loadAndApplyTemplate "templates/update.html" defaultContext
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/update.html" siteContext
+        >>= loadAndApplyTemplate "templates/default.html" siteContext
 
   -- RSS feed for updates.
   create ["updates.xml"] $ do
@@ -52,7 +52,7 @@ rules = do
             mconcat
               [ field "url" toCleanLink,
                 bodyField "description",
-                defaultContext
+                siteContext
               ]
 
       posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots updatePattern "updates"
@@ -81,8 +81,8 @@ withLatest f = do
   updates <- fmap (take 1) . recentFirst =<< loadAllSnapshots updatePattern "updates"
   let indexContext =
         if null updates
-          then defaultContext
-          else listField "latest-update" defaultContext (return updates) <> defaultContext
+          then siteContext
+          else listField "latest-update" siteContext (return updates) <> siteContext
   f indexContext
 
 -- | Feed configuration for updates.

@@ -61,9 +61,9 @@ linksCompiler = do
 
   let applySubcategories
         | null subcategories = id
-        | otherwise = (<>) $ listField "subcategories" defaultContext (return subcategories)
+        | otherwise = (<>) $ listField "subcategories" siteContext (return subcategories)
 
-  let linksContext = applyParent . applySubcategories $ defaultContext
+  let linksContext = applyParent . applySubcategories $ siteContext
 
   pandocCompiler
     >>= saveSnapshot ("links:" ++ parent)

@@ -37,15 +37,15 @@ rules = do
     compile $
       articleCompiler
         >>= saveSnapshot "articles"
-        >>= loadAndApplyTemplate "templates/article.html" defaultContext
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/article.html" siteContext
+        >>= loadAndApplyTemplate "templates/default.html" siteContext
 
   -- A curated index to the articles.
   match "article/index.markdown" $ do
     route $ constRoute "articles"
     compile $
       pandocCompiler
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" siteContext
 
   -- The archive page with links to all articles.
   match "article/archive.html" $ do
@@ -53,8 +53,8 @@ rules = do
     compile $ do
       articles <- recentFirst =<< loadAllSnapshots articlePattern "articles"
       let context =
-            listField "articles" defaultContext (return articles)
-              <> defaultContext
+            listField "articles" siteContext (return articles)
+              <> siteContext
 
       getResourceBody
         >>= applyAsTemplate context

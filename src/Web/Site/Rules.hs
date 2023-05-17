@@ -8,6 +8,7 @@
 module Web.Site.Rules (rules) where
 
 import Hakyll
+import Web.Site.Compilers
 import Web.Site.Routes
 import Web.Site.Rules.Article qualified as Article
 import Web.Site.Rules.Diagram qualified as Diagram
@@ -40,7 +41,7 @@ rules = do
     route dropExtensions
     compile $
       getResourceBody
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" siteContext
 
   match "index.html" $ do
     route idRoute

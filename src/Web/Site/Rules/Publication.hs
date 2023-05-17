@@ -8,6 +8,7 @@
 module Web.Site.Rules.Publication (rules, items) where
 
 import Hakyll
+import Web.Site.Compilers
 
 -- |
 -- Rules related to the list of my publications.
@@ -17,7 +18,7 @@ rules = do
     route $ constRoute "publications"
     compile $
       publicationsCompiler
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" siteContext
 
   match (fromGlob cslFile) $ compile cslCompiler
   match (fromGlob bibFile) $ compile biblioCompiler
