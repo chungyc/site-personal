@@ -11,3 +11,7 @@
 
 # Use context with site-specific customizations.
 - warning: {lhs: defaultContext, rhs: siteContext}
+
+# siteContext is defined in terms of defaultContext.
+# Do not warn about the use of defaultContext in this definition.
+- ignore: {name: Use siteContext, within: Web.Site.Compilers}
