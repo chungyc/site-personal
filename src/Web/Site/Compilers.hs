@@ -9,16 +9,18 @@ module Web.Site.Compilers
   ( -- * Compilers
     haskellCompiler,
 
-    -- * Post-processors
-    cleanupIndexUrls,
-    cleanupIndexUrl,
-
     -- * Pandoc options
 
     -- | Pandoc reader and writer options that can be used with 'pandocCompilerWith'.
     mathReaderOptions,
     mathWriterOptions,
     getTocOptionsWith,
+
+    -- * Custom contexts
+    siteContext,
+
+    -- * Utilities
+    cleanupIndexUrl,
   )
 where
 
@@ -65,41 +67,6 @@ haskellCompiler args = do
     -- We will run the code from the file directly,
     -- so we don't care about any content in an item.
     emptyItem = makeItem ""
-
--- |
--- For local URLs in the input which end with @index.html@, strip it.
---
--- For example:
---
--- >>> :{
--- let _ = pandocCompiler
---           >>= loadAndApplyTemplate "templates/default.html" defaultContext
---           >>= cleanupIndexUrls
--- :}
-cleanupIndexUrls :: Item String -> Compiler (Item String)
-cleanupIndexUrls = return . fmap (withUrls cleanupIndexUrl)
-
--- |
--- If the given URL is local and ends with @index.html@, strip the latter.
---
--- For example:
---
--- >>> cleanupIndexUrl "/article/index.html"
--- "/article/"
--- >>> cleanupIndexUrl "/article/page.html"
--- "/article/page.html"
--- >>> cleanupIndexUrl "http://chungyc.org/article/index.html"
--- "http://chungyc.org/article/index.html"
---
--- One will usually use 'cleanupIndexUrls' to clean up URLs in generated pages,
--- instead of using this function directly.
-cleanupIndexUrl :: String -> String
-cleanupIndexUrl url@('/' : _)
-  | Nothing <- prefix = url
-  | Just s <- prefix = s
-  where
-    prefix = needlePrefix "index.html" url
-cleanupIndexUrl url = url
 
 -- |
 -- Reader options for properly treating math in input.
@@ -172,3 +139,42 @@ getTocOptionsWith options = do
       | otherwise = Nothing
     build = runPure . runWithDefaultPartials . compileTemplate ""
     templateSource = "<nav class='toc'><h2>Contents</h2>\n$toc$\n</nav>\n$body$"
+
+-- | Default context used for the site.
+-- Adds customizations specific to this site to "defaultContext".
+-- In particular,
+--
+-- * Cleans @index.html@ URLs into directory URLs ending with @/@.
+--
+-- Use this when compiling items for this site instead of "defaultContext".
+siteContext :: Context String
+siteContext = field "url" clean <> defaultContext
+  where
+    -- Clean up "index.html" from URLs.
+    clean item = do
+      path <- getRoute (itemIdentifier item)
+      case path of
+        Nothing -> noResult "no route for identifier"
+        Just s -> pure . cleanupIndexUrl . toUrl $ s
+
+-- |
+-- If the given URL is local and ends with @index.html@, strip the latter.
+--
+-- For example:
+--
+-- >>> cleanupIndexUrl "/article/index.html"
+-- "/article/"
+-- >>> cleanupIndexUrl "/article/page.html"
+-- "/article/page.html"
+-- >>> cleanupIndexUrl "http://chungyc.org/article/index.html"
+-- "http://chungyc.org/article/index.html"
+--
+-- URLs are cleaned up by default with "siteContext",
+-- so one will usually not call this directly.
+cleanupIndexUrl :: String -> String
+cleanupIndexUrl url@('/' : _)
+  | Nothing <- prefix = url
+  | Just s <- prefix = s
+  where
+    prefix = needlePrefix "index.html" url
+cleanupIndexUrl url = url

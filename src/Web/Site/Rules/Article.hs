@@ -37,15 +37,15 @@ rules = do
     compile $
       articleCompiler
         >>= saveSnapshot "articles"
-        >>= loadAndApplyTemplate "templates/article.html" defaultContext
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/article.html" siteContext
+        >>= loadAndApplyTemplate "templates/default.html" siteContext
 
   -- A curated index to the articles.
   match "article/index.markdown" $ do
     route $ constRoute "articles"
     compile $
       pandocCompiler
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" siteContext
 
   -- The archive page with links to all articles.
   match "article/archive.html" $ do
@@ -53,36 +53,20 @@ rules = do
     compile $ do
       articles <- recentFirst =<< loadAllSnapshots articlePattern "articles"
       let context =
-            listField "articles" defaultContext (return articles)
-              <> defaultContext
+            listField "articles" siteContext (return articles)
+              <> siteContext
 
       getResourceBody
         >>= applyAsTemplate context
         >>= loadAndApplyTemplate "templates/default.html" context
-        >>= cleanupIndexUrls
 
   -- RSS feed for articles.
   create ["articles.xml"] $ do
     route idRoute
     compile $ do
-      -- Used to strip "index.html" from the URLs.
-      let toCleanLink item = do
-            path <- getRoute (itemIdentifier item)
-            case path of
-              Nothing -> noResult "no route for identifier"
-              Just s -> pure . cleanupIndexUrl . toUrl $ s
-
-      let itemContext =
-            mconcat
-              [ field "url" toCleanLink,
-                metadataField,
-                bodyField "description",
-                defaultContext
-              ]
-
+      let itemContext = metadataField <> bodyField "description" <> siteContext
       articles <- fmap (take 10) . recentFirst =<< loadAllSnapshots articlePattern "articles"
       renderRss updateFeedConfiguration itemContext articles
-        >>= cleanupIndexUrls
 
   match "article/bibliography/references.bib" $ compile biblioCompiler
   match "article/bibliography/acm.csl" $ compile cslCompiler

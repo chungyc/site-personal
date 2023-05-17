@@ -8,6 +8,7 @@
 module Web.Site.Rules.Server (rules) where
 
 import Hakyll
+import Web.Site.Compilers
 
 -- |
 -- Rules related to server setup.
@@ -39,4 +40,4 @@ rules = do
     route idRoute
     compile $
       getResourceBody
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" siteContext

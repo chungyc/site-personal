@@ -21,8 +21,8 @@ rules = do
     compile $ do
       updates <- recentFirst =<< loadAllSnapshots updatePattern "updates"
       let updatesContext =
-            listField "updates" defaultContext (return updates)
-              <> defaultContext
+            listField "updates" siteContext (return updates)
+              <> siteContext
 
       getResourceBody
         >>= applyAsTemplate updatesContext
@@ -34,27 +34,14 @@ rules = do
     compile $
       pandocCompiler
         >>= saveSnapshot "updates"
-        >>= loadAndApplyTemplate "templates/update.html" defaultContext
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/update.html" siteContext
+        >>= loadAndApplyTemplate "templates/default.html" siteContext
 
   -- RSS feed for updates.
   create ["updates.xml"] $ do
     route idRoute
     compile $ do
-      -- Used to strip "index.html" from the URLs.
-      let toCleanLink item = do
-            path <- getRoute (itemIdentifier item)
-            case path of
-              Nothing -> noResult "no route for identifier"
-              Just s -> pure . cleanupIndexUrl . toUrl $ s
-
-      let feedContext =
-            mconcat
-              [ field "url" toCleanLink,
-                bodyField "description",
-                defaultContext
-              ]
-
+      let feedContext = bodyField "description" <> siteContext
       posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots updatePattern "updates"
       renderRss updateFeedConfiguration feedContext posts
 
@@ -81,8 +68,8 @@ withLatest f = do
   updates <- fmap (take 1) . recentFirst =<< loadAllSnapshots updatePattern "updates"
   let indexContext =
         if null updates
-          then defaultContext
-          else listField "latest-update" defaultContext (return updates) <> defaultContext
+          then siteContext
+          else listField "latest-update" siteContext (return updates) <> siteContext
   f indexContext
 
 -- | Feed configuration for updates.
