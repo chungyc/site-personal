@@ -65,24 +65,9 @@ rules = do
   create ["articles.xml"] $ do
     route idRoute
     compile $ do
-      -- Used to strip "index.html" from the URLs.
-      let toCleanLink item = do
-            path <- getRoute (itemIdentifier item)
-            case path of
-              Nothing -> noResult "no route for identifier"
-              Just s -> pure . cleanupIndexUrl . toUrl $ s
-
-      let itemContext =
-            mconcat
-              [ field "url" toCleanLink,
-                metadataField,
-                bodyField "description",
-                defaultContext
-              ]
-
+      let itemContext = metadataField <> bodyField "description" <> siteContext
       articles <- fmap (take 10) . recentFirst =<< loadAllSnapshots articlePattern "articles"
       renderRss updateFeedConfiguration itemContext articles
-        >>= cleanupIndexUrls
 
   match "article/bibliography/references.bib" $ compile biblioCompiler
   match "article/bibliography/acm.csl" $ compile cslCompiler

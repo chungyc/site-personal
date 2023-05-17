@@ -19,6 +19,9 @@ module Web.Site.Compilers
     mathReaderOptions,
     mathWriterOptions,
     getTocOptionsWith,
+
+    -- * Custom contexts
+    siteContext,
   )
 where
 
@@ -172,3 +175,20 @@ getTocOptionsWith options = do
       | otherwise = Nothing
     build = runPure . runWithDefaultPartials . compileTemplate ""
     templateSource = "<nav class='toc'><h2>Contents</h2>\n$toc$\n</nav>\n$body$"
+
+-- | Default context used for the site.
+-- Adds customizations specific to this site to "defaultContext".
+-- In particular,
+--
+-- * Cleans @index.html@ URLs into directory URLs ending with @/@.
+--
+-- Use this when compiling items for this site instead of "defaultContext".
+siteContext :: Context String
+siteContext = field "url" clean <> defaultContext
+  where
+    -- Clean up "index.html" from URLs.
+    clean item = do
+      path <- getRoute (itemIdentifier item)
+      case path of
+        Nothing -> noResult "no route for identifier"
+        Just s -> pure . cleanupIndexUrl . toUrl $ s

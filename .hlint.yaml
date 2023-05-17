@@ -1,0 +1,13 @@
+# HLint configuration file
+# https://github.com/ndmitchell/hlint
+##########################
+
+
+- arguments: [-XGHC2021, -XOverloadedStrings]
+
+
+##########################
+# Custom hints
+
+# Use context with site-specific customizations.
+- warning: {lhs: defaultContext, rhs: siteContext}
