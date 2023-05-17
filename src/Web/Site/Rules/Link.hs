@@ -69,4 +69,3 @@ linksCompiler = do
     >>= saveSnapshot ("links:" ++ parent)
     >>= loadAndApplyTemplate "templates/links.html" linksContext
     >>= loadAndApplyTemplate "templates/default.html" linksContext
-    >>= cleanupIndexUrls

@@ -59,7 +59,6 @@ rules = do
       getResourceBody
         >>= applyAsTemplate context
         >>= loadAndApplyTemplate "templates/default.html" context
-        >>= cleanupIndexUrls
 
   -- RSS feed for articles.
   create ["articles.xml"] $ do

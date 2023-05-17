@@ -41,20 +41,7 @@ rules = do
   create ["updates.xml"] $ do
     route idRoute
     compile $ do
-      -- Used to strip "index.html" from the URLs.
-      let toCleanLink item = do
-            path <- getRoute (itemIdentifier item)
-            case path of
-              Nothing -> noResult "no route for identifier"
-              Just s -> pure . cleanupIndexUrl . toUrl $ s
-
-      let feedContext =
-            mconcat
-              [ field "url" toCleanLink,
-                bodyField "description",
-                siteContext
-              ]
-
+      let feedContext = bodyField "description" <> siteContext
       posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots updatePattern "updates"
       renderRss updateFeedConfiguration feedContext posts
 
