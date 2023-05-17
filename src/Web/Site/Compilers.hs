@@ -18,6 +18,9 @@ module Web.Site.Compilers
 
     -- * Custom contexts
     siteContext,
+
+    -- * Utilities
+    cleanupIndexUrl,
   )
 where
 
