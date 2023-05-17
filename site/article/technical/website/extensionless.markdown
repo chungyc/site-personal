@@ -143,8 +143,6 @@ See [`site/server/htaccess`].
 There is nothing more to do if all one wants is
 to serve HTML pages without including the extension in the URL.
 However, I would like to preview my site without standing up my own Apache HTTP server.
-I am now using an unreleased version of Hakyll to do this,
-but this section explains what I had done with the current release of Hakyll.
 
 Hakyll uses the [warp] HTTP server for previewing a site locally.
 It does not know to serve files without an extension as HTML,
@@ -152,27 +150,26 @@ so I made my own customizations to warp so that it would set `Content-Type` to `
 for files without an extension.
 
 ```haskell
-main = Warp.runSettings warpSettings $
-  Static.staticApp baseSettings{ ssGetMimeType = getMimeType }
-  where warpSettings = Warp.setHost (fromString "127.0.0.1") $
-                         Warp.setPort 8000 Warp.defaultSettings
-        baseSettings = Static.defaultFileServerSettings "_site"
-        defaultGetMimeType = ssGetMimeType baseSettings
-        getMimeType file =
-          if '.' `elem` fromPiece (fileName file)
-            then defaultGetMimeType file
-            else return "text/html"
+main :: IO ()
+main = hakyllWith config rules
+  where
+    config = defaultConfiguration { previewSettings = serverSettings }
+
+serverSettings :: FilePath -> Static.StaticSettings
+serverSettings path = baseSettings {ssGetMimeType = getMimeType}
+  where
+    baseSettings = Static.defaultFileServerSettings path
+    defaultGetMimeType = ssGetMimeType baseSettings
+
+    -- Overrides MIME type for files with no extension
+    -- so that HTML pages need no extension.
+    getMimeType file =
+      if Text.elem '.' (fromPiece $ fileName file)
+        then defaultGetMimeType file
+        else return "text/html"
 ```
 
-Hakyll now has a change to [customize its server settings] merged into its code base.
-It is not part of an official release yet, so I am using an unreleased version
-of Hakyll to do the same thing with Hakyll's own preview server.
-I have also customized what files it [considers for link checking],
-which is another option that is not part of an official release yet.
-
 [warp]: https://hackage.haskell.org/package/warp
-[customize its server settings]: https://github.com/jaspervdj/hakyll/commit/a7e7e52302fd38130ac5ceb677d81bff82af45d6
-[considers for link checking]: https://github.com/jaspervdj/hakyll/commit/532eb3bed46e5e5cb2de9628b816346e402ad991
 
 ## Caveats
 
