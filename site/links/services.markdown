@@ -12,3 +12,7 @@ published: 2023-03-17
 
 [Google Search Console](https://search.google.com/search-console)
 :   Monitor how a web site you own is indexed on Google Search.
+
+[1Password](https://1password.com/)
+:   Manage passwords.
+    Avoid password reuse and use strong passwords without going crazy.
