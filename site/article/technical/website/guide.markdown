@@ -127,6 +127,14 @@ keep-colors
 
 ## Compiling
 
+### Custom context
+
+This site uses a custom [`siteContext`] instead of `defaultContext`.
+It includes customizations to the default context specific to this site.
+In particular, it strips `index.html` from directory URLs.
+
+[`siteContext`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:siteContext
+
 ### Generation from Haskell
 
 [`haskellCompiler`] compiles items by running its input argument as Haskell code.
@@ -141,28 +149,6 @@ compile $ haskellCompiler []
 The code can be either Haskell or literate Haskell.
 
 [`haskellCompiler`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:haskellCompiler
-
-### Cleaning up URLs
-
-This site uses [clean URLs].  For most pages, nothing further needs to be done
-because they are routed to file names which serve as part of clean URLs in the first place.
-
-However, some pages are routed to `index.html` files so that the directory can be the URL.
-This is not an issue for manually inserted URLs, but URLs automatically collected,
-such as the index of updates or the index of articles, will include the `index.html` string.
-[`cleanupIndexUrls`] is used to clean up such URLs in the generated files.
-
-For example,
-
-```haskell
-compile $
-  pandocCompiler
-    >>= loadAndApplyTemplate "templates/default.html" defaultContext
-    >>= cleanupIndexUrls
-```
-
-[clean URLs]: /article/technical/website/extensionless
-[`cleanupIndexUrls`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:cleanupIndexUrls
 
 ### Math support
 
