@@ -2,7 +2,7 @@
 title: Guide to writing for this web site
 description: Various knobs that are useful to writing pages for this web site.
 published: 2023-03-18
-updated: 2023-04-02
+updated: 2023-05-21
 toc: true
 include-syntax-stylesheet: true
 ---
