@@ -81,7 +81,7 @@ If defined, it will include the latest [update] on the front page.
 
 These are particular CSS elements I may need to use manually.
 
-keep-colors
+`keep-colors`
 :   CSS class used with SVG images, for those whose colors should never invert on dark mode.
     The class should be associated with the `img` element inside a `figure` element;
     this is what the conversion to HTML from Markdown does.
