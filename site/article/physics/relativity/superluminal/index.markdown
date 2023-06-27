@@ -1,7 +1,7 @@
 ---
 title: Traveling to the past by being fast
 description: Using spacetime diagrams to demonstrate how traveling faster than light would allow for time travel.
-published: 2023-07-10
+published: 2023-08-15
 toc: true
 include-math: true
 include-bibliography-stylesheet: true
