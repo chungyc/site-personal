@@ -39,6 +39,8 @@ For a list of all articles, see the [archive of articles](/article/archive).
         *   [Proper time](/article/physics/relativity/proper-time/)
 
         *   [Twin paradox](/article/physics/relativity/paradox/twin/)
+        
+        *   [Time travel](/article/physics/relativity/superluminal/)
 
 *   Technical
 
