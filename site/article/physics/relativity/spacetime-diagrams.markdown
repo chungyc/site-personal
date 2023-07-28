@@ -206,4 +206,7 @@ one might understand apparent paradoxes such as the twin paradox.
 *   [Twin paradox](/article/physics/relativity/paradox/twin/);
     how two twins could both observe time being slow for each other
 
+*   [Time travel](/article/physics/relativity/superluminal/);
+    what we could do if we could travel faster than light
+
 ## References

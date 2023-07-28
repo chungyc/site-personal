@@ -20,6 +20,17 @@ then you can travel through time.
 
 ## Traveling to your past {#self}
 
+![Traveling faster than light from the other reference frame](/diagrams/article/relativity/superluminal/ftl-again.svg)
+
+![World line passing through your past](/diagrams/article/relativity/superluminal/travel-past.svg)
+
 ## Traveling to the future {#future}
+
+## See also
+
+*   [Spacetime diagrams](/article/physics/relativity/spacetime-diagrams);
+    visualizing relativistic world lines
+*   [Proper time](/article/physics/relativity/proper-time/);
+    how moving objects experience time
 
 ## References {#refs}
