@@ -34,4 +34,8 @@ Spacetime diagram
 -----------------
 
 > main :: IO ()
-> main = putDiagram defaultOptions $ line <> axes
+> main = putDiagram defaultOptions $ line <> axes'
+>   where
+>     axes' = axes # lineColor darkmagenta
+
+We override the color of the axes to distinguish it from the original reference frame.
