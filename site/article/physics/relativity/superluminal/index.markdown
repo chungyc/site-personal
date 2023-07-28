@@ -16,6 +16,8 @@ then you can travel through time.
 
 ## Traveling to someone else's past {#other}
 
+![World line traveling faster than light from another reference frame](/diagrams/article/relativity/superluminal/ftl-other.svg)
+
 ## Traveling to your past {#self}
 
 ## Traveling to the future {#future}
