@@ -1,13 +1,10 @@
-resolver: lts-20.21
+resolver: lts-21.4
 
 extra-deps:
 
   # Uses properties and media query functions not released yet.
   - git: https://github.com/sebastiaanvisser/clay.git
-    commit: a68f105f3408b524a3d194d0cfc8ccdc78ba3da2
-
-  # Uses link check file customization change not in Stackage yet.
-  - hakyll-4.16.0.0
+    commit: d6dfa00289f532850971b29abf6ee4c070045da2
 
 ghc-options:
   "$everything": -O2
