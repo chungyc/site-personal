@@ -4,6 +4,7 @@ description: |
   How to think about the passage of time for an object following a world line.
   Explains the concept of proper time.
 published: 2023-05-03
+updated: 2023-09-03
 toc: true
 include-math: true
 include-bibliography-stylesheet: true
@@ -49,7 +50,7 @@ which is the spacetime diagram on the right below.
 
 We can also find the time which passes for the moving object without transforming
 a world line into the intertial frame where it is stationary.
-First, we can define the _spacetime interval_ as follows.
+First, we can define the _spacetime interval_ as follows.[^natural-units]
 
 \[ ds^2 = dt^2 - dx^2 - dy^2 - dz^z \]
 
@@ -75,6 +76,10 @@ So we can say that the proper time for an inertial world line
 is the same as its spacetime interval.
 
 \[ d\tau = ds \]
+
+[^natural-units]: Here we use [natural units](https://en.wikipedia.org/wiki/Natural_units)
+for convenience, where \(c = 1\).  when using actual measurement values,
+multiply the time by the speed of light.
 
 ## Proper time in general {#proper-time}
 
