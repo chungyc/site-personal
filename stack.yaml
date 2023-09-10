@@ -1,10 +1,10 @@
-resolver: lts-21.9
+resolver: lts-21.11
 
 extra-deps:
 
   # Uses properties and media query functions not released yet.
   - git: https://github.com/sebastiaanvisser/clay.git
-    commit: d6dfa00289f532850971b29abf6ee4c070045da2
+    commit: f87f86408c01dece3bc0c46057e574b6ee90f6b0
 
 ghc-options:
   "$everything": -O2
