@@ -1,7 +1,7 @@
 ---
 title: Miscellaneous
 description: Random links that I don't want at the top-level, but don't have an appropriate category yet.
-updated: 2023-03-13
+updated: 2023-10-16
 ---
 
 [KaTeX](https://katex.org/)
@@ -20,3 +20,6 @@ updated: 2023-03-13
 
 [The Great Courses](https://www.thegreatcourses.com/)
 :   In-depth lectures on various subjects for the interested layperson.
+
+[Bogleheads](https://www.bogleheads.org/)
+:   Investing advice inspied by John Bogle.  "Stay the course."
