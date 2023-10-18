@@ -23,3 +23,9 @@ updated: 2023-10-16
 
 [Bogleheads](https://www.bogleheads.org/)
 :   Investing advice inspied by John Bogle.  "Stay the course."
+
+[Little Orchestra Society](https://www.littleorchestra.org/)
+:   An orchestra for children in New York.
+
+[Crunchyroll](https://www.crunchyroll.com/)
+:   Watching anime outside Japan.
