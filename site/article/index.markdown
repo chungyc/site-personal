@@ -25,6 +25,8 @@ For a list of all articles, see the [archive of articles](/article/archive).
         *   Statistics
         
             *   [Distributions](/article/reference/math/statistics/distributions)
+            
+        *   [Complex analysis](/article/reference/math/analysis/complex)
 
     *   Physics
     
