@@ -3,10 +3,13 @@ title: Complex analysis
 description: Basic reference on complex analysis.
 published: 2023-10-20
 include-math: true
+include-bibliography-stylesheet: true
 toc: true
 ---
 
 Basic reference on complex analysis.
+
+Notes taken while taking a course [@coursera:complex-analysis].
 
 ## Basics {#basics}
 
@@ -49,3 +52,5 @@ If $a_0$, $\ldots$, $a_n$ are complex numbers with $a_n \neq 0$, then the polyno
 has $n$ complex roots $z_1$, $\ldots$, $z_n$, where
 
 \[ p(z) = a_n \prod_{k=1}^n (z - z_k) \]
+
+## References
