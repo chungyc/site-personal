@@ -22,7 +22,7 @@ For a list of all articles, see the [archive of articles](/article/archive).
 
         *   [Probability](/article/reference/math/probability)
 
-        *   Statistics
+        *   [Statistics](/article/reference/math/statistics/)
         
             *   [Distributions](/article/reference/math/statistics/distributions)
             
