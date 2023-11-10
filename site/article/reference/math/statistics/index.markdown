@@ -97,4 +97,8 @@ they are the same distribution.
 
 "Independent and identically distributed" random variables.
 
+## See also
+
+* [Common distributions](distributions)
+
 ## References

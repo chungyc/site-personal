@@ -106,3 +106,7 @@ For \( \alpha > 1 \),
 For integer \(n \geq 1\),
 
 \[ \Gamma(n) = (n-1)! \]
+
+## See also
+
+* [General properties in statistics](./)
