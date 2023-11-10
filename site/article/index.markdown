@@ -20,14 +20,14 @@ For a list of all articles, see the [archive of articles](/article/archive).
 
     *   Mathematics
 
+        *   [Complex analysis](/article/reference/math/analysis/complex)
+
         *   [Probability](/article/reference/math/probability)
 
         *   [Statistics](/article/reference/math/statistics/)
         
             *   [Distributions](/article/reference/math/statistics/distributions)
             
-        *   [Complex analysis](/article/reference/math/analysis/complex)
-
     *   Physics
     
         *   [Relativity](/article/reference/physics/relativity/)
