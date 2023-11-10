@@ -2,6 +2,7 @@
 title: Statistics
 description: Notes on general definitions and properties in statistics.
 published: 2023-11-07
+updated: 2023-11-09
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
@@ -80,5 +81,20 @@ if $\E{\hat{\theta}} = \theta$.
 \[ \E{\overline{X}} = \E{X} \]
 
 \[ \E{\Var{\overline{X}}} = \frac{\Var{X}}{n^2} \]
+
+## Moment generating functions
+
+\[ M_X(t) = \E{e^{tX}} = \int_{-\infty}^\infty e^{tx} f_X(x) \, dx \]
+
+For independent $X_1$, ..., $X_n$ and $Y = \sum_{k=1}^n X_k$,
+
+\[ M_Y(t) = \prod_{k=1}^n M_X(t) \]
+
+If two probability distributions have the same moment generating function,
+they are the same distribution.
+
+## i.i.d.
+
+"Independent and identically distributed" random variables.
 
 ## References
