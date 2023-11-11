@@ -2,7 +2,7 @@
 title: Statistics
 description: Notes on general definitions and properties in statistics.
 published: 2023-11-07
-updated: 2023-11-09
+updated: 2023-11-10
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
@@ -81,6 +81,44 @@ if $\E{\hat{\theta}} = \theta$.
 \[ \E{\overline{X}} = \E{X} \]
 
 \[ \E{\Var{\overline{X}}} = \frac{\Var{X}}{n^2} \]
+
+The _bias_ of $\hat{\theta}$ is
+
+\[ \mathrm{B}(\hat{\theta}) = \E{\hat{\theta}} - \theta \]
+
+The _mean squared error_ is
+
+\[ \mathrm{MSE}(\hat{\theta}) = \E{(\hat{\theta} - \theta)^2} =
+   \Var{\hat{\theta}} + \mathrm{B}(\hat{\theta})^2 \]
+
+For two unbiased estimators $\hat{\theta}_1$ and $\hat{\theta}_2$,
+$\hat{\theta}_1$ is more _efficient_ than $\hat{\theta}_2$ if
+
+\[ \Var{\hat{\theta}_1} < \Var{\hat{\theta}_2} \]
+
+### Method of moments estimation
+
+Assuming a particular distribution with unknown parameters,
+pretend the sample moments, i.e., $\E{\overline{X}}, \E{\overline{X}^2}, \ldots$
+are equal to the true moments, and solve for the distribution parameters.
+
+### Maximum likelihood estimation
+
+Assuming a particular distribution with unknown parameters,
+the _maximum likelihood estimator_ is the set of parameters which result
+in the highest probability for the observed samples.[^not-bayesian]
+
+[^not-bayesian]: Note that the maximum likelihood estimator may not
+  be the most _probable_ set of parameters.  A large set of statisticians
+  have an aversion to using Bayes' theorem.
+
+_Likelihood_ is proportional to the joint probability mass function or density function,
+assuming a particular distribution with unknown parameters.
+
+#### Invariance property
+
+If $\tau$ is an invertible function, the maximum likelihood estimator for $\tau(\theta)$
+is $\tau(\hat{\theta})$, where $\hat{\theta}$ is the maximum likelhood estimator for $\theta$.
 
 ## Moment generating functions
 
