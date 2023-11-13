@@ -131,9 +131,22 @@ For independent $X_1$, ..., $X_n$ and $Y = \sum_{k=1}^n X_k$,
 If two probability distributions have the same moment generating function,
 they are the same distribution.
 
-## i.i.d.
+## Cramér-Rao lower bound
 
-"Independent and identically distributed" random variables.
+\[ \Var{\tau(\theta)} \geq
+   \frac{(\tau'(\theta))^2}{\mathrm{E} \left [
+     \left( \frac{\partial}{\partial \theta} \ln f(\vec{x}; \theta) \right)^2
+   \right] }
+\]
+
+The lower bound holds if
+
+\[ \frac{\partial}{\partial \theta} \int f(\vec{x}; \theta) \, dx =
+   \int \frac{\partial}{\partial \theta} f(\vec{x}; \theta) \, dx \]
+
+\[ \frac{\partial}{\partial \theta} \ln f(\vec{x}; \theta) \quad \text{exists} \]
+
+\[ 0 < \mathrm{E} \left[ \left( \frac{\partial}{\partial \theta} \ln f(\vec{x}; \theta) \right)^2 \right] < \infty \]
 
 ## See also
 
