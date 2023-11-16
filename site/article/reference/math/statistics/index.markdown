@@ -2,7 +2,7 @@
 title: Statistics
 description: Notes on general definitions and properties in statistics.
 published: 2023-11-07
-updated: 2023-11-10
+updated: 2023-11-16
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
@@ -147,6 +147,20 @@ The lower bound holds if
 \[ \frac{\partial}{\partial \theta} \ln f(\vec{x}; \theta) \quad \text{exists} \]
 
 \[ 0 < \mathrm{E} \left[ \left( \frac{\partial}{\partial \theta} \ln f(\vec{x}; \theta) \right)^2 \right] < \infty \]
+
+### Fisher information properties
+
+\[ \mathrm{E}\left[ \frac{\partial}{\partial \theta} \ln f(\vec{x}; \theta) \right] = 0 \]
+
+\[ \mathrm{E}\left[ \left( \frac{\partial}{\partial\theta} \ln f(\vec{x};\theta) \right)^2 \right]
+ = -\mathrm{E}\left[ \frac{\partial^2}{\partial\theta^2} \ln f(\vec{x};\theta) \right]
+\]
+
+If $Y=(X_1, \ldots, X_n)$ is a tuple of independent and identically distributed random variables,
+
+\[ \mathrm{E}\left[ \left( \frac{\partial}{\partial\theta} \ln f_Y(\vec{y};\theta) \right)^2 \right]
+ = n \mathrm{E}\left[ \left( \frac{\partial}{\partial\theta} \ln f_X(\vec{x};\theta) \right)^2 \right]
+\]
 
 ## See also
 
