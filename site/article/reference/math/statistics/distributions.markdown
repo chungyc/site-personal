@@ -1,7 +1,7 @@
 ---
 title: Distributions in Statistics
 published: 2023-02-16
-updated: 2023-11-09
+updated: 2023-11-18
 description: Basic reference on distributions in statistics.
 toc: true
 include-math: true
@@ -12,9 +12,9 @@ include-math: true
 
 Basic reference on distributions used in statistics.
 
-## Discrete distributions
+## Discrete distributions {#discrete}
 
-### Bernoulli distribution
+### Bernoulli distribution {#bernoulli}
 
 Single trial whose outcome can be success or failure.
 
@@ -28,7 +28,7 @@ Single trial whose outcome can be success or failure.
 \[ \Var{X} = p(1-p) \]
 \[ M_X(t) = 1 - p + pe^t \]
 
-### Geometric distribution
+### Geometric distribution {#geometric}
 
 Number of trials until first success.
 
@@ -38,7 +38,7 @@ Number of trials until first success.
 \[ \Var{X} = \frac{1-p}{p^2} \]
 \[ M_X(t) = \frac{p}{1-(1-p)e^t} \quad \text{ for } t < -\ln(1-p) \]
 
-### Binomial distribution
+### Binomial distribution {#binomial}
 
 Number of successes in \(n\) trials.
 
@@ -48,7 +48,7 @@ Number of successes in \(n\) trials.
 \[ \Var{X} = np(1-p) \]
 \[ M_X(t) = (1 - p + p e^t)^n \]
 
-### Poisson distribution
+### Poisson distribution {#poisson}
 
 Distribution of rare events in a large population.
 
@@ -58,9 +58,9 @@ Distribution of rare events in a large population.
 \[ \Var{X} = \lambda \]
 \[ M_X(t) = e^{\lambda (e^t - 1)} \]
 
-## Continuous distributions
+## Continuous distributions {#continuous}
 
-### Uniform distribution
+### Uniform distribution {#uniform}
 
 \[ X \sim \mathrm{unif}(a,b) \]
 \[ f(x) = \frac{1}{b-a} \quad \text{ for } a \leq x \leq b \]
@@ -68,7 +68,7 @@ Distribution of rare events in a large population.
 \[ \Var{X} = \frac{(b-a)^2}{12} \]
 \[ M_X(t) = \frac{e^{bt} - e^{at}}{(b-a)t} \]
 
-### Exponential distribution
+### Exponential distribution {#exponential}
 
 \[ X \sim \mathrm{exp}(\lambda) \]
 \[ f(x) = \lambda e^{-\lambda x} \quad \text{ for } x \geq 0 \]
@@ -76,7 +76,7 @@ Distribution of rare events in a large population.
 \[ \Var{X} = \frac{1}{\lambda^2} \]
 \[ M_X(t) = \frac{\lambda}{\lambda - t} \quad \text{ for } t < \lambda \]
 
-### Normal distribution
+### Normal distribution {#normal}
 
 \[ X \sim N(\mu, \sigma^2) \]
 \[ f(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{1}{2 \sigma^2} (x - \mu)^2} \]
@@ -84,7 +84,7 @@ Distribution of rare events in a large population.
 \[ \Var{X} = \sigma^2 \]
 \[ M_X(t) = e^{\mu t + \frac{1}{2} \sigma^2 t^2} \]
 
-### Gamma distribution
+### Gamma distribution {#gamma}
 
 \[ X \sim \Gamma(\alpha,\beta) \]
 \[ f(x) = \frac{1}{\Gamma(\alpha)} \beta^\alpha x^{\alpha-1} e^{-\beta x} \quad \text{ for } x \geq 0 \]
@@ -93,7 +93,7 @@ Distribution of rare events in a large population.
 \[ \Var{X} = \frac{\alpha}{\beta^2} \]
 \[ M_X(t) = \left( \frac{\beta}{\beta - t} \right)^\alpha \quad \text{ for } t < \beta \]
 
-#### Properties of the Gamma function
+#### Properties of the Gamma function {#gamma-properties}
 
 For \( \alpha = 1 \),
 
