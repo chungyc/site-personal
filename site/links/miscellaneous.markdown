@@ -1,7 +1,7 @@
 ---
 title: Miscellaneous
 description: Random links that I don't want at the top-level, but don't have an appropriate category yet.
-updated: 2023-10-18
+updated: 2023-11-20
 ---
 
 [KaTeX](https://katex.org/)
@@ -23,3 +23,6 @@ updated: 2023-10-18
 
 [Crunchyroll](https://www.crunchyroll.com/)
 :   Watching anime outside Japan.
+
+[Citation Style Language](https://citationstyles.org/)
+:   Specification of citation and bibliography styles for machines.
