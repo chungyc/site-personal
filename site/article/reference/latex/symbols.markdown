@@ -22,6 +22,7 @@ I often find myself looking these up.
   $\wedge$               `\wedge`
   $\neg$                 `\neg`
   $\equiv$               `\equiv`
+  $\sim$                 `\sim`
   $\approx$              `\approx`
   $\neq$                 `\neq`
   $\leq$                 `\leq`
