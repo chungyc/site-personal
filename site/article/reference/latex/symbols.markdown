@@ -1,6 +1,7 @@
 ---
 title: LaTeX symbols
 published: 2023-02-07
+updated: 2023-11-20
 description: Reference of LaTeX symbols useful to me.
 include-math: true
 ---
@@ -46,6 +47,7 @@ I often find myself looking these up.
   $\psi$                 `\psi`
   $\pi$                  `\pi`
   $\epsilon$             `\epsilon`
+  $\varepsilon$          `\varepsilon`
 --------------------   --------------------
 
 ## See also
