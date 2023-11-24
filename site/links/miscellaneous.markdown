@@ -1,7 +1,7 @@
 ---
 title: Miscellaneous
 description: Random links that I don't want at the top-level, but don't have an appropriate category yet.
-updated: 2023-11-20
+updated: 2023-11-24
 ---
 
 [Association for Computing Machinery](https://www.acm.org/)
