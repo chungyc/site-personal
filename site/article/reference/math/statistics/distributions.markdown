@@ -1,7 +1,7 @@
 ---
 title: Distributions in Statistics
 published: 2023-02-16
-updated: 2023-11-18
+updated: 2023-11-26
 description: Basic reference on distributions in statistics.
 toc: true
 include-math: true
@@ -93,7 +93,7 @@ Distribution of rare events in a large population.
 \[ \Var{X} = \frac{\alpha}{\beta^2} \]
 \[ M_X(t) = \left( \frac{\beta}{\beta - t} \right)^\alpha \quad \text{ for } t < \beta \]
 
-#### Properties of the Gamma function {#gamma-properties}
+#### Properties {#gamma-properties}
 
 For \( \alpha = 1 \),
 
@@ -106,6 +106,44 @@ For \( \alpha > 1 \),
 For integer \(n \geq 1\),
 
 \[ \Gamma(n) = (n-1)! \]
+
+### Chi-squared distribution {#chi-squared}
+
+A chi-squared distribution is defined in terms of a gamma distribution.
+If for random variable $X$, \( X \sim \Gamma(\frac{n}{2}, \frac{1}{2}) \),
+
+\[ X \sim \chi^2(n) \]
+
+#### Properties {#chi-squared-properties}
+
+For $X_i \sim \chi^2(n_i)$ and $Y=\sum_{i=1}^n X_i$,
+
+\[ Y \sim \chi^2 \left( \sum_{i=1}^n n_i \right) \]
+
+For $X \sim N(0,1)$ and $Y=X^2$,
+
+\[ Y \sim \chi^2(1) \]
+
+For sample variance $S$ of $n$ random samples from a normal distribution $N(\mu,\sigma^2)$,
+
+\[ \frac{(n-1) S^2}{\sigma^2} \sim \chi^2(n-1) \]
+
+### $t$-distribution {#t-dist}
+
+For $Z \sim N(0,1)$ and $W \sim \chi^2(n)$,
+the following random variable $T$ has the $t$-distribution.
+
+\[ T=\frac{Z}{\sqrt{\frac{W}{n}}} \]
+
+$T$ is said to have a $t$-distribution with $n$ degrees of freedom.
+
+\[ T \sim t(n) \]
+\[ f(t) = \frac{\Gamma\left(\frac{n+1}{2}\right)}{\Gamma\left(\frac{n}{2}\right)}
+          \frac{1}{\sqrt{n\pi}}
+          \left(1+\frac{t^2}{n}\right)^{-\frac{n+1}{2}}
+\]
+\[ \E{T} = 0 \]
+\[ \Var{T} = \frac{n}{n-2} \]
 
 ## See also
 
