@@ -87,4 +87,8 @@ has $n$ complex roots $z_1$, $\ldots$, $z_n$, where
 
 \[ p(z) = a_n \prod_{k=1}^n (z - z_k) \]
 
+## See also
+
+*   [Some complex functions](functions/)
+
 ## References
