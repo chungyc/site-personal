@@ -2,7 +2,7 @@
 title: Articles
 description: Index of articles written by Yoo Chung and posted on their personal web site.
 published: 2023-03-23
-updated: 2023-05-12
+updated: 2023-11-26
 rss-feed-link: /articles.xml
 ---
 
@@ -20,16 +20,16 @@ For a list of all articles, see the [archive of articles](/article/archive).
 
     *   Mathematics
 
-        *   [Complex analysis](/article/reference/math/analysis/complex)
+        *   [Complex analysis](/article/reference/math/analysis/complex/)
 
         *   [Probability](/article/reference/math/probability)
 
         *   [Statistics](/article/reference/math/statistics/)
-        
+
             *   [Distributions](/article/reference/math/statistics/distributions)
-            
+
     *   Physics
-    
+
         *   [Relativity](/article/reference/physics/relativity/)
 
 *   Physics
@@ -41,7 +41,7 @@ For a list of all articles, see the [archive of articles](/article/archive).
         *   [Proper time](/article/physics/relativity/proper-time/)
 
         *   [Twin paradox](/article/physics/relativity/paradox/twin/)
-        
+
         *   [Time travel](/article/physics/relativity/superluminal/)
 
 *   Technical
