@@ -2,6 +2,7 @@
 title: Complex analysis
 description: Basic reference on complex analysis.
 published: 2023-10-20
+updated: 2023-11-26
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
