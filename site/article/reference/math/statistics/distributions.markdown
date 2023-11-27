@@ -130,7 +130,7 @@ For sample variance $S^2$ of $n$ random samples from a normal distribution $N(\m
 
 The sample variance $S^2$ is defined by
 
-\[ S^2 = \frac{1}{n-1} \sum_{i=1}{n} X_i \]
+\[ S^2 = \frac{1}{n-1} \sum_{i=1}^{n} X_i \]
 
 ### $t$-distribution {#t-dist}
 
