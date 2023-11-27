@@ -124,9 +124,13 @@ For $X \sim N(0,1)$ and $Y=X^2$,
 
 \[ Y \sim \chi^2(1) \]
 
-For sample variance $S$ of $n$ random samples from a normal distribution $N(\mu,\sigma^2)$,
+For sample variance $S^2$ of $n$ random samples from a normal distribution $N(\mu,\sigma^2)$,
 
 \[ \frac{(n-1) S^2}{\sigma^2} \sim \chi^2(n-1) \]
+
+The sample variance $S^2$ is defined by
+
+\[ S^2 = \frac{1}{n-1} \sum_{i=1}{n} X_i \]
 
 ### $t$-distribution {#t-dist}
 
