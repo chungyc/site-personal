@@ -1,4 +1,5 @@
 {
+  "name": "Editor",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
@@ -37,7 +38,7 @@
     "pull": "git pull --all"
   },
   "hostRequirements": {
-    "memory": "8gb",
+    "memory": "16gb",
     "storage": "32gb"
   }
 }
