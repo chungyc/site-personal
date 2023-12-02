@@ -36,6 +36,6 @@
   },
   "hostRequirements": {
     "memory": "16gb",
-    "storage": "40gb"
+    "storage": "32gb"
   }
 }
