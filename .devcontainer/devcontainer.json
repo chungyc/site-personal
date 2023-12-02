@@ -1,4 +1,5 @@
 {
+  "name": "Editor",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
@@ -30,14 +31,11 @@
   "onCreateCommand": {
     "clean": "cp ~/.cabal/bin/* ~/.local/bin/ && rm -r ~/.cabal/"
   },
-  "updateContentCommand": {
-    "stack": "stack build --test --no-run-tests --haddock --no-haddock-deps --haddock-arguments=--no-warnings"
-  },
   "postStartCommand": {
     "pull": "git pull --all"
   },
   "hostRequirements": {
-    "memory": "8gb",
-    "storage": "32gb"
+    "memory": "16gb",
+    "storage": "40gb"
   }
 }
