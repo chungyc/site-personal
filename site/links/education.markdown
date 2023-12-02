@@ -1,6 +1,6 @@
 ---
 title: Education
-description: Links to resources for learning.
+description: Resources for learning.
 published: 2023-10-18
 updated: 2023-12-02
 ---
@@ -16,3 +16,9 @@ updated: 2023-12-02
 
 [American Museum of Natural History](https://www.amnh.org/)
 :   Museum of natural history in New York.
+
+[Bronx Zoo](https://bronxzoo.com/)
+:   The major zoo in the New York area.
+
+[Central Park Zoo](https://centralparkzoo.com/)
+:   Zoo in the center of Manhattan, New York.
