@@ -11,5 +11,8 @@ updated: 2023-12-02
 [The Great Courses](https://www.thegreatcourses.com/)
 :   In-depth lectures on various subjects for the interested layperson.
 
-[Stack Overflow](https://stackoverflow.com)
+[Stack Overflow](https://stackoverflow.com/)
 :   For asking and answering questions about coding.
+
+[American Museum of Natural History](https://www.amnh.org/)
+:   Museum of natural history in New York.
