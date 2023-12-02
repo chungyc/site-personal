@@ -31,9 +31,6 @@
   "onCreateCommand": {
     "clean": "cp ~/.cabal/bin/* ~/.local/bin/ && rm -r ~/.cabal/"
   },
-  "updateContentCommand": {
-    "stack": "stack build --test --no-run-tests --haddock --no-haddock-deps --haddock-arguments=--no-warnings"
-  },
   "postStartCommand": {
     "pull": "git pull --all"
   },
