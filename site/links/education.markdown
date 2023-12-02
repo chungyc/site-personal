@@ -22,3 +22,6 @@ updated: 2023-12-02
 
 [Central Park Zoo](https://centralparkzoo.com/)
 :   Zoo in the center of Manhattan, New York.
+
+[KiwiCo](https://www.kiwico.com/)
+:   Maker of hands-on projects for children (and some adults) for learning science and other topics.
