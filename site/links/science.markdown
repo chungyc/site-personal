@@ -2,6 +2,7 @@
 title: Science
 description: Science references I find useful or interesting.
 published: 2023-05-11
+updated: 2023-12-03
 ---
 
 [Quanta Magazine](https://www.quantamagazine.org/)
@@ -18,3 +19,6 @@ published: 2023-05-11
 [Zooniverse](https://www.zooniverse.org/)
 :   Platform for citizen science.
     Contribute to scientific research without having to get a PhD.
+
+[Cantor's Attic](https://neugierde.github.io/cantors-attic/)
+:   A resource for finding out about all sorts of mathematicaly infinity.
