@@ -2,7 +2,7 @@
 title: Articles
 description: Index of articles written by Yoo Chung and posted on their personal web site.
 published: 2023-03-23
-updated: 2023-11-26
+updated: 2023-12-05
 rss-feed-link: /articles.xml
 ---
 
@@ -21,6 +21,10 @@ For a list of all articles, see the [archive of articles](/article/archive).
     *   Mathematics
 
         *   [Complex analysis](/article/reference/math/analysis/complex/)
+
+            *   [Some complex functions](/article/reference/math/analysis/complex/functions/)
+
+            *   [Conformal mappings](/article/reference/math/analysis/complex/conformal-mappings/)
 
         *   [Probability](/article/reference/math/probability)
 
