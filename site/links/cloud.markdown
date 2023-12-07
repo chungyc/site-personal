@@ -1,6 +1,7 @@
 ---
 title: Cloud
 description: Cloud services I use or am interested in.
+updated: 2023-12-06
 ---
 
 [Google Cloud Platform](https://cloud.google.com/)
@@ -11,6 +12,9 @@ description: Cloud services I use or am interested in.
 
 [DreamHost](https://dreamhost.com/)
 :   A hosting and compute service provider.
+
+[mybinder.org](https://mybinder.org/)
+:   A public service for interacting with [Jupyter notebooks](https://docs.jupyter.org/).
 
 ### Note
 
