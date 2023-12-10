@@ -1,7 +1,7 @@
 ---
 title: Haskell
 description: References related to the Haskell programming language.
-updated: 2023-04-29
+updated: 2023-12-09
 ---
 
 [haskell.org](https://haskell.org/)
@@ -21,3 +21,9 @@ updated: 2023-04-29
 
 [Stackage](https://www.stackage.org/)
 :   Provides a consistent set of Haskell packages that are known to build together.
+
+[99 Haskell Problems](https://ninetynine.haskell.chungyc.org/)
+:   Problems for learning and practicing Haskell programming.
+
+[Scan code with HLint](https://github.com/haskell-actions/hlint-scan)
+:   GitHub action for Haskell code scanning using HLint.
