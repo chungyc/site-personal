@@ -16,3 +16,6 @@ updated: 2023-11-24
 
 [Crunchyroll](https://www.crunchyroll.com/)
 :   Watching anime outside Japan.
+
+[New York Times](https://www.nytimes.com/)
+:   Daily newspaper based in New York.
