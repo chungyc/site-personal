@@ -1,4 +1,4 @@
-resolver: lts-21.21
+resolver: lts-21.24
 
 extra-deps:
 
