@@ -1,7 +1,7 @@
 ---
 title: Distributions in Statistics
 published: 2023-02-16
-updated: 2023-11-26
+updated: 2023-12-16
 description: Basic reference on distributions in statistics.
 toc: true
 include-math: true
@@ -84,6 +84,10 @@ Distribution of rare events in a large population.
 \[ \Var{X} = \sigma^2 \]
 \[ M_X(t) = e^{\mu t + \frac{1}{2} \sigma^2 t^2} \]
 
+#### Properties {#normal-properties}
+
+Any linear combination of normal distributions will also be a normal distribution.
+
 ### Gamma distribution {#gamma}
 
 \[ X \sim \Gamma(\alpha,\beta) \]
@@ -110,7 +114,7 @@ For integer \(n \geq 1\),
 ### Chi-squared distribution {#chi-squared}
 
 A chi-squared distribution is defined in terms of a gamma distribution.
-If for random variable $X$, \( X \sim \Gamma(\frac{n}{2}, \frac{1}{2}) \),
+If for random variable $X$, \( X \sim \Gamma(\frac{n}{2}, \frac{1}{2}) \), then
 
 \[ X \sim \chi^2(n) \]
 

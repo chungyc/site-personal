@@ -2,7 +2,7 @@
 title: Statistics
 description: Notes on general definitions and properties in statistics.
 published: 2023-11-07
-updated: 2023-11-20
+updated: 2023-12-16
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
@@ -193,7 +193,8 @@ If $Y=(X_1, \ldots, X_n)$ is a tuple of independent and identically distributed 
 
 ## See also
 
-* [Probability](../probability)
-* [Common distributions](distributions)
+*   [Probability](../probability)
+*   [Common distributions](distributions)
+*   [Confidence intervals](confidence-intervals/)
 
 ## References

@@ -2,7 +2,7 @@
 title: Articles
 description: Index of articles written by Yoo Chung and posted on their personal web site.
 published: 2023-03-23
-updated: 2023-12-05
+updated: 2023-12-16
 rss-feed-link: /articles.xml
 ---
 
@@ -31,6 +31,8 @@ For a list of all articles, see the [archive of articles](/article/archive).
         *   [Statistics](/article/reference/math/statistics/)
 
             *   [Distributions](/article/reference/math/statistics/distributions)
+
+            *   [Confidence intervals](/article/reference/math/statistics/confidence-intervals/)
 
     *   Physics
 
