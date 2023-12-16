@@ -2,7 +2,7 @@
 title: Guide to writing for this web site
 description: Various knobs that are useful to writing pages for this web site.
 published: 2023-03-18
-updated: 2023-05-21
+updated: 2023-12-16
 toc: true
 include-syntax-stylesheet: true
 ---
@@ -57,14 +57,18 @@ Custom metadata fields which can be defined for any page.
 `rss-feed-link`
 :   A URL for an [RSS feed].
 
-`standalone-title`
-:   If defined, the value for the `title` metadata field will be
-    the entirety of the title for the page.  This is intended for the front page.
-    Other pages are expected to have the site title included in the page title.
+`front`
+:   Defined only on the front page.  If defined:
 
-    Note that this only applies to the text that goes inside the `title` HTML element.
-    The top-level heading will only include the value for the `title` metadata field
-    regardless of whether this is defined or not.
+    *   The value for the `title` metadata field will be the entirety of the title for the page.
+        Other pages are expected to have the site title included in the page title.
+
+        Note that this only applies to the text that goes inside the `title` HTML element.
+        The top-level heading will only include the value for the `title` metadata field
+        regardless of whether this is defined or not.
+
+    *   Includes links to content I own on other sites as `link` elements in `head`
+        with the `rel` attribute set to `"me"`.
 
 [KaTeX]: https://katex.org/
 [robots `meta` tag]: https://www.robotstxt.org/meta.html

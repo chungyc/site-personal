@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-    $-if(standalone-title)$
+    $-if(front)$
     <title>$title$</title>
     $-else$
     <title>$title$ - Yoo Chung</title>
@@ -34,7 +34,9 @@
     <link rel="alternate" type="application/rss+xml" href="$rss-feed-link$" />
     $-endif$
 
+    $-if(front)$
     <link rel="me" href="https://mathstodon.xyz/@chungyc" />
+    $-endif$
 
     $-if(include-math)$
     <!-- Use KaTeX to render math. -->
