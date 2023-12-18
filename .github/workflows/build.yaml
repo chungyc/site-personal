@@ -52,19 +52,19 @@ jobs:
           echo "docs=$(stack path --local-doc-root --no-haddock-deps)/personal-$(stack query locals personal version)" >> $GITHUB_OUTPUT
 
       - name: Upload executable
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: executable
           path: ${{ steps.paths.outputs.executable }}
 
       - name: Upload documentation
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: docs
           path: ${{ steps.paths.outputs.docs }}
 
       - name: Upload site
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site
           path: _site
