@@ -34,15 +34,8 @@
     $-if(rss-feed-link)$
     <link rel="alternate" type="application/rss+xml" href="$rss-feed-link$" />
     $-endif$
-
-    $-if(front)$
-    <link rel="me" href="https://blog.chungyc.org/" />
-    <link rel="me" href="https://github.com/chungyc" />
-    <link rel="me" href="https://mathstodon.xyz/@chungyc" />
-    <link rel="me" href="https://chungyc.medium.com/" />
-    <link rel="me" href="https://linkedin.com/in/chungyc" />
-    <link rel="me" href="https://www.goodreads.com/chungyc" />
-    <link rel="me" href="https://commons.wikimedia.org/wiki/User:YooChung" />
+    $-if(me-links)$
+    $me-links$
     $-endif$
 
     $-if(include-math)$
