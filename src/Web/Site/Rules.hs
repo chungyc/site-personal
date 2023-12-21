@@ -45,16 +45,10 @@ rules = do
 
   match "index.html" $ do
     route idRoute
-    compile $ do
-      meLinks <- loadBody "me-links.html"
-      Update.withLatest $ \indexContext -> do
-        let context = constField "me-links" meLinks <> indexContext
-        getResourceBody
-          >>= applyAsTemplate context
-          >>= loadAndApplyTemplate "templates/default.html" context
-
-  -- Load "rel=me" links to be included in "index.html".
-  match "me-links.html" $ compile getResourceBody
+    compile $ Update.withLatest $ \indexContext ->
+      getResourceBody
+        >>= applyAsTemplate indexContext
+        >>= loadAndApplyTemplate "templates/default.html" indexContext
 
   Sitemap.rules $
     "about.html"

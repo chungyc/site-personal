@@ -34,8 +34,9 @@
     $-if(rss-feed-link)$
     <link rel="alternate" type="application/rss+xml" href="$rss-feed-link$" />
     $-endif$
-    $-if(me-links)$
-    $me-links$
+
+    $-if(head-extra)$
+    $head-extra$
     $-endif$
 
     $-if(include-math)$

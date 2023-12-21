@@ -2,7 +2,7 @@
 title: Guide to writing for this web site
 description: Various knobs that are useful to writing pages for this web site.
 published: 2023-03-18
-updated: 2023-12-16
+updated: 2023-12-21
 toc: true
 include-syntax-stylesheet: true
 ---
@@ -42,6 +42,9 @@ Custom metadata fields which can be defined for any page.
     For loading stylesheets only loaded by a few pages;
     other stylesheets will usually have dedicated metadata fields.
 
+`head-extra`
+:   Extra content to include in the [`head`] HTML element.
+
 `include-math`
 :   If defined, load [KaTeX] resources necessary for rendering math.
 
@@ -57,26 +60,16 @@ Custom metadata fields which can be defined for any page.
 `rss-feed-link`
 :   A URL for an [RSS feed].
 
-`front`
-:   Defined only on the front page.  If defined:
-
-    *   The value for the `title` metadata field will be the entirety of the title for the page.
-        Other pages are expected to have the site title included in the page title.
-
-        Note that this only applies to the text that goes inside the `title` HTML element.
-        The top-level heading will only include the value for the `title` metadata field
-        regardless of whether this is defined or not.
-
-    *   Includes links to content I own on other sites as `link` elements in `head`
-        with the `rel` attribute set to `"me"`.
-
+[`head`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head
 [KaTeX]: https://katex.org/
 [robots `meta` tag]: https://www.robotstxt.org/meta.html
 [RSS feed]: https://validator.w3.org/feed/docs/rss2.html
 
 ### Front page
 
-The front page can define a `include-latest-update` metadata field.
+The front page will define the `front` metadata field.
+
+The front page can also define a `include-latest-update` metadata field.
 If defined, it will include the latest [update] on the front page.
 
 [update]:  /updates
