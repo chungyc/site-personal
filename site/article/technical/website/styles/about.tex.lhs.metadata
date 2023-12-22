@@ -1,0 +1,4 @@
+title: Extra stylesheet for about page
+description: Setting up extra styles for the about page on this site.
+published: 2023-12-21
+include-syntax-stylesheet: true
