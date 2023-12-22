@@ -63,7 +63,7 @@ items = "update/**" .||. "updates.xml"
 -- Apply a context with the latest update in the list field @latest-update@ to the given rule.
 --
 -- In particular, this is used by the front page to include the latest update.
--- The latest update with have a @latest-update@ metadata field with a true value
+-- The latest update will have a @latest-update@ metadata field with a true value
 -- and a @teaser@ metadata field with the teaser if it exists.
 withLatest :: (Context String -> Compiler (Item String)) -> Compiler (Item String)
 withLatest f = do
