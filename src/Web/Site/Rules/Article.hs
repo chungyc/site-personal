@@ -88,7 +88,11 @@ articlePattern =
 --
 -- These will be used to generate the sitemap.
 items :: Pattern
-items = articlePattern .||. "article/index.markdown" .||. "article/archive.html"
+items =
+  articlePattern
+    .||. "article/index.markdown"
+    .||. "article/archive.html"
+    .||. "articles.xml"
 
 -- |
 -- The Pandoc compiler, but with support for:
