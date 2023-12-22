@@ -1,4 +1,5 @@
 title: Extra stylesheet for error pages
 description: Setting up extra styles for error pages on this site.
 published: 2023-04-01
+updated: 2023-12-21
 include-syntax-stylesheet: true

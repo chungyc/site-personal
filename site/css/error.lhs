@@ -26,7 +26,10 @@ than just having a single sentence explaining the error.
 \begin{code}
 errorStyle :: Css
 errorStyle = do
-  div # ".letter-image" ? fontSize (em 20)
+  div # ".letter-image" ? do
+    fontSize (em 20)
+    maxWidth $ pct 90
+    maxHeight $ vh 70
 \end{code}
 
 \subsection{See also}
