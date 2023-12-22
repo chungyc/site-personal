@@ -22,7 +22,7 @@ main = putCss $ do
 
 This styles the profile photograph on the about page.
 
-First, we define which HTM element corresponds to the profile photograph.
+First, we define which HTML element corresponds to the profile photograph.
 The theshold for which the width is considered narrow or wide is also defined.
 
 \begin{code}
