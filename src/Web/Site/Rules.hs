@@ -45,10 +45,11 @@ rules = do
 
   match "index.html" $ do
     route idRoute
-    compile $ Update.withLatest $ \indexContext ->
+    compile $ Update.withLatest $ \indexContext -> do
+      let context = boolField "front" (const True) <> indexContext
       getResourceBody
-        >>= applyAsTemplate indexContext
-        >>= loadAndApplyTemplate "templates/default.html" indexContext
+        >>= applyAsTemplate context
+        >>= loadAndApplyTemplate "templates/default.html" context
 
   Sitemap.rules $
     "about.html"

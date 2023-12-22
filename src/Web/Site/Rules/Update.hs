@@ -63,14 +63,22 @@ items = "update/**" .||. "updates.xml"
 -- Apply a context with the latest update in the list field @latest-update@ to the given rule.
 --
 -- In particular, this is used by the front page to include the latest update.
+-- The latest update with have a @latest-update@ metadata field with a true value
+-- and a @teaser@ metadata field with the teaser if it exists.
 withLatest :: (Context String -> Compiler (Item String)) -> Compiler (Item String)
 withLatest f = do
   updates <- fmap (take 1) . recentFirst =<< loadAllSnapshots updatePattern "updates"
-  let indexContext =
-        if null updates
-          then siteContext
-          else listField "latest-update" siteContext (return updates) <> siteContext
+  let indexContext
+        | [] <- updates = siteContext
+        | otherwise = listField "latest-update" updateContext (pure updates) <> siteContext
   f indexContext
+  where
+    updateContext =
+      mconcat
+        [ boolField "latest-update" (const True),
+          teaserField "teaser" "updates",
+          siteContext
+        ]
 
 -- | Feed configuration for updates.
 updateFeedConfiguration :: FeedConfiguration

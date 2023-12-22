@@ -3,6 +3,15 @@
         Posted on $published$
     </section>
     <section>
+        $-if(latest-update)$
+        $-if(teaser)$
+        $teaser$
+        <p><a href="$url$">... more ..</a></p>
+        $-else$
         $body$
+        $-endif$
+        $-else$
+        $body$
+        $-endif$
     </section>
 </article>
