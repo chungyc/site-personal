@@ -71,6 +71,7 @@ narrowProfilePhotoStyle = do
       marginLeft auto
       marginRight auto
       maxWidth $ pct 50
+      width $ em 8
       height auto
       "aspect-ratio" -: "auto"
 \end{code}
