@@ -10,6 +10,7 @@ module Main (main) where
 
 import Clay
 import Clay.Media qualified as Media
+import Web.Site.Styles (narrowWidth)
 
 main :: IO ()
 main = putCss frontStyle
@@ -28,7 +29,7 @@ frontStyle = do
   ".latest-update" ? do
     sym padding $ em 1
 
-  query Media.all [Media.minWidth $ cm 10] $ do
+  query Media.all [Media.minWidth narrowWidth] $ do
     ".latest-update" ? do
       sym margin $ em 2
       sym padding $ em 2

@@ -11,6 +11,7 @@ module Main (main) where
 
 import Clay
 import Clay.Media qualified as Media
+import Web.Site.Styles (narrowWidth, wideWidth)
 \end{code}
 
 A few function names from the Prelude module conflict with HTML element names or CSS keywords.
@@ -284,16 +285,16 @@ is light mode or dark mode.
 \begin{code}
 mediaStyles :: Css
 mediaStyles = do
-  query Media.all [Media.maxWidth $ em 30] $ do
+  query Media.all [Media.maxWidth narrowWidth] $ do
     body ? sym margin (em 1)
 
     ul <> ol ? do
       marginLeft $ em 0.5
       paddingLeft $ em 0.5
 
-  query Media.all [Media.minWidth $ em 60] $ do
+  query Media.all [Media.minWidth wideWidth] $ do
     body ? do
-      width $ em 60
+      width wideWidth
       marginRight auto
       marginLeft auto
 

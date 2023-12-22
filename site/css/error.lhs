@@ -27,7 +27,7 @@ than just having a single sentence explaining the error.
 errorStyle :: Css
 errorStyle = do
   div # ".letter-image" ? do
-    fontSize (em 20)
+    fontSize $ em 20
     maxWidth $ pct 90
     maxHeight $ vh 70
 \end{code}

@@ -37,6 +37,7 @@ library:
   dependencies:
   - hakyll
   - bytestring
+  - clay
   - diagrams-lib
   - diagrams-svg
   - filepath
