@@ -1,7 +1,7 @@
 ---
 title: Miscellaneous
 description: Random links that I don't want at the top-level, but don't have an appropriate category yet.
-updated: 2023-12-21
+updated: 2023-12-22
 ---
 
 [Association for Computing Machinery](https://www.acm.org/)
@@ -9,7 +9,7 @@ updated: 2023-12-21
     I am a professional member.
 
 [Bogleheads](https://www.bogleheads.org/)
-:   Investing advice inspied by John Bogle.  "Stay the course."
+:   Investing advice inspired by John Bogle.  "Stay the course."
 
 [Little Orchestra Society](https://www.littleorchestra.org/)
 :   An orchestra for children in New York.
@@ -19,6 +19,9 @@ updated: 2023-12-21
 
 [New York Times](https://www.nytimes.com/)
 :   Daily newspaper based in New York.
+
+[Creative Commons](https://creativecommons.org/)
+:   Licensing for sharing creative work.
 
 [Medium](https://medium.com/)
 :   A place for thoughtful and distraction-free reading and writing.
