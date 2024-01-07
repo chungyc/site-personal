@@ -2,47 +2,16 @@
 title: Complex analysis
 description: Basic reference on complex analysis.
 published: 2023-10-20
-updated: 2023-11-26
+updated: 2024-01-07
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
 ---
 
 Basic reference on complex analysis.
+See [background definitions](background) for prerequisites.
 
 Notes taken while taking a course [@coursera:complex-analysis].
-
-## Basics {#basics}
-
-Disk
-:   \( B_r(z_0) = \{ z \in \Complex \mid |z-z_0| < r \} \)
-
-Circle
-:   \( K_r(z_0) = \{ z \in \Complex \mid |z-z_0| = r \} \)
-
-Interior point
-:   For \( E \subset \Complex \), $z_0$ is an _interior point_ of $E$
-    if there is \( r > 0 \) such that \( B_r(z_0) \subset E \).
-
-Boundary point
-:   For \( E \subset \Complex \), $b$ is a _boundary point_ of $E$
-    if for all $r>0$, $E \cap B_r(b) \neq \emptyset$
-    and $E^\complement \cap B_r(b) \neq \emptyset$.
-
-    The set of all boundary points of $E$ is the _boundary set_ of $E$,
-    denoted $\partial E$.
-
-Open set
-:   A set in $\Complex$ is _open_ if all of its points are interior points.
-
-Closed set
-:   A set $E$ in $\Complex$ is _closed_ if $\partial E \subset E$.
-
-Closure
-:   The _closure_ of $E$ is $\overline{E} = E \cup \partial E$.
-
-Interior
-:   The _interior_ of $E$ is the set $\overset{\circ}{E}$ of all interior points.
 
 ## Limit {#limit}
 
@@ -57,7 +26,7 @@ $f$ is _continuous_ at $z_0$ if
 
 ## Derivative {#derivative}
 
-\[ \frac{d}{dz} f(z_0) = \lim_{z \rightarrow z_0} f(z) \]
+\[ \frac{d}{dz} f(z_0) = \lim_{z \rightarrow z_0} \frac{f(z) - f(z_0)}{z-z_0} \]
 
 $f$ is _analytic_ in an open set $U \subset \Complex$ if $f$ is differentiable for every $z \in U$.
 A function which is analytic in $\Complex$ is an _entire_ function.
@@ -76,6 +45,18 @@ Also,
 $f=u+iv$ is analytic in $D$ if and only if for any $z \in D$,
 $\frac{\partial u}{\partial x}$ and $\frac{\partial v}{\partial y}$ exist,
 are continuous, and satisfy the Cauchy-Riemann equations.
+
+## Integral
+
+The path integral over a path $\gamma: [a,b] \rightarrow \Complex$ is
+
+\[ \int_\gamma f(z) \, dz = \lim_{n \rightarrow \infty} \sum_{k=0}^{n-1} f(z_k) (z_{k+1} - z_k) \]
+
+where \(z_k = \gamma(t_k)\) and \(a = t_0 < t_1 < \ldots < t_n = b\) for any \(n>0\).
+
+If $\gamma$ is a smooth curve and $f$ is continuous,
+
+\[ \int_\gamma f(z) \, dz = \int_a^b f(\gamma(t)) \gamma'(t) \, dt \]
 
 ## Fundamental theorem of algebra {#algebra-theorem}
 

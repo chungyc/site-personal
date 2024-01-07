@@ -2,12 +2,13 @@
 title: Conformal mappings
 description: Personal notes on conformal mappings in complex analysis.
 published: 2023-12-05
+updated: 2024-01-07
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
 ---
 
-Personal notes on conformal mappings in complex analysis.
+Personal notes on conformal mappings in [complex analysis](../).
 
 Notes taken while taking a course [@coursera:complex-analysis].
 
@@ -21,23 +22,6 @@ A _conformal mapping_ from $D$ to $V$ is a bijection which is conformal on all p
 
 If \( f : D \rightarrow \Complex \) is analytic and \( f'(z_0) \neq 0 \) for \( z_0 \in D \),
 then $f$ is conformal at $z_0$.
-
-### Path {#path}
-
-A _path_ in the complex plane is a continuous function
-from a real number interval $[a,b]$ to complex numbers.
-
-### Curves {#curve}
-
-A _curve_ is a smooth path or a piecewise smooth path.
-
-#### Smooth path {#smooth}
-
-A path is _smooth_ if the function can be differentiated an arbitrary number of times.
-
-#### Piecewise smooth path {#piecewise-smooth}
-
-A path is _piecewise smooth_ if it is the concatenation of a finite number of smooth paths.
 
 ## Möbius transformations {#mobius}
 
@@ -101,9 +85,5 @@ Möbius transformations map circles and lines to circles and lines.
 If $D$ is a simply connected domain in the complex plane, i.e., open, connected, and has no holes,
 and $D$ is a strict subset of $\Complex$, then there is a conformal mapping from $D$
 onto the unit disk $\mathbb{D}=B_1(0)$.
-
-## See also
-
-*   [Complex analysis](./)
 
 ## References
