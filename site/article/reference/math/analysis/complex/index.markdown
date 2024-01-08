@@ -31,7 +31,7 @@ $f$ is _continuous_ at $z_0$ if
 $f$ is _analytic_ in an open set $U \subset \Complex$ if $f$ is differentiable for every $z \in U$.
 A function which is analytic in $\Complex$ is an _entire_ function.
 
-## Cauchy-Riemann equations {#cauchy-riemann}
+### Cauchy-Riemann equations {#cauchy-riemann}
 
 If $f(z) = u(x,y) + i v(x,y)$ for $z = x+iy$ and real functions $u$ and $v$,
 
@@ -56,7 +56,23 @@ where \(z_k = \gamma(t_k)\) and \(a = t_0 < t_1 < \ldots < t_n = b\) for any \(n
 
 If $\gamma$ is a smooth curve and $f$ is continuous,
 
-\[ \int_\gamma f(z) \, dz = \int_a^b f(\gamma(t)) \gamma'(t) \, dt \]
+\[ \int_\gamma f(z) \, dz = \int_a^b f(\gamma(t)) \, \gamma'(t) \, dt \]
+
+### By arc length {#integral-arc-length}
+
+Integration with respect to arc length is defined as
+
+\[ \int_\gamma f(z) \, |dz| = \int_a^b f(\gamma(t)) \, |\gamma'(t)| \, dt \]
+
+#### ML Estimate {#ml-estimate}
+
+If $\gamma$ is a curve and $f$ is continuous on $\gamma$,
+
+\[ \left| \int_\gamma f(z) \, dz \right| \leq \int_\gamma |f(z)| \, |dz| \]
+
+In particular, if $|f(z)| \leq M$ on $\gamma$,
+
+\[ \left| \int_\gamma f(z) \, dz \right| \leq M \cdot \mathrm{length}(\gamma) \]
 
 ## Fundamental theorem of algebra {#algebra-theorem}
 
