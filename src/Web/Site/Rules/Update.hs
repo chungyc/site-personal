@@ -1,6 +1,6 @@
 -- |
 -- Description: Rules for generating pages with recent updates.
--- Copyright: Copyright (C) 2023 Yoo Chung
+-- Copyright: Copyright (C) 2024 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
 --
