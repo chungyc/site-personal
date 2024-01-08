@@ -57,7 +57,7 @@ updatePattern = "update/**" .&&. complement "update/index.html"
 --
 -- These will be used to generate the sitemap.
 items :: Pattern
-items = "update/**" .||. "updates.xml"
+items = "update/**"
 
 -- |
 -- Apply a context with the latest update in the list field @latest-update@ to the given rule.

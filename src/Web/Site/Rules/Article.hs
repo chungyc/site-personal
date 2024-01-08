@@ -92,7 +92,6 @@ items =
   articlePattern
     .||. "article/index.markdown"
     .||. "article/archive.html"
-    .||. "articles.xml"
 
 -- |
 -- The Pandoc compiler, but with support for:
