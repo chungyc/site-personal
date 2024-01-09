@@ -1,7 +1,7 @@
 ---
 title: Distributions in Statistics
 published: 2023-02-16
-updated: 2023-12-16
+updated: 2024-01-09
 description: Basic reference on distributions in statistics.
 toc: true
 include-math: true
@@ -152,6 +152,17 @@ $T$ is said to have a $t$-distribution with $n$ degrees of freedom.
 \]
 \[ \E{T} = 0 \]
 \[ \Var{T} = \frac{n}{n-2} \]
+
+### $F$-distribution {#f-dist}
+
+For $X_1 \sim \chi^2(n_1)$ and $X_2 \sim \chi^2(n_2)$,
+the following random variable $F$ has the $F$-distribution.
+
+\[ F = \frac{X_1 / n_1}{X_2 / n_2} \]
+
+\[ F \sim F(n_1-1,n_2-1) \]
+\[ \E{F} = \frac{n_2}{n_2-2} \quad \text{ for } n_2 > 2 \]
+\[ \Var{F} = \frac{2n_2^2(n_1+n_2-2)}{n_1(n_2-2)^2(n_2-4)} \quad \text{ for } n_2 > 2 \]
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: Confidence intervals
 description: Personal notes on confidence intervals in statistics.
 published: 2023-12-16
+updated: 2024-01-09
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
@@ -83,6 +84,16 @@ It can be approximated with Welch's approximation:
 \[ \nu = \frac{\left( \frac{S_1^2}{n_1} + \frac{S_2^2}{n_2} \right)^2}
               {\frac{\left( \frac{S_1^2}{n_1} \right)^2}{n_1 - 1} +
                \frac{\left( \frac{S_2^2}{n_2} \right)^2}{n_2 - 1} } \]
+
+## Proportion of variances {#variance-proportion}
+
+If $X_1 \sim N(\mu_1,\sigma_1^2)$ and $X_2 \sim N(\mu_2,\sigma_2^2)$,
+then the following has the [$F$-distribution](../distributions#f-dist).
+
+\[ \frac{\sigma_2^2}{\sigma_1^2} \cdot \frac{S_1^2}{S_2^2} \sim F(n_1-1, n_2-1) \]
+
+$\sigma_1$ and $\sigma_2$ are the true variances,
+while $S_1$ and $S_2$ are the sample variances.
 
 ## See also
 
