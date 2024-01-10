@@ -2,7 +2,7 @@
 title: Complex analysis
 description: Basic reference on complex analysis.
 published: 2023-10-20
-updated: 2024-01-07
+updated: 2024-01-10
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
@@ -73,6 +73,18 @@ If $\gamma$ is a curve and $f$ is continuous on $\gamma$,
 In particular, if $|f(z)| \leq M$ on $\gamma$,
 
 \[ \left| \int_\gamma f(z) \, dz \right| \leq M \cdot \mathrm{length}(\gamma) \]
+
+### Primitives {#primitive}
+
+If $D \subset \Complex$ and $f : D \rightarrow \Complex$ is continuous,
+a _primitive_ of $f$ is an analytic function $F : D \rightarrow \Complex$
+such that \(\frac{dF}{dz} = f\) on $D$.
+For any curve $\gamma : [a,b] \rightarrow D$,
+
+\[ \int_\gamma f(z) \, dz = F(\gamma(b)) - F(\gamma(a)) \]
+
+If $D$ is a **simply** connected domain in $\Complex$ and $f$ is analytic in $D$,
+then $f$ has a primitive in $D$.
 
 ## Fundamental theorem of algebra {#algebra-theorem}
 
