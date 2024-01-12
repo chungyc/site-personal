@@ -43,6 +43,7 @@ library:
   - filepath
   - http-types
   - pandoc
+  - pandoc-types
   - svg-builder
   - text
   - wai

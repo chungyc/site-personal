@@ -7,7 +7,9 @@
 -- Exports the rules for generic articles on the site.
 module Web.Site.Rules.Article (rules, items) where
 
+import Data.Functor ((<&>))
 import Hakyll
+import Text.Pandoc.Builder (setMeta)
 import Web.Site.Compilers
 import Web.Site.Routes
 
@@ -102,12 +104,13 @@ items =
 articleCompiler :: Compiler (Item String)
 articleCompiler = do
   writerOptions <- getTocOptionsWith mathWriterOptions
-  body <- getResourceBody
   bibFile <- load "article/bibliography/references.bib"
   cslFile <- load "article/bibliography/acm.csl"
-  pandoc <- readPandocWith mathReaderOptions body
-  pandoc' <- processPandocBiblio cslFile bibFile pandoc
-  return $ writePandocWith writerOptions pandoc'
+  getResourceBody
+    >>= readPandocWith mathReaderOptions
+    >>= processPandocBiblio cslFile bibFile
+      . fmap (setMeta "link-citations" True)
+    <&> writePandocWith writerOptions
 
 -- |
 -- Feed configuration for updates.
