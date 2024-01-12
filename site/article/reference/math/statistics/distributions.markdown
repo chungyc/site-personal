@@ -162,7 +162,7 @@ the following random variable $F$ has the $F$-distribution.
 
 \[ F \sim F(n_1-1,n_2-1) \]
 \[ \E{F} = \frac{n_2}{n_2-2} \quad \text{ for } n_2 > 2 \]
-\[ \Var{F} = \frac{2n_2^2(n_1+n_2-2)}{n_1(n_2-2)^2(n_2-4)} \quad \text{ for } n_2 > 2 \]
+\[ \Var{F} = \frac{2n_2^2(n_1+n_2-2)}{n_1(n_2-2)^2(n_2-4)} \quad \text{ for } n_2 > 4 \]
 
 ## See also
 
