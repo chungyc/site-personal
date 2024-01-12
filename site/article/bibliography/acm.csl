@@ -195,6 +195,12 @@
         </choose>
       </group>
       <text macro="access" prefix=" "/>
+      <!-- Include extra notes. (Yoo Chung <dev@chungyc.org>) -->
+      <choose>
+        <if variable="note">
+          <text variable="note" prefix=" " suffix=" "/>
+        </if>
+      </choose>
     </layout>
   </bibliography>
 </style>
