@@ -18,10 +18,11 @@ main = putCss biblioStyle
 
 \subsection{Bibliography}
 
-This site uses the
+This site uses a modified version of the
 \href{https://github.com/citation-style-language/styles/blob/master/association-for-computing-machinery.csl}{citation style}
-used by the
-\href{https://www.acm.org/}{Association for Computing Machinery}.
+for the \href{https://www.acm.org/}{Association for Computing Machinery}.
+It includes a few customizations for linking from titles and including notes.
+
 The stylesheet here is responsible for ensuring that the citation keys
 are lined up and that there is appropriate spacing between entries.
 
