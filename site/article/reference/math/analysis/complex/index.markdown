@@ -2,7 +2,7 @@
 title: Complex analysis
 description: Basic reference on complex analysis.
 published: 2023-10-20
-updated: 2024-01-10
+updated: 2024-01-11
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
@@ -85,6 +85,34 @@ For any curve $\gamma : [a,b] \rightarrow D$,
 
 If $D$ is a **simply** connected domain in $\Complex$ and $f$ is analytic in $D$,
 then $f$ has a primitive in $D$.
+
+### Cauchy's theorem {#cauchy-theorem}
+
+If $D$ is a simply connected domain in $\Complex$, $f$ is analytic in $D$,
+and $\gamma$ is a piecewise smooth and closed curve in $D$, then
+
+\[ \int_\gamma f(z) \, dz = 0 \]
+
+If $\gamma_1$ and $\gamma_2$ are simply closed curves with the same orientation,
+$\gamma_2$ is inside $\gamma_1$, and $f$ is analytic in a domain which contains both curves
+and the region between them, then
+
+\[ \int_{\gamma_1} f(z) \, dz = \int_{\gamma_2} f(z) \, dz \]
+
+### Cauchy integral formula {#cauchy-integral-formula}
+
+If $D$ is a simply connected domain bounded by a piecewise smooth curve $\gamma$,
+and $f$ is analytic in a superset of $\overline{D}$, then for all $w \in D$
+
+\[ f(w) = \frac{1}{2 \pi i} \int_\gamma \frac{f(z)}{z-w} \, dz \]
+
+If $f$ is analytic in an open set,
+then $\frac{df}{dz}$ is also analytic in the same open set.
+For all $w \in D$ and $k \geq 0$,
+
+\[ \frac{d^k f}{dz^k}(w)
+ = \frac{k!}{2 \pi i} \int_\gamma \frac{f(z)}{(z-w)^{k+1}} \, dz
+\]
 
 ## Fundamental theorem of algebra {#algebra-theorem}
 
