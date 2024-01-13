@@ -114,6 +114,13 @@ For all $w \in D$ and $k \geq 0$,
  = \frac{k!}{2 \pi i} \int_\gamma \frac{f(z)}{(z-w)^{k+1}} \, dz
 \]
 
+#### Cauchy's estimate {#cauchy-estimate}
+
+If $f$ is analytic in an open set which contains $\overline{B_r(z_0)}$
+and $|f(z)| \leq m$ holds on $\partial B_r(z_0)$, then for all $k \geq 0$,
+
+\[ \left| \frac{d^k f}{dz}(z_0) \right| \leq \frac{k! \, m}{r^k} \]
+
 ## Fundamental theorem of algebra {#algebra-theorem}
 
 If $a_0$, $\ldots$, $a_n$ are complex numbers with $a_n \neq 0$, then the polynomial
