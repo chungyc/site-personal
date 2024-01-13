@@ -2,7 +2,7 @@
 title: Complex analysis
 description: Basic reference on complex analysis.
 published: 2023-10-20
-updated: 2024-01-11
+updated: 2024-01-12
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
@@ -120,6 +120,18 @@ If $f$ is analytic in an open set which contains $\overline{B_r(z_0)}$
 and $|f(z)| \leq m$ holds on $\partial B_r(z_0)$, then for all $k \geq 0$,
 
 \[ \left| \frac{d^k f}{dz}(z_0) \right| \leq \frac{k! \, m}{r^k} \]
+
+### Liouville's theorem {#liouville-theorem}
+
+If $f$ is analytic in $\Complex$ and is bounded, then $f$ must be constant.
+
+### Maximum principle {#maximum-principle}
+
+If $f$ is analytic in an open set $D$ and there exists $z_0 \in D$
+such that $|f(z)| \leq |f(z_0)|$ for all $z \in D$, then $f$ is constant in $D$.
+
+If $D \subset \Complex$ is a bounded domain, $f$ is continuous in $\overline{D}$,
+and $f$ is analytic in $D$, then $|f|$ has its maximum on $\partial D$.
 
 ## Fundamental theorem of algebra {#algebra-theorem}
 
