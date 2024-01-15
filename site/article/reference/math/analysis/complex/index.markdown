@@ -2,7 +2,7 @@
 title: Complex analysis
 description: Basic reference on complex analysis.
 published: 2023-10-20
-updated: 2024-01-12
+updated: 2024-01-15
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
@@ -147,5 +147,6 @@ has $n$ complex roots $z_1$, $\ldots$, $z_n$, where
 
 *   [Some complex functions](functions/)
 *   [Conformal mappings](conformal-mappings/)
+*   [Power series](power-series/)
 
 ## References

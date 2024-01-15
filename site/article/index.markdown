@@ -28,6 +28,8 @@ For a list of all articles, see the [archive of articles](/article/archive).
 
             *   [Conformal mappings](/article/reference/math/analysis/complex/conformal-mappings/)
 
+            *   [Power series](/article/reference/math/analysis/complex/power-series/)
+
         *   [Probability](/article/reference/math/probability)
 
         *   [Statistics](/article/reference/math/statistics/)
