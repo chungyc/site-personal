@@ -37,6 +37,31 @@ the series converges absolutely in \(\{|z-z_0| < R\}\)
 and diverges in \(\{|z-z_0| > R\}\).
 The convergence is uniform in \(|z-z_0| \leq r\) for any \(0 \leq r < R\).
 
+#### Ratio test {#ratio-test}
+
+If \(\left\{\left|\frac{a_k}{a_{k+1}}\right|\right\}\) has a limit as \(k \rightarrow \infty\),
+then the radius of convergence $R$ for \(\sum_{k=0}^\infty a_k (z-z_0)^k\) is
+
+\[ R = \lim_{k \rightarrow \infty} \left|\frac{a_k}{a_{k+1}}\right| \]
+
+$\infty$ is considered a valid limit value in this context.
+
+#### Root test {#root-test}
+
+If \(\left\{\sqrt[k]{|a_k|}\right\}\) has a limit as \(k \rightarrow \infty\),
+then the radius of convergence $R$ for \(\sum_{k=0}^\infty a_k (z-z_0)^k\) is
+
+\[ R = \frac{1}{\lim_{k \rightarrow \infty} \sqrt[k]{|a_k|}} \]
+
+If \(\lim_{k \rightarrow \infty} \sqrt[k]{|a_k|} = 0\), then \(R=\infty\),
+and if \(\lim_{k \rightarrow \infty} \sqrt[k]{|a_k|} = \infty\), then \(R=0\).
+
+#### Cauchy-Hadamard criterion {#cauchy-hadamard}
+
+The radius of convergence $R$ for \(\sum_{k=0}^\infty a_k(z-z_0)^k\) is
+
+\[ R = \frac{1}{\limsup_{k \rightarrow \infty} \sqrt[k]{|a_k|}} \]
+
 ## Analyticity of power series {#analytic}
 
 If \(f(z)=\sum_{k=0}^\infty a_k(z-z_0)^k\) has radius of convergence \(R>0\),
@@ -53,6 +78,25 @@ The series can be differentiated term by term.
 The coefficient $a_k$ can be derived using the $k$-order derivative.
 
 \[ a_k = \frac{1}{k!} \frac{d^k f}{dz^k}(z_0) \]
+
+### Power series representation {#power-series-for-analytic-function}
+
+If \(f : U \rightarrow \Complex\) is analytic and $r$ is such that \(\{|z-z_0| < r\} \subset U\),
+then $f$ as a power series representation in this disk.
+
+\[ f(z) = \sum_{k=0}^\infty a_k (z-z_0)^k \]
+
+for \(|z-z_0|<r\) and where
+
+\[ a_k = \frac{1}{k!} \frac{d^k f}{dz^k}(z_0) \]
+
+The radius of convergence is at least $r$.
+
+### Determination by derivatives {#derivatives-equality}
+
+If $f$ and $g$ are analytic in \(D=\{|z-z_0|<r\}\)
+and \(\frac{d^k f}{dz^k}(z_0) = \frac{d^k g}{dz^k}(z_0)\) for all $k \geq 0$,
+then \(f(z)=g(z)\) for all \(z \in D\).
 
 ## Integration of power series {#integraion}
 
