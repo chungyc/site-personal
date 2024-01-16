@@ -109,4 +109,9 @@ then for any $w$ such that \(|w-z_0| < R\),
 &= \sum_{k=0}^\infty \frac{a_k}{k+1}(w-z_0)^{k+1}
 \end{align*}
 
+## See also
+
+*   [Complex analysis](../)
+*   [Riemann zeta function](zeta)
+
 ## References
