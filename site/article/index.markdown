@@ -48,6 +48,8 @@ For a list of all articles, see the [archive of articles](/article/archive).
 
     *   [Relativity](/article/reference/physics/relativity/)
 
+    *   [Quantum mechanics](/article/reference/physics/quantum-mechanics/)
+
 *   [RISC-V](/article/reference/hardware/riscv/)
 
 ## Physics {#physics}
