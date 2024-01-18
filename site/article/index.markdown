@@ -2,7 +2,7 @@
 title: Articles
 description: Index of articles written by Yoo Chung and posted on their personal web site.
 published: 2023-03-23
-updated: 2024-01-15
+updated: 2024-01-17
 rss-feed-link: /articles.xml
 ---
 
@@ -10,64 +10,68 @@ Index of articles written by Yoo Chung.
 These are organized by topic, and will not include all articles.
 For a list of all articles, see the [archive of articles](/article/archive).
 
-*   References
+*   [References](#references)
+*   [Physics](#physics)
+*   [Technical](#technical)
 
-    *   [RISC-V](/article/reference/hardware/riscv/)
+## References {#references}
 
-    *   LaTeX
+*   LaTeX
 
-        *   [LaTeX symbols](/article/reference/latex/symbols)
+    *   [LaTeX symbols](/article/reference/latex/symbols)
 
-    *   Mathematics
+*   Mathematics
 
-        *   [Complex analysis](/article/reference/math/analysis/complex/)
+    *   [Complex analysis](/article/reference/math/analysis/complex/)
 
-            *   [Background definitions](/article/reference/math/analysis/complex/background)
+        *   [Background definitions](/article/reference/math/analysis/complex/background)
 
-            *   [Some complex functions](/article/reference/math/analysis/complex/functions/)
+        *   [Some complex functions](/article/reference/math/analysis/complex/functions/)
 
-            *   [Conformal mappings](/article/reference/math/analysis/complex/conformal-mappings/)
+        *   [Conformal mappings](/article/reference/math/analysis/complex/conformal-mappings/)
 
-            *   [Power series](/article/reference/math/analysis/complex/power-series/)
+        *   [Power series](/article/reference/math/analysis/complex/power-series/)
 
-                *   [Riemann zeta function](/article/reference/math/analysis/complex/power-series/zeta)
+            *   [Riemann zeta function](/article/reference/math/analysis/complex/power-series/zeta)
 
-        *   [Probability](/article/reference/math/probability)
+    *   [Probability](/article/reference/math/probability)
 
-        *   [Statistics](/article/reference/math/statistics/)
+    *   [Statistics](/article/reference/math/statistics/)
 
-            *   [Distributions](/article/reference/math/statistics/distributions)
+        *   [Distributions](/article/reference/math/statistics/distributions)
 
-            *   [Confidence intervals](/article/reference/math/statistics/confidence-intervals/)
+        *   [Confidence intervals](/article/reference/math/statistics/confidence-intervals/)
 
-            *   [Hypothesis testing](/article/reference/math/statistics/hypothesis-testing/)
-
-    *   Physics
-
-        *   [Relativity](/article/reference/physics/relativity/)
+        *   [Hypothesis testing](/article/reference/math/statistics/hypothesis-testing/)
 
 *   Physics
 
-    *   Relativity
+    *   [Relativity](/article/reference/physics/relativity/)
 
-        *   [Spacetime diagrams](/article/physics/relativity/spacetime-diagrams)
+*   [RISC-V](/article/reference/hardware/riscv/)
 
-        *   [Proper time](/article/physics/relativity/proper-time/)
+## Physics {#physics}
 
-        *   [Twin paradox](/article/physics/relativity/paradox/twin/)
+*   Relativity
 
-        *   [Time travel](/article/physics/relativity/superluminal/)
+    *   [Spacetime diagrams](/article/physics/relativity/spacetime-diagrams)
 
-*   Technical
+    *   [Proper time](/article/physics/relativity/proper-time/)
 
-    *   This web site
+    *   [Twin paradox](/article/physics/relativity/paradox/twin/)
 
-        *   [Guide to writing for the site](/article/technical/website/guide)
+    *   [Time travel](/article/physics/relativity/superluminal/)
 
-        *   [Supporting clean URLs](/article/technical/website/extensionless)
+## Technical {#technical}
 
-        *   [Stylesheets](/article/technical/website/styles/)
+*   This web site
 
-        *   [Trying out diagrams](/article/technical/website/diagrams/trying-out)
+    *   [Guide to writing for the site](/article/technical/website/guide)
 
-        *   [Experiments and testing](/article/technical/website/experiments/)
+    *   [Supporting clean URLs](/article/technical/website/extensionless)
+
+    *   [Stylesheets](/article/technical/website/styles/)
+
+    *   [Trying out diagrams](/article/technical/website/diagrams/trying-out)
+
+    *   [Experiments and testing](/article/technical/website/experiments/)
