@@ -103,11 +103,12 @@ items =
 -- * table of contents
 articleCompiler :: Compiler (Item String)
 articleCompiler = do
-  writerOptions <- getTocOptionsWith mathWriterOptions
+  let readerOptions = mathReaderWith defaultHakyllReaderOptions
+  writerOptions <- getTocOptionsWith $ mathWriterWith defaultHakyllWriterOptions
   bibFile <- load "article/bibliography/references.bib"
   cslFile <- load "article/bibliography/acm.csl"
   getResourceBody
-    >>= readPandocWith mathReaderOptions
+    >>= readPandocWith readerOptions
     >>= processPandocBiblio cslFile bibFile
       . fmap (setMeta "link-citations" True)
     <&> writePandocWith writerOptions

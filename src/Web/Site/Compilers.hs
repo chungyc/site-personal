@@ -12,8 +12,8 @@ module Web.Site.Compilers
     -- * Pandoc options
 
     -- | Pandoc reader and writer options that can be used with 'pandocCompilerWith'.
-    mathReaderOptions,
-    mathWriterOptions,
+    mathReaderWith,
+    mathWriterWith,
     getTocOptionsWith,
 
     -- * Custom contexts
@@ -69,17 +69,19 @@ haskellCompiler args = do
     emptyItem = makeItem ""
 
 -- |
--- Reader options for properly treating math in input.
+-- Add support for properly parsing math in the reader options.
 --
--- Should be used in conjunction with 'mathWriterOptions' for proper math rendering.
+-- Should be used in conjunction with 'mathWriterWith' for proper math rendering.
 -- For example:
 --
--- >>> let _ = pandocCompilerWith mathReaderOptions mathWriterOptions
-mathReaderOptions :: ReaderOptions
-mathReaderOptions =
-  defaultHakyllReaderOptions
+-- >>> let readerOptions = mathReaderWith defaultHakyllReaderOptions
+-- >>> let writerOptions = mathWriterWith defaultHakyllWriterOptions
+-- >>> let _ = pandocCompilerWith readerOptions writerOptions
+mathReaderWith :: ReaderOptions -> ReaderOptions
+mathReaderWith options =
+  options
     { readerExtensions =
-        readerExtensions defaultHakyllReaderOptions
+        readerExtensions options
           <> extensionsFromList
             [ Ext_tex_math_single_backslash,
               Ext_tex_math_double_backslash,
@@ -89,19 +91,21 @@ mathReaderOptions =
     }
 
 -- |
--- Writer options for writing out math to HTML.
+-- Add support for writing out math to HTML in the writer options.
 --
--- Should be used in conjunction with 'mathReaderOptions'
+-- Should be used in conjunction with 'mathReaderWith'
 -- to read input that is to be rendered as math.
 -- For example:
 --
--- >>> let _ = pandocCompilerWith mathReaderOptions mathWriterOptions
+-- >>> let readerOptions = mathReaderWith defaultHakyllReaderOptions
+-- >>> let writerOptions = mathWriterWith defaultHakyllWriterOptions
+-- >>> let _ = pandocCompilerWith readerOptions writerOptions
 --
 -- Pages which use math should define the @include-math@ metadata field
 -- to ensure that the resources necessary for rendering math is included.
-mathWriterOptions :: WriterOptions
-mathWriterOptions =
-  defaultHakyllWriterOptions
+mathWriterWith :: WriterOptions -> WriterOptions
+mathWriterWith options =
+  options
     { -- We use KaTeX to render math, but the auto-render extension depends
       -- on how Pandoc writes out math in MathJax.  It does not work with
       -- how Pandoc writes out math in KaTeX.
@@ -116,7 +120,6 @@ mathWriterOptions =
 -- For example:
 --
 -- >>> let _ = getTocOptionsWith defaultHakyllWriterOptions
--- >>> let _ = getTocOptionsWith mathWriterOptions
 getTocOptionsWith :: WriterOptions -> Compiler WriterOptions
 getTocOptionsWith options = do
   identifier <- getUnderlying
