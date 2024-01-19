@@ -15,3 +15,7 @@
 # siteContext is defined in terms of defaultContext.
 # Do not warn about the use of defaultContext in this definition.
 - ignore: {name: Use siteContext, within: Web.Site.Compilers}
+
+# Avoid obscure operators.
+# At least, using these makes it harder for me to read the code.
+- ignore: {name: "Use <&>"}

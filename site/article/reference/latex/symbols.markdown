@@ -1,7 +1,7 @@
 ---
 title: LaTeX symbols
 published: 2023-02-07
-updated: 2024-01-17
+updated: 2024-01-18
 description: Reference of LaTeX symbols useful to me.
 include-math: true
 ---
@@ -32,6 +32,7 @@ I often find myself looking these up.
   $\not\subset$          `\not\subset`
   $\nsubseteq$           `\nsubseteq`
   $\nabla$               `\nabla`
+  $\partial$             `\partial`
 --------------------   --------------------
 
 ## Greek letters
