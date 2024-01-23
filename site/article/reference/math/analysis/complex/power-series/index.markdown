@@ -113,5 +113,6 @@ then for any $w$ such that \(|w-z_0| < R\),
 
 *   [Complex analysis](../)
 *   [Riemann zeta function](zeta)
+*   [Laurent series](../laurent-series/)
 
 ## References

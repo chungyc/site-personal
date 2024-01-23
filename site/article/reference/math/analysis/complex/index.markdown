@@ -148,5 +148,6 @@ has $n$ complex roots $z_1$, $\ldots$, $z_n$, where
 *   [Some complex functions](functions/)
 *   [Conformal mappings](conformal-mappings/)
 *   [Power series](power-series/)
+*   [Laurent series](laurent-series/)
 
 ## References

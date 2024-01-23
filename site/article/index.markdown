@@ -34,6 +34,8 @@ For a list of all articles, see the [archive of articles](/article/archive).
 
             *   [Riemann zeta function](/article/reference/math/analysis/complex/power-series/zeta)
 
+        *   [Laurent series](/article/reference/math/analysis/complex/laurent-series/)
+
     *   [Probability](/article/reference/math/probability)
 
     *   [Statistics](/article/reference/math/statistics/)
