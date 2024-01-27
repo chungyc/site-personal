@@ -82,7 +82,7 @@ The coefficient $a_k$ can be derived using the $k$-order derivative.
 ### Power series representation {#power-series-for-analytic-function}
 
 If \(f : U \rightarrow \Complex\) is analytic and $r$ is such that \(\{|z-z_0| < r\} \subset U\),
-then $f$ as a power series representation in this disk.
+then $f$ has a power series representation in this disk.
 
 \[ f(z) = \sum_{k=0}^\infty a_k (z-z_0)^k \]
 
