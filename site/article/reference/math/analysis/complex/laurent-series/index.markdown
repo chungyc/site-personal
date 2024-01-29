@@ -2,6 +2,7 @@
 title: Laurent series
 description: Personal notes on Laurent series in complex analysis.
 published: 2024-01-22
+updated: 2024-01-28
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
@@ -103,7 +104,8 @@ More generally, if $z_0$ is a pole of order $n$,
      \frac{d^{n-1}}{dz^{n-1}} \left( (z-z_0)^n f(z) \right)
 \]
 
-If \(f(z) = \frac{g(z)}{h(z)}\), where $g$ and $h$ are analytic near $z_0$ and \(h(z_0)=0\),
+If \(f(z) = \frac{g(z)}{h(z)}\), where $g$ and $h$ are analytic near $z_0$
+and $h$ has a simple zero at $z_0$,
 
 \[ \mathrm{Res}(f, z_0) = \frac{g(z_0)}{\frac{dh}{dz}(z_0)} \]
 
