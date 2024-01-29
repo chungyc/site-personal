@@ -77,7 +77,7 @@ If these are the case:
 
 *   $D$ is a simply connected domain
 *   $f$ is analytic in $D$ except for isolated singularities
-*   $C$ is a simple closed curve oriented counterclockwise
+*   $C$ is a simple closed curve oriented counterclockwise with no singularities of $f$
 *   $z_1$, ..., $z_n$ are the isolated singularities of $f$ which lie inside $C$
 
 then the following holds:
