@@ -2,12 +2,15 @@
 title: Mathematical formulations for physics
 description: Personal reference for the various formulations of physics such as Newtonian, Lagrangian, and Hamiltonian.
 published: 2024-01-31
+updated: 2024-02-05
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
 ---
 
 Personal reference on the various ways to mathematically formulate physics.
+
+In all of the following, \(v_i = \frac{x_i}{dt}\).
 
 ## Newtonian {#newtonian}
 
@@ -31,8 +34,6 @@ The trajectory satisfies the principle of least action or stationary action.
 
 ### Generalized momentum {#lagrangian-momentum}
 
-If \(v_i = \frac{dx_i}{dt}\), then the following is the generalized momentum conjugate to \(x_i\):
-
 \[ p_i = \frac{\partial \mathcal{L}}{\partial v_i} \]
 
 ### Classical Lagrangian {#classical-lagrangian}
@@ -41,7 +42,7 @@ If \(v_i = \frac{dx_i}{dt}\), then the following is the generalized momentum con
 
 ## Hamiltonian {#hamiltonian}
 
-\[ H = E = T + V \]
+\[ H = \sum p_i v_i - \mathcal{L} = T + V = E \]
 
 ### Equations of motion {#hamiltonian-motion-equations}
 
@@ -51,5 +52,5 @@ If \(v_i = \frac{dx_i}{dt}\), then the following is the generalized momentum con
 ## References
 
 ---
-nocite: '@susskind2013'
+nocite: '@susskind2013, @baggott2020'
 ---
