@@ -10,7 +10,8 @@ toc: true
 
 Personal reference on the various ways to mathematically formulate physics.
 
-In all of the following, \(v_i = \frac{x_i}{dt}\).
+In all of the following, \(v_i = \frac{x_i}{dt}\),
+and \(x_i\) is not necessarily a Cartesian coordinate except in the Newtonian formulation.
 
 ## Newtonian {#newtonian}
 
