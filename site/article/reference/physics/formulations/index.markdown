@@ -54,6 +54,12 @@ For a symmetry which leaves the Lagrangian invariant, there is a conserved quant
 \[ \frac{dp_i}{dt} = - \frac{\partial H}{\partial x_i} \]
 \[ \frac{dx_i}{dt} = \frac{\partial H}{\partial p_i} \]
 
+### Gibbs-Liouville theorem {#incompressibility}
+
+For \(\mathbf{v} = (x_1, \ldots, x_n, p_1, \ldots, p_n)\) in phase space,
+
+\[ \nabla \cdot \mathbf{v} = 0 \]
+
 ## References
 
 ---
