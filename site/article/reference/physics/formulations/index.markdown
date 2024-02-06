@@ -60,6 +60,23 @@ For \(\mathbf{v} = (x_1, \ldots, x_n, p_1, \ldots, p_n)\) in phase space,
 
 \[ \nabla \cdot \mathbf{v} = 0 \]
 
+### Poisson bracket {#poisson-bracket}
+
+\[ \{F,G\} = \sum_i \left(
+      \frac{\partial F}{\partial q_i} \frac{\partial G}{\partial p_i} -
+      \frac{\partial F}{\partial p_i} \frac{\partial G}{\partial q_i}
+   \right)
+\]
+
+With the Hamiltonian $H$,
+
+\[ \frac{dF}{dt} = \{F,H\} \]
+
+The equations of motions for a Hamiltonian can be expressed with the Poisson bracket.
+
+\[ \frac{d q_k}{dt} = \{q_k,H\} \]
+\[ \frac{d p_k}{dt} = \{p_k,H\} \]
+
 ## References
 
 ---
