@@ -40,6 +40,10 @@ The trajectory satisfies the principle of least action or stationary action.
 
 \[ \mathcal{L} = T - V = \frac{1}{2} m v^2 - V \]
 
+### Symmetry and conservation {#symmetry-lagrangian}
+
+For a symmetry which leaves the Lagrangian invariant, there is a conserved quantity.
+
 ## Hamiltonian {#hamiltonian}
 
 \[ H = \sum p_i v_i - \mathcal{L} = T + V = E \]
