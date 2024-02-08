@@ -2,7 +2,7 @@
 title: Mathematical formulations for physics
 description: Personal reference for the various formulations of physics such as Newtonian, Lagrangian, and Hamiltonian.
 published: 2024-01-31
-updated: 2024-02-05
+updated: 2024-02-08
 include-math: true
 include-bibliography-stylesheet: true
 toc: true
@@ -76,6 +76,21 @@ The equations of motions for a Hamiltonian can be expressed with the Poisson bra
 
 \[ \frac{d q_k}{dt} = \{q_k,H\} \]
 \[ \frac{d p_k}{dt} = \{p_k,H\} \]
+
+#### Basic properties {#poisson-bracket-axioms}
+
+\[ \{A,C\} = -\{C,A\} \]
+\[ \{cA,C\} = c\{A,C\} \]
+\[ \{A+B,C\} = \{A,C\} + \{B,C\} \]
+\[ \{AB,C\} = A\{B,C\} + B\{A,C\} \]
+\[ \{q_i,q_j\} = 0 \]
+\[ \{p_i,p_j\} = 0 \]
+\[ \{q_i,p_j\} = \delta_{ij} \]
+
+#### Other properties {#poisson-bracket-properties}
+
+\[ \{f,p_i\} = \frac{\partial f}{\partial q_i} \]
+\[ \{f,q_i\} = -\frac{\partial f}{\partial p_i} \]
 
 ## References
 
