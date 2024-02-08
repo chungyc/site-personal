@@ -2,7 +2,7 @@
 title: Articles
 description: Index of articles written by Yoo Chung and posted on their personal web site.
 published: 2023-03-23
-updated: 2024-01-31
+updated: 2024-02-07
 rss-feed-link: /articles.xml
 ---
 
@@ -21,6 +21,8 @@ For a list of all articles, see the [archive of articles](/article/archive).
     *   [LaTeX symbols](/article/reference/latex/symbols)
 
 *   Mathematics
+
+    *   [Index relation functions](/article/reference/math/index-relation/)
 
     *   [Complex analysis](/article/reference/math/analysis/complex/)
 
