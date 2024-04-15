@@ -2,7 +2,7 @@
 title: Science
 description: Science references I find useful or interesting.
 published: 2023-05-11
-updated: 2023-12-03
+updated: 2024-04-15
 ---
 
 [Quanta Magazine](https://www.quantamagazine.org/)
@@ -22,3 +22,6 @@ updated: 2023-12-03
 
 [Cantor's Attic](https://neugierde.github.io/cantors-attic/)
 :   A resource for finding out about all sorts of mathematicaly infinity.
+
+[kurzgesagt](https://www.youtube.com/@kurzgesagt)
+:   Fun educational animations with a focus on science.

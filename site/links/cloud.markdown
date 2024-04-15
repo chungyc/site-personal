@@ -1,7 +1,7 @@
 ---
 title: Cloud
 description: Cloud services I use or am interested in.
-updated: 2023-12-06
+updated: 2024-04-15
 ---
 
 [Google Cloud Platform](https://cloud.google.com/)
@@ -15,6 +15,9 @@ updated: 2023-12-06
 
 [mybinder.org](https://mybinder.org/)
 :   A public service for interacting with [Jupyter notebooks](https://docs.jupyter.org/).
+
+[GeForce NOW](https://www.nvidia.com/en-us/geforce-now/)
+:   Gaming on high-end graphics hardware without having to chase the hardware upgrade game.
 
 ### Note
 
