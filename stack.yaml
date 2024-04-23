@@ -5,6 +5,3 @@ extra-deps:
   # Uses properties and media query functions not released yet.
   - git: https://github.com/sebastiaanvisser/clay.git
     commit: a59f9c6e56cb4870583b7b6bab0332f1d7a75b78
-
-ghc-options:
-  "$everything": -O2
