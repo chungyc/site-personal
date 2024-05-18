@@ -298,6 +298,8 @@ mediaStyles = do
       marginRight auto
       marginLeft auto
 
+  footerPosition
+
   query Media.all [Media.prefersColorScheme Media.light] lightColorScheme
 
   query Media.all [Media.prefersColorScheme Media.dark] darkColorScheme
@@ -316,6 +318,19 @@ headingColors mapColor = do
   h4 ? fontColor (mapColor 4)
   h5 ? fontColor (mapColor 5)
   h6 ? fontColor (mapColor 6)
+\end{code}
+
+If the screen height is large enough so that
+it would not occupy more than half of the screen,
+I would like to keep the footer stuck to the bottom.
+
+\begin{code}
+footerPosition :: Css
+footerPosition = do
+  query Media.all [Media.minHeight $ em 24] $ do
+    footer ? do
+      position sticky
+      bottom $ em 1
 \end{code}
 
 \subsubsection{Light mode}
