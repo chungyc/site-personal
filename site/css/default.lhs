@@ -113,7 +113,6 @@ so I will probably stick with it.
   footer ? do
     fontFamily ["Courier New"] [monospace, sansSerif]
     fontSize $ em 0.75
-    borderTop (px 1) solid black
     marginTop $ em 1
 
   footer |> nav ? do
@@ -323,6 +322,8 @@ headingColors mapColor = do
 If the screen height is large enough so that
 it would not occupy more than half of the screen,
 I would like to keep the footer stuck to the bottom.
+To prevent other content from overlapping with the footer,
+we will also later explicitly set the background color for the footer.
 
 \begin{code}
 footerPosition :: Css
@@ -330,7 +331,8 @@ footerPosition = do
   query Media.all [Media.minHeight $ em 24] $ do
     footer ? do
       position sticky
-      bottom $ em 1
+      bottom nil
+      paddingBottom $ em 0.5
 \end{code}
 
 \subsubsection{Light mode}
@@ -343,6 +345,10 @@ lightColorScheme = do
   html ? do
     color black
     backgroundColor white
+
+  footer ? do
+    backgroundColor white
+    borderTop (px 1) solid black
 
   a # link ? color blue
   a # visited ? color purple
@@ -370,7 +376,9 @@ darkColorScheme = do
     color white
     backgroundColor black
 
-  footer ? borderTop (px 1) solid white
+  footer ? do
+    backgroundColor black
+    borderTop (px 1) solid white
 
   a # link ? color cyan
   a # visited ? color pink
