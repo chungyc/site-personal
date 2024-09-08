@@ -2,7 +2,7 @@
 title: Software
 description: References related to computer software.
 published: 2023-11-24
-updated: 2024-01-17
+updated: 2024-09-08
 ---
 
 [KaTeX](https://katex.org/)
@@ -17,3 +17,7 @@ updated: 2024-01-17
 
 [Unified Code for Units of Measure](https://ucum.org/)
 :   A standard for representing most measurement units in machine-readable form.
+
+[Protocol Buffers](https://protobuf.dev/)
+:   An efficient data exchange format.
+    Source code is maintained in a [GitHub repository](https://github.com/protocolbuffers/protobuf).

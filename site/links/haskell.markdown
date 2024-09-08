@@ -1,7 +1,7 @@
 ---
 title: Haskell
 description: References related to the Haskell programming language.
-updated: 2023-12-09
+updated: 2024-09-08
 ---
 
 [haskell.org](https://haskell.org/)
@@ -27,3 +27,6 @@ updated: 2023-12-09
 
 [Scan code with HLint](https://github.com/haskell-actions/hlint-scan)
 :   GitHub action for Haskell code scanning using HLint.
+
+[proto-lens](https://github.com/google/proto-lens)
+:   Library for using [protocol buffer messages](https://protobuf.dev/) in Haskell.
