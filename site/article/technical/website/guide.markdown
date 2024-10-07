@@ -2,7 +2,7 @@
 title: Guide to writing for this web site
 description: Various knobs that are useful to writing pages for this web site.
 published: 2023-03-18
-updated: 2023-12-21
+updated: 2024-10-07
 toc: true
 include-syntax-stylesheet: true
 ---
@@ -149,16 +149,18 @@ The code can be either Haskell or literate Haskell.
 
 ### Math support
 
-Use [`mathReaderOptions`] and [`mathWriterOptions`] to make Pandoc render math.
+Use [`mathReaderWith`] and [`mathWriterWith`] to make Pandoc render math.
 
 For example,
 
 ```haskell
-compile $ pandocCompilerWith mathReaderOptions mathWriterOptions
+let readerOptions = mathReaderWith defaultHakyllReaderOptions
+let writerOptions = mathWriterWith defaultHakyllWriterOptions
+compile $ pandocCompilerWith readerOptions writerOptions
 ```
 
-[`mathReaderOptions`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:mathReaderOptions
-[`mathWriterOptions`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:mathWriterOptions
+[`mathReaderWith`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:mathReaderWith
+[`mathWriterWith`]: https://chungyc.github.io/site-personal/Web-Site-Compilers.html#v:mathWriterWith
 
 ### Table of contents
 
