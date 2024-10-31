@@ -1,7 +1,7 @@
-resolver: lts-22.23
+resolver: lts-22.39
 
 extra-deps:
 
   # Uses properties and media query functions not released yet.
   - git: https://github.com/sebastiaanvisser/clay.git
-    commit: a59f9c6e56cb4870583b7b6bab0332f1d7a75b78
+    commit: b9bb56772ef26c1e87ee5189d30e00fe7cf73aac
