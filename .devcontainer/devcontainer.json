@@ -29,7 +29,7 @@
     }
   },
   "onCreateCommand": {
-    "clean": "cp ~/.cabal/bin/* ~/.local/bin/ && rm -r ~/.cabal/"
+    "build": "stack build"
   },
   "postStartCommand": {
     "pull": "git pull --all"
