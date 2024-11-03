@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
+
       - name: Cache dependencies
         uses: actions/cache@v4
         with:
@@ -32,8 +34,6 @@ jobs:
           path: .stack-work
           key: build-${{ hashFiles('app/**', 'src/**', 'test/**') }}
           restore-keys: build-
-
-      - uses: actions/checkout@v4
 
       - uses: haskell-actions/setup@v2
         with:
