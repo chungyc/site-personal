@@ -20,6 +20,8 @@ For a list of all articles, see the [archive of articles](/article/archive).
 
     *   [LaTeX symbols](/article/reference/latex/symbols)
 
+    *   [LaTeX environments](/article/reference/latex/environments)
+
 *   Mathematics
 
     *   [Index relation functions](/article/reference/math/index-relation/)
