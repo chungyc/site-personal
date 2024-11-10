@@ -2,9 +2,9 @@ module Main where
 
 import Control.Monad (forM_)
 import Data.ByteString.Lazy qualified as B
+import Text.Blaze.Html.Renderer.Utf8 (renderHtml)
 import Text.Blaze.Html5 as H hiding (main)
 import Text.Blaze.Html5.Attributes as A
-import Text.Blaze.Html.Renderer.Utf8 (renderHtml)
 
 main :: IO ()
 main = B.putStr $ renderHtml $ do
@@ -21,7 +21,7 @@ main = B.putStr $ renderHtml $ do
     "This page is not intended to be useful in general.  "
 
   h2 "Counting numbers" ! A.id "count"
-  blockquote $ forM_ [1..100 :: Int] $ (<> " ") . toHtml
+  blockquote $ forM_ [1 .. 100 :: Int] $ (<> " ") . toHtml
 
   h2 "Fibonacci numbers" ! A.id "fibonacci"
   blockquote $ forM_ (take 100 fibonacci) $ (<> " ") . toHtml
@@ -30,7 +30,7 @@ main = B.putStr $ renderHtml $ do
   blockquote $ forM_ (take 100 primes) $ (<> " ") . toHtml
 
 fibonacci :: [Integer]
-fibonacci = 1 : 1 : [ m+n | (m,n) <- zip fibonacci (drop 1 fibonacci) ]
+fibonacci = 1 : 1 : [m + n | (m, n) <- zip fibonacci (drop 1 fibonacci) ]
 
 primes :: [Integer]
-primes = 2 : [ n | n <- [3,5..], all (\m -> n `mod` m /= 0) (takeWhile (\m -> m*m <= n) primes) ]
+primes = 2 : [n | n <- [3, 5 ..], all (\m -> n `mod` m /= 0) (takeWhile (\m -> m * m <= n) primes) ]
