@@ -1,15 +1,13 @@
 module Main where
 
-import Prelude hiding (id, putStr)
-
 import Control.Monad (forM_)
-import Data.ByteString.Lazy (putStr)
+import Data.ByteString.Lazy qualified as B
 import Text.Blaze.Html5 as H hiding (main)
 import Text.Blaze.Html5.Attributes as A
 import Text.Blaze.Html.Renderer.Utf8 (renderHtml)
 
 main :: IO ()
-main = putStr $ renderHtml $ do
+main = B.putStr $ renderHtml $ do
   nav ! class_ "toc" $ do
     h2 "Contents"
     ul $ do
@@ -22,13 +20,13 @@ main = putStr $ renderHtml $ do
     "It is an experiment with generating an article programmatically on this web site.  "
     "This page is not intended to be useful in general.  "
 
-  h2 "Counting numbers" ! id "count"
+  h2 "Counting numbers" ! A.id "count"
   blockquote $ forM_ [1..100 :: Int] $ (<> " ") . toHtml
 
-  h2 "Fibonacci numbers" ! id "fibonacci"
+  h2 "Fibonacci numbers" ! A.id "fibonacci"
   blockquote $ forM_ (take 100 fibonacci) $ (<> " ") . toHtml
 
-  h2 "Prime numbers" ! id "prime"
+  h2 "Prime numbers" ! A.id "prime"
   blockquote $ forM_ (take 100 primes) $ (<> " ") . toHtml
 
 fibonacci :: [Integer]
