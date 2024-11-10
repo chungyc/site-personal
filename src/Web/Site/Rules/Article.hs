@@ -7,6 +7,7 @@
 -- Exports the rules for generic articles on the site.
 module Web.Site.Rules.Article (rules, items) where
 
+import Data.ByteString.Lazy.Char8 (unpack)
 import Hakyll
 import Text.Pandoc.Builder (setMeta)
 import Web.Site.Compilers
@@ -29,7 +30,7 @@ import Web.Site.Routes
 rules :: Rules ()
 rules = do
   -- Individual articles.
-  match articlePattern $ do
+  match (articlePattern .&&. complement "article/**.hs") $ do
     route $
       composeRoutes dropExtensions $
         -- Index pages have should URLs to the directory.
@@ -37,6 +38,21 @@ rules = do
 
     compile $
       articleCompiler
+        >>= saveSnapshot "articles"
+        >>= loadAndApplyTemplate "templates/article.html" siteContext
+        >>= loadAndApplyTemplate "templates/default.html" siteContext
+
+  -- Programmatically generated articles.
+  -- They should generate content that goes into the <body> element.
+  match "article/**.hs" $ do
+    route $
+      composeRoutes dropExtensions $
+        -- Index pages have should URLs to the directory.
+        gsubRoute "/index$" (const "/index.html")
+
+    compile $
+      haskellCompiler []
+        >>= pure . fmap unpack
         >>= saveSnapshot "articles"
         >>= loadAndApplyTemplate "templates/article.html" siteContext
         >>= loadAndApplyTemplate "templates/default.html" siteContext

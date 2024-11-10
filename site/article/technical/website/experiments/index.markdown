@@ -11,3 +11,4 @@ Index of pages for experimentation with various aspects of this web site.
 *   [Literate Haskell](literate-haskell)
 *   [Stylesheet](with-style)
 *   [Syntax highlighting](highlighting)
+*   [Programmatic generation](programmatic-generate)

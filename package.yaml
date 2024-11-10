@@ -64,6 +64,7 @@ executables:
     # Not directly depended upon by the executable,
     # but included here to ensure these are available
     # for site Haskell code which generate files.
+    - blaze-html
     - clay
     - diagrams-contrib
     - diagrams-lib
