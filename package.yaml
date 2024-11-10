@@ -36,6 +36,7 @@ library:
   source-dirs: src
   dependencies:
   - hakyll
+  - blaze-html
   - bytestring
   - clay
   - diagrams-lib

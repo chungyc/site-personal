@@ -5,15 +5,15 @@ import Data.ByteString.Lazy qualified as B
 import Text.Blaze.Html.Renderer.Utf8 (renderHtml)
 import Text.Blaze.Html5 as H hiding (main)
 import Text.Blaze.Html5.Attributes as A
+import Web.Generate.Contents
 
 main :: IO ()
 main = B.putStr $ renderHtml $ do
-  nav ! class_ "toc" $ do
-    h2 "Contents"
-    ul $ do
-      li $ a ! href "#count" $ "Counting numbers"
-      li $ a ! href "#fibonacci" $ "Fibonacci numbers"
-      li $ a ! href "#prime" $ "Prime numbers"
+  toc
+    [ Entry "Counting numbers" "#count" [],
+      Entry "Fibonacci numbers" "#fibonacci" [],
+      Entry "Prime numbers" "#prime" []
+    ]
 
   p $ do
     "This is content randomly generated from Haskell code.  "
