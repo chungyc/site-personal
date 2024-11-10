@@ -19,6 +19,9 @@ main = B.putStr $ renderHtml $ do
     "This is content randomly generated from Haskell code.  "
     "It is an experiment with generating an article programmatically on this web site.  "
     "This page is not intended to be useful in general.  "
+    "The source code for this page is on "
+    a ! href "https://github.com/chungyc/site-personal/blob/main/site/article/technical/website/experiments/programmatic-generate.hs" $ "GitHub"
+    ".  "
 
   h2 "Counting numbers" ! A.id "count"
   blockquote $ forM_ [1 .. 100 :: Int] $ (<> " ") . toHtml
