@@ -30,7 +30,7 @@ main = B.putStr $ renderHtml $ do
   blockquote $ forM_ (take 100 primes) $ (<> " ") . toHtml
 
 fibonacci :: [Integer]
-fibonacci = 1 : 1 : [m + n | (m, n) <- zip fibonacci (drop 1 fibonacci) ]
+fibonacci = 1 : 1 : [m + n | (m, n) <- zip fibonacci (drop 1 fibonacci)]
 
 primes :: [Integer]
-primes = 2 : [n | n <- [3, 5 ..], all (\m -> n `mod` m /= 0) (takeWhile (\m -> m * m <= n) primes) ]
+primes = 2 : [n | n <- [3, 5 ..], all (\m -> n `mod` m /= 0) (takeWhile (\m -> m * m <= n) primes)]
