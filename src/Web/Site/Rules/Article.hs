@@ -45,7 +45,7 @@ rules = do
   match "article/index.markdown" $ do
     route $ constRoute "articles"
     compile $
-      pandocCompiler
+      articleCompiler
         >>= loadAndApplyTemplate "templates/default.html" siteContext
 
   -- The archive page with links to all articles.
