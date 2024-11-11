@@ -9,14 +9,45 @@
 --
 -- For example, the following generates HTML for a table of contents:
 --
+-- >>> import Text.Blaze.Html.Renderer.Pretty (renderHtml)
 -- >>> :{
--- let _ = toc $ [ Entry "First section" "#first"
---                 [ Entry "First sub-section" "#first-sub" []
---                 , Entry "Second sub-section" "#second-sub" []
---                 ]
---               , Entry "Second section" "#second" []
---               ]
+-- putStr $ renderHtml$ toc $
+--   [ Entry "First section" "#first"
+--     [ Entry "First sub-section" "#first-sub" []
+--     , Entry "Second sub-section" "#second-sub" []
+--     ]
+--   , Entry "Second section" "#second" []
+--   ]
 -- :}
+-- <nav class="toc">
+--     <h2>
+--         Contents
+--     </h2>
+--     <ul>
+--         <li>
+--             <a href="#first">
+--                 First section
+--             </a>
+--             <ul>
+--                 <li>
+--                     <a href="#first-sub">
+--                         First sub-section
+--                     </a>
+--                 </li>
+--                 <li>
+--                     <a href="#second-sub">
+--                         Second sub-section
+--                     </a>
+--                 </li>
+--             </ul>
+--         </li>
+--         <li>
+--             <a href="#second">
+--                 Second section
+--             </a>
+--         </li>
+--     </ul>
+-- </nav>
 module Web.Generate.Contents (Entry (..), toc) where
 
 import Control.Monad (unless)
