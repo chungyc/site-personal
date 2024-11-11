@@ -24,3 +24,6 @@ The following lists individual stylesheets which are used by this web site.
 
 [Errors](error)
 :   Styling for error pages.
+
+[Syntax highlighting](syntax)
+:   Styling for syntax highlighting of code blocks.
