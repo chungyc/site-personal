@@ -18,7 +18,8 @@ main = putCss biblioStyle
 
 \subsection{Bibliography}
 
-This site uses a modified version of the
+This site uses a 
+\href{https://github.com/chungyc/site-personal/blob/main/site/article/bibliography/acm.csl}{modified version} of the
 \href{https://github.com/citation-style-language/styles/blob/master/association-for-computing-machinery.csl}{citation style}
 for the \href{https://www.acm.org/}{Association for Computing Machinery}.
 It includes a few customizations for linking from titles and including notes.
