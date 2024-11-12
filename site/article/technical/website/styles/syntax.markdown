@@ -116,6 +116,10 @@ short of writing a stylesheet myself.
 
 *   The same approach is also [explained by Rebecca Skinner][rskinner].
 
+*   [Other stylesheets] for this web site.
+
 [Source code]: https://github.com/chungyc/site-personal/blob/main/src/Web/Site/Rules/Stylesheet.hs
 
 [rskinner]: https://rebeccaskinner.net/posts/2021-01-31-hakyll-syntax-highlighting.html
+
+[Other stylesheets]: ./
