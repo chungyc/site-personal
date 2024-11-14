@@ -33,6 +33,10 @@ But everything that has been talked about is rather trivial.
 
 We really need to talk about something more interesting.
 
+### Heading with lots and lots of text, so long that there is no way it can fit in just one line
+
+I want to see what long headings look like, especially with narrow screens.
+
 ## Lists
 
 This is a plain list.
