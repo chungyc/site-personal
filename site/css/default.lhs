@@ -143,25 +143,29 @@ if the list was not a direct child.
 
 For the sole reason that I use monospace fonts with code,
 I have the headings in a monospace font as well.
+The headings are not justified.
 
 Except for the first-level heading which basically serves as the displayed title for the page,
 I add dotted underlines to distinguish the headings from normal text.
 Different levels of headings are distinguished by different sizes;
 the different sizes may be a bit too subtle, but I'm not sure what to do about it.
 At least the heading levels will be obvious in the table of contents.
+
 Later, heading levels will also be distinguished by fading colors,
 when the colors are specified for each preferred color scheme for specific media.
 
 \begin{code}
 headings :: Css
 headings = do
-  h1 ? do
+  h1 <> h2 <> h3 <> h4 <> h5 <> h6 ? do
     fontFamily ["Courier New"] [monospace, sansSerif]
+    textAlign $ alignSide sideLeft
+
+  h1 ? do
     fontSize $ em 2
     fontStyle italic
 
   h2 <> h3 <> h4 <> h5 <> h6 ? do
-    fontFamily ["Courier New"] [monospace, sansSerif]
     textDecorationLine underline
     textDecorationStyle dotted
 
