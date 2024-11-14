@@ -56,7 +56,7 @@ for various parts of the code.
 
 \begin{code}
 fibonacci' :: [Integer]
-fibonacci' = 1 : 1 : [ m+n | (m,n) <- zip fibonacci (drop 1 fibonacci) ]
+fibonacci' = 1 : 1 : [ m+n | (m,n) <- zip fibonacci' (drop 1 fibonacci') ]
 \end{code}
 
 We obviously cannot print the entirety of the list, but we can look up a few numbers.
