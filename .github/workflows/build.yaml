@@ -68,6 +68,7 @@ jobs:
         with:
           name: site
           path: _site
+          include-hidden-files: true
 
   deploy-site:
     if: github.ref_name == 'main'
