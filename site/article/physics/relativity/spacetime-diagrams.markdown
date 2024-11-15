@@ -2,7 +2,7 @@
 title: Spacetime diagrams
 description: Spacetime diagrams for plotting out world lines relativistically.
 published: 2023-04-24
-updated: 2023-05-03
+updated: 2023-11-15
 toc: true
 include-math: true
 include-bibliography-stylesheet: true
@@ -21,9 +21,9 @@ the following two postulates:
 
 [^maxwell]: With [Maxwell's equations for electromagnetism],
 one could argue that the second postulate is a consequence of the first postulate.
-This is because the equations predict a specific speed for light,
+This is because the equations predict a particular speed for light,
 and the equations would not be laws of physics
-if the speed of light was different for different inertial frames.
+if the speed of light was not this speed in different inertial frames.
 
 With these postulates, one can derive how the coordinates \((x,t)\)
 of a particular event in one inertial frame are transformed
@@ -50,7 +50,7 @@ Instead, they transform together as a set of spacetime coordinates from one iner
 Space and time should not be considered completely independent things,
 but should be considered intertwined as spacetime.
 
-[Maxwell's equations for electromagnetism]: https://www.maxwells-equations.com/
+[Maxwell's equations for electromagnetism]: /article/reference/physics/electromagnetism/maxwell
 
 ## A spacetime diagram {#diagram}
 
