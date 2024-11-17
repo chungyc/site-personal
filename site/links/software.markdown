@@ -2,7 +2,7 @@
 title: Software
 description: References related to computer software.
 published: 2023-11-24
-updated: 2024-09-08
+updated: 2024-11-17
 ---
 
 [KaTeX](https://katex.org/)
@@ -21,3 +21,6 @@ updated: 2024-09-08
 [Protocol Buffers](https://protobuf.dev/)
 :   An efficient data exchange format.
     Source code is maintained in a [GitHub repository](https://github.com/protocolbuffers/protobuf).
+
+[Agda](https://agda.readthedocs.io/)
+:   Dependently typed programming language which can also be used as a theorem prover.
