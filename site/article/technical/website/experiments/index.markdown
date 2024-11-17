@@ -2,7 +2,7 @@
 title: Experiments for this web site
 description: Index of pages for experimentation with various aspects of this web site.
 published: 2023-03-23
-updated: 2023-12-11
+updated: 2024-11-17
 ---
 
 Index of pages for experimentation with various aspects of this web site.
@@ -12,3 +12,4 @@ Index of pages for experimentation with various aspects of this web site.
 *   [Stylesheet](with-style)
 *   [Syntax highlighting](highlighting)
 *   [Programmatic generation](programmatic-generate)
+*   [SVG animation](svg-animation)

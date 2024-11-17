@@ -1,0 +1,35 @@
+---
+title: SVG animation
+description: Page experimenting with SVG animation.
+published: 2024-11-17
+---
+
+<p>
+This page is for experimenting with SVG animations.
+It is not useful in general.
+</p>
+
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60">
+  <rect width="50" height="60" fill="blue">
+    <animate
+      attributeName="width"
+      values="50;100;50"
+      dur="30s"
+      repeatCount="indefinite"
+    />
+    <animate
+      attributeName="height"
+      values="60;20;60;20;60"
+      dur="30s"
+      repeatCount="indefinite"
+    />
+    <animate
+      attributeName="fill"
+      values="blue;red;blue"
+      dur="30s"
+      repeatCount="indefinite"
+    />
+  </rect>
+</svg>
+</div>
