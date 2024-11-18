@@ -14,6 +14,7 @@
     <meta name="author" content="Yoo Chung"/>
     <meta name="description" content="Animation of the world lines of twins, one stationary and the other traveling.  Includes the axis which counts as the 'now' for the traveling twin.  This animation was created by manually editing a generated SVG image."/>
     <link rel="author" href="https://chungyc.org/"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"/>
   </metadata>
   <g
       stroke-linecap="butt"
