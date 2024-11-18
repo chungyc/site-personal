@@ -2,6 +2,7 @@
 title: Twin paradox
 description: Explaining the twin paradox from the perspective of the other twin.
 published: 2023-05-12
+updated: 2024-11-18
 toc: true
 include-math: true
 include-bibliography-stylesheet: true
@@ -121,6 +122,14 @@ which does not pass in the inertial frames for the traveling twin while they are
 traveling to the star and coming back from the star.
 
 ![World lines from Earth with the \(x\) axes from the traveling twin](/diagrams/article/relativity/paradox/twin/worldlines-axes.svg)
+
+We can also animate what the world lines look like in Earth's inertial frame,
+including what counts as "now" for the reference frame of the traveling twin.
+It is even more apparent in the animation that the "same time" for the traveling twin
+differs from that for the twin on Earth, and that a large chunk of time is skipped
+for the twin on Earth from the perspective of the traveling twin when they turn around.
+
+![Animated world lines from Earth's reference frame](/images/article/physics/relativity/paradox/twin/worldlines.svg)
 
 This explains why it seemed the twin paradox was paradoxical.
 We correctly reasoned that time will pass slowly for both twins,

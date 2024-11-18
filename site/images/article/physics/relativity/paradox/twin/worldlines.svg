@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0.0 0.0 4095.9999999999995 2914.737714500883"
+    height="2914.7377"
+    width="4096.0000"
+    font-size="1"
+    stroke-opacity="1"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    stroke="rgb(0,0,0)"
+    version="1.1">
+  <metadata>
+    <meta name="author" content="Yoo Chung"/>
+    <meta name="description" content="Animation of the world lines of twins, one stationary and the other traveling.  Includes the axis which counts as the 'now' for the traveling twin.  This animation was created by manually editing a generated SVG image."/>
+    <link rel="author" href="https://chungyc.org/"/>
+  </metadata>
+  <g
+      stroke-linecap="butt"
+      opacity="7.500000000000001e-2"
+      fill="rgb(0,0,0)"
+      stroke-dashoffset="0.0"
+      stroke-dasharray="34.55251897994648,69.10503795989295"
+      stroke-miterlimit="10.0"
+      stroke-width="1.7276259489973238"
+      fill-opacity="0.0"
+      stroke-opacity="1.0"
+      stroke-linejoin="miter"
+      stroke="rgb(0,0,0)">
+    <path d="M 2453.7135,2625.8039 l -2336.8700,-2336.8700 "/>
+  </g>
+  <g
+      stroke-linecap="butt"
+      opacity="7.500000000000001e-2"
+      fill="rgb(0,0,0)"
+      stroke-dashoffset="0.0"
+      stroke-dasharray="34.55251897994648,69.10503795989295"
+      stroke-miterlimit="10.0"
+      stroke-width="1.7276259489973238"
+      fill-opacity="0.0"
+      stroke-opacity="1.0"
+      stroke-linejoin="miter"
+      stroke="rgb(0,0,0)">
+    <path d="M 116.8435,2625.8039 l 2336.8700,-2336.8700 "/>
+  </g>
+  <g
+      stroke-linecap="butt"
+      opacity="1.0000000000000002e-2"
+      fill="rgb(0,0,0)"
+      stroke-miterlimit="10.0"
+      stroke-width="13.82100759197859"
+      fill-opacity="0.0"
+      stroke-opacity="1.0"
+      stroke-linejoin="miter"
+      stroke="rgb(0,0,0)">
+    <path d="M 1285.2785,2625.8039 l 0.0000,-2215.9362 "/>
+  </g>
+  <g
+      stroke-linecap="butt"
+      opacity="0.1"
+      fill="rgb(0,0,0)"
+      stroke-miterlimit="10.0"
+      stroke-width="0.0"
+      fill-opacity="1.0"
+      stroke-opacity="1.0"
+      stroke-linejoin="miter"
+      stroke="rgb(0,0,0)">
+    <path d="M 1285.2785,288.9338 l -45.9651,141.4660 l 45.9651,-24.1653 l 45.9651,24.1653 Z"/>
+  </g>
+  <g
+      stroke-linecap="butt"
+      opacity="1.0000000000000002e-2"
+      fill="rgb(0,0,0)"
+      stroke-miterlimit="10.0"
+      stroke-width="0.0"
+      fill-opacity="1.0"
+      stroke-opacity="1.0"
+      stroke-linejoin="miter"
+      stroke="rgb(0,0,0)">
+    <path d="M 1285.2785,406.2346 l -0.0000,3.6331 l -6.9105,-0.0000 l 6.9105,-3.6331 l -0.0000,3.6331 l 6.9105,0.0000 Z"/>
+  </g>
+  <g
+      stroke-linecap="butt"
+      opacity="0.1"
+      fill="rgb(0,0,0)"
+      stroke-miterlimit="10.0"
+      stroke-width="13.82100759197859"
+      fill-opacity="0.0"
+      stroke-opacity="1.0"
+      stroke-linejoin="miter"
+      stroke="rgb(0,0,0)">
+    <path d="M 116.8435,1457.3689 h 2336.8700 "/>
+  </g>
+  <g
+      stroke-linecap="butt"
+      fill="rgb(0,0,0)"
+      stroke-dasharray="25,75"
+      stroke-miterlimit="10.0"
+      stroke-width="13.82100759197859"
+      fill-opacity="0.0"
+      stroke-opacity="0.75"
+      stroke-linejoin="miter"
+      stroke="rgb(100,100,100)">
+    <path d="M 307.4645,2782.2496 l 3533.0154,-2649.7616 " />
+    <path d="M 307.4645,132.4881 l 3533.0154,2649.7616 " />
+  </g>
+  <g
+      stroke-linecap="butt"
+      fill="rgb(0,0,0)"
+      stroke-miterlimit="10.0"
+      stroke-width="13.82100759197859"
+      fill-opacity="0.0"
+      stroke-opacity="1.0"
+      stroke-linejoin="miter"
+      stroke="rgb(0,0,0)">
+    <path d="M -471.2292,3822.8412 l 3533.0154,-2649.7616 ">
+      <animate
+          attributeName="d"
+          values="M -471.2292,3833.8412 l 3533.0154,-2649.7616 ; M 307.4645,2782.2496 l 3533.0154,-2649.7616 ; M 307.4645,132.4881 l 3533.0154,2649.7616 ; M -481.2292,-919.1034 l 3533.0154,2649.7616 "
+          keyTimes="0; 0.495; 0.505; 1"
+          dur="30s"
+          repeatCount="indefinite"
+          />
+    </path>
+  </g>
+  <g
+      stroke-linecap="butt"
+      fill="rgb(0,0,0)"
+      stroke-miterlimit="10.0"
+      stroke-width="34.55251897994648"
+      fill-opacity="0.0"
+      stroke-opacity="1.0"
+      stroke-linejoin="miter"
+      stroke="rgb(255,0,0)">
+    <path d="M 1285.2785,2508.9604 l 788.6936,-1051.5915 l -788.6936,-1051.5915 ">
+      <animate
+          attributeName="d"
+          values="M 1285.2785,2508.9604 l 0,0 l 0,0 ; M 1285.2785,2508.9604 l 788.6936,-1051.5915 l 0,0 ; M 1285.2785,2508.9604 l 788.6936,-1051.5915 l -788.6936,-1051.5915 "
+          dur="30s"
+          repeatCount="indefinite"
+          />
+    </path>
+  </g>
+  <g
+      stroke-linecap="butt"
+      fill="rgb(0,0,0)"
+      stroke-miterlimit="10.0"
+      stroke-width="34.55251897994648"
+      fill-opacity="0.0"
+      stroke-opacity="1.0"
+      stroke-linejoin="miter"
+      stroke="rgb(0,0,255)">
+    <path d="M 1285.2785,2508.9604 v -2103.1830 ">
+      <animate
+          attributeName="d"
+          values="M 1285.2785,2508.9604 v 0 ; M 1285.2785,2508.9604 v -2103.1830 "
+          dur="30s"
+          repeatCount="indefinite"
+          />
+    </path>
+  </g>
+</svg>
