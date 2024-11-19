@@ -24,3 +24,6 @@ updated: 2024-11-17
 
 [Agda](https://agda.readthedocs.io/)
 :   Dependently typed programming language which can also be used as a theorem prover.
+
+[Schema.org](https://schema.org/)
+:   Machine-readable vocabulary for marking up web content.
