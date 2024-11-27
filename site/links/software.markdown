@@ -2,7 +2,7 @@
 title: Software
 description: References related to computer software.
 published: 2023-11-24
-updated: 2024-11-17
+updated: 2024-11-26
 ---
 
 [KaTeX](https://katex.org/)
@@ -27,3 +27,6 @@ updated: 2024-11-17
 
 [Schema.org](https://schema.org/)
 :   Machine-readable vocabulary for marking up web content.
+
+[SVG](https://www.w3.org/TR/SVG2/)
+:   Specification for the Scalable Vector Graphics format.
