@@ -22,6 +22,9 @@ updated: 2024-09-08
 [Stackage](https://www.stackage.org/)
 :   Provides a consistent set of Haskell packages that are known to build together.
 
+[Haddock](https://haskell-haddock.readthedocs.io/)
+:   For automatically generating documentation from annotated Haskell code.
+
 [99 Haskell Problems](https://ninetynine.haskell.chungyc.org/)
 :   Problems for learning and practicing Haskell programming.
 
