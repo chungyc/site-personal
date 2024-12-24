@@ -14,7 +14,7 @@ although that will take be many years into the future.
 (Sadly, there will never be a part 2, at least by the same author.)
 
 My secret success criteria for the project would be if I can do all computations for
-a basic quantum mechanics course within just the GHCi interpreter.
+a basic quantum mechanics course within just the [GHCi] interpreter.
 It could even be used within an [IHaskell] notebook, with the
 derived integrals being typeset with LaTeX.
 
