@@ -11,7 +11,7 @@ At the current time, it only supports basic integration,
 but I hope to eventually implement most of the algorithms in
 [Symbolic Integration I: Transcendental Functions],
 although that will take be many years into the future.
-(Sadly, there will never be a part 2, at least by the same author.)
+(Sadly, there will never be a part 2, at least not by the same author.)
 
 My secret success criteria for the project would be if I can do all computations for
 a basic quantum mechanics course within just the [GHCi] interpreter.
