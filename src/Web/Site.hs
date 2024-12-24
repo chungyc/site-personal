@@ -30,6 +30,7 @@ config =
             "--checksum",
             "--compress",
             "--delete",
+            "--exclude .dh-diag",
             "--exclude .well-known",
             "--links",
             "--recursive",
