@@ -18,7 +18,7 @@ One is for the twin which stays on Earth.
 The other is for the twin who travels to a star and back.
 
 > travelingTwin :: Diagram B
-> travelingTwin = strokeLine (fromOffsets [r2 (v * t, t), r2 (-v * t, t)])
+> travelingTwin = strokeLine (fromOffsets [r2 (v * t, t), r2 ((-v) * t, t)])
 >                 # lineColor red
 >                 # lineWidth veryThick
 >                 # translateY (-t)
@@ -46,7 +46,7 @@ The origin is set to be the point at which the traveling twin arrives at the sta
 >   where
 >     gamma = 1 / sqrt (1 - v * v)
 >     x' = gamma * v * t
->     t' = gamma * (- v * x)
+>     t' = gamma * (-v) * x
 >     x = v * t
 
 In this inertial frame, the world lines look like this:

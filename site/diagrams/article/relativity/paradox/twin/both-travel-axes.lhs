@@ -8,13 +8,13 @@
 There are two world lines.
 
 > travelingTwin :: Diagram B
-> travelingTwin = strokeLine (fromOffsets [r2 (v * t, t), r2 (-v * t, t)])
+> travelingTwin = strokeLine (fromOffsets [r2 (v * t, t), r2 ((-v) * t, t)])
 >                 # lineColor red
 >                 # lineWidth veryThick
 >                 # translateY (-t)
 
 > travelingTwin' :: Diagram B
-> travelingTwin' = strokeLine (fromOffsets [r2 (-v * t, t), r2 (v * t, t)])
+> travelingTwin' = strokeLine (fromOffsets [r2 ((-v) * t, t), r2 (v * t, t)])
 >                 # lineColor blue
 >                 # lineWidth veryThick
 >                 # translateY (-t)
@@ -35,7 +35,7 @@ The traveling twins is traveling at the following speed relative to Earth:
 This is the \(x\) axis in a stationary inertial frame.
 
 > axis :: Diagram B
-> axis = (-1 ^& 0) ~~ (1 ^& 0)
+> axis = ((-1) ^& 0) ~~ (1 ^& 0)
 
 These are is the \(x\) axes for the inertial frame on the outbound trips.
 
@@ -43,7 +43,7 @@ These are is the \(x\) axes for the inertial frame on the outbound trips.
 > outboundAxis = axis # transform (transformation v) # translate (r2 (v*t, 0))
 >
 > outboundAxis' :: Diagram B
-> outboundAxis' = axis # transform (transformation (-v)) # translate (r2 (-v*t, 0))
+> outboundAxis' = axis # transform (transformation (-v)) # translate (r2 ((-v)*t, 0))
 
 These are the \(x\) axes for the inertial frame on the inbound trips.
 
@@ -51,7 +51,7 @@ These are the \(x\) axes for the inertial frame on the inbound trips.
 > inboundAxis = axis # transform (transformation (-v)) # translate (r2 (v*t, 0))
 >
 > inboundAxis' :: Diagram B
-> inboundAxis' = axis # transform (transformation v) # translate (r2 (-v*t, 0))
+> inboundAxis' = axis # transform (transformation v) # translate (r2 ((-v)*t, 0))
 
 \subsection{Spacetime diagram}
 

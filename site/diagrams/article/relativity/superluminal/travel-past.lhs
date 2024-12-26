@@ -15,7 +15,7 @@ faster than the speed of light.
 >   where
 >     outbound = fromOffsets [V2 (v*t) t]
 >     outbound' = outbound # transform (transformation v')
->     inbound = outbound' <> fromOffsets [V2 (-v*t) t]
+>     inbound = outbound' <> fromOffsets [V2 ((-v)*t) t]
 >     worldline = inbound # transform (transformation (-v'))
 
 These are the travel time and speed.

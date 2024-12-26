@@ -18,7 +18,7 @@ One is for the twin which stays on Earth.
 The other is for the twin who travels to a star and back.
 
 > travelingTwin :: Diagram B
-> travelingTwin = strokeLine (fromOffsets [r2 (v * t, t), r2 (-v * t, t)])
+> travelingTwin = strokeLine (fromOffsets [r2 (v * t, t), r2 ((-v) * t, t)])
 >                 # lineColor red
 >                 # lineWidth veryThick
 >                 # translateY (-t)

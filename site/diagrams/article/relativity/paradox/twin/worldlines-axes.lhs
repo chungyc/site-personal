@@ -18,7 +18,7 @@ One is for the twin which stays on Earth.
 The other is for the twin who travels to a star and back.
 
 > travelingTwin :: Diagram B
-> travelingTwin = strokeLine (fromOffsets [r2 (v * t, t), r2 (-v * t, t)])
+> travelingTwin = strokeLine (fromOffsets [r2 (v * t, t), r2 ((-v) * t, t)])
 >                 # lineColor red
 >                 # lineWidth veryThick
 >                 # translateY (-t)
@@ -40,7 +40,7 @@ The traveling twin is traveling at the following speed:
 This is the \(x\) axis in a stationary inertial frame.
 
 > axis :: Diagram B
-> axis = (-1 ^& 0) ~~ (1 ^& 0)
+> axis = ((-1) ^& 0) ~~ (1 ^& 0)
 
 This is the \(x\) axis for the inertial frame on the outbound trip
 for the traveling twin in the Earth's inertial frame.
