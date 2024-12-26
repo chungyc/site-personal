@@ -152,7 +152,7 @@ transformation ::
 transformation v = fromMat22 matrix (V2 0 0)
   where
     gamma = 1 / sqrt (1 - v ** 2)
-    matrix = V2 (V2 gamma (-gamma * v)) (V2 (-gamma * v) gamma)
+    matrix = V2 (V2 gamma ((-gamma) * v)) (V2 ((-gamma) * v) gamma)
 
 -- | Convert given coordinates into a two-dimensional "Diagrams" vector.
 --
@@ -205,7 +205,7 @@ axesWith :: AxesOptions -> Diagram B
 axesWith AxesOptions {axesLength, axesLightcone} =
   xAxis <> tAxis <> lightCone
   where
-    xAxis = (-axesLength ^& 0) ~~ (axesLength ^& 0)
+    xAxis = ((-axesLength) ^& 0) ~~ (axesLength ^& 0)
     tAxis = (0 ^& (-axesLength)) `arrowBetween` (0 ^& axesLength)
     lightCone
       | axesLightcone =
