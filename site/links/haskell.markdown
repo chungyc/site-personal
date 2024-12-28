@@ -1,7 +1,7 @@
 ---
 title: Haskell
-description: References related to the Haskell programming language.
-updated: 2024-09-08
+description: Personal references related to the Haskell programming language.
+updated: 2024-12-28
 ---
 
 [haskell.org](https://haskell.org/)
@@ -30,6 +30,9 @@ updated: 2024-09-08
 
 [Scan code with HLint](https://github.com/haskell-actions/hlint-scan)
 :   GitHub action for Haskell code scanning using HLint.
+
+[Symtegration](https://github.com/chungyc/symtegration)
+:   Symbolic integration in Haskell.
 
 [proto-lens](https://github.com/google/proto-lens)
 :   Library for using [protocol buffer messages](https://protobuf.dev/) in Haskell.
