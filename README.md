@@ -9,12 +9,6 @@ The content is publicly visible for knowledge sharing, not for direct use by oth
 [Hakyll]: https://jaspervdj.be/hakyll/
 [Yoo Chung]: https://chungyc.org/
 
-## Status
-
-[![Build](https://github.com/chungyc/site-personal/actions/workflows/build.yaml/badge.svg)](https://github.com/chungyc/site-personal/actions/workflows/build.yaml)
-[![Ormolu](https://github.com/chungyc/site-personal/actions/workflows/ormolu.yaml/badge.svg)](https://github.com/chungyc/site-personal/actions/workflows/ormolu.yaml)
-[![HLint](https://github.com/chungyc/site-personal/actions/workflows/hlint.yaml/badge.svg)](https://github.com/chungyc/site-personal/actions/workflows/hlint.yaml)
-
 ## See also
 
 *   [Library documentation](https://chungyc.github.io/site-personal/)
