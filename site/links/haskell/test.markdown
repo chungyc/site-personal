@@ -1,7 +1,7 @@
 ---
 title: Testing with Haskell
-description: Haskell libraries related to testing.
-published: 2023-04-29
+description: Personal references for Haskell libraries related to testing.
+published: 2025-01-02
 ---
 
 [Hspec](https://hspec.github.io/)
@@ -12,3 +12,6 @@ published: 2023-04-29
 
 [HLint](https://github.com/ndmitchell/hlint)
 :   Linter for Haskell.
+
+[Scan code with HLint](https://github.com/haskell-actions/hlint-scan)
+:   GitHub action for Haskell code scanning using HLint.

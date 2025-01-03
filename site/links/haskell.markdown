@@ -1,7 +1,7 @@
 ---
 title: Haskell
 description: Personal references related to the Haskell programming language.
-updated: 2024-12-28
+updated: 2025-01-02
 ---
 
 [haskell.org](https://haskell.org/)
@@ -27,9 +27,6 @@ updated: 2024-12-28
 
 [99 Haskell Problems](https://ninetynine.haskell.chungyc.org/)
 :   Problems for learning and practicing Haskell programming.
-
-[Scan code with HLint](https://github.com/haskell-actions/hlint-scan)
-:   GitHub action for Haskell code scanning using HLint.
 
 [Symtegration](https://github.com/chungyc/symtegration)
 :   Symbolic integration in Haskell.
