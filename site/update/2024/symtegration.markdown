@@ -2,6 +2,7 @@
 title: Symtegration
 description: I have released Symtegration, which is a Haskell library for symbolically integrating mathematical expressions.
 published: 2024-12-24
+updated: 2025-01-05
 ---
 
 I have been on a symbolic integration kick for the past month,
@@ -23,7 +24,7 @@ It may or may not be the greatest of names,
 but no one else seemed to be using it as a name for something,
 and it was a simple enough name.
 
-[Symtegration]: https://github.com/chungyc/symtegration
+[Symtegration]: https://symtegration.dev/
 
 [Symbolic Integration I: Transcendental Functions]: https://doi.org/10.1007/b138171
 
