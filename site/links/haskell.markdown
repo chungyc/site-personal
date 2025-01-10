@@ -1,7 +1,7 @@
 ---
 title: Haskell
 description: Personal references related to the Haskell programming language.
-updated: 2025-01-02
+updated: 2025-01-09
 ---
 
 [haskell.org](https://haskell.org/)
@@ -28,7 +28,7 @@ updated: 2025-01-02
 [99 Haskell Problems](https://ninetynine.haskell.chungyc.org/)
 :   Problems for learning and practicing Haskell programming.
 
-[Symtegration](https://github.com/chungyc/symtegration)
+[Symtegration](https://symtegration.dev/)
 :   Symbolic integration in Haskell.
 
 [proto-lens](https://github.com/google/proto-lens)
