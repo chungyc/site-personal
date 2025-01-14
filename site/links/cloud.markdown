@@ -1,7 +1,7 @@
 ---
 title: Cloud
 description: Cloud services I use or am interested in.
-updated: 2024-04-15
+updated: 2025-01-13
 ---
 
 [Google Cloud Platform](https://cloud.google.com/)
@@ -18,6 +18,9 @@ updated: 2024-04-15
 
 [GeForce NOW](https://www.nvidia.com/en-us/geforce-now/)
 :   Gaming on high-end graphics hardware without having to chase the hardware upgrade game.
+
+[Codecov](https://about.codecov.io/)
+:   Code coverage analysis.
 
 ### Note
 
