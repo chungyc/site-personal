@@ -85,7 +85,7 @@ I can't stand jagged edges in text, so I specify that text be justified.
     fontFamily ["Georgia", "Garamond"] [serif, sansSerif, monospace]
     textRendering optimizeLegibility
     textAlign justify
-    lineHeight $ unitless 1.25
+    lineHeight $ unitless 1.5
 \end{code}
 
 In narrow screens, it often feels like there is a great waste of empty space
