@@ -2,7 +2,7 @@
 title: Articles
 description: Index of articles written by Yoo Chung and posted on their personal web site.
 published: 2023-03-23
-updated: 2024-11-15
+updated: 2025-01-22
 toc: true
 rss-feed-link: /articles.xml
 ---
@@ -78,6 +78,8 @@ For a list of all articles, see the [archive of articles](/article/archive).
 *   [Time travel](/article/physics/relativity/superluminal/)
 
 ## Technical {#technical}
+
+*   [Random technical tips](/article/technical/tips/)
 
 ### This web site {#technical-website}
 
