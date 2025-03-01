@@ -4,4 +4,4 @@ extra-deps:
 
   # Uses properties and media query functions not released yet.
   - git: https://github.com/sebastiaanvisser/clay.git
-    commit: b9bb56772ef26c1e87ee5189d30e00fe7cf73aac
+    commit: 3805af82149e3480f695a00f50067a70eaaead0d

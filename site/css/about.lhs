@@ -69,7 +69,7 @@ narrowProfilePhotoStyle = do
       maxWidth $ pct 50
       width $ em 8
       height auto
-      "aspect-ratio" -: "auto"
+      aspectRatio auto
 \end{code}
 
 \subsection{See also}
