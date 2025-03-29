@@ -1,8 +1,8 @@
 ---
 title: Software
-description: References related to computer software.
+description: Personal references related to computer software.
 published: 2023-11-24
-updated: 2025-03-09
+updated: 2025-03-29
 ---
 
 [KaTeX](https://katex.org/)
@@ -30,8 +30,3 @@ updated: 2025-03-09
 
 [SVG](https://www.w3.org/TR/SVG2/)
 :   Specification for the Scalable Vector Graphics format.
-
-[Nix](https://nixos.org/)
-:   Nix the package manager, Nixpkgs the collection of Nix packages,
-    and NixOS the operating system based on Nix.
-    Supports reproducible and isolated computing environments without virtualization.
