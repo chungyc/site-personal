@@ -35,13 +35,14 @@ dependencies:
 library:
   source-dirs: src
   dependencies:
-  - hakyll
   - blaze-html
   - bytestring
   - clay
   - diagrams-lib
+  - diagrams-rasterific
   - diagrams-svg
   - filepath
+  - hakyll
   - http-types
   - pandoc
   - pandoc-types
@@ -72,6 +73,14 @@ executables:
     - diagrams-lib
     - diagrams-svg
     - linear
+
+  collatz:
+    main: app/Collatz.hs
+
+    dependencies:
+    - personal
+    - diagrams-lib
+    - diagrams-rasterific
 
     # Work around https://github.com/sol/hpack/issues/303.
     when:
