@@ -4,7 +4,7 @@ description: |
   How to think about the passage of time for an object following a world line.
   Explains the concept of proper time.
 published: 2023-05-03
-updated: 2023-09-03
+updated: 2025-10-03
 toc: true
 include-math: true
 include-bibliography-stylesheet: true
@@ -134,8 +134,8 @@ The integral for proper time would then be of a more tractable sort.
 \[
 \tau = \int \sqrt{\left(\frac{dt}{d\theta}\right)^2 -
                   \left(\frac{dx}{d\theta}\right)^2 -
-                  \left(\frac{dx}{d\theta}\right)^2 -
-                  \left(\frac{dx}{d\theta}\right)^2} \, d\theta
+                  \left(\frac{dy}{d\theta}\right)^2 -
+                  \left(\frac{dz}{d\theta}\right)^2} \, d\theta
 \]
 
 While it can be the case that \(\theta = \tau\), it doesn't have to be.[^proper-time-parameter]
