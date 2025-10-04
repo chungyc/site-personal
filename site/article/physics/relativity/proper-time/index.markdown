@@ -52,7 +52,7 @@ We can also find the time which passes for the moving object without transformin
 a world line into the intertial frame where it is stationary.
 First, we can define the _spacetime interval_ as follows.[^natural-units]
 
-\[ ds^2 = dt^2 - dx^2 - dy^2 - dz^z \]
+\[ ds^2 = dt^2 - dx^2 - dy^2 - dz^2 \]
 
 It can be shown that this remains the same no matter the inertial frame.
 In other words, the amount of time or length between two events will be
