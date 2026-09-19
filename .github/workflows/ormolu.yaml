@@ -18,4 +18,4 @@ jobs:
           # Set language and extensions explicitly
           # to accommodate Haskell code generating the site.
           respect-cabal-files: false
-          extra-args: '-o -XGHC2021 -o -XOverloadedStrings'
+          extra-args: '-o -XGHC2024 -o -XOverloadedStrings'
