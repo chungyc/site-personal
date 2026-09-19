@@ -63,7 +63,7 @@ testRoute ::
   IO (Maybe FilePath, UsedMetadata)
 testRoute routes filepath = withSystemTempDirectory "test" $ \tmpdir -> do
   store <- Store.new True tmpdir
-  provider <- newProvider store (const $ pure False) tmpdir
+  (provider, _) <- newProvider store (const $ pure False) tmpdir
   runRoutes routes provider $ fromFilePath filepath
 
 -- | Generate an arbitrary component of a file path.

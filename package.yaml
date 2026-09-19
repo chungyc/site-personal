@@ -20,7 +20,7 @@ description: |
   .
   * The source is available on [GitHub](https://github.com/chungyc/site-personal).
 
-language: GHC2021
+language: GHC2024
 
 default-extensions:
 - OverloadedStrings
@@ -49,6 +49,11 @@ library:
   - text
   - wai
   - wai-app-static
+
+  # Work around https://github.com/sol/hpack/issues/303.
+  when:
+  - condition: false
+    other-modules: Paths_personal
 
 executables:
   site:
